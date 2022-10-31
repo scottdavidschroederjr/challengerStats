@@ -1,13 +1,12 @@
 import requests
 
 # input info
-apiKey = "RGAPI-7704e635-9979-4a18-abe1-333b483e81d2"
+apiKey = ""
 user1 = "SaveAsUntitled"
 user2 = "plsperish"
 setCoreName = "TFTSet7_2"
 
 # LP change dictionary
-
 lpChange = {1: 40, 2: 30, 3: 20, 4: 10, 5: -10, 6: -20, 7: -30, 8: -40}
 
 # account info request
