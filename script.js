@@ -1,5 +1,5 @@
 //these will be the inputs on the site to pull the info
-var apiKey = "RGAPI-9144b35c-bceb-4dd3-aa47-5ab89fc33464"
+var apiKey = ""
 var userName1 = "SaveAsUntitled"
 var userName2 = "plsperish"
 var setCoreName = "TFTSet7_2"
