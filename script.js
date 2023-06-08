@@ -9,6 +9,7 @@ var output = {
     "username": userName1,
     "puuid" : "",
     "matches": [],
+    "duoMatches": [],
     "duoWins": 0,
     "duoLosses": 0,
     "duoLPChange": 0,
@@ -17,6 +18,7 @@ var output = {
     "username": userName2,
     "puuid" : "",
     "matches": [],
+    "duoMatches": [],
     "duoWins": 0,
     "duoLosses": 0,
     "duoLPChange": 0,
@@ -39,21 +41,32 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
     else if (typeOfRequest === "matchList"){
       var sectionOfMatches = 0
 
+      while (sectionOfMatches <= 2000){
       var matchRequestURL = "https://americas.api.riotgames.com/tft/match/v1/matches/by-puuid/" + requestInput + "/ids?start=" + sectionOfMatches + "&count=100&api_key=" + apiKey;
       
 
       var response = await fetch(matchRequestURL)
       var data = await response.json();
 
+    
+      output[username]["matches"] = output[username]["matches"].concat(data)
       
-      output[username]["matches"] = data
+      sectionOfMatches = sectionOfMatches + 100;
+      }
 
       //starts comparison once matches have been pulled for both users
-      if (Object.keys(output[userName1]["matches"]).length >= 100 && Object.keys(output[userName2]["matches"]).length >= 100) {
+      if (Object.keys(output[userName1]["matches"]).length >= 1000 && Object.keys(output[userName2]["matches"]).length >= 1000) {
         const intersection = output[userName1]["matches"].filter(element => output[userName2]["matches"].includes(element));
-        console.log(output[userName1]["puuid"])
-        console.log(output[userName2]["puuid"])
         console.log(intersection)
+
+        const fs = require('fs');
+        fs.writeFile("testing", JSON.stringify(output), 'utf8', function (err) {
+            if (err) {
+                return console.log(err);
+            }
+        
+            console.log("The file was saved!");
+          }); 
       }
   
 
