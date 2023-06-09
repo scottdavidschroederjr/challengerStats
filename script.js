@@ -62,7 +62,12 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
         
         //for (let i = 0; i < Object.keys(intersection).length; i++) THIS IS RIGHT CODE, SWAPPING SO WE DONT GET RATE LIMITED every 2 seconds
         for (let i = 0; i < Object.keys(intersection).length; i++) {
-          fetchData(intersection[i], "matchInfo")
+          setTimeout( function() {
+            fetchData(intersection[i], "matchInfo").then(i = i + 1)
+            console.log(i)
+          },2000);
+          
+          
         }
       }
     }
@@ -74,12 +79,10 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
 
       //to catch failed requests because of rate limiting
       data = await rateLimitWait(data, matchRequestURL)
-      console.log(data)
       
 
       const puuid1 = output[userName1]["puuid"]
       const puuid2 = output[userName2]["puuid"]
-      console.log(requestInput)
 
     //TO DO add function that sorts out games from different sets HERE
 
@@ -99,23 +102,21 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
 
 //slow down requests when rate limit is hit
 function rateLimitWait (dataReturned, URL) {
-  console.log(dataReturned["metadata"])
-
   if (dataReturned["metadata"] == undefined) {
     let failedRequest = dataReturned
     //short time out of two seconds to wait out (20 requests every 1 second) limit
-    setTimeout( async () => {
-      var response = await fetch(URL)
-      failedRequest = await response.json()
+    setTimeout( function() {
+      var response = fetch(URL)
+      failedRequest = response.json()
       console.log(failedRequest)
     },2000);
 
 
     //long time out of two and a half minutes to wait out (100 requests every 2 minutes) limit
     if (failedRequest["metadata"] == undefined){
-      setTimeout( async () => {
-        var response = await fetch(URL)
-        failedRequest = await response.json()
+      setTimeout( function() {
+        var response = fetch(URL)
+        failedRequest = response.json()
       },150000);
 
       if (failedRequest["metadata"] == undefined){
