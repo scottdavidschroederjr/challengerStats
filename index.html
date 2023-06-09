@@ -1,26 +1,27 @@
 <!doctype html>
 <html>
     <head>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="icon" href="./images/siteIcon.png"
+        <link rel="icon" href="./images/siteIcon.png">
+        <title>Directive by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     </head>
 
 
-    <body>
+    <body class="is-preload">
         <div>
-        <h1>Insert duo data</h1>
+        <h1>TFT Duo Stats</h1>
+        <p>Use this tool to see how you perform when duoing with a friend in ranked TFT.</p>
 
+        <div id="inputSection">
         <form>
-            <input type="text" class="input" name="user1" id="user1" placeholder="SaveAsUntitled">
+            <input type="text" class="input" name="user1" id="user1" placeholder="Username #1">
             <br>
-            <input type="text" class="input" name="user2" id="user2" placeholder="plsperish">
+            <input type="text" class="input" name="user2" id="user2" placeholder="Username #2">
             <br>
 
-            <select name="htmlSet" id="htmlSet" required>
+            <select class="input" name="htmlSet" id="htmlSet" required>
                 <option value="">All Sets Included</option>
                 <option value="" disabled>Set 1: TFT Beta Set</option>
                 <option value="">Set 2: Rise of the Elements</option>
@@ -41,7 +42,8 @@
             </select>
         </form>
 
-        <button oneclick=duoInfoFunction(htmlSet.value,user1.value,user2.value)>Get duo stats</button>
+        <button id="duoRun" oneclick=duoInfoFunction(htmlSet.value,user1.value,user2.value)>Get duo stats</button>
+        </div>
         </div>
     </body>
 </html>
