@@ -73,8 +73,9 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
       var data = await response.json();
 
       //to catch failed requests because of rate limiting
-      data = rateLimitWait(data, matchRequestURL)
+      data = await rateLimitWait(data, matchRequestURL)
       console.log(data)
+      
 
       const puuid1 = output[userName1]["puuid"]
       const puuid2 = output[userName2]["puuid"]
@@ -98,19 +99,24 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
 
 //slow down requests when rate limit is hit
 function rateLimitWait (dataReturned, URL) {
+  console.log(dataReturned["metadata"])
 
   if (dataReturned["metadata"] == undefined) {
-    //short time out of two seconds to wait out (20 requests every 1 second) limit
-    setTimeout( () => {},2000);
     let failedRequest = dataReturned
-    var response = await fetch(URL)
-    failedRequest = await response.json()
+    //short time out of two seconds to wait out (20 requests every 1 second) limit
+    setTimeout( async () => {
+      var response = await fetch(URL)
+      failedRequest = await response.json()
+      console.log(failedRequest)
+    },2000);
+
 
     //long time out of two and a half minutes to wait out (100 requests every 2 minutes) limit
     if (failedRequest["metadata"] == undefined){
-      setTimeout( () => {},150000);
-      var response = await fetch(URL)
-      failedRequest = await response.json()
+      setTimeout( async () => {
+        var response = await fetch(URL)
+        failedRequest = await response.json()
+      },150000);
 
       if (failedRequest["metadata"] == undefined){
         console.log("Request error. Try again later.")
@@ -125,7 +131,6 @@ function rateLimitWait (dataReturned, URL) {
       return failedRequest
     }
     
-
   }
   else {
     console.log("All good here!")
