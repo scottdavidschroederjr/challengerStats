@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="./images/siteIcon.png"
+    </head>
+
+
+    <body>
+        <h1>Insert duo data</h1>
+
+
+
+
+
+        <form>
+            <input type="text" class="input" name="user1" id="user1" placeholder="SaveAsUntitled">
+            <br>
+            <input type="text" class="input" name="user2" id="user2" placeholder="plsperish">
+            <br>
+
+            <select name="htmlSet" id="htmlSet" required>
+                <option value="">All Sets Included</option>
+                <option value="" disabled>Set 1: TFT Beta Set</option>
+                <option value="">Set 2: Rise of the Elements</option>
+                <option value="">Set 3: Galaxies</option>
+                <option value="">Set 3.5: Return to the Stars</option>
+                <option value="">Set 4: Fates</option>
+                <option value="">Set 4.5: Festival of Beasts</option>
+                <option value="">Set 5: Reckoning</option>
+                <option value="">Set 5.5: Dawn of Heroes</option>
+                <option value="">Set 6: Gizmos & Gadgets</option>
+                <option value="">Set 6.5: Neon Nights</option>
+                <option value="">Set 7: Dragonlands</option>
+                <option value="">Set 7.5: Uncharted Realms</option>
+                <option value="">Set 8: Monsters Attack</option>
+                <option value="">Set 8.5: Glitched Out</option>
+                <option value="" disabled>Set 9: Runeterra Reforged</option>
+            <br>
+            </select>
+        </form>
+
+        <button oneclick=duoInfoFunction(htmlSet.value,user1.value,user2.value)>Get duo stats</button>
+    </body>
+</html>
