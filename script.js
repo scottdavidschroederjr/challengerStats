@@ -1,5 +1,5 @@
 //these will be the inputs on the site to pull the info
-var apiKey = ""
+var apiKey = "RGAPI-cf67bb2c-c4e4-4737-b778-b16fc634458c"
 var userName1 = "SaveAsUntitled"
 var userName2 = "plsperish"
 var setCoreName = "TFTSet7_2"
@@ -29,7 +29,7 @@ var output = {
 
 async function fetchData(requestInput, typeOfRequest = false, username) {
 
-  //for converting user's username into PUUID
+  //converts username to PUUID
     if (typeOfRequest === "puuid") {
       
       let requestURL = "https://na1.api.riotgames.com/tft/summoner/v1/summoners/by-name/" + requestInput + "?api_key=" + apiKey;
@@ -39,61 +39,67 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
       return output[requestInput]["puuid"]
     }
 
-  //for grabbing list of matches
+  //getting match list
     else if (typeOfRequest === "matchList"){
       var sectionOfMatches = 0
 
+      //grabs # of matches specified by number in while loop
       while (sectionOfMatches <= 1000){
-      var matchRequestURL = "https://americas.api.riotgames.com/tft/match/v1/matches/by-puuid/" + requestInput + "/ids?start=" + sectionOfMatches + "&count=100&api_key=" + apiKey;
-      
+        var matchRequestURL = "https://americas.api.riotgames.com/tft/match/v1/matches/by-puuid/" + requestInput + "/ids?start=" + sectionOfMatches + "&count=100&api_key=" + apiKey;
+        var response = await fetch(matchRequestURL)
+        var data = await response.json();
 
-      var response = await fetch(matchRequestURL)
-      var data = await response.json();
+        //TODO add protection from failed request function in here
 
-    
-      output[username]["matches"] = output[username]["matches"].concat(data)
-      
-      sectionOfMatches = sectionOfMatches + 100;
+        output[username]["matches"] = output[username]["matches"].concat(data)
+        sectionOfMatches = sectionOfMatches + 100;
       }
-
-      //starts comparison once matches have been pulled for both users
-      if (Object.keys(output[userName1]["matches"]).length >= 1000 && Object.keys(output[userName2]["matches"]).length >= 1000) {
-        const intersection = output[userName1]["matches"].filter(element => output[userName2]["matches"].includes(element));
+      //once match list is full, save only duo games
+      if (Object.keys(output[userName1]["matches"]).length >= 1000 && Object.keys(output[userName2]["matches"]).length >= 1000 && Object.keys(output[userName1]["duoMatches"]).length <= 0) {
         
-        //for (let i = 0; i < Object.keys(intersection).length; i++) THIS IS RIGHT CODE, SWAPPING SO WE DONT GET RATE LIMITED every 2 seconds
+        console.log('it my fault')
+        const intersection = output[userName1]["matches"].filter(element => output[userName2]["matches"].includes(element));
+
+        //trying to fix the double run with this code
+        output[userName1]["duoMatches"] = intersection
+        output[userName2]["duoMatches"] = intersection
+      
+      //then start requesting data for duo games
         for (let i = 0; i < Object.keys(intersection).length; i++) {
-          setTimeout( function() {
-            fetchData(intersection[i], "matchInfo").then(i = i + 1)
-            console.log(i)
-          },2000);
-          
-          
+            let response = await fetchData(intersection[i], "matchInfo").then(console.log(i))
+            
         }
+      
+      //TODO all data from duo matches is saved to output, now lets do some math
+
+
       }
     }
-    //for grabbing match data
+  
+  //gets match data
     else if (typeOfRequest === "matchInfo") {
       let matchRequestURL = "https://americas.api.riotgames.com/tft/match/v1/matches/"+ requestInput + "?api_key=" + apiKey
       var response = await fetch(matchRequestURL)
       var data = await response.json();
 
       //to catch failed requests because of rate limiting
-      data = await rateLimitWait(data, matchRequestURL)
+      //data = await rateLimitWait(data, matchRequestURL)
       
+    //TO DO add function that sorts out games from different sets HERE
 
+    //putting match data in the proper place
+
+      //gets which index each player is and then puts their placement into the dataset
       const puuid1 = output[userName1]["puuid"]
       const puuid2 = output[userName2]["puuid"]
 
-    //TO DO add function that sorts out games from different sets HERE
-
-    //gets which index each player is and then puts their placement into the dataset
       let playerArray = []
       playerArray = playerArray.concat(data["metadata"]["participants"])
 
       let indexPlayer1 = playerArray.indexOf(puuid1)
       let indexPlayer2 = playerArray.indexOf(puuid2)
 
-    //adds both player's placements to the output object
+      //adds both player's placements to the output object
       output[userName1]["duoPlacements"] = output[userName1]["duoPlacements"].concat(data["info"]["participants"][indexPlayer1]['placement'])
       output[userName2]["duoPlacements"] = output[userName2]["duoPlacements"].concat(data["info"]["participants"][indexPlayer2]['placement'])
 
@@ -101,43 +107,53 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
   }
 
 //slow down requests when rate limit is hit
-function rateLimitWait (dataReturned, URL) {
+async function rateLimitWait (dataReturned, URL) {
+
+//checks if proper data was returned by request
   if (dataReturned["metadata"] == undefined) {
     let failedRequest = dataReturned
-    //short time out of two seconds to wait out (20 requests every 1 second) limit
-    setTimeout( function() {
-      var response = fetch(URL)
-      failedRequest = response.json()
-      console.log(failedRequest)
-    },2000);
 
+//short time out of two seconds to wait out (20 requests every 1 second) limit 
+    var response = await fetch(URL)
+    failedRequest = await response.json()
+    console.log(failedRequest)
 
-    //long time out of two and a half minutes to wait out (100 requests every 2 minutes) limit
+//check for proper data after short wait
     if (failedRequest["metadata"] == undefined){
-      setTimeout( function() {
-        var response = fetch(URL)
-        failedRequest = response.json()
-      },150000);
 
+//long time out of two and a half minutes to wait out (100 requests every 2 minutes) limit
+      var response = await fetch(URL)
+      failedRequest = response.json()
+
+
+//for complete failure of API to get data
       if (failedRequest["metadata"] == undefined){
         console.log("Request error. Try again later.")
       }
+//long wait resolves issue
       else{
         console.log("All good here after long wait!")
         return failedRequest
       }
     }
+//short wait resolves issue    
     else {
       console.log("All good here after short wait!")
       return failedRequest
     }
-    
+
+//no issue with request   
   }
   else {
     console.log("All good here!")
     return dataReturned
   }
 }
+
+function sleep(ms) {
+  new Promise(resolve => setTimeout(resolve, ms));
+}
+
 
 
 
@@ -148,9 +164,6 @@ user1PUUID => fetchData(user1PUUID, "matchList", userName1))
 fetchData(userName2, "puuid").then(
 user2PUUID => fetchData(user2PUUID, "matchList", userName2))
 
-//function that cuts down match list to only matches that both users are in
-//request duo match data for U1
-//request duo match data for U2
 
 
 
