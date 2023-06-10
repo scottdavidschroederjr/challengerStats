@@ -1,5 +1,5 @@
 //these will be the inputs on the site to pull the info
-var apiKey = "RGAPI-cf67bb2c-c4e4-4737-b778-b16fc634458c"
+var apiKey = ""
 var userName1 = "SaveAsUntitled"
 var userName2 = "plsperish"
 var setCoreName = "TFTSet7_2"
@@ -54,7 +54,7 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
         output[username]["matches"] = output[username]["matches"].concat(data)
         sectionOfMatches = sectionOfMatches + 100;
       }
-      //once match list is full, save only duo games
+      //once match list is full, save only duo games, third qualifer also stops it from getting into this loop twice for some reason?
       if (Object.keys(output[userName1]["matches"]).length >= 1000 && Object.keys(output[userName2]["matches"]).length >= 1000 && Object.keys(output[userName1]["duoMatches"]).length <= 0) {
         
         console.log('it my fault')
