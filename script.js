@@ -1,6 +1,5 @@
 //these will be the inputs on the site to pull the info
 var apiKey = ""
-var apiKey = "RGAPI-cf67bb2c-c4e4-4737-b778-b16fc634458c"
 var userName1 = "SaveAsUntitled"
 var userName2 = "plsperish"
 var setCoreName = "TFTSet7_2"
@@ -49,17 +48,15 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
       var sectionOfMatches = 0
 
       //grabs # of matches specified by number in while loop
-      while (sectionOfMatches <= 20000){
+      while (sectionOfMatches <= 1000){
         var matchRequestURL = "https://americas.api.riotgames.com/tft/match/v1/matches/by-puuid/" + requestInput + "/ids?start=" + sectionOfMatches + "&count=100&api_key=" + apiKey;
         var response = await fetch(matchRequestURL)
         var data = await response.json();
 
         //rateLimits requests and gets proper data
-        data = await rateLimitWait(data, matchRequestURL)
 
         output[username]["matches"] = output[username]["matches"].concat(data)
         sectionOfMatches = sectionOfMatches + 100;
-        console.log(output[username]["matches"])
       }
       //once match list is full, save only duo games, third qualifer also stops it from getting into this loop twice for some reason?
       if (Object.keys(output[userName1]["matches"]).length >= 1000 && Object.keys(output[userName2]["matches"]).length >= 1000 && Object.keys(output[userName1]["duoMatches"]).length <= 0) {
@@ -72,15 +69,35 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
       
       //then start requesting data for duo games
         for (let i = 0; i < Object.keys(intersection).length; i++) {
-            let response = await fetchData(intersection[i], "matchInfo").then(console.log(i))
+            let response = await fetchData(intersection[i], "matchInfo").then()
             
         }
         console.log(output[userName1]["duoPlacements"])
         console.log(output[userName2]["duoPlacements"])
       
       //TODO all data from duo matches is saved to output, now lets do some math
+        for (let x = 0; x < Object.keys(output[userName1]["duoPlacements"]).length; x++) {  
 
+          if (output[userName1]["duoPlacements"][x] <= 4) {
+            output[userName1]["duoWins"] = output[userName1]["duoWins"] + 1
+            console.log(output[userName1]["duoWins"])
+          } else {
+            output[userName1]["duoLosses"] = output[userName1]["duoLosses"] + 1
+          }
+        }
 
+        for (let y = 0; y < Object.keys(output[userName2]["duoPlacements"]).length; y++) {
+          if (output[userName2]["duoPlacements"][y] <= 4) {
+            output[userName2]["duoWins"] = output[userName2]["duoWins"] + 1
+            console.log(output[userName2]["duoWins"])
+          } else {
+            output[userName2]["duoLosses"] = output[userName2]["duoLosses"] + 1
+          }
+        }
+        console.log(output[userName1])
+        console.log(output[userName2])
+        console.log(userName1 + "'s duo record " + output[userName1]["duoWins"] + "-" + output[userName1]["duoLosses"])
+        console.log(userName2 + "'s duo record " + output[userName2]["duoWins"] + "-" + output[userName2]["duoLosses"])
       }
     }
   
@@ -93,9 +110,9 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
       //to catch failed requests because of rate limiting
       data = await rateLimitWait(data, matchRequestURL)
       
-    //TO DO add function that sorts out games from different sets HERE
-
-    //putting match data in the proper place
+      //TO DO add function that sorts out games from different sets HERE
+      //proper set, ranked and only normal match check
+      if (data['info']['tft_set_core_name'] != setCoreName || data['info']['queue_id'] != 1100 || data['info']['tft_game_type'] != "standard"){
 
       //gets which index each player is and then puts their placement into the dataset
       const puuid1 = output[userName1]["puuid"]
@@ -111,28 +128,25 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
       output[userName1]["duoPlacements"] = output[userName1]["duoPlacements"].concat(data["info"]["participants"][indexPlayer1]['placement'])
       output[userName2]["duoPlacements"] = output[userName2]["duoPlacements"].concat(data["info"]["participants"][indexPlayer2]['placement'])
 
+      }
     }
   }
 
 //slow down requests when rate limit is hit
 async function rateLimitWait (dataReturned, URL) {
-  //checks if proper data was returned by request
+
+  //checks if proper data was returned by request, first perm is for matchData second is for matchList
   if (dataReturned["metadata"] == undefined) {
-    
     //short time out of two seconds to wait out (20 requests every 1 second) limit 
-    console.log("start waiting")
-
     await new Promise(resolve => setTimeout(resolve, 5000));
-
-    console.log("done waitin'")
     var response = await fetch(URL)
     let failedRequest = await response.json()
 
     //check for proper data after short wait
     if (failedRequest["metadata"] == undefined){
-    console.log("start waiting long")
+    console.log("Rate limit reached. Please wait one moment.")
     await new Promise(resolve => setTimeout(resolve, 120000));
-    console.log("done waitin'")
+    console.log("Thank you for waiting.")
 
       //long time out of two and a half minutes to wait out (100 requests every 2 minutes) limit
       var response = await fetch(URL)
@@ -147,13 +161,11 @@ async function rateLimitWait (dataReturned, URL) {
 
       //long wait resolves issue
       else{
-        console.log("All good here after long wait!")
         return failedRequest
       }
     }
     //short wait resolves issue    
     else {
-      console.log("All good here after short wait!")
       return failedRequest
     }
   //no issue with request   
@@ -179,7 +191,6 @@ user1PUUID => fetchData(user1PUUID, "matchList", userName1))
 
 fetchData(userName2, "puuid").then(
 user2PUUID => fetchData(user2PUUID, "matchList", userName2))
-
 
 
 
