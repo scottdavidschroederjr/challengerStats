@@ -1,5 +1,6 @@
 //these will be the inputs on the site to pull the info
 var apiKey = ""
+var apiKey = "RGAPI-cf67bb2c-c4e4-4737-b778-b16fc634458c"
 var userName1 = "SaveAsUntitled"
 var userName2 = "plsperish"
 var setCoreName = "TFTSet7_2"
@@ -35,6 +36,10 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
       let requestURL = "https://na1.api.riotgames.com/tft/summoner/v1/summoners/by-name/" + requestInput + "?api_key=" + apiKey;
       let response = await fetch(requestURL)
       let data = await response.json();
+
+      //TODO:LP there should IDEALLY be an instance of the rateLimit function here to check for errors
+      //but if this is throwing an error, the whole service is probably down so low pryo
+
       output[requestInput]["puuid"] = data["puuid"]
       return output[requestInput]["puuid"]
     }
@@ -44,20 +49,21 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
       var sectionOfMatches = 0
 
       //grabs # of matches specified by number in while loop
-      while (sectionOfMatches <= 1000){
+      while (sectionOfMatches <= 20000){
         var matchRequestURL = "https://americas.api.riotgames.com/tft/match/v1/matches/by-puuid/" + requestInput + "/ids?start=" + sectionOfMatches + "&count=100&api_key=" + apiKey;
         var response = await fetch(matchRequestURL)
         var data = await response.json();
 
-        //TODO add protection from failed request function in here
+        //rateLimits requests and gets proper data
+        data = await rateLimitWait(data, matchRequestURL)
 
         output[username]["matches"] = output[username]["matches"].concat(data)
         sectionOfMatches = sectionOfMatches + 100;
+        console.log(output[username]["matches"])
       }
       //once match list is full, save only duo games, third qualifer also stops it from getting into this loop twice for some reason?
       if (Object.keys(output[userName1]["matches"]).length >= 1000 && Object.keys(output[userName2]["matches"]).length >= 1000 && Object.keys(output[userName1]["duoMatches"]).length <= 0) {
         
-        console.log('it my fault')
         const intersection = output[userName1]["matches"].filter(element => output[userName2]["matches"].includes(element));
 
         //trying to fix the double run with this code
@@ -69,6 +75,8 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
             let response = await fetchData(intersection[i], "matchInfo").then(console.log(i))
             
         }
+        console.log(output[userName1]["duoPlacements"])
+        console.log(output[userName2]["duoPlacements"])
       
       //TODO all data from duo matches is saved to output, now lets do some math
 
@@ -83,7 +91,7 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
       var data = await response.json();
 
       //to catch failed requests because of rate limiting
-      //data = await rateLimitWait(data, matchRequestURL)
+      data = await rateLimitWait(data, matchRequestURL)
       
     //TO DO add function that sorts out games from different sets HERE
 
@@ -108,55 +116,63 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
 
 //slow down requests when rate limit is hit
 async function rateLimitWait (dataReturned, URL) {
-
-//checks if proper data was returned by request
+  //checks if proper data was returned by request
   if (dataReturned["metadata"] == undefined) {
-    let failedRequest = dataReturned
+    
+    //short time out of two seconds to wait out (20 requests every 1 second) limit 
+    console.log("start waiting")
 
-//short time out of two seconds to wait out (20 requests every 1 second) limit 
+    await new Promise(resolve => setTimeout(resolve, 5000));
+
+    console.log("done waitin'")
     var response = await fetch(URL)
-    failedRequest = await response.json()
-    console.log(failedRequest)
+    let failedRequest = await response.json()
 
-//check for proper data after short wait
+    //check for proper data after short wait
     if (failedRequest["metadata"] == undefined){
+    console.log("start waiting long")
+    await new Promise(resolve => setTimeout(resolve, 120000));
+    console.log("done waitin'")
 
-//long time out of two and a half minutes to wait out (100 requests every 2 minutes) limit
+      //long time out of two and a half minutes to wait out (100 requests every 2 minutes) limit
       var response = await fetch(URL)
-      failedRequest = response.json()
+      let failedRequest = await response.json()
 
 
-//for complete failure of API to get data
+      //for complete failure of API to get data
       if (failedRequest["metadata"] == undefined){
         console.log("Request error. Try again later.")
+        return failedRequest
       }
-//long wait resolves issue
+
+      //long wait resolves issue
       else{
         console.log("All good here after long wait!")
         return failedRequest
       }
     }
-//short wait resolves issue    
+    //short wait resolves issue    
     else {
       console.log("All good here after short wait!")
       return failedRequest
     }
+  //no issue with request   
 
-//no issue with request   
   }
   else {
-    console.log("All good here!")
     return dataReturned
   }
 }
 
+//sleep function to fight against the evils of rate limiting
 function sleep(ms) {
   new Promise(resolve => setTimeout(resolve, ms));
+  return 
 }
 
 
-
-
+//running the code that starts it all
+//TODO have these work with the HTML input
 
 fetchData(userName1, "puuid").then(
 user1PUUID => fetchData(user1PUUID, "matchList", userName1))
