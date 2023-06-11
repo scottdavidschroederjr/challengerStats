@@ -2,7 +2,7 @@
 var apiKey = ""
 var userName1 = "SaveAsUntitled"
 var userName2 = "plsperish"
-var setCoreName = "TFTSet7_2"
+var setCoreName = "TFTSet8_2" //Options TFTSet7, TFTSet7_2, TFTSet8, TFTSet8_2
 
 var output = {
   [userName1]: {
@@ -75,12 +75,11 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
         console.log(output[userName1]["duoPlacements"])
         console.log(output[userName2]["duoPlacements"])
       
-      //TODO all data from duo matches is saved to output, now lets do some math
+      //now lets do some math
         for (let x = 0; x < Object.keys(output[userName1]["duoPlacements"]).length; x++) {  
 
           if (output[userName1]["duoPlacements"][x] <= 4) {
             output[userName1]["duoWins"] = output[userName1]["duoWins"] + 1
-            console.log(output[userName1]["duoWins"])
           } else {
             output[userName1]["duoLosses"] = output[userName1]["duoLosses"] + 1
           }
@@ -89,13 +88,10 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
         for (let y = 0; y < Object.keys(output[userName2]["duoPlacements"]).length; y++) {
           if (output[userName2]["duoPlacements"][y] <= 4) {
             output[userName2]["duoWins"] = output[userName2]["duoWins"] + 1
-            console.log(output[userName2]["duoWins"])
           } else {
             output[userName2]["duoLosses"] = output[userName2]["duoLosses"] + 1
           }
         }
-        console.log(output[userName1])
-        console.log(output[userName2])
         console.log(userName1 + "'s duo record " + output[userName1]["duoWins"] + "-" + output[userName1]["duoLosses"])
         console.log(userName2 + "'s duo record " + output[userName2]["duoWins"] + "-" + output[userName2]["duoLosses"])
       }
@@ -112,17 +108,20 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
       
       //TO DO add function that sorts out games from different sets HERE
       //proper set, ranked and only normal match check
-      if (data['info']['tft_set_core_name'] != setCoreName || data['info']['queue_id'] != 1100 || data['info']['tft_game_type'] != "standard"){
+      if (data['info']['tft_set_core_name'] == setCoreName && data['info']['queue_id'] == 1100 && data['info']['tft_game_type'] == "standard"){
 
       //gets which index each player is and then puts their placement into the dataset
       const puuid1 = output[userName1]["puuid"]
       const puuid2 = output[userName2]["puuid"]
 
       let playerArray = []
+      let indexPlayer1 = 9
+      let indexPlayer2 = 9
+
       playerArray = playerArray.concat(data["metadata"]["participants"])
 
-      let indexPlayer1 = playerArray.indexOf(puuid1)
-      let indexPlayer2 = playerArray.indexOf(puuid2)
+      indexPlayer1  = playerArray.indexOf(puuid1)
+      indexPlayer2  = playerArray.indexOf(puuid2)
 
       //adds both player's placements to the output object
       output[userName1]["duoPlacements"] = output[userName1]["duoPlacements"].concat(data["info"]["participants"][indexPlayer1]['placement'])
@@ -188,9 +187,10 @@ function sleep(ms) {
 
 fetchData(userName1, "puuid").then(
 user1PUUID => fetchData(user1PUUID, "matchList", userName1))
-
 fetchData(userName2, "puuid").then(
 user2PUUID => fetchData(user2PUUID, "matchList", userName2))
+
+
 
 
 
