@@ -1,31 +1,53 @@
-//these will be the inputs on the site to pull the info
-var apiKey = ""
-var userName1 = "SaveAsUntitled"
-var userName2 = "plsperish"
-var setCoreName = "TFTSet8_2" //Options TFTSet7, TFTSet7_2, TFTSet8, TFTSet8_2
+//variables that need to be seen everywhere
+//this can be cleaned up to mainly reference output object
+var userName1 = ""
+var userName2 = ""
+const apiKey = ""
+var setNumber = ""
+var puuid1 = ""
+var puuid2 = ""
+var output = {}
 
-var output = {
-  [userName1]: {
-    "username": userName1,
-    "puuid" : "",
-    "matches": [],
-    "duoMatches": [],
-    "duoPlacements": [],
-    "duoWins": 0,
-    "duoLosses": 0,
-    "duoLPChange": 0,
-  },
-  [userName2]: {
-    "username": userName2,
-    "puuid" : "",
-    "matches": [],
-    "duoMatches": [],
-    "duoPlacements": [],
-    "duoWins": 0,
-    "duoLosses": 0,
-    "duoLPChange": 0,
+
+//click button on site to call this function
+function websiteRun(firstUserName, secondUserName, TFTset) {
+  console.log("we made it")
+
+  
+  setNumber = TFTset.toString()
+  userName1 = firstUserName.toString()
+  userName2 = secondUserName.toString()
+
+  output = {
+    [userName1]: {
+      "username":  [userName1],
+      "puuid" : "",
+      "matches": [],
+      "duoMatches": [],
+      "duoPlacements": [],
+      "duoWins": 0,
+      "duoLosses": 0,
+      "duoLPChange": 0,
+    },
+    [userName2]: {
+      "username": [userName2],
+      "puuid" : "",
+      "matches": [],
+      "duoMatches": [],
+      "duoPlacements": [],
+      "duoWins": 0,
+      "duoLosses": 0,
+      "duoLPChange": 0,
+    }
   }
+
+  fetchData(userName1, "puuid", userName1).then(
+  user1PUUID => fetchData(user1PUUID, "matchList", userName1))
+  fetchData(userName2, "puuid", userName2).then(
+  user2PUUID => fetchData(user2PUUID, "matchList", userName2))
+
 }
+
 
 async function fetchData(requestInput, typeOfRequest = false, username) {
 
@@ -40,6 +62,15 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
       //but if this is throwing an error, the whole service is probably down so low pryo
 
       output[requestInput]["puuid"] = data["puuid"]
+
+      //ugly fix but updates the global puuid values
+      if (requestInput == userName1) {
+        puuid1 = data["puuid"]
+      }
+      else {
+        puuid2 = data["puuid"]
+      }
+
       return output[requestInput]["puuid"]
     }
 
@@ -108,11 +139,11 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
       
       //TO DO add function that sorts out games from different sets HERE
       //proper set, ranked and only normal match check
-      if (data['info']['tft_set_core_name'] == setCoreName && data['info']['queue_id'] == 1100 && data['info']['tft_game_type'] == "standard"){
+      if (data['info']['tft_set_core_name'] == setNumber && data['info']['queue_id'] == 1100 && data['info']['tft_game_type'] == "standard"){
 
       //gets which index each player is and then puts their placement into the dataset
-      const puuid1 = output[userName1]["puuid"]
-      const puuid2 = output[userName2]["puuid"]
+      //const puuid1 = output[userName1]["puuid"]
+      //const puuid2 = output[userName2]["puuid"]
 
       let playerArray = []
       let indexPlayer1 = 9
@@ -185,13 +216,13 @@ function sleep(ms) {
 //running the code that starts it all
 //TODO have these work with the HTML input
 
-fetchData(userName1, "puuid").then(
-user1PUUID => fetchData(user1PUUID, "matchList", userName1))
-fetchData(userName2, "puuid").then(
-user2PUUID => fetchData(user2PUUID, "matchList", userName2))
+//fetchData(userName1, "puuid").then(
+//user1PUUID => fetchData(user1PUUID, "matchList", userName1))
+//fetchData(userName2, "puuid").then(
+//user2PUUID => fetchData(user2PUUID, "matchList", userName2))
 
 
-
+//websiteRun("SaveAsUntitled", "plsperish", "TFTSet8_2")
 
 
 

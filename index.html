@@ -6,6 +6,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+
+        <script src="script.js" async></script>
     </head>
 
 
@@ -21,27 +23,27 @@
             <br>
 
             <select class="input" name="htmlSet" id="htmlSet" required>
-                <option value="">All Sets Included</option>
-                <option value="" disabled>Set 1: TFT Beta Set</option>
-                <option value="">Set 2: Rise of the Elements</option>
-                <option value="">Set 3: Galaxies</option>
-                <option value="">Set 3.5: Return to the Stars</option>
-                <option value="">Set 4: Fates</option>
-                <option value="">Set 4.5: Festival of Beasts</option>
-                <option value="">Set 5: Reckoning</option>
-                <option value="">Set 5.5: Dawn of Heroes</option>
-                <option value="">Set 6: Gizmos & Gadgets</option>
-                <option value="">Set 6.5: Neon Nights</option>
-                <option value="">Set 7: Dragonlands</option>
-                <option value="">Set 7.5: Uncharted Realms</option>
-                <option value="">Set 8: Monsters Attack</option>
-                <option value="">Set 8.5: Glitched Out</option>
-                <option value="" disabled>Set 9: Runeterra Reforged</option>
+                <option value=""disabled>All Sets Included</option>
+                <option value=""disabled>Set 1: TFT Beta Set</option>
+                <option value=""disabled>Set 2: Rise of the Elements</option>
+                <option value=""disabled>Set 3: Galaxies</option>
+                <option value=""disabled>Set 3.5: Return to the Stars</option>
+                <option value=""disabled>Set 4: Fates</option>
+                <option value=""disabled>Set 4.5: Festival of Beasts</option>
+                <option value=""disabled>Set 5: Reckoning</option>
+                <option value=""disabled>Set 5.5: Dawn of Heroes</option>
+                <option value=""disabled>Set 6: Gizmos & Gadgets</option>
+                <option value=""disabled>Set 6.5: Neon Nights</option>
+                <option value="TFTSet7">Set 7: Dragonlands</option>
+                <option value="TFTSet7_2">Set 7.5: Uncharted Realms</option>
+                <option value="TFTSet8">Set 8: Monsters Attack</option>
+                <option value="TFTSet8_2">Set 8.5: Glitched Out</option>
+                <option value="TFTSet9" disabled>Set 9: Runeterra Reforged</option>
             <br>
             </select>
         </form>
 
-        <button id="duoRun" oneclick=duoInfoFunction(htmlSet.value,user1.value,user2.value)>Get duo stats</button>
+        <button id="duoRun" onclick="websiteRun(htmlSet.value,user1.value,user2.value)">Get duo stats</button>
         </div>
         </div>
     </body>
