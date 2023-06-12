@@ -4,19 +4,17 @@
         <link rel="icon" href="./images/siteIcon.png">
         <title>TFT Duo Stats</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-
         <script src="script.js" async></script>
     </head>
 
 
-    <body class="is-preload">
-        <div>
-        <h1>TFT Duo Stats</h1>
-        <p>Use this tool to see how you perform when duoing with a friend in ranked TFT.</p>
-
+    <body> 
+    <div class="box">
+        <div id="header">TFT Duo Stats</div>
+        <div class="explainerText"><p>Use this tool to see how you perform when duoing with a friend in ranked TFT.</p></div>
         <div id="inputSection">
+            
         <form>
             <input type="text" class="input" name="user1" id="user1" placeholder="Username #1">
             <input type="text" class="input" name="user2" id="user2" placeholder="Username #2">
@@ -37,14 +35,19 @@
                 <option value="TFTSet7">Set 7: Dragonlands</option>
                 <option value="TFTSet7_2">Set 7.5: Uncharted Realms</option>
                 <option value="TFTSet8">Set 8: Monsters Attack</option>
-                <option value="TFTSet8_2">Set 8.5: Glitched Out</option>
+                <option value="TFTSet8_2" >Set 8.5: Glitched Out</option>
                 <option value="TFTSet9" disabled>Set 9: Runeterra Reforged</option>
-            <br>
             </select>
         </form>
 
-        <button id="duoRun" onclick="websiteRun(htmlSet.value,user1.value,user2.value)">Get duo stats</button>
+        <button id="duoRun" class="btn btn-submit" onclick="websiteRun(htmlSet.value,user1.value,user2.value)">Get duo stats</button>
         </div>
-        </div>
+    </div>
+    <br><br>
+    <div class="box">
+        <div class="explainerText">Here's where we'd output the results of the function being run.</div>
+    </div>
+
+
     </body>
 </html>

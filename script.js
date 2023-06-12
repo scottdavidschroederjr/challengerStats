@@ -7,12 +7,10 @@ var setNumber = ""
 var puuid1 = ""
 var puuid2 = ""
 var output = {}
-
+const lpChange = {1: 40, 2: 30, 3: 20, 4: 10, 5: -10, 6: -20, 7: -30, 8: -40}
 
 //click button on site to call this function
 function websiteRun(firstUserName, secondUserName, TFTset) {
-  console.log("we made it")
-
   
   setNumber = TFTset.toString()
   userName1 = firstUserName.toString()
@@ -106,8 +104,11 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
         console.log(output[userName1]["duoPlacements"])
         console.log(output[userName2]["duoPlacements"])
       
-      //now lets do some math
-        for (let x = 0; x < Object.keys(output[userName1]["duoPlacements"]).length; x++) {  
+      //adds up wins and losses for each player
+      //TODO make this function also update DUO LP change
+        for (let x = 0; x < Object.keys(output[userName1]["duoPlacements"]).length; x++) {
+
+          output[userName1]["duoLPChange"] = output[userName1]["duoLPChange"] + lpChange[output[userName1]["duoPlacements"][x]]
 
           if (output[userName1]["duoPlacements"][x] <= 4) {
             output[userName1]["duoWins"] = output[userName1]["duoWins"] + 1
@@ -117,14 +118,16 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
         }
 
         for (let y = 0; y < Object.keys(output[userName2]["duoPlacements"]).length; y++) {
+          output[userName2]["duoLPChange"] = output[userName2]["duoLPChange"] + lpChange[output[userName2]["duoPlacements"][y]]
+
           if (output[userName2]["duoPlacements"][y] <= 4) {
             output[userName2]["duoWins"] = output[userName2]["duoWins"] + 1
           } else {
             output[userName2]["duoLosses"] = output[userName2]["duoLosses"] + 1
           }
         }
-        console.log(userName1 + "'s duo record " + output[userName1]["duoWins"] + "-" + output[userName1]["duoLosses"])
-        console.log(userName2 + "'s duo record " + output[userName2]["duoWins"] + "-" + output[userName2]["duoLosses"])
+        console.log(userName1 + "'s duo record " + output[userName1]["duoWins"] + "-" + output[userName1]["duoLosses"] + " with a estimated LP change of: " + output[userName1]["duoLPChange"])
+        console.log(userName2 + "'s duo record " + output[userName2]["duoWins"] + "-" + output[userName2]["duoLosses"] + " with a estimated LP change of: " + output[userName2]["duoLPChange"])
       }
     }
   
@@ -137,13 +140,9 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
       //to catch failed requests because of rate limiting
       data = await rateLimitWait(data, matchRequestURL)
       
-      //TO DO add function that sorts out games from different sets HERE
       //proper set, ranked and only normal match check
       if (data['info']['tft_set_core_name'] == setNumber && data['info']['queue_id'] == 1100 && data['info']['tft_game_type'] == "standard"){
 
-      //gets which index each player is and then puts their placement into the dataset
-      //const puuid1 = output[userName1]["puuid"]
-      //const puuid2 = output[userName2]["puuid"]
 
       let playerArray = []
       let indexPlayer1 = 9
@@ -167,6 +166,7 @@ async function rateLimitWait (dataReturned, URL) {
 
   //checks if proper data was returned by request, first perm is for matchData second is for matchList
   if (dataReturned["metadata"] == undefined) {
+
     //short time out of two seconds to wait out (20 requests every 1 second) limit 
     await new Promise(resolve => setTimeout(resolve, 5000));
     var response = await fetch(URL)
@@ -189,17 +189,13 @@ async function rateLimitWait (dataReturned, URL) {
         return failedRequest
       }
 
-      //long wait resolves issue
       else{
         return failedRequest
       }
     }
-    //short wait resolves issue    
     else {
       return failedRequest
-    }
-  //no issue with request   
-
+    } 
   }
   else {
     return dataReturned
@@ -212,17 +208,13 @@ function sleep(ms) {
   return 
 }
 
-
-//running the code that starts it all
-//TODO have these work with the HTML input
-
 //fetchData(userName1, "puuid").then(
 //user1PUUID => fetchData(user1PUUID, "matchList", userName1))
 //fetchData(userName2, "puuid").then(
 //user2PUUID => fetchData(user2PUUID, "matchList", userName2))
 
 
-//websiteRun("SaveAsUntitled", "plsperish", "TFTSet8_2")
+websiteRun("SaveAsUntitled", "plsperish", "TFTSet7_2")
 
 
 
