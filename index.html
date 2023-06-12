@@ -4,50 +4,51 @@
         <link rel="icon" href="./images/siteIcon.png">
         <title>TFT Duo Stats</title>
 		<meta charset="utf-8" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="main.css" />
+        <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
         <script src="script.js" async></script>
     </head>
-
-
     <body> 
-    <div class="box">
-        <div id="header">TFT Duo Stats</div>
-        <div class="explainerText"><p>Use this tool to see how you perform when duoing with a friend in ranked TFT.</p></div>
-        <div id="inputSection">
+            <div class="box">
+            <div id="header">TFT Duo Stats</div>
+            <div class="explainerText"><p>Use this tool to see how you perform when duoing with a friend in ranked TFT.</p></div>
+            <div id="inputSection">
+              
+            <form>
+              <input type="text" class="input" name="user1" id="user1" placeholder="Username #1"/>
+              <input type="text" class="input" name="user2" id="user2" placeholder="Username #2"/>
+              <br>
+          
+              <select class="input" name="htmlSet" id="htmlSet" required>
+                  <option value=""disabled>All Sets Included</option>
+                  <option value=""disabled>Set 1: TFT Beta Set</option>
+                  <option value=""disabled>Set 2: Rise of the Elements</option>
+                  <option value=""disabled>Set 3: Galaxies</option>
+                  <option value=""disabled>Set 3.5: Return to the Stars</option>
+                  <option value=""disabled>Set 4: Fates</option>
+                  <option value=""disabled>Set 4.5: Festival of Beasts</option>
+                  <option value=""disabled>Set 5: Reckoning</option>
+                  <option value=""disabled>Set 5.5: Dawn of Heroes</option>
+                  <option value=""disabled>Set 6: Gizmos & Gadgets</option>
+                  <option value=""disabled>Set 6.5: Neon Nights</option>
+                  <option value="TFTSet7">Set 7: Dragonlands</option>
+                  <option value="TFTSet7_2">Set 7.5: Uncharted Realms</option>
+                  <option value="TFTSet8">Set 8: Monsters Attack</option>
+                  <option value="TFTSet8_2" >Set 8.5: Glitched Out</option>
+                  <option value="TFTSet9" disabled>Set 9: Runeterra Reforged</option>
+              </select>
+            </form>
+          
+              <button id="duoRun" onclick="websiteRun(htmlSet.value,user1.value,user2.value)">Get duo stats</button>
+            </div>
+            </div>
             
-        <form>
-            <input type="text" class="input" name="user1" id="user1" placeholder="Username #1">
-            <input type="text" class="input" name="user2" id="user2" placeholder="Username #2">
             <br>
 
-            <select class="input" name="htmlSet" id="htmlSet" required>
-                <option value=""disabled>All Sets Included</option>
-                <option value=""disabled>Set 1: TFT Beta Set</option>
-                <option value=""disabled>Set 2: Rise of the Elements</option>
-                <option value=""disabled>Set 3: Galaxies</option>
-                <option value=""disabled>Set 3.5: Return to the Stars</option>
-                <option value=""disabled>Set 4: Fates</option>
-                <option value=""disabled>Set 4.5: Festival of Beasts</option>
-                <option value=""disabled>Set 5: Reckoning</option>
-                <option value=""disabled>Set 5.5: Dawn of Heroes</option>
-                <option value=""disabled>Set 6: Gizmos & Gadgets</option>
-                <option value=""disabled>Set 6.5: Neon Nights</option>
-                <option value="TFTSet7">Set 7: Dragonlands</option>
-                <option value="TFTSet7_2">Set 7.5: Uncharted Realms</option>
-                <option value="TFTSet8">Set 8: Monsters Attack</option>
-                <option value="TFTSet8_2" >Set 8.5: Glitched Out</option>
-                <option value="TFTSet9" disabled>Set 9: Runeterra Reforged</option>
-            </select>
-        </form>
-
-        <button id="duoRun" class="btn btn-submit" onclick="websiteRun(htmlSet.value,user1.value,user2.value)">Get duo stats</button>
-        </div>
-    </div>
-    <br><br>
-    <div class="box">
-        <div class="explainerText">Here's where we'd output the results of the function being run.</div>
-    </div>
-
-
+            <div class="box">
+              <div class="explainerText"/>Here's where we'd output the results of the function being run.<div/>
+            </div>
     </body>
 </html>

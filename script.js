@@ -1,4 +1,7 @@
 //variables that need to be seen everywhere
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
 //this can be cleaned up to mainly reference output object
 var userName1 = ""
 var userName2 = ""
@@ -212,11 +215,74 @@ function sleep(ms) {
 //user1PUUID => fetchData(user1PUUID, "matchList", userName1))
 //fetchData(userName2, "puuid").then(
 //user2PUUID => fetchData(user2PUUID, "matchList", userName2))
-
-
-websiteRun("SaveAsUntitled", "plsperish", "TFTSet7_2")
-
+//websiteRun("SaveAsUntitled", "plsperish", "TFTSet7_2")
 
 
 
 
+
+
+
+
+
+
+//React to load page will go below here
+function mainPage ()
+{
+  return (
+    <div> 
+    <div className="box">
+    <div id="header">TFT Duo Stats</div>
+    <div className="explainerText"><p>Use this tool to see how you perform when duoing with a friend in ranked TFT.</p></div>
+    <div id="inputSection">
+      
+    <form>
+      <input type="text" className="input" name="user1" id="user1" placeholder="Username #1"/>
+      <input type="text" className="input" name="user2" id="user2" placeholder="Username #2"/>
+      <br/><br/>
+  
+      <select className="input" name="htmlSet" id="htmlSet" required>
+          <option value=""disabled>All Sets Included</option>
+          <option value=""disabled>Set 1: TFT Beta Set</option>
+          <option value=""disabled>Set 2: Rise of the Elements</option>
+          <option value=""disabled>Set 3: Galaxies</option>
+          <option value=""disabled>Set 3.5: Return to the Stars</option>
+          <option value=""disabled>Set 4: Fates</option>
+          <option value=""disabled>Set 4.5: Festival of Beasts</option>
+          <option value=""disabled>Set 5: Reckoning</option>
+          <option value=""disabled>Set 5.5: Dawn of Heroes</option>
+          <option value=""disabled>Set 6: Gizmos & Gadgets</option>
+          <option value=""disabled>Set 6.5: Neon Nights</option>
+          <option value="TFTSet7">Set 7: Dragonlands</option>
+          <option value="TFTSet7_2">Set 7.5: Uncharted Realms</option>
+          <option value="TFTSet8">Set 8: Monsters Attack</option>
+          <option value="TFTSet8_2" >Set 8.5: Glitched Out</option>
+          <option value="TFTSet9" disabled>Set 9: Runeterra Reforged</option>
+      </select>
+    </form>
+  
+      <button id="duoRun" className="btn btn-submit" onclick="websiteRun(htmlSet.value,user1.value,user2.value)">Get duo stats</button>
+    </div>
+    </div>
+      <br /><br />
+    <div className="box">
+      <div className="explainerText"/>Here's where we'd output the results of the function being run.<div/>
+    </div>
+    </div>
+  )
+}
+
+ReactDOM.render(
+  <div>
+    <mainPage />
+  </div>
+, 
+  document.getElementById("root")
+)
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
