@@ -1,7 +1,4 @@
 //variables that need to be seen everywhere
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-
 //this can be cleaned up to mainly reference output object
 var userName1 = ""
 var userName2 = ""
@@ -217,17 +214,8 @@ function sleep(ms) {
 //user2PUUID => fetchData(user2PUUID, "matchList", userName2))
 //websiteRun("SaveAsUntitled", "plsperish", "TFTSet7_2")
 
-
-
-
-
-
-
-
-
-
 //React to load page will go below here
-function mainPage ()
+/*function mainPage ()
 {
   return (
     <div> 
@@ -269,20 +257,5 @@ function mainPage ()
       <div className="explainerText"/>Here's where we'd output the results of the function being run.<div/>
     </div>
     </div>
-  )
-}
-
-ReactDOM.render(
-  <div>
-    <mainPage />
-  </div>
-, 
-  document.getElementById("root")
-)
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+  )}
+*/
