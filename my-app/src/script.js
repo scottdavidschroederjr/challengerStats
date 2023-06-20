@@ -88,7 +88,7 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
         sectionOfMatches = sectionOfMatches + 100;
       }
       //once match list is full, save only duo games, third qualifer also stops it from getting into this loop twice for some reason?
-      if (Object.keys(output[userName1]["matches"]).length >= 1000 && Object.keys(output[userName2]["matches"]).length >= 1000 && Object.keys(output[userName1]["duoMatches"]).length <= 0) {
+      if (Object.keys(output[userName1]["matches"]).length >= 100 && Object.keys(output[userName2]["matches"]).length >= 100 && Object.keys(output[userName1]["duoMatches"]).length <= 0) {
         
         const intersection = output[userName1]["matches"].filter(element => output[userName2]["matches"].includes(element));
 
@@ -105,7 +105,6 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
         console.log(output[userName2]["duoPlacements"])
       
       //adds up wins and losses for each player
-      //TODO make this function also update DUO LP change
         for (let x = 0; x < Object.keys(output[userName1]["duoPlacements"]).length; x++) {
 
           output[userName1]["duoLPChange"] = output[userName1]["duoLPChange"] + lpChange[output[userName1]["duoPlacements"][x]]
@@ -212,7 +211,8 @@ function sleep(ms) {
 //user1PUUID => fetchData(user1PUUID, "matchList", userName1))
 //fetchData(userName2, "puuid").then(
 //user2PUUID => fetchData(user2PUUID, "matchList", userName2))
-//websiteRun("SaveAsUntitled", "plsperish", "TFTSet7_2")
+
+//websiteRun("SaveAsUntitled", "EzWonTon", "TFTSet9")
 
 //React to load page will go below here
 /*function mainPage ()
