@@ -62,7 +62,7 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
       output[requestInput]["puuid"] = data["puuid"]
 
       //ugly fix but updates the global puuid values
-      if (requestInput == userName1) {
+      if (requestInput === userName1) {
         puuid1 = data["puuid"]
       }
       else {
@@ -133,14 +133,16 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
   //gets match data
     else if (typeOfRequest === "matchInfo") {
       let matchRequestURL = "https://americas.api.riotgames.com/tft/match/v1/matches/"+ requestInput + "?api_key=" + apiKey
+      // eslint-disable-next-line no-redeclare
       var response = await fetch(matchRequestURL)
+      // eslint-disable-next-line no-redeclare
       var data = await response.json();
 
       //to catch failed requests because of rate limiting
       data = await rateLimitWait(data, matchRequestURL)
       
       //proper set, ranked and only normal match check
-      if (data['info']['tft_set_core_name'] == setNumber && data['info']['queue_id'] == 1100 && data['info']['tft_game_type'] == "standard"){
+      if (data['info']['tft_set_core_name'] === setNumber && data['info']['queue_id'] === 1100 && data['info']['tft_game_type'] === "standard"){
 
 
       let playerArray = []
@@ -164,7 +166,7 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
 async function rateLimitWait (dataReturned, URL) {
 
   //checks if proper data was returned by request, first perm is for matchData second is for matchList
-  if (dataReturned["metadata"] == undefined) {
+  if (dataReturned["metadata"] === undefined) {
 
     //short time out of two seconds to wait out (20 requests every 1 second) limit 
     await new Promise(resolve => setTimeout(resolve, 5000));
@@ -172,18 +174,19 @@ async function rateLimitWait (dataReturned, URL) {
     let failedRequest = await response.json()
 
     //check for proper data after short wait
-    if (failedRequest["metadata"] == undefined){
+    if (failedRequest["metadata"] === undefined){
     console.log("Rate limit reached. Please wait one moment.")
     await new Promise(resolve => setTimeout(resolve, 120000));
     console.log("Thank you for waiting.")
 
       //long time out of two and a half minutes to wait out (100 requests every 2 minutes) limit
+      // eslint-disable-next-line no-redeclare
       var response = await fetch(URL)
       let failedRequest = await response.json()
 
 
       //for complete failure of API to get data
-      if (failedRequest["metadata"] == undefined){
+      if (failedRequest["metadata"] === undefined){
         console.log("Request error. Try again later.")
         return failedRequest
       }
@@ -212,7 +215,9 @@ function sleep(ms) {
 //fetchData(userName2, "puuid").then(
 //user2PUUID => fetchData(user2PUUID, "matchList", userName2))
 
-//websiteRun("SaveAsUntitled", "EzWonTon", "TFTSet9")
+websiteRun("SaveAsUntitled", "EzWonTon", "TFTSet9")
+
+
 
 //React to load page will go below here
 /*function mainPage ()

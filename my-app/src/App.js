@@ -1,4 +1,13 @@
 import './App.css';
+import React, { useState } from 'react';
+import axios from 'axios';
+
+//for handing data
+const config = {
+  headers: {
+    'Content-Type': 'application/json'
+  }
+};
 
 export function App() {
   return (
@@ -22,15 +31,39 @@ export function App() {
 }
 
 function InputBlock() {
+  const handleSubmit = async (set, firstUser, secondUser) => {
+    try {
+      console.log("got here")
+      const response = await axios.post('http://localhost:3001/api/data', { set, firstUser, secondUser }, config);
+      console.log(response.data)
+      return null
+
+    } catch (error) {
+      //TODO make more visual error
+      console.log("error")
+    }
+  };
+
+  const handleButtonClick = () => {
+    const user1Input = document.getElementById('user1');
+    const user2Input = document.getElementById('user2');
+    const htmlSetInput = document.getElementById('htmlSet');
+
+    const user1 = user1Input.value;
+    const user2 = user2Input.value;
+    const htmlSet = htmlSetInput.value;
+
+    handleSubmit(user1, user2, htmlSet)
+  };
+
   return (
     <div id="inputSection">
-              
-    <form>
-      <input type="text" className="input" name="user1" id="user1" placeholder="Username #1"/>
-      <input type="text" className="input" name="user2" id="user2" placeholder="Username #2"/>
-      <br/>
-  
-      <select className="input" name="htmlSet" id="htmlSet" required>
+      <form>
+        <input type="text" className="input" name="user1" id="user1" placeholder="Username #1" />
+        <input type="text" className="input" name="user2" id="user2" placeholder="Username #2" />
+        <br />
+
+        <select className="input" name="htmlSet" id="htmlSet" required>
           <option value=""disabled>All Sets Included</option>
           <option value=""disabled>Set 1: TFT Beta Set</option>
           <option value=""disabled>Set 2: Rise of the Elements</option>
@@ -46,14 +79,12 @@ function InputBlock() {
           <option value="TFTSet7_2">Set 7.5: Uncharted Realms</option>
           <option value="TFTSet8">Set 8: Monsters Attack</option>
           <option value="TFTSet8_2" >Set 8.5: Glitched Out</option>
-          <option value="TFTSet9" disabled>Set 9: Runeterra Reforged</option>
-      </select>
-    </form>
-  
-      <button id="duoRun" onclick="websiteRun(htmlSet.value,user1.value,user2.value)">Get duo stats</button>
+          <option value="TFTSet9">Set 9: Runeterra Reforged</option>
+        </select>
+      </form>
+      <button onClick={handleButtonClick}>Get duo stats</button>
     </div>
-  )
-
+  );
 }
 
 function Header() {
@@ -73,5 +104,8 @@ function OutputBox(){
     <div className="explainerText">Here's where we'd output the results of the function being run.</div>
   )
 }
+
+  //requests the data using puppet
+
 
 export default App()
