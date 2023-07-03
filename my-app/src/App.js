@@ -31,10 +31,13 @@ export function App() {
 }
 
 function InputBlock() {
-  const handleSubmit = async (set, firstUser, secondUser) => {
+  const handleSubmit = async (firstUser, secondUser, set) => {
     try {
       console.log("got here")
-      const response = await axios.post('http://localhost:3001/api/data', { set, firstUser, secondUser }, config);
+      console.log(set)
+      console.log(firstUser)
+      console.log(secondUser)
+      const response = await axios.post('http://localhost:3001/api/data', { firstUser, secondUser, set}, config);
       console.log(response.data)
       return null
 

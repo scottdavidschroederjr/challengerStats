@@ -2,7 +2,7 @@
 //this can be cleaned up to mainly reference output object
 var userName1 = ""
 var userName2 = ""
-const apiKey = ""
+const apiKey = "RGAPI-e1312170-0301-4883-90cd-51bc8d31a456"
 var setNumber = ""
 var puuid1 = ""
 var puuid2 = ""
@@ -50,7 +50,11 @@ function websiteRun(firstUserName, secondUserName, TFTset) {
 async function fetchData(requestInput, typeOfRequest = false, username) {
 
   //converts username to PUUID
+  //TODO add check of database to see if we've already got PUUID
     if (typeOfRequest === "puuid") {
+      console.log(requestInput)
+
+      try {
       
       let requestURL = "https://na1.api.riotgames.com/tft/summoner/v1/summoners/by-name/" + requestInput + "?api_key=" + apiKey;
       let response = await fetch(requestURL)
@@ -61,6 +65,8 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
 
       output[requestInput]["puuid"] = data["puuid"]
 
+      //TODO add PUUID to database
+
       //ugly fix but updates the global puuid values
       if (requestInput === userName1) {
         puuid1 = data["puuid"]
@@ -70,10 +76,15 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
       }
 
       return output[requestInput]["puuid"]
+    } catch (error) {
+      console.log("i am error")
+      return
+    }
     }
 
   //getting match list
     else if (typeOfRequest === "matchList"){
+      console.log(requestInput)
       var sectionOfMatches = 0
 
       //grabs # of matches specified by number in while loop
@@ -98,7 +109,12 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
       
       //then start requesting data for duo games
         for (let i = 0; i < Object.keys(intersection).length; i++) {
+
+            //TODO check if we've already got matchData in database
+
             let response = await fetchData(intersection[i], "matchInfo").then()
+            
+            //TODO add match data to database
             
         }
         console.log(output[userName1]["duoPlacements"])
@@ -132,6 +148,7 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
   
   //gets match data
     else if (typeOfRequest === "matchInfo") {
+      console.log(requestInput)
       let matchRequestURL = "https://americas.api.riotgames.com/tft/match/v1/matches/"+ requestInput + "?api_key=" + apiKey
       // eslint-disable-next-line no-redeclare
       var response = await fetch(matchRequestURL)
@@ -167,6 +184,7 @@ async function rateLimitWait (dataReturned, URL) {
 
   //checks if proper data was returned by request, first perm is for matchData second is for matchList
   if (dataReturned["metadata"] === undefined) {
+    console.log(URL)
 
     //short time out of two seconds to wait out (20 requests every 1 second) limit 
     await new Promise(resolve => setTimeout(resolve, 5000));
@@ -204,63 +222,4 @@ async function rateLimitWait (dataReturned, URL) {
   }
 }
 
-//sleep function to fight against the evils of rate limiting
-function sleep(ms) {
-  new Promise(resolve => setTimeout(resolve, ms));
-  return 
-}
-
-//fetchData(userName1, "puuid").then(
-//user1PUUID => fetchData(user1PUUID, "matchList", userName1))
-//fetchData(userName2, "puuid").then(
-//user2PUUID => fetchData(user2PUUID, "matchList", userName2))
-
-websiteRun("SaveAsUntitled", "EzWonTon", "TFTSet9")
-
-
-
-//React to load page will go below here
-/*function mainPage ()
-{
-  return (
-    <div> 
-    <div className="box">
-    <div id="header">TFT Duo Stats</div>
-    <div className="explainerText"><p>Use this tool to see how you perform when duoing with a friend in ranked TFT.</p></div>
-    <div id="inputSection">
-      
-    <form>
-      <input type="text" className="input" name="user1" id="user1" placeholder="Username #1"/>
-      <input type="text" className="input" name="user2" id="user2" placeholder="Username #2"/>
-      <br/><br/>
-  
-      <select className="input" name="htmlSet" id="htmlSet" required>
-          <option value=""disabled>All Sets Included</option>
-          <option value=""disabled>Set 1: TFT Beta Set</option>
-          <option value=""disabled>Set 2: Rise of the Elements</option>
-          <option value=""disabled>Set 3: Galaxies</option>
-          <option value=""disabled>Set 3.5: Return to the Stars</option>
-          <option value=""disabled>Set 4: Fates</option>
-          <option value=""disabled>Set 4.5: Festival of Beasts</option>
-          <option value=""disabled>Set 5: Reckoning</option>
-          <option value=""disabled>Set 5.5: Dawn of Heroes</option>
-          <option value=""disabled>Set 6: Gizmos & Gadgets</option>
-          <option value=""disabled>Set 6.5: Neon Nights</option>
-          <option value="TFTSet7">Set 7: Dragonlands</option>
-          <option value="TFTSet7_2">Set 7.5: Uncharted Realms</option>
-          <option value="TFTSet8">Set 8: Monsters Attack</option>
-          <option value="TFTSet8_2" >Set 8.5: Glitched Out</option>
-          <option value="TFTSet9" disabled>Set 9: Runeterra Reforged</option>
-      </select>
-    </form>
-  
-      <button id="duoRun" className="btn btn-submit" onclick="websiteRun(htmlSet.value,user1.value,user2.value)">Get duo stats</button>
-    </div>
-    </div>
-      <br /><br />
-    <div className="box">
-      <div className="explainerText"/>Here's where we'd output the results of the function being run.<div/>
-    </div>
-    </div>
-  )}
-*/
+module.exports =  websiteRun 

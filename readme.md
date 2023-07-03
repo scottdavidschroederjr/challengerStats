@@ -15,3 +15,6 @@ The TODOs for this project are as such:
 
 7. Make the final tweaks to the site and make sure everything runs.
 8. Clean up the project page and add the project to my resume.
+
+
+//guide used for SQL setup (https://www.makeuseof.com/use-postgresql-with-sequelize-in-nodejs/)
