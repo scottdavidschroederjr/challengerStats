@@ -4,7 +4,8 @@ const { Sequelize } = require("sequelize");
 //PUT PASSWORD BACK IN HERE WHEN YOU START WORKING AGAIN
 const sequelize = new Sequelize('postgres', 'postgres', '', {
   host: 'localhost',
-  dialect: 'postgres'
+  dialect: 'postgres',
+  logging: false
 });
 
 const testDbConnection = async () => {

@@ -364,4 +364,4 @@ const matchData = sq.define("matchData", {
 
 
 
-module.exports = {User}
+module.exports = {User, matchUsers, matchData}
