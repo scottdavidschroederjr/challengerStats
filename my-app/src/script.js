@@ -2,6 +2,9 @@
 const { sq } = require("./database/db.js")
 const { DataTypes } = require("sequelize");
 const { User } = require("./database/modules/createTables.js")
+const { matchUsers } = require("./database/modules/createTables.js")
+const { matchData } = require("./database/modules/createTables.js")
+
 
 //variables that need to be seen everywhere
 //this can be cleaned up to mainly reference output object
@@ -64,7 +67,6 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
   console.log(requestInput)
 
   //converts username to PUUID
-  //need to change 
   if (typeOfRequest === "puuid") {
     async function checkUsers(inputUser) {
       var lowerUser = inputUser.toLowerCase()
@@ -88,7 +90,6 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
 
     //checks database for PUUID info
     if (sqlPUUID !== undefined) {
-      console.log(sqlPUUID + "it is in the database")
 
       output[requestInput]["puuid"] = sqlPUUID
 
@@ -143,7 +144,6 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
       //grabs # of matches specified by number in while loop
       while (sectionOfMatches <= 1000){
         var matchRequestURL = "https://americas.api.riotgames.com/tft/match/v1/matches/by-puuid/" + requestInput + "/ids?start=" + sectionOfMatches + "&count=100&api_key=" + apiKey;
-        console.log(matchRequestURL)
         var response = await fetch(matchRequestURL)
         var data = await response.json();
 
@@ -200,6 +200,7 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
 
     //checks database
       async function checkMatch(inputMatch) {
+        try {
         const matchesDB = await matchUsers.findAll({
           where: {
             matchID: inputMatch
@@ -212,6 +213,9 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
         } catch {
           return undefined
         }
+       } catch {
+        return undefined
+       }
       }
       var sqlMatch = await checkMatch(requestInput)
       
@@ -235,8 +239,49 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
   
         //to catch failed requests because of rate limiting
         data = await rateLimitWait(data, matchRequestURL)
+
+        //adds data to matchUsers database
+        try {
+          matchUsers.findOrCreate({
+            where: {matchID: requestInput},
+
+            defaults: {
+
+            matchID: data["metadata"]["match_id"],
+            game_datetime: data['info']["game_datetime"],
+            game_length: data['info']["game_length"],
+            queue_id: data['info']['tft_queue_id'],
+            tft_game_type: data['info']['tft_game_type'],
+            tft_set_core_name: data['info']['tft_set_core_name'],
+            tft_set_number: data['info']['tft_set_number'],
+
+            player1: data["metadata"]["participants"][0],
+            player2: data["metadata"]["participants"][1],
+            player3: data["metadata"]["participants"][2],
+            player4: data["metadata"]["participants"][3],
+            player5: data["metadata"]["participants"][4],
+            player6: data["metadata"]["participants"][5],
+            player7: data["metadata"]["participants"][6],
+            player8: data["metadata"]["participants"][7]
+            }
+          })
+          console.log("added new entry to DB")
+
+        } catch {
+          console.log("Error adding new match user info to database.")
+        }
+
+        //TODO adds data to matchData database
+        try {
+
+        } catch {
+          console.log("Error adding new match info to database.")
+        }
+
+        }
         
         //proper set, ranked and only normal match check
+        //might run into an issue here with scope and DATA not being seen outside of the else function above
         if (data['info']['tft_set_core_name'] === setNumber && data['info']['queue_id'] === 1100 && data['info']['tft_game_type'] === "standard"){
   
   
@@ -252,11 +297,6 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
         //adds both player's placements to the output object
         output[userName1]["duoPlacements"] = output[userName1]["duoPlacements"].concat(data["info"]["participants"][indexPlayer1]['placement'])
         output[userName2]["duoPlacements"] = output[userName2]["duoPlacements"].concat(data["info"]["participants"][indexPlayer2]['placement'])
-
-        //TODO adds data to database
-      }
-
-
 
       }
     }
