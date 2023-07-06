@@ -1,20 +1,33 @@
+// for running SQL stuff
+const { sq } = require("./database/db.js")
+const { DataTypes } = require("sequelize");
+const { User } = require("./database/modules/createTables.js")
+
 //variables that need to be seen everywhere
 //this can be cleaned up to mainly reference output object
 var userName1 = ""
 var userName2 = ""
-const apiKey = "RGAPI-e1312170-0301-4883-90cd-51bc8d31a456"
+const apiKey = ""
 var setNumber = ""
 var puuid1 = ""
 var puuid2 = ""
 var output = {}
 const lpChange = {1: 40, 2: 30, 3: 20, 4: 10, 5: -10, 6: -20, 7: -30, 8: -40}
 
+//starts sync to SQL server
+sq.sync()
+
+
+
 //click button on site to call this function
 function websiteRun(firstUserName, secondUserName, TFTset) {
+
   
   setNumber = TFTset.toString()
   userName1 = firstUserName.toString()
   userName2 = secondUserName.toString()
+
+
 
   output = {
     [userName1]: {
@@ -48,24 +61,68 @@ function websiteRun(firstUserName, secondUserName, TFTset) {
 
 
 async function fetchData(requestInput, typeOfRequest = false, username) {
+  console.log(requestInput)
 
   //converts username to PUUID
-  //TODO add check of database to see if we've already got PUUID
-    if (typeOfRequest === "puuid") {
-      console.log(requestInput)
+  //need to change 
+  if (typeOfRequest === "puuid") {
+    async function checkUsers(inputUser) {
+      var lowerUser = inputUser.toLowerCase()
+      const users = await User.findAll({
+        where: {
+          name: lowerUser
+          }
+        })
+      const plainUsers = users.map(user => user.toJSON())
 
       try {
+        return plainUsers[0]["puuid"]
+      } catch {
+        return undefined
+      }
       
+    }
+      
+    var sqlPUUID = await checkUsers(requestInput)
+    
+
+    //checks database for PUUID info
+    if (sqlPUUID !== undefined) {
+      console.log(sqlPUUID + "it is in the database")
+
+      output[requestInput]["puuid"] = sqlPUUID
+
+      if (requestInput === userName1) {
+        puuid1 = sqlPUUID
+      }
+      else {
+        puuid2 = sqlPUUID
+      }
+
+      return output[requestInput]["puuid"]
+      }
+
+    //requests PUUID from Riot if not in database
+    else {
       let requestURL = "https://na1.api.riotgames.com/tft/summoner/v1/summoners/by-name/" + requestInput + "?api_key=" + apiKey;
       let response = await fetch(requestURL)
       let data = await response.json();
-
-      //TODO:LP there should IDEALLY be an instance of the rateLimit function here to check for errors
-      //but if this is throwing an error, the whole service is probably down so low pryo
-
       output[requestInput]["puuid"] = data["puuid"]
 
-      //TODO add PUUID to database
+      //adds PUUID to database
+      try {
+        User.findOrCreate({
+          where: {puuid: data["puuid"]},
+          defaults: {
+          puuid: data["puuid"],
+          name: requestInput.toLowerCase(),
+          accountID: data["accountId"],
+          id: data["id"]
+         }
+        })
+      } catch {
+        console.log("Error adding new user to database.")
+      }
 
       //ugly fix but updates the global puuid values
       if (requestInput === userName1) {
@@ -76,20 +133,17 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
       }
 
       return output[requestInput]["puuid"]
-    } catch (error) {
-      console.log("i am error")
-      return
     }
-    }
+  }
 
   //getting match list
-    else if (typeOfRequest === "matchList"){
-      console.log(requestInput)
+  else if (typeOfRequest === "matchList"){
       var sectionOfMatches = 0
 
       //grabs # of matches specified by number in while loop
       while (sectionOfMatches <= 1000){
         var matchRequestURL = "https://americas.api.riotgames.com/tft/match/v1/matches/by-puuid/" + requestInput + "/ids?start=" + sectionOfMatches + "&count=100&api_key=" + apiKey;
+        console.log(matchRequestURL)
         var response = await fetch(matchRequestURL)
         var data = await response.json();
 
@@ -109,14 +163,9 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
       
       //then start requesting data for duo games
         for (let i = 0; i < Object.keys(intersection).length; i++) {
-
-            //TODO check if we've already got matchData in database
-
             let response = await fetchData(intersection[i], "matchInfo").then()
-            
-            //TODO add match data to database
-            
         }
+
         console.log(output[userName1]["duoPlacements"])
         console.log(output[userName2]["duoPlacements"])
       
@@ -148,32 +197,66 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
   
   //gets match data
     else if (typeOfRequest === "matchInfo") {
-      console.log(requestInput)
-      let matchRequestURL = "https://americas.api.riotgames.com/tft/match/v1/matches/"+ requestInput + "?api_key=" + apiKey
-      // eslint-disable-next-line no-redeclare
-      var response = await fetch(matchRequestURL)
-      // eslint-disable-next-line no-redeclare
-      var data = await response.json();
 
-      //to catch failed requests because of rate limiting
-      data = await rateLimitWait(data, matchRequestURL)
+    //checks database
+      async function checkMatch(inputMatch) {
+        const matchesDB = await matchUsers.findAll({
+          where: {
+            matchID: inputMatch
+            }
+          })
+        const plainMatch = matchesDB.map(user => user.toJSON())
+  
+        try {
+          return plainMatch[0]["matchID"]
+        } catch {
+          return undefined
+        }
+      }
+      var sqlMatch = await checkMatch(requestInput)
       
-      //proper set, ranked and only normal match check
-      if (data['info']['tft_set_core_name'] === setNumber && data['info']['queue_id'] === 1100 && data['info']['tft_game_type'] === "standard"){
+  
+      //gets info from database
+      if (sqlMatch !== undefined) {
+
+        console.log(sqlMatch + "it is in the database")
+  
+        //TODO put data about match where it needs to be!
+  
+        }
+
+      //requests data from Riot
+      else {
+        let matchRequestURL = "https://americas.api.riotgames.com/tft/match/v1/matches/"+ requestInput + "?api_key=" + apiKey
+        // eslint-disable-next-line no-redeclare
+        var response = await fetch(matchRequestURL)
+        // eslint-disable-next-line no-redeclare
+        var data = await response.json();
+  
+        //to catch failed requests because of rate limiting
+        data = await rateLimitWait(data, matchRequestURL)
+        
+        //proper set, ranked and only normal match check
+        if (data['info']['tft_set_core_name'] === setNumber && data['info']['queue_id'] === 1100 && data['info']['tft_game_type'] === "standard"){
+  
+  
+        let playerArray = []
+        let indexPlayer1 = 9
+        let indexPlayer2 = 9
+  
+        playerArray = playerArray.concat(data["metadata"]["participants"])
+  
+        indexPlayer1  = playerArray.indexOf(puuid1)
+        indexPlayer2  = playerArray.indexOf(puuid2)
+  
+        //adds both player's placements to the output object
+        output[userName1]["duoPlacements"] = output[userName1]["duoPlacements"].concat(data["info"]["participants"][indexPlayer1]['placement'])
+        output[userName2]["duoPlacements"] = output[userName2]["duoPlacements"].concat(data["info"]["participants"][indexPlayer2]['placement'])
+
+        //TODO adds data to database
+      }
 
 
-      let playerArray = []
-      let indexPlayer1 = 9
-      let indexPlayer2 = 9
-
-      playerArray = playerArray.concat(data["metadata"]["participants"])
-
-      indexPlayer1  = playerArray.indexOf(puuid1)
-      indexPlayer2  = playerArray.indexOf(puuid2)
-
-      //adds both player's placements to the output object
-      output[userName1]["duoPlacements"] = output[userName1]["duoPlacements"].concat(data["info"]["participants"][indexPlayer1]['placement'])
-      output[userName2]["duoPlacements"] = output[userName2]["duoPlacements"].concat(data["info"]["participants"][indexPlayer2]['placement'])
 
       }
     }

@@ -2,7 +2,7 @@ const { Sequelize } = require("sequelize");
 
 
 //PUT PASSWORD BACK IN HERE WHEN YOU START WORKING AGAIN
-const sequelize = new Sequelize('postgres', 'postgres', 'PASSWORD', {
+const sequelize = new Sequelize('postgres', 'postgres', '', {
   host: 'localhost',
   dialect: 'postgres'
 });

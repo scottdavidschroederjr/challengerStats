@@ -352,3 +352,16 @@ const matchData = sq.define("matchData", {
 //matchData.sync().then(() => {console.log("User Model synced");});
 //User.sync().then(() => {console.log("User Model synced");});
 //matchUsers.sync().then(() => {console.log("User Model synced");});
+
+//var puuidAdd = User.create({
+  //puuid: "4y7U0S8KJEdONYlueYzI_BHK22nE93gPmA783axCNcNOzC0M0ldpdcRs8ON-OAkMUA__t9QQNhRrLA",
+  //name: "saveasuntitled",
+  //accountID: "L9V81fZ7FKkJFzmrGCdh-PVmgWU339M8kbE6e67rgNVyRfM",
+  //id: "w5NWTI5sktMcXVpeUqtyofoNvhydyGcxk_e-9PDjofsgCRU"
+//})
+
+
+
+
+
+module.exports = {User}
