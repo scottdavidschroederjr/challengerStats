@@ -30,8 +30,6 @@ function websiteRun(firstUserName, secondUserName, TFTset) {
   userName1 = firstUserName.toString()
   userName2 = secondUserName.toString()
 
-
-
   output = {
     [userName1]: {
       "username":  [userName1],
@@ -55,11 +53,18 @@ function websiteRun(firstUserName, secondUserName, TFTset) {
     }
   }
 
-  fetchData(userName1, "puuid", userName1).then(
-  user1PUUID => fetchData(user1PUUID, "matchList", userName1))
-  fetchData(userName2, "puuid", userName2).then(
-  user2PUUID => fetchData(user2PUUID, "matchList", userName2))
+  const fetchDataPromises = [
+    fetchData(userName1, "puuid", userName1).then((user1PUUID) =>
+      fetchData(user1PUUID, "matchList", userName1)
+    ),
+    fetchData(userName2, "puuid", userName2).then((user2PUUID) =>
+      fetchData(user2PUUID, "matchList", userName2)
+    ),
+  ];
 
+  return Promise.all(fetchDataPromises).then((finalOutput) => {
+    return finalOutput;
+  });
 }
 
 //all functions that request data flow through here
@@ -191,6 +196,7 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
         }
         console.log(userName1 + "'s duo record " + output[userName1]["duoWins"] + "-" + output[userName1]["duoLosses"] + " with a estimated LP change of: " + output[userName1]["duoLPChange"])
         console.log(userName2 + "'s duo record " + output[userName2]["duoWins"] + "-" + output[userName2]["duoLosses"] + " with a estimated LP change of: " + output[userName2]["duoLPChange"])
+        return output
       }
     }
   
@@ -224,8 +230,12 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
               }
             })
           const plainUsersMatch = matchesUsersDB.map(user => user.toJSON())
+          
           try {
-            return plainUsersMatch
+            if (plainUsersMatch[0]['tft_set_core_name'] !== undefined){
+              return plainUsersMatch
+            }
+            else return undefined
           } catch {
             return undefined
           }
@@ -234,35 +244,32 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
          }
         }
 
-      var sqlMatch = await checkMatch(requestInput)
       var sqlUsersMatch = await checkUsersMatch(requestInput)
-
-      console.log(sqlMatch)
-      
+      var sqlMatch = await checkMatch(requestInput)
   
       //gets info from database
+      //set to double undefined while this is WIP
       if (sqlMatch !== undefined && sqlUsersMatch !== undefined){  
+
         //put data about match where it needs to be!
         if (sqlUsersMatch[0]['tft_set_core_name'] === setNumber && sqlUsersMatch[0]['queue_id'] === "1100" && sqlUsersMatch[0]['tft_game_type'] === "standard"){
   
-          console.log("we're inside!")
-
           //TODO getting this to get the proper placement data out
+          function getKeyByValue(object, value) {
+            return Object.keys(object).find(key => object[key] === value);
+          }
 
-          let playerArray = [sqlMatch['player1'], sqlMatch['player2'], sqlMatch['player3'], sqlMatch['player4'], sqlMatch['player5'], sqlMatch['player6'], sqlMatch['player7'], sqlMatch['player8']]
-          let indexPlayer1  = playerArray.indexOf(puuid1) + 1
-          let indexPlayer2  = playerArray.indexOf(puuid2) + 1
-          indexPlayer1  = "p" + indexPlayer1 + "_placement"
-          indexPlayer2  = "p" + indexPlayer2 + "_placement"
-
-          console.log(playerArray.indexOf(puuid1))
+          //getting which player each user is in the game to reference data (bad hack)
+          let indexPlayer1 = getKeyByValue(sqlMatch[0], puuid1)
+          let user1placement = indexPlayer1[0] + indexPlayer1[6] + "_placement"
+          let indexPlayer2  = getKeyByValue(sqlMatch[0], puuid2)
+          let user2placement = indexPlayer2[0] + indexPlayer2[6] + "_placement"
     
           //adds both player's placements to the output object
-          output[userName1]["duoPlacements"] = output[userName1]["duoPlacements"].concat(sqlMatch['${indexPlayer1}'])
-          output[userName2]["duoPlacements"] = output[userName2]["duoPlacements"].concat(sqlMatch['${indexPlayer2}'])
+          output[userName1]["duoPlacements"] = output[userName1]["duoPlacements"].concat(sqlMatch[0][user1placement])
+          output[userName2]["duoPlacements"] = output[userName2]["duoPlacements"].concat(sqlMatch[0][user2placement])
   
         }  
-        //END OF TODO
   
         }
 
@@ -304,8 +311,6 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
             player8: data["metadata"]["participants"][7]
             }
           })
-
-          console.log("added new entry to DB")
 
         } catch {
           console.log("Error adding new match user info to database.")
