@@ -1,20 +1,13 @@
-The code does run locally as of 6/11/23 but it won't run the API calls in the browser of course so I'll circle back to making this project a full reality once I understand server side computing a bit better.
+Last Updated: 7/10/23
 
-The TODOs for this project are as such:
-1. ~~Clean up HTML for site so pre-click looks presentable~~ // completed (6/12/23)
+Project has basic functionality and technically would be ready to launch but the display of stats on the site needs to be much better than it current is. Also there's a lot of functionality that I'd want to add on top of this. 
 
-2. ~~Convert how the site is being displayed from using HTML to using React~~ // completed (6/14/23)
-- Make on click buttons work again with React
+Latest major updates
+- added database support to avoid 
 
-3. Learn React.js to find out what needs to be done to create a waiting screen and a way to display the output.
-4. Implement what I've learned in step 3 into the HTML/CSS/JS code.
+TODOs
+- create function that can add additional matches to the data
+- clean up visually on display site
+- make this readme into a better explantion of the project itself
+- clean up code to inhance readability 
 
-
-5. Learn what is need to be learned about how to setup server side computing.
-6. Implement what I've learned in step 4 to get that up and running.
-
-7. Make the final tweaks to the site and make sure everything runs.
-8. Clean up the project page and add the project to my resume.
-
-
-//guide used for SQL setup (https://www.makeuseof.com/use-postgresql-with-sequelize-in-nodejs/)
