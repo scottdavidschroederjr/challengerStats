@@ -1,6 +1,8 @@
 import './App.css';
 import React, { useState } from 'react';
 import axios from 'axios';
+import Chart from "chart.js/auto";
+import { Bar } from "react-chartjs-2";
 
 //for handing data
 const config = {
@@ -20,28 +22,67 @@ export function App() {
 }
 
 function InputBlock() {
+  //TODO there has to be a better way to do this, need to learn more about React to fix this 
   const [user1, setUser1] = useState([]);
   const [user2, setUser2] = useState([]);
-  const [user1results, setUser1results] = useState([]);
-  const [user2results, setUser2results] = useState([]);
-  
-  
+  const [user1record, setUser1record] = useState([]);
+  const [user2record, setUser2record] = useState([]);
+  const [user1top4, setUser1top4] = useState([]);
+  const [user2top4, setUser2top4] = useState([]);
+  const [user1LPchange, setuser1LPchange] = useState([]);
+  const [user2LPchange, setuser2LPchange] = useState([]);
+
+  //AND there ESPECIALLY has to be a better way to do this!
+  const [u1results, setu1results] = useState([]);
+  const [u2results, setu2results] = useState([]);
+  const [u2chart, setu2chart] = useState([])
+
+
   const handleSubmit = async (firstUser, secondUser, set) => {
       await axios.post('http://localhost:3001/api/data', { firstUser, secondUser, set}, config).then(response => {
         console.log(response['data'])
         
+        //TODO figure out what makes this data sometimes populate in 0 and other times in 1, or could even right a function that takes care of the 0 / 1 so this doesn't have to be double written
+
         if (response['data'][0] !== null) {
           setUser1(firstUser)
+          setUser1record(response['data'][0][firstUser]["duoWins"] + "-" + response['data'][0][firstUser]["duoLosses"])
+          setUser1top4(response['data'][0][firstUser]["top4Rate"])
+          setuser1LPchange(response['data'][0][firstUser]["duoLPChange"])
+
           setUser2(secondUser)
-          setUser1results(response['data'][0][firstUser]["duoWins"] + "-" + response['data'][0][firstUser]["duoLosses"])
-          setUser2results(response['data'][0][secondUser]["duoWins"] + "-" + response['data'][0][secondUser]["duoLosses"])    
+          setUser2top4(response['data'][0][secondUser]["top4Rate"])
+          setUser2record(response['data'][0][secondUser]["duoWins"] + "-" + response['data'][0][secondUser]["duoLosses"]) 
+          setuser2LPchange(response['data'][0][secondUser]["duoLPChange"])  
+          
+          for (let x = 1; x < 9; x++) {
+            console.log(u1results)
+            setu1results(u1results.push(response['data'][0][firstUser]["matchResults"][x]))
+            setu2results(u2results.push(response['data'][0][secondUser]["matchResults"][x]))
+          }
+
+
+          
         }
         else if (response['data'][1] !== null){
           setUser1(firstUser)
+          setUser1record(response['data'][1][firstUser]["duoWins"] + "-" + response['data'][1][firstUser]["duoLosses"])
+          setUser1top4(response['data'][1][firstUser]["top4Rate"])
+          setuser1LPchange(response['data'][1][firstUser]["duoLPChange"])
+          
+
           setUser2(secondUser)
-          setUser1results(response['data'][1][firstUser]["duoWins"] + "-" + response['data'][1][firstUser]["duoLosses"])
-          setUser2results(response['data'][1][secondUser]["duoWins"] + "-" + response['data'][1][secondUser]["duoLosses"]) 
+          setUser2top4(response['data'][1][secondUser]["top4Rate"])
+          setUser2record(response['data'][1][secondUser]["duoWins"] + "-" + response['data'][1][secondUser]["duoLosses"])
+          setuser2LPchange(response['data'][1][secondUser]["duoLPChange"])
+            
+          for (let x = 1; x < 9; x++) {
+            console.log(u1results)
+            setu1results(u1results.push(response['data'][1][firstUser]["matchResults"][x]))
+            setu2results(u2results.push(response['data'][1][secondUser]["matchResults"][x]))
+          }
         }
+        
         
       })
   };
@@ -61,14 +102,48 @@ function InputBlock() {
   };
 
   function Results(){
+
+    //if (user1LPchange !== typeof Number) {
+    //  return (<div></div>)
+    //}
+
+    
     return (
       <div id="results">
         <div className='username'>{user1}</div>
-        {user1results} <br></br> 
+
+        <div className='resultsBody'>
+
+            <div className='leftResults'>
+              <div className='top4Results'>{user1top4} - Top4</div>
+              <div className='recordResults'>{user1record}</div>
+              <div className='lpTitle'>Est. LP Change</div>
+              <div className='lpChange'>{user1LPchange}</div>
+            </div>
+
+            <div className='rightResults'>right results</div>
+
+        </div>
+        
         <div className='username'>{user2}</div>
-        {user2results} <br></br> 
+        
+        <div className='resultsBody'>
+
+            <div className='leftResults'>
+              <div className='top4Results'>{user2top4} - Top4</div>
+              <div className='recordResults'>{user2record}</div>
+              <div className='lpTitle'>Est. LP Change</div>
+              <div className='lpChange'>{user2LPchange}</div>
+            </div>
+
+            <div className='rightResults'>
+            </div>
+            
+        </div>
+        
       </div>
     )
+    
   }
 
   return (

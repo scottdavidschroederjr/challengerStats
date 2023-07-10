@@ -55,11 +55,64 @@
 
     }
 	#results {
-		margin-top: 20px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	}
 	.username {
-		font-size: 30px;
-		font-weight: 1000;
-		text-shadow: 1px 1px 2px rgb(255, 255, 255);
+		margin-top: 20px;
+		font-size: 36px;
+		font-weight: 650;
+		text-shadow: 2px 2px 1px gray;
+		color: white;
+		border: 2px solid black;
+		background-color: black;
+		text-align: left;
+		padding-left: 10px;
+	}
+	.resultsBody{
+		display: flex;
+	}
+	.leftResults {
+		display: flex;
+		flex-direction: column;
+		border: 2px solid black;
+		width: 220px;
+	}
+	.rightResults {
+		border: 2px solid black;
+		width: 280px;
+	}
+
+	.top4Results {
+		padding-left: 5px;
+		text-align: center;
+		font-size: 36px;
+		font-weight: 750;
 		color: #000000;
+		border-left: 2px solid black;
+		border-bottom: 2px solid black;
+		border-right: 0px solid black;
+		background-color: #a0a0a0;
+	}
+	.recordResults {
+		border-left: 2px solid black;
+		border-bottom: 2px solid black;
+		color: #000000;
+		font-size: 46px;
+		font-weight: 600;
+	}
+	.lpTitle {
+		text-align: center;
+		font-size: 32px;
+		font-weight: 750;
+		color: #000000;
+		border-left: 2px solid black;
+		border-bottom: 2px solid black;
+		background-color: #a0a0a0;
+	}
+	.lpChange {
+		border-left: 2px solid black;
+		border-bottom: 2px solid black;
+		color: #000000;
+		font-size: 46px;
+		font-weight: 600;
 	}

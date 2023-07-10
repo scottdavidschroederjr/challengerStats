@@ -40,6 +40,18 @@ function websiteRun(firstUserName, secondUserName, TFTset) {
       "duoWins": 0,
       "duoLosses": 0,
       "duoLPChange": 0,
+      "top4Rate": 0,
+      "winRate": 0,
+      "matchResults": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0
+        }
     },
     [userName2]: {
       "username": [userName2],
@@ -50,6 +62,18 @@ function websiteRun(firstUserName, secondUserName, TFTset) {
       "duoWins": 0,
       "duoLosses": 0,
       "duoLPChange": 0,
+      "top4Rate": 0,
+      "winRate": 0,
+      "matchResults": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0
+        }
     }
   }
 
@@ -175,8 +199,10 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
       
       //adds up wins and losses for each player
         for (let x = 0; x < Object.keys(output[userName1]["duoPlacements"]).length; x++) {
-
+          //TODO make this work for both username 1 and username 2, probably make it a function that runs with username as an arg
+          //updates LP and then updates match results
           output[userName1]["duoLPChange"] = output[userName1]["duoLPChange"] + lpChange[output[userName1]["duoPlacements"][x]]
+          output[userName1]["matchResults"][output[userName1]["duoPlacements"][x]] = output[userName1]["matchResults"][output[userName1]["duoPlacements"][x]] + 1
 
           if (output[userName1]["duoPlacements"][x] <= 4) {
             output[userName1]["duoWins"] = output[userName1]["duoWins"] + 1
@@ -187,6 +213,7 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
 
         for (let y = 0; y < Object.keys(output[userName2]["duoPlacements"]).length; y++) {
           output[userName2]["duoLPChange"] = output[userName2]["duoLPChange"] + lpChange[output[userName2]["duoPlacements"][y]]
+          output[userName2]["matchResults"][output[userName2]["duoPlacements"][y]] = output[userName2]["matchResults"][output[userName2]["duoPlacements"][y]] + 1
 
           if (output[userName2]["duoPlacements"][y] <= 4) {
             output[userName2]["duoWins"] = output[userName2]["duoWins"] + 1
@@ -194,8 +221,17 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
             output[userName2]["duoLosses"] = output[userName2]["duoLosses"] + 1
           }
         }
+
+        //sets top4Rate and winrate
+        output[userName1]["top4Rate"] = ((output[userName1]["duoWins"]/(output[userName1]["duoWins"] + output[userName1]["duoLosses"])) * 100).toFixed(0) + '%'
+        output[userName1]["winRate"] = ((output[userName1]["matchResults"]["1"]/(output[userName1]["duoWins"] + output[userName1]["duoLosses"])) * 100).toFixed(0) + '%'
+
+        output[userName2]["top4Rate"] = ((output[userName2]["duoWins"]/(output[userName2]["duoWins"] + output[userName2]["duoLosses"])) * 100).toFixed(0) + '%'
+        output[userName2]["winRate"] = ((output[userName2]["matchResults"]["1"]/(output[userName2]["duoWins"] + output[userName2]["duoLosses"])) * 100).toFixed(0) + '%'
+
         console.log(userName1 + "'s duo record " + output[userName1]["duoWins"] + "-" + output[userName1]["duoLosses"] + " with a estimated LP change of: " + output[userName1]["duoLPChange"])
         console.log(userName2 + "'s duo record " + output[userName2]["duoWins"] + "-" + output[userName2]["duoLosses"] + " with a estimated LP change of: " + output[userName2]["duoLPChange"])
+
         return output
       }
     }

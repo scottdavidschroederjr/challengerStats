@@ -10,4 +10,5 @@ TODOs
 - clean up visually on display site
 - make this readme into a better explantion of the project itself
 - clean up code to inhance readability 
+- add static API key as a secret in the project so I don't have to keep adding and remove the daily one that changes
 
