@@ -326,97 +326,322 @@ const matchData = sq.define("matchData", {
     p1_t14_tier_total: {
       type: DataTypes.INTEGER,
     },
-    p1_t15_name: {
+//p1 units
+  p1_u1_character_id: {
+    type: DataTypes.STRING,
+  },
+  p1_u1_item1: {
+    type: DataTypes.INTEGER,
+    },
+  p1_u1_item2: {
+      type: DataTypes.INTEGER,
+    },
+  p1_u1_item3: {
+      type: DataTypes.INTEGER,
+    },
+  p1_u1_name: {
       type: DataTypes.STRING,
     },
-    p1_t15_num_units: {
+  p1_u1_rarity: {
       type: DataTypes.INTEGER,
     },
-    p1_t15_style: {
+  p1_u1_tier: {
       type: DataTypes.INTEGER,
     },
-    p1_t15_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t15_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t16_name: {
+    p1_u2_character_id: {
       type: DataTypes.STRING,
     },
-    p1_t16_num_units: {
+    p1_u2_item1: {
       type: DataTypes.INTEGER,
     },
-    p1_t16_style: {
+    p1_u2_item2: {
       type: DataTypes.INTEGER,
     },
-    p1_t16_tier_current: {
+    p1_u2_item3: {
       type: DataTypes.INTEGER,
     },
-    p1_t16_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t17_name: {
+    p1_u2_name: {
       type: DataTypes.STRING,
     },
-    p1_t17_num_units: {
+    p1_u2_rarity: {
       type: DataTypes.INTEGER,
     },
-    p1_t17_style: {
+    p1_u2_tier: {
       type: DataTypes.INTEGER,
     },
-    p1_t17_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t17_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t18_name: {
+    p1_u3_character_id: {
       type: DataTypes.STRING,
     },
-    p1_t18_num_units: {
+    p1_u3_item1: {
       type: DataTypes.INTEGER,
     },
-    p1_t18_style: {
+    p1_u3_item2: {
       type: DataTypes.INTEGER,
     },
-    p1_t18_tier_current: {
+    p1_u3_item3: {
       type: DataTypes.INTEGER,
     },
-    p1_t18_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t19_name: {
+    p1_u3_name: {
       type: DataTypes.STRING,
     },
-    p1_t19_num_units: {
+    p1_u3_rarity: {
       type: DataTypes.INTEGER,
     },
-    p1_t19_style: {
+    p1_u3_tier: {
       type: DataTypes.INTEGER,
     },
-    p1_t19_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t19_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t20_name: {
+    p1_u4_character_id: {
       type: DataTypes.STRING,
     },
-    p1_t20_num_units: {
+    p1_u4_item1: {
       type: DataTypes.INTEGER,
     },
-    p1_t20_style: {
+    p1_u4_item2: {
       type: DataTypes.INTEGER,
     },
-    p1_t20_tier_current: {
+    p1_u4_item3: {
       type: DataTypes.INTEGER,
     },
-    p1_t20_tier_total: {
+    p1_u4_name: {
+      type: DataTypes.STRING,
+    },
+    p1_u4_rarity: {
       type: DataTypes.INTEGER,
     },
-
+    p1_u4_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u5_character_id: {
+      type: DataTypes.STRING,
+    },
+    p1_u5_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u5_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u5_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u5_name: {
+      type: DataTypes.STRING,
+    },
+    p1_u5_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u5_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u6_character_id: {
+      type: DataTypes.STRING,
+    },
+    p1_u6_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u6_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u6_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u6_name: {
+      type: DataTypes.STRING,
+    },
+    p1_u6_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u6_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u7_character_id: {
+      type: DataTypes.STRING,
+    },
+    p1_u7_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u7_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u7_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u7_name: {
+      type: DataTypes.STRING,
+    },
+    p1_u7_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u7_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u8_character_id: {
+      type: DataTypes.STRING,
+    },
+    p1_u8_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u8_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u8_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u8_name: {
+      type: DataTypes.STRING,
+    },
+    p1_u8_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u8_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u9_character_id: {
+      type: DataTypes.STRING,
+    },
+    p1_u9_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u9_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u9_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u9_name: {
+      type: DataTypes.STRING,
+    },
+    p1_u9_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u9_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u10_character_id: {
+      type: DataTypes.STRING,
+    },
+    p1_u10_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u10_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u10_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u10_name: {
+      type: DataTypes.STRING,
+    },
+    p1_u10_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u10_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u11_character_id: {
+      type: DataTypes.STRING,
+    },
+    p1_u11_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u11_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u11_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u11_name: {
+      type: DataTypes.STRING,
+    },
+    p1_u11_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u11_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u12_character_id: {
+      type: DataTypes.STRING,
+    },
+    p1_u12_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u12_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u12_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u12_name: {
+      type: DataTypes.STRING,
+    },
+    p1_u12_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u12_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u13_character_id: {
+      type: DataTypes.STRING,
+    },
+    p1_u13_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u13_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u13_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u13_name: {
+      type: DataTypes.STRING,
+    },
+    p1_u13_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u13_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u14_character_id: {
+      type: DataTypes.STRING,
+    },
+    p1_u14_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u14_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u14_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u14_name: {
+      type: DataTypes.STRING,
+    },
+    p1_u14_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u14_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u15_character_id: {
+      type: DataTypes.STRING,
+    },
+    p1_u15_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u15_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u15_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u15_name: {
+      type: DataTypes.STRING,
+    },
+    p1_u15_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p1_u15_tier: {
+      type: DataTypes.INTEGER,
+    },
 //p2 stats
     player2: {
       type: DataTypes.STRING,
@@ -661,97 +886,323 @@ const matchData = sq.define("matchData", {
     p2_t14_tier_total: {
       type: DataTypes.INTEGER,
     },
-    p2_t15_name: {
+    
+    p2_u1_character_id: {
       type: DataTypes.STRING,
     },
-    p2_t15_num_units: {
+    p2_u1_item1: {
       type: DataTypes.INTEGER,
     },
-    p2_t15_style: {
+    p2_u1_item2: {
       type: DataTypes.INTEGER,
     },
-    p2_t15_tier_current: {
+    p2_u1_item3: {
       type: DataTypes.INTEGER,
     },
-    p2_t15_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t16_name: {
+    p2_u1_name: {
       type: DataTypes.STRING,
     },
-    p2_t16_num_units: {
+    p2_u1_rarity: {
       type: DataTypes.INTEGER,
     },
-    p2_t16_style: {
+    p2_u1_tier: {
       type: DataTypes.INTEGER,
     },
-    p2_t16_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t16_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t17_name: {
+    p2_u2_character_id: {
       type: DataTypes.STRING,
     },
-    p2_t17_num_units: {
+    p2_u2_item1: {
       type: DataTypes.INTEGER,
     },
-    p2_t17_style: {
+    p2_u2_item2: {
       type: DataTypes.INTEGER,
     },
-    p2_t17_tier_current: {
+    p2_u2_item3: {
       type: DataTypes.INTEGER,
     },
-    p2_t17_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t18_name: {
+    p2_u2_name: {
       type: DataTypes.STRING,
     },
-    p2_t18_num_units: {
+    p2_u2_rarity: {
       type: DataTypes.INTEGER,
     },
-    p2_t18_style: {
+    p2_u2_tier: {
       type: DataTypes.INTEGER,
     },
-    p2_t18_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t18_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t19_name: {
+    p2_u3_character_id: {
       type: DataTypes.STRING,
     },
-    p2_t19_num_units: {
+    p2_u3_item1: {
       type: DataTypes.INTEGER,
     },
-    p2_t19_style: {
+    p2_u3_item2: {
       type: DataTypes.INTEGER,
     },
-    p2_t19_tier_current: {
+    p2_u3_item3: {
       type: DataTypes.INTEGER,
     },
-    p2_t19_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t20_name: {
+    p2_u3_name: {
       type: DataTypes.STRING,
     },
-    p2_t20_num_units: {
+    p2_u3_rarity: {
       type: DataTypes.INTEGER,
     },
-    p2_t20_style: {
+    p2_u3_tier: {
       type: DataTypes.INTEGER,
     },
-    p2_t20_tier_current: {
+    p2_u4_character_id: {
+      type: DataTypes.STRING,
+    },
+    p2_u4_item1: {
       type: DataTypes.INTEGER,
     },
-    p2_t20_tier_total: {
+    p2_u4_item2: {
       type: DataTypes.INTEGER,
     },
-
+    p2_u4_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u4_name: {
+      type: DataTypes.STRING,
+    },
+    p2_u4_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u4_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u5_character_id: {
+      type: DataTypes.STRING,
+    },
+    p2_u5_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u5_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u5_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u5_name: {
+      type: DataTypes.STRING,
+    },
+    p2_u5_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u5_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u6_character_id: {
+      type: DataTypes.STRING,
+    },
+    p2_u6_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u6_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u6_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u6_name: {
+      type: DataTypes.STRING,
+    },
+    p2_u6_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u6_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u7_character_id: {
+      type: DataTypes.STRING,
+    },
+    p2_u7_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u7_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u7_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u7_name: {
+      type: DataTypes.STRING,
+    },
+    p2_u7_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u7_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u8_character_id: {
+      type: DataTypes.STRING,
+    },
+    p2_u8_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u8_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u8_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u8_name: {
+      type: DataTypes.STRING,
+    },
+    p2_u8_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u8_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u9_character_id: {
+      type: DataTypes.STRING,
+    },
+    p2_u9_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u9_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u9_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u9_name: {
+      type: DataTypes.STRING,
+    },
+    p2_u9_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u9_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u10_character_id: {
+      type: DataTypes.STRING,
+    },
+    p2_u10_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u10_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u10_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u10_name: {
+      type: DataTypes.STRING,
+    },
+    p2_u10_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u10_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u11_character_id: {
+      type: DataTypes.STRING,
+    },
+    p2_u11_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u11_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u11_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u11_name: {
+      type: DataTypes.STRING,
+    },
+    p2_u11_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u11_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u12_character_id: {
+      type: DataTypes.STRING,
+    },
+    p2_u12_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u12_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u12_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u12_name: {
+      type: DataTypes.STRING,
+    },
+    p2_u12_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u12_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u13_character_id: {
+      type: DataTypes.STRING,
+    },
+    p2_u13_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u13_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u13_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u13_name: {
+      type: DataTypes.STRING,
+    },
+    p2_u13_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u13_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u14_character_id: {
+      type: DataTypes.STRING,
+    },
+    p2_u14_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u14_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u14_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u14_name: {
+      type: DataTypes.STRING,
+    },
+    p2_u14_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u14_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u15_character_id: {
+      type: DataTypes.STRING,
+    },
+    p2_u15_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u15_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u15_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u15_name: {
+      type: DataTypes.STRING,
+    },
+    p2_u15_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p2_u15_tier: {
+      type: DataTypes.INTEGER,
+    },
+    
 
 
 
@@ -1000,96 +1451,324 @@ const matchData = sq.define("matchData", {
     p3_t14_tier_total: {
       type: DataTypes.INTEGER,
     },
-    p3_t15_name: {
+    
+    //p3 units
+    p3_u1_character_id: {
       type: DataTypes.STRING,
     },
-    p3_t15_num_units: {
+    p3_u1_item1: {
       type: DataTypes.INTEGER,
     },
-    p3_t15_style: {
+    p3_u1_item2: {
       type: DataTypes.INTEGER,
     },
-    p3_t15_tier_current: {
+    p3_u1_item3: {
       type: DataTypes.INTEGER,
     },
-    p3_t15_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t16_name: {
+    p3_u1_name: {
       type: DataTypes.STRING,
     },
-    p3_t16_num_units: {
+    p3_u1_rarity: {
       type: DataTypes.INTEGER,
     },
-    p3_t16_style: {
+    p3_u1_tier: {
       type: DataTypes.INTEGER,
     },
-    p3_t16_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t16_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t17_name: {
+    p3_u2_character_id: {
       type: DataTypes.STRING,
     },
-    p3_t17_num_units: {
+    p3_u2_item1: {
       type: DataTypes.INTEGER,
     },
-    p3_t17_style: {
+    p3_u2_item2: {
       type: DataTypes.INTEGER,
     },
-    p3_t17_tier_current: {
+    p3_u2_item3: {
       type: DataTypes.INTEGER,
     },
-    p3_t17_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t18_name: {
+    p3_u2_name: {
       type: DataTypes.STRING,
     },
-    p3_t18_num_units: {
+    p3_u2_rarity: {
       type: DataTypes.INTEGER,
     },
-    p3_t18_style: {
+    p3_u2_tier: {
       type: DataTypes.INTEGER,
     },
-    p3_t18_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t18_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t19_name: {
+    p3_u3_character_id: {
       type: DataTypes.STRING,
     },
-    p3_t19_num_units: {
+    p3_u3_item1: {
       type: DataTypes.INTEGER,
     },
-    p3_t19_style: {
+    p3_u3_item2: {
       type: DataTypes.INTEGER,
     },
-    p3_t19_tier_current: {
+    p3_u3_item3: {
       type: DataTypes.INTEGER,
     },
-    p3_t19_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t20_name: {
+    p3_u3_name: {
       type: DataTypes.STRING,
     },
-    p3_t20_num_units: {
+    p3_u3_rarity: {
       type: DataTypes.INTEGER,
     },
-    p3_t20_style: {
+    p3_u3_tier: {
       type: DataTypes.INTEGER,
     },
-    p3_t20_tier_current: {
+    p3_u4_character_id: {
+      type: DataTypes.STRING,
+    },
+    p3_u4_item1: {
       type: DataTypes.INTEGER,
     },
-    p3_t20_tier_total: {
+    p3_u4_item2: {
       type: DataTypes.INTEGER,
     },
+    p3_u4_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u4_name: {
+      type: DataTypes.STRING,
+    },
+    p3_u4_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u4_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u5_character_id: {
+      type: DataTypes.STRING,
+    },
+    p3_u5_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u5_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u5_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u5_name: {
+      type: DataTypes.STRING,
+    },
+    p3_u5_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u5_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u6_character_id: {
+      type: DataTypes.STRING,
+    },
+    p3_u6_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u6_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u6_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u6_name: {
+      type: DataTypes.STRING,
+    },
+    p3_u6_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u6_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u7_character_id: {
+      type: DataTypes.STRING,
+    },
+    p3_u7_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u7_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u7_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u7_name: {
+      type: DataTypes.STRING,
+    },
+    p3_u7_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u7_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u8_character_id: {
+      type: DataTypes.STRING,
+    },
+    p3_u8_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u8_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u8_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u8_name: {
+      type: DataTypes.STRING,
+    },
+    p3_u8_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u8_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u9_character_id: {
+      type: DataTypes.STRING,
+    },
+    p3_u9_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u9_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u9_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u9_name: {
+      type: DataTypes.STRING,
+    },
+    p3_u9_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u9_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u10_character_id: {
+      type: DataTypes.STRING,
+    },
+    p3_u10_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u10_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u10_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u10_name: {
+      type: DataTypes.STRING,
+    },
+    p3_u10_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u10_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u11_character_id: {
+      type: DataTypes.STRING,
+    },
+    p3_u11_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u11_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u11_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u11_name: {
+      type: DataTypes.STRING,
+    },
+    p3_u11_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u11_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u12_character_id: {
+      type: DataTypes.STRING,
+    },
+    p3_u12_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u12_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u12_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u12_name: {
+      type: DataTypes.STRING,
+    },
+    p3_u12_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u12_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u13_character_id: {
+      type: DataTypes.STRING,
+    },
+    p3_u13_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u13_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u13_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u13_name: {
+      type: DataTypes.STRING,
+    },
+    p3_u13_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u13_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u14_character_id: {
+      type: DataTypes.STRING,
+    },
+    p3_u14_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u14_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u14_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u14_name: {
+      type: DataTypes.STRING,
+    },
+    p3_u14_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u14_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u15_character_id: {
+      type: DataTypes.STRING,
+    },
+    p3_u15_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u15_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u15_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u15_name: {
+      type: DataTypes.STRING,
+    },
+    p3_u15_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p3_u15_tier: {
+      type: DataTypes.INTEGER,
+    },
+    
 
     //p4 stats
     player4: {
@@ -1335,96 +2014,323 @@ const matchData = sq.define("matchData", {
     p4_t14_tier_total: {
       type: DataTypes.INTEGER,
     },
-    p4_t15_name: {
+  
+    p4_u1_character_id: {
       type: DataTypes.STRING,
     },
-    p4_t15_num_units: {
+    p4_u1_item1: {
       type: DataTypes.INTEGER,
     },
-    p4_t15_style: {
+    p4_u1_item2: {
       type: DataTypes.INTEGER,
     },
-    p4_t15_tier_current: {
+    p4_u1_item3: {
       type: DataTypes.INTEGER,
     },
-    p4_t15_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t16_name: {
+    p4_u1_name: {
       type: DataTypes.STRING,
     },
-    p4_t16_num_units: {
+    p4_u1_rarity: {
       type: DataTypes.INTEGER,
     },
-    p4_t16_style: {
+    p4_u1_tier: {
       type: DataTypes.INTEGER,
     },
-    p4_t16_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t16_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t17_name: {
+    p4_u2_character_id: {
       type: DataTypes.STRING,
     },
-    p4_t17_num_units: {
+    p4_u2_item1: {
       type: DataTypes.INTEGER,
     },
-    p4_t17_style: {
+    p4_u2_item2: {
       type: DataTypes.INTEGER,
     },
-    p4_t17_tier_current: {
+    p4_u2_item3: {
       type: DataTypes.INTEGER,
     },
-    p4_t17_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t18_name: {
+    p4_u2_name: {
       type: DataTypes.STRING,
     },
-    p4_t18_num_units: {
+    p4_u2_rarity: {
       type: DataTypes.INTEGER,
     },
-    p4_t18_style: {
+    p4_u2_tier: {
       type: DataTypes.INTEGER,
     },
-    p4_t18_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t18_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t19_name: {
+    p4_u3_character_id: {
       type: DataTypes.STRING,
     },
-    p4_t19_num_units: {
+    p4_u3_item1: {
       type: DataTypes.INTEGER,
     },
-    p4_t19_style: {
+    p4_u3_item2: {
       type: DataTypes.INTEGER,
     },
-    p4_t19_tier_current: {
+    p4_u3_item3: {
       type: DataTypes.INTEGER,
     },
-    p4_t19_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t20_name: {
+    p4_u3_name: {
       type: DataTypes.STRING,
     },
-    p4_t20_num_units: {
+    p4_u3_rarity: {
       type: DataTypes.INTEGER,
     },
-    p4_t20_style: {
+    p4_u3_tier: {
       type: DataTypes.INTEGER,
     },
-    p4_t20_tier_current: {
+    p4_u4_character_id: {
+      type: DataTypes.STRING,
+    },
+    p4_u4_item1: {
       type: DataTypes.INTEGER,
     },
-    p4_t20_tier_total: {
+    p4_u4_item2: {
       type: DataTypes.INTEGER,
     },
+    p4_u4_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u4_name: {
+      type: DataTypes.STRING,
+    },
+    p4_u4_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u4_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u5_character_id: {
+      type: DataTypes.STRING,
+    },
+    p4_u5_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u5_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u5_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u5_name: {
+      type: DataTypes.STRING,
+    },
+    p4_u5_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u5_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u6_character_id: {
+      type: DataTypes.STRING,
+    },
+    p4_u6_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u6_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u6_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u6_name: {
+      type: DataTypes.STRING,
+    },
+    p4_u6_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u6_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u7_character_id: {
+      type: DataTypes.STRING,
+    },
+    p4_u7_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u7_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u7_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u7_name: {
+      type: DataTypes.STRING,
+    },
+    p4_u7_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u7_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u8_character_id: {
+      type: DataTypes.STRING,
+    },
+    p4_u8_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u8_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u8_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u8_name: {
+      type: DataTypes.STRING,
+    },
+    p4_u8_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u8_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u9_character_id: {
+      type: DataTypes.STRING,
+    },
+    p4_u9_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u9_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u9_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u9_name: {
+      type: DataTypes.STRING,
+    },
+    p4_u9_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u9_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u10_character_id: {
+      type: DataTypes.STRING,
+    },
+    p4_u10_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u10_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u10_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u10_name: {
+      type: DataTypes.STRING,
+    },
+    p4_u10_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u10_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u11_character_id: {
+      type: DataTypes.STRING,
+    },
+    p4_u11_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u11_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u11_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u11_name: {
+      type: DataTypes.STRING,
+    },
+    p4_u11_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u11_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u12_character_id: {
+      type: DataTypes.STRING,
+    },
+    p4_u12_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u12_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u12_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u12_name: {
+      type: DataTypes.STRING,
+    },
+    p4_u12_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u12_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u13_character_id: {
+      type: DataTypes.STRING,
+    },
+    p4_u13_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u13_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u13_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u13_name: {
+      type: DataTypes.STRING,
+    },
+    p4_u13_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u13_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u14_character_id: {
+      type: DataTypes.STRING,
+    },
+    p4_u14_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u14_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u14_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u14_name: {
+      type: DataTypes.STRING,
+    },
+    p4_u14_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u14_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u15_character_id: {
+      type: DataTypes.STRING,
+    },
+    p4_u15_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u15_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u15_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u15_name: {
+      type: DataTypes.STRING,
+    },
+    p4_u15_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p4_u15_tier: {
+      type: DataTypes.INTEGER,
+    },
+    
 
     //p5 stats
     player5: {
@@ -1671,97 +2577,325 @@ const matchData = sq.define("matchData", {
     p5_t14_tier_total: {
       type: DataTypes.INTEGER,
     },
-    p5_t15_name: {
-      type: DataTypes.STRING,
-    },
-    p5_t15_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t15_style: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t15_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t15_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t16_name: {
-      type: DataTypes.STRING,
-    },
-    p5_t16_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t16_style: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t16_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t16_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t17_name: {
-      type: DataTypes.STRING,
-    },
-    p5_t17_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t17_style: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t17_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t17_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t18_name: {
-      type: DataTypes.STRING,
-    },
-    p5_t18_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t18_style: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t18_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t18_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t19_name: {
-      type: DataTypes.STRING,
-    },
-    p5_t19_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t19_style: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t19_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t19_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t20_name: {
-      type: DataTypes.STRING,
-    },
-    p5_t20_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t20_style: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t20_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t20_tier_total: {
-      type: DataTypes.INTEGER,
-    },
+    
 
+    //p5 units
+    p5_u1_character_id: {
+      type: DataTypes.STRING,
+    },
+    p5_u1_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u1_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u1_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u1_name: {
+      type: DataTypes.STRING,
+    },
+    p5_u1_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u1_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u2_character_id: {
+      type: DataTypes.STRING,
+    },
+    p5_u2_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u2_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u2_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u2_name: {
+      type: DataTypes.STRING,
+    },
+    p5_u2_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u2_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u3_character_id: {
+      type: DataTypes.STRING,
+    },
+    p5_u3_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u3_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u3_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u3_name: {
+      type: DataTypes.STRING,
+    },
+    p5_u3_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u3_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u4_character_id: {
+      type: DataTypes.STRING,
+    },
+    p5_u4_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u4_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u4_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u4_name: {
+      type: DataTypes.STRING,
+    },
+    p5_u4_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u4_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u5_character_id: {
+      type: DataTypes.STRING,
+    },
+    p5_u5_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u5_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u5_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u5_name: {
+      type: DataTypes.STRING,
+    },
+    p5_u5_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u5_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u6_character_id: {
+      type: DataTypes.STRING,
+    },
+    p5_u6_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u6_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u6_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u6_name: {
+      type: DataTypes.STRING,
+    },
+    p5_u6_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u6_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u7_character_id: {
+      type: DataTypes.STRING,
+    },
+    p5_u7_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u7_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u7_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u7_name: {
+      type: DataTypes.STRING,
+    },
+    p5_u7_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u7_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u8_character_id: {
+      type: DataTypes.STRING,
+    },
+    p5_u8_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u8_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u8_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u8_name: {
+      type: DataTypes.STRING,
+    },
+    p5_u8_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u8_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u9_character_id: {
+      type: DataTypes.STRING,
+    },
+    p5_u9_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u9_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u9_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u9_name: {
+      type: DataTypes.STRING,
+    },
+    p5_u9_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u9_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u10_character_id: {
+      type: DataTypes.STRING,
+    },
+    p5_u10_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u10_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u10_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u10_name: {
+      type: DataTypes.STRING,
+    },
+    p5_u10_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u10_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u11_character_id: {
+      type: DataTypes.STRING,
+    },
+    p5_u11_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u11_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u11_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u11_name: {
+      type: DataTypes.STRING,
+    },
+    p5_u11_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u11_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u12_character_id: {
+      type: DataTypes.STRING,
+    },
+    p5_u12_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u12_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u12_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u12_name: {
+      type: DataTypes.STRING,
+    },
+    p5_u12_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u12_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u13_character_id: {
+      type: DataTypes.STRING,
+    },
+    p5_u13_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u13_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u13_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u13_name: {
+      type: DataTypes.STRING,
+    },
+    p5_u13_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u13_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u14_character_id: {
+      type: DataTypes.STRING,
+    },
+    p5_u14_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u14_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u14_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u14_name: {
+      type: DataTypes.STRING,
+    },
+    p5_u14_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u14_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u15_character_id: {
+      type: DataTypes.STRING,
+    },
+    p5_u15_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u15_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u15_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u15_name: {
+      type: DataTypes.STRING,
+    },
+    p5_u15_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p5_u15_tier: {
+      type: DataTypes.INTEGER,
+    },
+    
 
     //p6 stats
     player6: {
@@ -2007,97 +3141,325 @@ const matchData = sq.define("matchData", {
     p6_t14_tier_total: {
       type: DataTypes.INTEGER,
     },
-    p6_t15_name: {
-      type: DataTypes.STRING,
-    },
-    p6_t15_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t15_style: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t15_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t15_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t16_name: {
-      type: DataTypes.STRING,
-    },
-    p6_t16_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t16_style: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t16_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t16_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t17_name: {
-      type: DataTypes.STRING,
-    },
-    p6_t17_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t17_style: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t17_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t17_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t18_name: {
-      type: DataTypes.STRING,
-    },
-    p6_t18_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t18_style: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t18_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t18_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t19_name: {
-      type: DataTypes.STRING,
-    },
-    p6_t19_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t19_style: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t19_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t19_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t20_name: {
-      type: DataTypes.STRING,
-    },
-    p6_t20_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t20_style: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t20_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t20_tier_total: {
-      type: DataTypes.INTEGER,
-    },
+   
 
+    //p6 units
+    p6_u1_character_id: {
+      type: DataTypes.STRING,
+    },
+    p6_u1_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u1_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u1_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u1_name: {
+      type: DataTypes.STRING,
+    },
+    p6_u1_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u1_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u2_character_id: {
+      type: DataTypes.STRING,
+    },
+    p6_u2_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u2_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u2_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u2_name: {
+      type: DataTypes.STRING,
+    },
+    p6_u2_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u2_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u3_character_id: {
+      type: DataTypes.STRING,
+    },
+    p6_u3_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u3_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u3_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u3_name: {
+      type: DataTypes.STRING,
+    },
+    p6_u3_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u3_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u4_character_id: {
+      type: DataTypes.STRING,
+    },
+    p6_u4_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u4_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u4_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u4_name: {
+      type: DataTypes.STRING,
+    },
+    p6_u4_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u4_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u5_character_id: {
+      type: DataTypes.STRING,
+    },
+    p6_u5_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u5_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u5_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u5_name: {
+      type: DataTypes.STRING,
+    },
+    p6_u5_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u5_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u6_character_id: {
+      type: DataTypes.STRING,
+    },
+    p6_u6_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u6_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u6_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u6_name: {
+      type: DataTypes.STRING,
+    },
+    p6_u6_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u6_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u7_character_id: {
+      type: DataTypes.STRING,
+    },
+    p6_u7_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u7_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u7_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u7_name: {
+      type: DataTypes.STRING,
+    },
+    p6_u7_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u7_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u8_character_id: {
+      type: DataTypes.STRING,
+    },
+    p6_u8_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u8_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u8_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u8_name: {
+      type: DataTypes.STRING,
+    },
+    p6_u8_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u8_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u9_character_id: {
+      type: DataTypes.STRING,
+    },
+    p6_u9_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u9_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u9_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u9_name: {
+      type: DataTypes.STRING,
+    },
+    p6_u9_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u9_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u10_character_id: {
+      type: DataTypes.STRING,
+    },
+    p6_u10_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u10_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u10_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u10_name: {
+      type: DataTypes.STRING,
+    },
+    p6_u10_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u10_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u11_character_id: {
+      type: DataTypes.STRING,
+    },
+    p6_u11_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u11_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u11_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u11_name: {
+      type: DataTypes.STRING,
+    },
+    p6_u11_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u11_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u12_character_id: {
+      type: DataTypes.STRING,
+    },
+    p6_u12_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u12_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u12_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u12_name: {
+      type: DataTypes.STRING,
+    },
+    p6_u12_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u12_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u13_character_id: {
+      type: DataTypes.STRING,
+    },
+    p6_u13_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u13_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u13_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u13_name: {
+      type: DataTypes.STRING,
+    },
+    p6_u13_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u13_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u14_character_id: {
+      type: DataTypes.STRING,
+    },
+    p6_u14_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u14_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u14_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u14_name: {
+      type: DataTypes.STRING,
+    },
+    p6_u14_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u14_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u15_character_id: {
+      type: DataTypes.STRING,
+    },
+    p6_u15_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u15_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u15_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u15_name: {
+      type: DataTypes.STRING,
+    },
+    p6_u15_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p6_u15_tier: {
+      type: DataTypes.INTEGER,
+    },
+    
 
     //p7 stats
     player7: {
@@ -2343,97 +3705,325 @@ const matchData = sq.define("matchData", {
     p7_t14_tier_total: {
       type: DataTypes.INTEGER,
     },
-    p7_t15_name: {
-      type: DataTypes.STRING,
-    },
-    p7_t15_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t15_style: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t15_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t15_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t16_name: {
-      type: DataTypes.STRING,
-    },
-    p7_t16_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t16_style: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t16_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t16_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t17_name: {
-      type: DataTypes.STRING,
-    },
-    p7_t17_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t17_style: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t17_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t17_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t18_name: {
-      type: DataTypes.STRING,
-    },
-    p7_t18_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t18_style: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t18_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t18_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t19_name: {
-      type: DataTypes.STRING,
-    },
-    p7_t19_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t19_style: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t19_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t19_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t20_name: {
-      type: DataTypes.STRING,
-    },
-    p7_t20_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t20_style: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t20_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t20_tier_total: {
-      type: DataTypes.INTEGER,
-    },
+    
 
+    //p7 units
+    p7_u1_character_id: {
+      type: DataTypes.STRING,
+    },
+    p7_u1_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u1_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u1_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u1_name: {
+      type: DataTypes.STRING,
+    },
+    p7_u1_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u1_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u2_character_id: {
+      type: DataTypes.STRING,
+    },
+    p7_u2_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u2_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u2_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u2_name: {
+      type: DataTypes.STRING,
+    },
+    p7_u2_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u2_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u3_character_id: {
+      type: DataTypes.STRING,
+    },
+    p7_u3_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u3_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u3_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u3_name: {
+      type: DataTypes.STRING,
+    },
+    p7_u3_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u3_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u4_character_id: {
+      type: DataTypes.STRING,
+    },
+    p7_u4_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u4_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u4_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u4_name: {
+      type: DataTypes.STRING,
+    },
+    p7_u4_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u4_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u5_character_id: {
+      type: DataTypes.STRING,
+    },
+    p7_u5_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u5_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u5_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u5_name: {
+      type: DataTypes.STRING,
+    },
+    p7_u5_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u5_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u6_character_id: {
+      type: DataTypes.STRING,
+    },
+    p7_u6_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u6_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u6_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u6_name: {
+      type: DataTypes.STRING,
+    },
+    p7_u6_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u6_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u7_character_id: {
+      type: DataTypes.STRING,
+    },
+    p7_u7_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u7_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u7_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u7_name: {
+      type: DataTypes.STRING,
+    },
+    p7_u7_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u7_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u8_character_id: {
+      type: DataTypes.STRING,
+    },
+    p7_u8_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u8_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u8_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u8_name: {
+      type: DataTypes.STRING,
+    },
+    p7_u8_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u8_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u9_character_id: {
+      type: DataTypes.STRING,
+    },
+    p7_u9_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u9_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u9_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u9_name: {
+      type: DataTypes.STRING,
+    },
+    p7_u9_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u9_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u10_character_id: {
+      type: DataTypes.STRING,
+    },
+    p7_u10_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u10_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u10_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u10_name: {
+      type: DataTypes.STRING,
+    },
+    p7_u10_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u10_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u11_character_id: {
+      type: DataTypes.STRING,
+    },
+    p7_u11_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u11_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u11_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u11_name: {
+      type: DataTypes.STRING,
+    },
+    p7_u11_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u11_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u12_character_id: {
+      type: DataTypes.STRING,
+    },
+    p7_u12_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u12_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u12_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u12_name: {
+      type: DataTypes.STRING,
+    },
+    p7_u12_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u12_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u13_character_id: {
+      type: DataTypes.STRING,
+    },
+    p7_u13_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u13_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u13_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u13_name: {
+      type: DataTypes.STRING,
+    },
+    p7_u13_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u13_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u14_character_id: {
+      type: DataTypes.STRING,
+    },
+    p7_u14_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u14_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u14_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u14_name: {
+      type: DataTypes.STRING,
+    },
+    p7_u14_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u14_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u15_character_id: {
+      type: DataTypes.STRING,
+    },
+    p7_u15_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u15_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u15_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u15_name: {
+      type: DataTypes.STRING,
+    },
+    p7_u15_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p7_u15_tier: {
+      type: DataTypes.INTEGER,
+    },
+    
 
     //p8 stats
     player8: {
@@ -2679,103 +4269,331 @@ const matchData = sq.define("matchData", {
     p8_t14_tier_total: {
       type: DataTypes.INTEGER,
     },
-    p8_t15_name: {
-      type: DataTypes.STRING,
-    },
-    p8_t15_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p8_t15_style: {
-      type: DataTypes.INTEGER,
-    },
-    p8_t15_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p8_t15_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p8_t16_name: {
-      type: DataTypes.STRING,
-    },
-    p8_t16_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p8_t16_style: {
-      type: DataTypes.INTEGER,
-    },
-    p8_t16_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p8_t16_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p8_t17_name: {
-      type: DataTypes.STRING,
-    },
-    p8_t17_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p8_t17_style: {
-      type: DataTypes.INTEGER,
-    },
-    p8_t17_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p8_t17_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p8_t18_name: {
-      type: DataTypes.STRING,
-    },
-    p8_t18_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p8_t18_style: {
-      type: DataTypes.INTEGER,
-    },
-    p8_t18_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p8_t18_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p8_t19_name: {
-      type: DataTypes.STRING,
-    },
-    p8_t19_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p8_t19_style: {
-      type: DataTypes.INTEGER,
-    },
-    p8_t19_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p8_t19_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p8_t20_name: {
-      type: DataTypes.STRING,
-    },
-    p8_t20_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p8_t20_style: {
-      type: DataTypes.INTEGER,
-    },
-    p8_t20_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p8_t20_tier_total: {
-      type: DataTypes.INTEGER,
-    }
+    
 
+    //p8 champs
+    p8_u1_character_id: {
+      type: DataTypes.STRING,
+    },
+    p8_u1_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u1_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u1_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u1_name: {
+      type: DataTypes.STRING,
+    },
+    p8_u1_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u1_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u2_character_id: {
+      type: DataTypes.STRING,
+    },
+    p8_u2_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u2_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u2_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u2_name: {
+      type: DataTypes.STRING,
+    },
+    p8_u2_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u2_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u3_character_id: {
+      type: DataTypes.STRING,
+    },
+    p8_u3_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u3_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u3_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u3_name: {
+      type: DataTypes.STRING,
+    },
+    p8_u3_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u3_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u4_character_id: {
+      type: DataTypes.STRING,
+    },
+    p8_u4_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u4_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u4_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u4_name: {
+      type: DataTypes.STRING,
+    },
+    p8_u4_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u4_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u5_character_id: {
+      type: DataTypes.STRING,
+    },
+    p8_u5_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u5_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u5_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u5_name: {
+      type: DataTypes.STRING,
+    },
+    p8_u5_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u5_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u6_character_id: {
+      type: DataTypes.STRING,
+    },
+    p8_u6_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u6_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u6_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u6_name: {
+      type: DataTypes.STRING,
+    },
+    p8_u6_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u6_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u7_character_id: {
+      type: DataTypes.STRING,
+    },
+    p8_u7_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u7_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u7_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u7_name: {
+      type: DataTypes.STRING,
+    },
+    p8_u7_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u7_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u8_character_id: {
+      type: DataTypes.STRING,
+    },
+    p8_u8_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u8_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u8_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u8_name: {
+      type: DataTypes.STRING,
+    },
+    p8_u8_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u8_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u9_character_id: {
+      type: DataTypes.STRING,
+    },
+    p8_u9_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u9_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u9_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u9_name: {
+      type: DataTypes.STRING,
+    },
+    p8_u9_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u9_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u10_character_id: {
+      type: DataTypes.STRING,
+    },
+    p8_u10_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u10_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u10_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u10_name: {
+      type: DataTypes.STRING,
+    },
+    p8_u10_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u10_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u11_character_id: {
+      type: DataTypes.STRING,
+    },
+    p8_u11_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u11_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u11_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u11_name: {
+      type: DataTypes.STRING,
+    },
+    p8_u11_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u11_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u12_character_id: {
+      type: DataTypes.STRING,
+    },
+    p8_u12_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u12_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u12_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u12_name: {
+      type: DataTypes.STRING,
+    },
+    p8_u12_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u12_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u13_character_id: {
+      type: DataTypes.STRING,
+    },
+    p8_u13_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u13_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u13_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u13_name: {
+      type: DataTypes.STRING,
+    },
+    p8_u13_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u13_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u14_character_id: {
+      type: DataTypes.STRING,
+    },
+    p8_u14_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u14_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u14_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u14_name: {
+      type: DataTypes.STRING,
+    },
+    p8_u14_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u14_tier: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u15_character_id: {
+      type: DataTypes.STRING,
+    },
+    p8_u15_item1: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u15_item2: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u15_item3: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u15_name: {
+      type: DataTypes.STRING,
+    },
+    p8_u15_rarity: {
+      type: DataTypes.INTEGER,
+    },
+    p8_u15_tier: {
+      type: DataTypes.INTEGER,
+    },
+    
 
   });
 
-//matchData.sync().then(() => {console.log("User Model synced");});
-//User.sync().then(() => {console.log("User Model synced");});
-//matchUsers.sync().then(() => {console.log("User Model synced");});
+matchData.sync().then(() => {console.log("User Model synced");});
+User.sync().then(() => {console.log("User Model synced");});
+matchUsers.sync().then(() => {console.log("User Model synced");});
 
 //var puuidAdd = User.create({
   //puuid: "4y7U0S8KJEdONYlueYzI_BHK22nE93gPmA783axCNcNOzC0M0ldpdcRs8ON-OAkMUA__t9QQNhRrLA",

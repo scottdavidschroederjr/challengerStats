@@ -345,6 +345,7 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
         }
 
         //adds data to matchData database
+        //TODO ADD ALL OF THE OTHER DATA
         try {
           matchData.findOrCreate({
             where: {matchID: requestInput},
@@ -364,6 +365,7 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
             p1_augment1: data["info"]["participants"][0]['augments'][0],
             p1_augment2: data["info"]["participants"][0]['augments'][1],
             p1_augment3: data["info"]["participants"][0]['augments'][2],
+            
             
             player2: data["metadata"]["participants"][1],
             p2_gold_left: data["info"]["participants"][1]['gold_left'],
