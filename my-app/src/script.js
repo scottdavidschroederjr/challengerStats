@@ -10,11 +10,10 @@ const { matchData } = require("./database/modules/createTables.js")
 //this can be cleaned up to mainly reference output object
 var userName1 = ""
 var userName2 = ""
-const apiKey = "RGAPI-5c89a0b8-b3d0-467d-a43b-055c0461723e"
+const apiKey = ""
 var setNumber = ""
 var output = {}
 const lpChange = {1: 40, 2: 30, 3: 20, 4: 10, 5: -10, 6: -20, 7: -30, 8: -40}
-
 
 
 //starts sync to SQL server
@@ -122,10 +121,10 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
       output[requestInput]["puuid"] = sqlPUUID
 
       if (requestInput === userName1) {
-        puuid1 = sqlPUUID
+        output[userName1]["puuid"] = sqlPUUID
       }
       else {
-        puuid2 = sqlPUUID
+        output[userName2]["puuid"] = sqlPUUID
       }
 
       return output[requestInput]["puuid"]
@@ -153,13 +152,6 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
         console.log("Error adding new user to database.")
       }
 
-      //ugly fix but updates the global puuid values
-      if (requestInput === userName1) {
-        puuid1 = data["puuid"]
-      }
-      else {
-        puuid2 = data["puuid"]
-      }
 
       return output[requestInput]["puuid"]
     }
