@@ -10,12 +10,12 @@ const { matchData } = require("./database/modules/createTables.js")
 //this can be cleaned up to mainly reference output object
 var userName1 = ""
 var userName2 = ""
-const apiKey = ""
+const apiKey = "RGAPI-5c89a0b8-b3d0-467d-a43b-055c0461723e"
 var setNumber = ""
-var puuid1 = ""
-var puuid2 = ""
 var output = {}
 const lpChange = {1: 40, 2: 30, 3: 20, 4: 10, 5: -10, 6: -20, 7: -30, 8: -40}
+
+
 
 //starts sync to SQL server
 sq.sync()
@@ -296,9 +296,9 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
           }
 
           //getting which player each user is in the game to reference data (bad hack)
-          let indexPlayer1 = getKeyByValue(sqlMatch[0], puuid1)
+          let indexPlayer1 = getKeyByValue(sqlMatch[0], output[userName1]["puuid"])
           let user1placement = indexPlayer1[0] + indexPlayer1[6] + "_placement"
-          let indexPlayer2  = getKeyByValue(sqlMatch[0], puuid2)
+          let indexPlayer2  = getKeyByValue(sqlMatch[0], output[userName2]["puuid"])
           let user2placement = indexPlayer2[0] + indexPlayer2[6] + "_placement"
     
           //adds both player's placements to the output object
@@ -472,8 +472,9 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
     
           playerArray = playerArray.concat(data["metadata"]["participants"])
     
-          indexPlayer1  = playerArray.indexOf(puuid1)
-          indexPlayer2  = playerArray.indexOf(puuid2)
+          indexPlayer1  = playerArray.indexOf(output[userName1]["puuid"])
+          indexPlayer2  = playerArray.indexOf(output[userName2]["puuid"])
+
     
           //adds both player's placements to the output object
           output[userName1]["duoPlacements"] = output[userName1]["duoPlacements"].concat(data["info"]["participants"][indexPlayer1]['placement'])
