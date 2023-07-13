@@ -1,10 +1,7 @@
 const { traitMatchData } = require("../modules/createTables")
 
 function updateTrait (requestInput, data) {
-
-
   let defaults = {matchID: data["metadata"]["match_id"]}
-  let maxTraits = 0
 
   for (let x = 0; x < 8; x++){
       for (let i = 0; i < 30; i++){
@@ -26,7 +23,6 @@ function updateTrait (requestInput, data) {
 
       }
   }
-  console.log(defaults)
   try {
     traitMatchData.findOrCreate({
       where: {matchID: requestInput},

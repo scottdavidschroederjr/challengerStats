@@ -12,7 +12,7 @@ function updatePUUID (requestInput, data) {
          }
         })
       } catch {
-        console.log("Error adding new user to database.")
+        console.log("Error adding PUUID.")
       }
     }
 

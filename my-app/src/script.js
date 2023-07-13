@@ -8,6 +8,7 @@ const { updateTrait } = require("./database/update/updateTrait.js")
 const { updateUnits } = require("./database/update/updateUnits.js")
 const { updatePUUID } = require("./database/update/updatePUUID.js")
 const { updateUsers } = require("./database/update/updateUsers.js")
+const { updateGeneralMatchData } = require("./database/update/updateGeneralMatch.js")
 
 
 //variables that need to be seen everywhere
@@ -303,138 +304,9 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
         //to catch failed requests because of rate limiting
         data = await rateLimitWait(data, matchRequestURL)
 
-        //adds data to matchUsers database
+        //adds data to databases
         updateUsers(requestInput, data)
-
-        //TODO swap with function adds data to generalMatchData database
-        try {
-          generalMatchData.findOrCreate({
-            where: {matchID: requestInput},
-  
-            defaults: {
-  
-            matchID: data["metadata"]["match_id"],
-  
-            //player 1 general data
-            player1: data["metadata"]["participants"][0],
-            p1_gold_left: data["info"]["participants"][0]['gold_left'],
-            p1_last_round: data["info"]["participants"][0]['last_round'],
-            p1_level: data["info"]["participants"][0]['level'],
-            p1_placement: data["info"]["participants"][0]['placement'],
-            p1_players_eliminated: data["info"]["participants"][0]['players_eliminated'],
-            p1_time_eliminated: data["info"]["participants"][0]['time_eliminated'],
-            p1_total_damage_to_players: data["info"]["participants"][0]['total_damage_to_players'],
-            p1_augment1: data["info"]["participants"][0]['augments'][0],
-            p1_augment2: data["info"]["participants"][0]['augments'][1],
-            p1_augment3: data["info"]["participants"][0]['augments'][2],
-
-            //player 2 general data
-            player2: data["metadata"]["participants"][1],
-            p2_gold_left: data["info"]["participants"][1]['gold_left'],
-            p2_last_round: data["info"]["participants"][1]['last_round'],
-            p2_level: data["info"]["participants"][1]['level'],
-            p2_placement: data["info"]["participants"][1]['placement'],
-            p2_players_eliminated: data["info"]["participants"][1]['players_eliminated'],
-            p2_time_eliminated: data["info"]["participants"][1]['time_eliminated'],
-            p2_total_damage_to_players: data["info"]["participants"][1]['total_damage_to_players'],
-            p2_augment1: data["info"]["participants"][1]['augments'][0],
-            p2_augment2: data["info"]["participants"][1]['augments'][1],
-            p2_augment3: data["info"]["participants"][1]['augments'][2],
-
-            //player 2 trait data
-  
-            player3: data["metadata"]["participants"][2],
-            p3_gold_left: data["info"]["participants"][2]['gold_left'],
-            p3_last_round: data["info"]["participants"][2]['last_round'],
-            p3_level: data["info"]["participants"][2]['level'],
-            p3_placement: data["info"]["participants"][2]['placement'],
-            p3_players_eliminated: data["info"]["participants"][2]['players_eliminated'],
-            p3_time_eliminated: data["info"]["participants"][2]['time_eliminated'],
-            p3_total_damage_to_players: data["info"]["participants"][2]['total_damage_to_players'],
-            p3_augment1: data["info"]["participants"][2]['augments'][0],
-            p3_augment2: data["info"]["participants"][2]['augments'][1],
-            p3_augment3: data["info"]["participants"][2]['augments'][2],
-
-            //player 3 trait data
-  
-            player4: data["metadata"]["participants"][3],
-            p4_gold_left: data["info"]["participants"][3]['gold_left'],
-            p4_last_round: data["info"]["participants"][3]['last_round'],
-            p4_level: data["info"]["participants"][3]['level'],
-            p4_placement: data["info"]["participants"][3]['placement'],
-            p4_players_eliminated: data["info"]["participants"][3]['players_eliminated'],
-            p4_time_eliminated: data["info"]["participants"][3]['time_eliminated'],
-            p4_total_damage_to_players: data["info"]["participants"][3]['total_damage_to_players'],
-            p4_augment1: data["info"]["participants"][3]['augments'][0],
-            p4_augment2: data["info"]["participants"][3]['augments'][1],
-            p4_augment3: data["info"]["participants"][3]['augments'][2],
-
-            //player 4 trait data
-  
-            player5: data["metadata"]["participants"][4],
-            p5_gold_left: data["info"]["participants"][4]['gold_left'],
-            p5_last_round: data["info"]["participants"][4]['last_round'],
-            p5_level: data["info"]["participants"][4]['level'],
-            p5_placement: data["info"]["participants"][4]['placement'],
-            p5_players_eliminated: data["info"]["participants"][4]['players_eliminated'],
-            p5_time_eliminated: data["info"]["participants"][4]['time_eliminated'],
-            p5_total_damage_to_players: data["info"]["participants"][4]['total_damage_to_players'],
-            p5_augment1: data["info"]["participants"][4]['augments'][0],
-            p5_augment2: data["info"]["participants"][4]['augments'][1],
-            p5_augment3: data["info"]["participants"][4]['augments'][2],
-
-            //player 5 trait data
-  
-            player6: data["metadata"]["participants"][5],
-            p6_gold_left: data["info"]["participants"][5]['gold_left'],
-            p6_last_round: data["info"]["participants"][5]['last_round'],
-            p6_level: data["info"]["participants"][5]['level'],
-            p6_placement: data["info"]["participants"][5]['placement'],
-            p6_players_eliminated: data["info"]["participants"][5]['players_eliminated'],
-            p6_time_eliminated: data["info"]["participants"][5]['time_eliminated'],
-            p6_total_damage_to_players: data["info"]["participants"][5]['total_damage_to_players'],
-            p6_augment1: data["info"]["participants"][5]['augments'][0],
-            p6_augment2: data["info"]["participants"][5]['augments'][1],
-            p6_augment3: data["info"]["participants"][5]['augments'][2],
-
-            //player 6 trait data
-  
-            player7: data["metadata"]["participants"][6],
-            p7_gold_left: data["info"]["participants"][6]['gold_left'],
-            p7_last_round: data["info"]["participants"][6]['last_round'],
-            p7_level: data["info"]["participants"][6]['level'],
-            p7_placement: data["info"]["participants"][6]['placement'],
-            p7_players_eliminated: data["info"]["participants"][6]['players_eliminated'],
-            p7_time_eliminated: data["info"]["participants"][6]['time_eliminated'],
-            p7_total_damage_to_players: data["info"]["participants"][6]['total_damage_to_players'],
-            p7_augment1: data["info"]["participants"][6]['augments'][0],
-            p7_augment2: data["info"]["participants"][6]['augments'][1],
-            p7_augment3: data["info"]["participants"][6]['augments'][2],
-
-            //player 7 trait data
-  
-            player8: data["metadata"]["participants"][7],
-            p8_gold_left: data["info"]["participants"][7]['gold_left'],
-            p8_last_round: data["info"]["participants"][7]['last_round'],
-            p8_level: data["info"]["participants"][7]['level'],
-            p8_placement: data["info"]["participants"][7]['placement'],
-            p8_players_eliminated: data["info"]["participants"][7]['players_eliminated'],
-            p8_time_eliminated: data["info"]["participants"][7]['time_eliminated'],
-            p8_total_damage_to_players: data["info"]["participants"][7]['total_damage_to_players'],
-            p8_augment1: data["info"]["participants"][7]['augments'][0],
-            p8_augment2: data["info"]["participants"][7]['augments'][1],
-            p8_augment3: data["info"]["participants"][7]['augments'][2],
-
-            //player 8 trait data
-
-            }
-          })
-        } catch {
-          console.log("Error adding NEW MATCH INFO to database.")
-        }
-
-        //adds data to traitMatchData database
-        console.log("is it not getting here")
+        updateGeneralMatchData(requestInput, data)
         updateTrait(requestInput, data)
         updateUnits(requestInput, data)
 

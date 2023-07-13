@@ -31,7 +31,7 @@ const matchUsers = sq.define("matchUsers", {
     },
   
     game_datetime: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.BIGINT,
     },
     
     game_length: {
@@ -39,7 +39,7 @@ const matchUsers = sq.define("matchUsers", {
     },
   
     queue_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.SMALLINT,
       },
     
     tft_game_type: {
@@ -119,322 +119,6 @@ const generalMatchData = sq.define("generalMatchData", {
       type: DataTypes.STRING,
     },
    
-//p1 units
-  p1_u1_character_id: {
-    type: DataTypes.STRING,
-  },
-  p1_u1_item1: {
-    type: DataTypes.INTEGER,
-    },
-  p1_u1_item2: {
-      type: DataTypes.INTEGER,
-    },
-  p1_u1_item3: {
-      type: DataTypes.INTEGER,
-    },
-  p1_u1_name: {
-      type: DataTypes.STRING,
-    },
-  p1_u1_rarity: {
-      type: DataTypes.INTEGER,
-    },
-  p1_u1_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u2_character_id: {
-      type: DataTypes.STRING,
-    },
-    p1_u2_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u2_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u2_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u2_name: {
-      type: DataTypes.STRING,
-    },
-    p1_u2_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u2_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u3_character_id: {
-      type: DataTypes.STRING,
-    },
-    p1_u3_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u3_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u3_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u3_name: {
-      type: DataTypes.STRING,
-    },
-    p1_u3_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u3_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u4_character_id: {
-      type: DataTypes.STRING,
-    },
-    p1_u4_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u4_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u4_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u4_name: {
-      type: DataTypes.STRING,
-    },
-    p1_u4_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u4_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u5_character_id: {
-      type: DataTypes.STRING,
-    },
-    p1_u5_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u5_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u5_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u5_name: {
-      type: DataTypes.STRING,
-    },
-    p1_u5_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u5_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u6_character_id: {
-      type: DataTypes.STRING,
-    },
-    p1_u6_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u6_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u6_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u6_name: {
-      type: DataTypes.STRING,
-    },
-    p1_u6_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u6_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u7_character_id: {
-      type: DataTypes.STRING,
-    },
-    p1_u7_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u7_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u7_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u7_name: {
-      type: DataTypes.STRING,
-    },
-    p1_u7_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u7_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u8_character_id: {
-      type: DataTypes.STRING,
-    },
-    p1_u8_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u8_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u8_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u8_name: {
-      type: DataTypes.STRING,
-    },
-    p1_u8_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u8_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u9_character_id: {
-      type: DataTypes.STRING,
-    },
-    p1_u9_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u9_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u9_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u9_name: {
-      type: DataTypes.STRING,
-    },
-    p1_u9_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u9_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u10_character_id: {
-      type: DataTypes.STRING,
-    },
-    p1_u10_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u10_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u10_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u10_name: {
-      type: DataTypes.STRING,
-    },
-    p1_u10_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u10_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u11_character_id: {
-      type: DataTypes.STRING,
-    },
-    p1_u11_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u11_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u11_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u11_name: {
-      type: DataTypes.STRING,
-    },
-    p1_u11_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u11_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u12_character_id: {
-      type: DataTypes.STRING,
-    },
-    p1_u12_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u12_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u12_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u12_name: {
-      type: DataTypes.STRING,
-    },
-    p1_u12_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u12_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u13_character_id: {
-      type: DataTypes.STRING,
-    },
-    p1_u13_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u13_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u13_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u13_name: {
-      type: DataTypes.STRING,
-    },
-    p1_u13_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u13_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u14_character_id: {
-      type: DataTypes.STRING,
-    },
-    p1_u14_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u14_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u14_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u14_name: {
-      type: DataTypes.STRING,
-    },
-    p1_u14_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u14_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u15_character_id: {
-      type: DataTypes.STRING,
-    },
-    p1_u15_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u15_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u15_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u15_name: {
-      type: DataTypes.STRING,
-    },
-    p1_u15_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p1_u15_tier: {
-      type: DataTypes.INTEGER,
-    },
 //p2 stats
     player2: {
       type: DataTypes.STRING,
@@ -4299,16 +3983,4338 @@ const unitMatchData = sq.define("unitMatchData", {
       allowNull: false,
       primaryKey: true,
     },
+    p1_u1_character_id: {
+      type: DataTypes.STRING,
+    },
+    p1_u1_item1: {
+      type: DataTypes.STRING,
+      },
+    p1_u1_item2: {
+        type: DataTypes.STRING,
+      },
+    p1_u1_item3: {
+        type: DataTypes.STRING,
+      },
+    p1_u1_rarity: {
+        type: DataTypes.SMALLINT,
+      },
+    p1_u1_tier: {
+        type: DataTypes.SMALLINT,
+      },
+    p1_u2_character_id: {
+      type: DataTypes.STRING,
+    },
+    p1_u2_item1: {
+      type: DataTypes.STRING,
+      },
+    p1_u2_item2: {
+        type: DataTypes.STRING,
+      },
+    p1_u2_item3: {
+        type: DataTypes.STRING,
+      },
+    p1_u2_rarity: {
+        type: DataTypes.SMALLINT,
+      },
+    p1_u2_tier: {
+        type: DataTypes.SMALLINT,
+      },     
+    p1_u3_character_id: {
+      type: DataTypes.STRING,
+    },
+    p1_u3_item1: {
+      type: DataTypes.STRING,
+      },
+    p1_u3_item2: {
+        type: DataTypes.STRING,
+      },
+    p1_u3_item3: {
+        type: DataTypes.STRING,
+      },
+    p1_u3_rarity: {
+        type: DataTypes.SMALLINT,
+      },
+    p1_u3_tier: {
+        type: DataTypes.SMALLINT,
+      },
+p1_u4_character_id: {
+  type: DataTypes.STRING,
+},
+p1_u4_item1: {
+  type: DataTypes.STRING,
+},
+p1_u4_item2: {
+  type: DataTypes.STRING,
+},
+p1_u4_item3: {
+  type: DataTypes.STRING,
+},
+p1_u4_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p1_u4_tier: {
+  type: DataTypes.SMALLINT,
+},
+p1_u5_character_id: {
+  type: DataTypes.STRING,
+},
+p1_u5_item1: {
+  type: DataTypes.STRING,
+},
+p1_u5_item2: {
+  type: DataTypes.STRING,
+},
+p1_u5_item3: {
+  type: DataTypes.STRING,
+},
+p1_u5_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p1_u5_tier: {
+  type: DataTypes.SMALLINT,
+},
+p1_u6_character_id: {
+  type: DataTypes.STRING,
+},
+p1_u6_item1: {
+  type: DataTypes.STRING,
+},
+p1_u6_item2: {
+  type: DataTypes.STRING,
+},
+p1_u6_item3: {
+  type: DataTypes.STRING,
+},
+p1_u6_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p1_u6_tier: {
+  type: DataTypes.SMALLINT,
+},
+p1_u7_character_id: {
+  type: DataTypes.STRING,
+},
+p1_u7_item1: {
+  type: DataTypes.STRING,
+},
+p1_u7_item2: {
+  type: DataTypes.STRING,
+},
+p1_u7_item3: {
+  type: DataTypes.STRING,
+},
+p1_u7_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p1_u7_tier: {
+  type: DataTypes.SMALLINT,
+},
+p1_u8_character_id: {
+  type: DataTypes.STRING,
+},
+p1_u8_item1: {
+  type: DataTypes.STRING,
+},
+p1_u8_item2: {
+  type: DataTypes.STRING,
+},
+p1_u8_item3: {
+  type: DataTypes.STRING,
+},
+p1_u8_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p1_u8_tier: {
+  type: DataTypes.SMALLINT,
+},
+p1_u9_character_id: {
+  type: DataTypes.STRING,
+},
+p1_u9_item1: {
+  type: DataTypes.STRING,
+},
+p1_u9_item2: {
+  type: DataTypes.STRING,
+},
+p1_u9_item3: {
+  type: DataTypes.STRING,
+},
+p1_u9_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p1_u9_tier: {
+  type: DataTypes.SMALLINT,
+},
+p1_u10_character_id: {
+  type: DataTypes.STRING,
+},
+p1_u10_item1: {
+  type: DataTypes.STRING,
+},
+p1_u10_item2: {
+  type: DataTypes.STRING,
+},
+p1_u10_item3: {
+  type: DataTypes.STRING,
+},
+p1_u10_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p1_u10_tier: {
+  type: DataTypes.SMALLINT,
+},
+p1_u11_character_id: {
+  type: DataTypes.STRING,
+},
+p1_u11_item1: {
+  type: DataTypes.STRING,
+},
+p1_u11_item2: {
+  type: DataTypes.STRING,
+},
+p1_u11_item3: {
+  type: DataTypes.STRING,
+},
+p1_u11_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p1_u11_tier: {
+  type: DataTypes.SMALLINT,
+},
+p1_u12_character_id: {
+  type: DataTypes.STRING,
+},
+p1_u12_item1: {
+  type: DataTypes.STRING,
+},
+p1_u12_item2: {
+  type: DataTypes.STRING,
+},
+p1_u12_item3: {
+  type: DataTypes.STRING,
+},
+p1_u12_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p1_u12_tier: {
+  type: DataTypes.SMALLINT,
+},
+p1_u13_character_id: {
+  type: DataTypes.STRING,
+},
+p1_u13_item1: {
+  type: DataTypes.STRING,
+},
+p1_u13_item2: {
+  type: DataTypes.STRING,
+},
+p1_u13_item3: {
+  type: DataTypes.STRING,
+},
+p1_u13_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p1_u13_tier: {
+  type: DataTypes.SMALLINT,
+},
+p1_u14_character_id: {
+  type: DataTypes.STRING,
+},
+p1_u14_item1: {
+  type: DataTypes.STRING,
+},
+p1_u14_item2: {
+  type: DataTypes.STRING,
+},
+p1_u14_item3: {
+  type: DataTypes.STRING,
+},
+p1_u14_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p1_u14_tier: {
+  type: DataTypes.SMALLINT,
+},
+p1_u15_character_id: {
+  type: DataTypes.STRING,
+},
+p1_u15_item1: {
+  type: DataTypes.STRING,
+},
+p1_u15_item2: {
+  type: DataTypes.STRING,
+},
+p1_u15_item3: {
+  type: DataTypes.STRING,
+},
+p1_u15_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p1_u15_tier: {
+  type: DataTypes.SMALLINT,
+},
+p1_u16_character_id: {
+  type: DataTypes.STRING,
+},
+p1_u16_item1: {
+  type: DataTypes.STRING,
+},
+p1_u16_item2: {
+  type: DataTypes.STRING,
+},
+p1_u16_item3: {
+  type: DataTypes.STRING,
+},
+p1_u16_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p1_u16_tier: {
+  type: DataTypes.SMALLINT,
+},
+p1_u17_character_id: {
+  type: DataTypes.STRING,
+},
+p1_u17_item1: {
+  type: DataTypes.STRING,
+},
+p1_u17_item2: {
+  type: DataTypes.STRING,
+},
+p1_u17_item3: {
+  type: DataTypes.STRING,
+},
+p1_u17_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p1_u17_tier: {
+  type: DataTypes.SMALLINT,
+},
+p1_u18_character_id: {
+  type: DataTypes.STRING,
+},
+p1_u18_item1: {
+  type: DataTypes.STRING,
+},
+p1_u18_item2: {
+  type: DataTypes.STRING,
+},
+p1_u18_item3: {
+  type: DataTypes.STRING,
+},
+p1_u18_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p1_u18_tier: {
+  type: DataTypes.SMALLINT,
+},
+p1_u19_character_id: {
+  type: DataTypes.STRING,
+},
+p1_u19_item1: {
+  type: DataTypes.STRING,
+},
+p1_u19_item2: {
+  type: DataTypes.STRING,
+},
+p1_u19_item3: {
+  type: DataTypes.STRING,
+},
+p1_u19_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p1_u19_tier: {
+  type: DataTypes.SMALLINT,
+},
+p1_u20_character_id: {
+  type: DataTypes.STRING,
+},
+p1_u20_item1: {
+  type: DataTypes.STRING,
+},
+p1_u20_item2: {
+  type: DataTypes.STRING,
+},
+p1_u20_item3: {
+  type: DataTypes.STRING,
+},
+p1_u20_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p1_u20_tier: {
+  type: DataTypes.SMALLINT,
+},
+p1_u21_character_id: {
+  type: DataTypes.STRING,
+},
+p1_u21_item1: {
+  type: DataTypes.STRING,
+},
+p1_u21_item2: {
+  type: DataTypes.STRING,
+},
+p1_u21_item3: {
+  type: DataTypes.STRING,
+},
+p1_u21_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p1_u21_tier: {
+  type: DataTypes.SMALLINT,
+},
+p1_u22_character_id: {
+  type: DataTypes.STRING,
+},
+p1_u22_item1: {
+  type: DataTypes.STRING,
+},
+p1_u22_item2: {
+  type: DataTypes.STRING,
+},
+p1_u22_item3: {
+  type: DataTypes.STRING,
+},
+p1_u22_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p1_u22_tier: {
+  type: DataTypes.SMALLINT,
+},
+p1_u23_character_id: {
+  type: DataTypes.STRING,
+},
+p1_u23_item1: {
+  type: DataTypes.STRING,
+},
+p1_u23_item2: {
+  type: DataTypes.STRING,
+},
+p1_u23_item3: {
+  type: DataTypes.STRING,
+},
+p1_u23_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p1_u23_tier: {
+  type: DataTypes.SMALLINT,
+},
+p1_u24_character_id: {
+  type: DataTypes.STRING,
+},
+p1_u24_item1: {
+  type: DataTypes.STRING,
+},
+p1_u24_item2: {
+  type: DataTypes.STRING,
+},
+p1_u24_item3: {
+  type: DataTypes.STRING,
+},
+p1_u24_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p1_u24_tier: {
+  type: DataTypes.SMALLINT,
+},
+p1_u25_character_id: {
+  type: DataTypes.STRING,
+},
+p1_u25_item1: {
+  type: DataTypes.STRING,
+},
+p1_u25_item2: {
+  type: DataTypes.STRING,
+},
+p1_u25_item3: {
+  type: DataTypes.STRING,
+},
+p1_u25_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p1_u25_tier: {
+  type: DataTypes.SMALLINT,
+},
+p1_u26_character_id: {
+  type: DataTypes.STRING,
+},
+p1_u26_item1: {
+  type: DataTypes.STRING,
+},
+p1_u26_item2: {
+  type: DataTypes.STRING,
+},
+p1_u26_item3: {
+  type: DataTypes.STRING,
+},
+p1_u26_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p1_u26_tier: {
+  type: DataTypes.SMALLINT,
+},
+p1_u27_character_id: {
+  type: DataTypes.STRING,
+},
+p1_u27_item1: {
+  type: DataTypes.STRING,
+},
+p1_u27_item2: {
+  type: DataTypes.STRING,
+},
+p1_u27_item3: {
+  type: DataTypes.STRING,
+},
+p1_u27_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p1_u27_tier: {
+  type: DataTypes.SMALLINT,
+},
+p1_u28_character_id: {
+  type: DataTypes.STRING,
+},
+p1_u28_item1: {
+  type: DataTypes.STRING,
+},
+p1_u28_item2: {
+  type: DataTypes.STRING,
+},
+p1_u28_item3: {
+  type: DataTypes.STRING,
+},
+p1_u28_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p1_u28_tier: {
+  type: DataTypes.SMALLINT,
+},
+p1_u29_character_id: {
+  type: DataTypes.STRING,
+},
+p1_u29_item1: {
+  type: DataTypes.STRING,
+},
+p1_u29_item2: {
+  type: DataTypes.STRING,
+},
+p1_u29_item3: {
+  type: DataTypes.STRING,
+},
+p1_u29_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p1_u29_tier: {
+  type: DataTypes.SMALLINT,
+},
+p1_u30_character_id: {
+  type: DataTypes.STRING,
+},
+p1_u30_item1: {
+  type: DataTypes.STRING,
+},
+p1_u30_item2: {
+  type: DataTypes.STRING,
+},
+p1_u30_item3: {
+  type: DataTypes.STRING,
+},
+p1_u30_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p1_u30_tier: {
+  type: DataTypes.SMALLINT,
+},
+p2_u1_character_id: {
+  type: DataTypes.STRING,
+},
+p2_u1_item1: {
+  type: DataTypes.STRING,
+},
+p2_u1_item2: {
+  type: DataTypes.STRING,
+},
+p2_u1_item3: {
+  type: DataTypes.STRING,
+},
+p2_u1_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p2_u1_tier: {
+  type: DataTypes.SMALLINT,
+},
+p2_u2_character_id: {
+  type: DataTypes.STRING,
+},
+p2_u2_item1: {
+  type: DataTypes.STRING,
+},
+p2_u2_item2: {
+  type: DataTypes.STRING,
+},
+p2_u2_item3: {
+  type: DataTypes.STRING,
+},
+p2_u2_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p2_u2_tier: {
+  type: DataTypes.SMALLINT,
+},
+p2_u3_character_id: {
+  type: DataTypes.STRING,
+},
+p2_u3_item1: {
+  type: DataTypes.STRING,
+},
+p2_u3_item2: {
+  type: DataTypes.STRING,
+},
+p2_u3_item3: {
+  type: DataTypes.STRING,
+},
+p2_u3_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p2_u3_tier: {
+  type: DataTypes.SMALLINT,
+},
+p2_u4_character_id: {
+  type: DataTypes.STRING,
+},
+p2_u4_item1: {
+  type: DataTypes.STRING,
+},
+p2_u4_item2: {
+  type: DataTypes.STRING,
+},
+p2_u4_item3: {
+  type: DataTypes.STRING,
+},
+p2_u4_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p2_u4_tier: {
+  type: DataTypes.SMALLINT,
+},
+p2_u5_character_id: {
+  type: DataTypes.STRING,
+},
+p2_u5_item1: {
+  type: DataTypes.STRING,
+},
+p2_u5_item2: {
+  type: DataTypes.STRING,
+},
+p2_u5_item3: {
+  type: DataTypes.STRING,
+},
+p2_u5_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p2_u5_tier: {
+  type: DataTypes.SMALLINT,
+},
+p2_u6_character_id: {
+  type: DataTypes.STRING,
+},
+p2_u6_item1: {
+  type: DataTypes.STRING,
+},
+p2_u6_item2: {
+  type: DataTypes.STRING,
+},
+p2_u6_item3: {
+  type: DataTypes.STRING,
+},
+p2_u6_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p2_u6_tier: {
+  type: DataTypes.SMALLINT,
+},
+p2_u7_character_id: {
+  type: DataTypes.STRING,
+},
+p2_u7_item1: {
+  type: DataTypes.STRING,
+},
+p2_u7_item2: {
+  type: DataTypes.STRING,
+},
+p2_u7_item3: {
+  type: DataTypes.STRING,
+},
+p2_u7_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p2_u7_tier: {
+  type: DataTypes.SMALLINT,
+},
+p2_u8_character_id: {
+  type: DataTypes.STRING,
+},
+p2_u8_item1: {
+  type: DataTypes.STRING,
+},
+p2_u8_item2: {
+  type: DataTypes.STRING,
+},
+p2_u8_item3: {
+  type: DataTypes.STRING,
+},
+p2_u8_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p2_u8_tier: {
+  type: DataTypes.SMALLINT,
+},
+p2_u9_character_id: {
+  type: DataTypes.STRING,
+},
+p2_u9_item1: {
+  type: DataTypes.STRING,
+},
+p2_u9_item2: {
+  type: DataTypes.STRING,
+},
+p2_u9_item3: {
+  type: DataTypes.STRING,
+},
+p2_u9_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p2_u9_tier: {
+  type: DataTypes.SMALLINT,
+},
+p2_u10_character_id: {
+  type: DataTypes.STRING,
+},
+p2_u10_item1: {
+  type: DataTypes.STRING,
+},
+p2_u10_item2: {
+  type: DataTypes.STRING,
+},
+p2_u10_item3: {
+  type: DataTypes.STRING,
+},
+p2_u10_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p2_u10_tier: {
+  type: DataTypes.SMALLINT,
+},
+p2_u11_character_id: {
+  type: DataTypes.STRING,
+},
+p2_u11_item1: {
+  type: DataTypes.STRING,
+},
+p2_u11_item2: {
+  type: DataTypes.STRING,
+},
+p2_u11_item3: {
+  type: DataTypes.STRING,
+},
+p2_u11_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p2_u11_tier: {
+  type: DataTypes.SMALLINT,
+},
+p2_u12_character_id: {
+  type: DataTypes.STRING,
+},
+p2_u12_item1: {
+  type: DataTypes.STRING,
+},
+p2_u12_item2: {
+  type: DataTypes.STRING,
+},
+p2_u12_item3: {
+  type: DataTypes.STRING,
+},
+p2_u12_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p2_u12_tier: {
+  type: DataTypes.SMALLINT,
+},
+p2_u13_character_id: {
+  type: DataTypes.STRING,
+},
+p2_u13_item1: {
+  type: DataTypes.STRING,
+},
+p2_u13_item2: {
+  type: DataTypes.STRING,
+},
+p2_u13_item3: {
+  type: DataTypes.STRING,
+},
+p2_u13_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p2_u13_tier: {
+  type: DataTypes.SMALLINT,
+},
+p2_u14_character_id: {
+  type: DataTypes.STRING,
+},
+p2_u14_item1: {
+  type: DataTypes.STRING,
+},
+p2_u14_item2: {
+  type: DataTypes.STRING,
+},
+p2_u14_item3: {
+  type: DataTypes.STRING,
+},
+p2_u14_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p2_u14_tier: {
+  type: DataTypes.SMALLINT,
+},
+p2_u15_character_id: {
+  type: DataTypes.STRING,
+},
+p2_u15_item1: {
+  type: DataTypes.STRING,
+},
+p2_u15_item2: {
+  type: DataTypes.STRING,
+},
+p2_u15_item3: {
+  type: DataTypes.STRING,
+},
+p2_u15_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p2_u15_tier: {
+  type: DataTypes.SMALLINT,
+},
+p2_u16_character_id: {
+  type: DataTypes.STRING,
+},
+p2_u16_item1: {
+  type: DataTypes.STRING,
+},
+p2_u16_item2: {
+  type: DataTypes.STRING,
+},
+p2_u16_item3: {
+  type: DataTypes.STRING,
+},
+p2_u16_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p2_u16_tier: {
+  type: DataTypes.SMALLINT,
+},
+p2_u17_character_id: {
+  type: DataTypes.STRING,
+},
+p2_u17_item1: {
+  type: DataTypes.STRING,
+},
+p2_u17_item2: {
+  type: DataTypes.STRING,
+},
+p2_u17_item3: {
+  type: DataTypes.STRING,
+},
+p2_u17_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p2_u17_tier: {
+  type: DataTypes.SMALLINT,
+},
+p2_u18_character_id: {
+  type: DataTypes.STRING,
+},
+p2_u18_item1: {
+  type: DataTypes.STRING,
+},
+p2_u18_item2: {
+  type: DataTypes.STRING,
+},
+p2_u18_item3: {
+  type: DataTypes.STRING,
+},
+p2_u18_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p2_u18_tier: {
+  type: DataTypes.SMALLINT,
+},
+p2_u19_character_id: {
+  type: DataTypes.STRING,
+},
+p2_u19_item1: {
+  type: DataTypes.STRING,
+},
+p2_u19_item2: {
+  type: DataTypes.STRING,
+},
+p2_u19_item3: {
+  type: DataTypes.STRING,
+},
+p2_u19_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p2_u19_tier: {
+  type: DataTypes.SMALLINT,
+},
+p2_u20_character_id: {
+  type: DataTypes.STRING,
+},
+p2_u20_item1: {
+  type: DataTypes.STRING,
+},
+p2_u20_item2: {
+  type: DataTypes.STRING,
+},
+p2_u20_item3: {
+  type: DataTypes.STRING,
+},
+p2_u20_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p2_u20_tier: {
+  type: DataTypes.SMALLINT,
+},
+p2_u21_character_id: {
+  type: DataTypes.STRING,
+},
+p2_u21_item1: {
+  type: DataTypes.STRING,
+},
+p2_u21_item2: {
+  type: DataTypes.STRING,
+},
+p2_u21_item3: {
+  type: DataTypes.STRING,
+},
+p2_u21_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p2_u21_tier: {
+  type: DataTypes.SMALLINT,
+},
+p2_u22_character_id: {
+  type: DataTypes.STRING,
+},
+p2_u22_item1: {
+  type: DataTypes.STRING,
+},
+p2_u22_item2: {
+  type: DataTypes.STRING,
+},
+p2_u22_item3: {
+  type: DataTypes.STRING,
+},
+p2_u22_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p2_u22_tier: {
+  type: DataTypes.SMALLINT,
+},
+p2_u23_character_id: {
+  type: DataTypes.STRING,
+},
+p2_u23_item1: {
+  type: DataTypes.STRING,
+},
+p2_u23_item2: {
+  type: DataTypes.STRING,
+},
+p2_u23_item3: {
+  type: DataTypes.STRING,
+},
+p2_u23_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p2_u23_tier: {
+  type: DataTypes.SMALLINT,
+},
+p2_u24_character_id: {
+  type: DataTypes.STRING,
+},
+p2_u24_item1: {
+  type: DataTypes.STRING,
+},
+p2_u24_item2: {
+  type: DataTypes.STRING,
+},
+p2_u24_item3: {
+  type: DataTypes.STRING,
+},
+p2_u24_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p2_u24_tier: {
+  type: DataTypes.SMALLINT,
+},
+p2_u25_character_id: {
+  type: DataTypes.STRING,
+},
+p2_u25_item1: {
+  type: DataTypes.STRING,
+},
+p2_u25_item2: {
+  type: DataTypes.STRING,
+},
+p2_u25_item3: {
+  type: DataTypes.STRING,
+},
+p2_u25_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p2_u25_tier: {
+  type: DataTypes.SMALLINT,
+},
+p2_u26_character_id: {
+  type: DataTypes.STRING,
+},
+p2_u26_item1: {
+  type: DataTypes.STRING,
+},
+p2_u26_item2: {
+  type: DataTypes.STRING,
+},
+p2_u26_item3: {
+  type: DataTypes.STRING,
+},
+p2_u26_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p2_u26_tier: {
+  type: DataTypes.SMALLINT,
+},
+p2_u27_character_id: {
+  type: DataTypes.STRING,
+},
+p2_u27_item1: {
+  type: DataTypes.STRING,
+},
+p2_u27_item2: {
+  type: DataTypes.STRING,
+},
+p2_u27_item3: {
+  type: DataTypes.STRING,
+},
+p2_u27_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p2_u27_tier: {
+  type: DataTypes.SMALLINT,
+},
+p2_u28_character_id: {
+  type: DataTypes.STRING,
+},
+p2_u28_item1: {
+  type: DataTypes.STRING,
+},
+p2_u28_item2: {
+  type: DataTypes.STRING,
+},
+p2_u28_item3: {
+  type: DataTypes.STRING,
+},
+p2_u28_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p2_u28_tier: {
+  type: DataTypes.SMALLINT,
+},
+p2_u29_character_id: {
+  type: DataTypes.STRING,
+},
+p2_u29_item1: {
+  type: DataTypes.STRING,
+},
+p2_u29_item2: {
+  type: DataTypes.STRING,
+},
+p2_u29_item3: {
+  type: DataTypes.STRING,
+},
+p2_u29_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p2_u29_tier: {
+  type: DataTypes.SMALLINT,
+},
+p2_u30_character_id: {
+  type: DataTypes.STRING,
+},
+p2_u30_item1: {
+  type: DataTypes.STRING,
+},
+p2_u30_item2: {
+  type: DataTypes.STRING,
+},
+p2_u30_item3: {
+  type: DataTypes.STRING,
+},
+p2_u30_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p2_u30_tier: {
+  type: DataTypes.SMALLINT,
+},
+p3_u1_character_id: {
+  type: DataTypes.STRING,
+},
+p3_u1_item1: {
+  type: DataTypes.STRING,
+},
+p3_u1_item2: {
+  type: DataTypes.STRING,
+},
+p3_u1_item3: {
+  type: DataTypes.STRING,
+},
+p3_u1_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p3_u1_tier: {
+  type: DataTypes.SMALLINT,
+},
+p3_u2_character_id: {
+  type: DataTypes.STRING,
+},
+p3_u2_item1: {
+  type: DataTypes.STRING,
+},
+p3_u2_item2: {
+  type: DataTypes.STRING,
+},
+p3_u2_item3: {
+  type: DataTypes.STRING,
+},
+p3_u2_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p3_u2_tier: {
+  type: DataTypes.SMALLINT,
+},
+p3_u3_character_id: {
+  type: DataTypes.STRING,
+},
+p3_u3_item1: {
+  type: DataTypes.STRING,
+},
+p3_u3_item2: {
+  type: DataTypes.STRING,
+},
+p3_u3_item3: {
+  type: DataTypes.STRING,
+},
+p3_u3_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p3_u3_tier: {
+  type: DataTypes.SMALLINT,
+},
+p3_u4_character_id: {
+  type: DataTypes.STRING,
+},
+p3_u4_item1: {
+  type: DataTypes.STRING,
+},
+p3_u4_item2: {
+  type: DataTypes.STRING,
+},
+p3_u4_item3: {
+  type: DataTypes.STRING,
+},
+p3_u4_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p3_u4_tier: {
+  type: DataTypes.SMALLINT,
+},
+p3_u5_character_id: {
+  type: DataTypes.STRING,
+},
+p3_u5_item1: {
+  type: DataTypes.STRING,
+},
+p3_u5_item2: {
+  type: DataTypes.STRING,
+},
+p3_u5_item3: {
+  type: DataTypes.STRING,
+},
+p3_u5_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p3_u5_tier: {
+  type: DataTypes.SMALLINT,
+},
+p3_u6_character_id: {
+  type: DataTypes.STRING,
+},
+p3_u6_item1: {
+  type: DataTypes.STRING,
+},
+p3_u6_item2: {
+  type: DataTypes.STRING,
+},
+p3_u6_item3: {
+  type: DataTypes.STRING,
+},
+p3_u6_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p3_u6_tier: {
+  type: DataTypes.SMALLINT,
+},
+p3_u7_character_id: {
+  type: DataTypes.STRING,
+},
+p3_u7_item1: {
+  type: DataTypes.STRING,
+},
+p3_u7_item2: {
+  type: DataTypes.STRING,
+},
+p3_u7_item3: {
+  type: DataTypes.STRING,
+},
+p3_u7_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p3_u7_tier: {
+  type: DataTypes.SMALLINT,
+},
+p3_u8_character_id: {
+  type: DataTypes.STRING,
+},
+p3_u8_item1: {
+  type: DataTypes.STRING,
+},
+p3_u8_item2: {
+  type: DataTypes.STRING,
+},
+p3_u8_item3: {
+  type: DataTypes.STRING,
+},
+p3_u8_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p3_u8_tier: {
+  type: DataTypes.SMALLINT,
+},
+p3_u9_character_id: {
+  type: DataTypes.STRING,
+},
+p3_u9_item1: {
+  type: DataTypes.STRING,
+},
+p3_u9_item2: {
+  type: DataTypes.STRING,
+},
+p3_u9_item3: {
+  type: DataTypes.STRING,
+},
+p3_u9_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p3_u9_tier: {
+  type: DataTypes.SMALLINT,
+},
+p3_u10_character_id: {
+  type: DataTypes.STRING,
+},
+p3_u10_item1: {
+  type: DataTypes.STRING,
+},
+p3_u10_item2: {
+  type: DataTypes.STRING,
+},
+p3_u10_item3: {
+  type: DataTypes.STRING,
+},
+p3_u10_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p3_u10_tier: {
+  type: DataTypes.SMALLINT,
+},
+p3_u11_character_id: {
+  type: DataTypes.STRING,
+},
+p3_u11_item1: {
+  type: DataTypes.STRING,
+},
+p3_u11_item2: {
+  type: DataTypes.STRING,
+},
+p3_u11_item3: {
+  type: DataTypes.STRING,
+},
+p3_u11_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p3_u11_tier: {
+  type: DataTypes.SMALLINT,
+},
+p3_u12_character_id: {
+  type: DataTypes.STRING,
+},
+p3_u12_item1: {
+  type: DataTypes.STRING,
+},
+p3_u12_item2: {
+  type: DataTypes.STRING,
+},
+p3_u12_item3: {
+  type: DataTypes.STRING,
+},
+p3_u12_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p3_u12_tier: {
+  type: DataTypes.SMALLINT,
+},
+p3_u13_character_id: {
+  type: DataTypes.STRING,
+},
+p3_u13_item1: {
+  type: DataTypes.STRING,
+},
+p3_u13_item2: {
+  type: DataTypes.STRING,
+},
+p3_u13_item3: {
+  type: DataTypes.STRING,
+},
+p3_u13_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p3_u13_tier: {
+  type: DataTypes.SMALLINT,
+},
+p3_u14_character_id: {
+  type: DataTypes.STRING,
+},
+p3_u14_item1: {
+  type: DataTypes.STRING,
+},
+p3_u14_item2: {
+  type: DataTypes.STRING,
+},
+p3_u14_item3: {
+  type: DataTypes.STRING,
+},
+p3_u14_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p3_u14_tier: {
+  type: DataTypes.SMALLINT,
+},
+p3_u15_character_id: {
+  type: DataTypes.STRING,
+},
+p3_u15_item1: {
+  type: DataTypes.STRING,
+},
+p3_u15_item2: {
+  type: DataTypes.STRING,
+},
+p3_u15_item3: {
+  type: DataTypes.STRING,
+},
+p3_u15_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p3_u15_tier: {
+  type: DataTypes.SMALLINT,
+},
+p3_u16_character_id: {
+  type: DataTypes.STRING,
+},
+p3_u16_item1: {
+  type: DataTypes.STRING,
+},
+p3_u16_item2: {
+  type: DataTypes.STRING,
+},
+p3_u16_item3: {
+  type: DataTypes.STRING,
+},
+p3_u16_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p3_u16_tier: {
+  type: DataTypes.SMALLINT,
+},
+p3_u17_character_id: {
+  type: DataTypes.STRING,
+},
+p3_u17_item1: {
+  type: DataTypes.STRING,
+},
+p3_u17_item2: {
+  type: DataTypes.STRING,
+},
+p3_u17_item3: {
+  type: DataTypes.STRING,
+},
+p3_u17_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p3_u17_tier: {
+  type: DataTypes.SMALLINT,
+},
+p3_u18_character_id: {
+  type: DataTypes.STRING,
+},
+p3_u18_item1: {
+  type: DataTypes.STRING,
+},
+p3_u18_item2: {
+  type: DataTypes.STRING,
+},
+p3_u18_item3: {
+  type: DataTypes.STRING,
+},
+p3_u18_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p3_u18_tier: {
+  type: DataTypes.SMALLINT,
+},
+p3_u19_character_id: {
+  type: DataTypes.STRING,
+},
+p3_u19_item1: {
+  type: DataTypes.STRING,
+},
+p3_u19_item2: {
+  type: DataTypes.STRING,
+},
+p3_u19_item3: {
+  type: DataTypes.STRING,
+},
+p3_u19_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p3_u19_tier: {
+  type: DataTypes.SMALLINT,
+},
+p3_u20_character_id: {
+  type: DataTypes.STRING,
+},
+p3_u20_item1: {
+  type: DataTypes.STRING,
+},
+p3_u20_item2: {
+  type: DataTypes.STRING,
+},
+p3_u20_item3: {
+  type: DataTypes.STRING,
+},
+p3_u20_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p3_u20_tier: {
+  type: DataTypes.SMALLINT,
+},
+p3_u21_character_id: {
+  type: DataTypes.STRING,
+},
+p3_u21_item1: {
+  type: DataTypes.STRING,
+},
+p3_u21_item2: {
+  type: DataTypes.STRING,
+},
+p3_u21_item3: {
+  type: DataTypes.STRING,
+},
+p3_u21_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p3_u21_tier: {
+  type: DataTypes.SMALLINT,
+},
+p3_u22_character_id: {
+  type: DataTypes.STRING,
+},
+p3_u22_item1: {
+  type: DataTypes.STRING,
+},
+p3_u22_item2: {
+  type: DataTypes.STRING,
+},
+p3_u22_item3: {
+  type: DataTypes.STRING,
+},
+p3_u22_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p3_u22_tier: {
+  type: DataTypes.SMALLINT,
+},
+p3_u23_character_id: {
+  type: DataTypes.STRING,
+},
+p3_u23_item1: {
+  type: DataTypes.STRING,
+},
+p3_u23_item2: {
+  type: DataTypes.STRING,
+},
+p3_u23_item3: {
+  type: DataTypes.STRING,
+},
+p3_u23_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p3_u23_tier: {
+  type: DataTypes.SMALLINT,
+},
+p3_u24_character_id: {
+  type: DataTypes.STRING,
+},
+p3_u24_item1: {
+  type: DataTypes.STRING,
+},
+p3_u24_item2: {
+  type: DataTypes.STRING,
+},
+p3_u24_item3: {
+  type: DataTypes.STRING,
+},
+p3_u24_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p3_u24_tier: {
+  type: DataTypes.SMALLINT,
+},
+p3_u25_character_id: {
+  type: DataTypes.STRING,
+},
+p3_u25_item1: {
+  type: DataTypes.STRING,
+},
+p3_u25_item2: {
+  type: DataTypes.STRING,
+},
+p3_u25_item3: {
+  type: DataTypes.STRING,
+},
+p3_u25_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p3_u25_tier: {
+  type: DataTypes.SMALLINT,
+},
+p3_u26_character_id: {
+  type: DataTypes.STRING,
+},
+p3_u26_item1: {
+  type: DataTypes.STRING,
+},
+p3_u26_item2: {
+  type: DataTypes.STRING,
+},
+p3_u26_item3: {
+  type: DataTypes.STRING,
+},
+p3_u26_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p3_u26_tier: {
+  type: DataTypes.SMALLINT,
+},
+p3_u27_character_id: {
+  type: DataTypes.STRING,
+},
+p3_u27_item1: {
+  type: DataTypes.STRING,
+},
+p3_u27_item2: {
+  type: DataTypes.STRING,
+},
+p3_u27_item3: {
+  type: DataTypes.STRING,
+},
+p3_u27_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p3_u27_tier: {
+  type: DataTypes.SMALLINT,
+},
+p3_u28_character_id: {
+  type: DataTypes.STRING,
+},
+p3_u28_item1: {
+  type: DataTypes.STRING,
+},
+p3_u28_item2: {
+  type: DataTypes.STRING,
+},
+p3_u28_item3: {
+  type: DataTypes.STRING,
+},
+p3_u28_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p3_u28_tier: {
+  type: DataTypes.SMALLINT,
+},
+p3_u29_character_id: {
+  type: DataTypes.STRING,
+},
+p3_u29_item1: {
+  type: DataTypes.STRING,
+},
+p3_u29_item2: {
+  type: DataTypes.STRING,
+},
+p3_u29_item3: {
+  type: DataTypes.STRING,
+},
+p3_u29_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p3_u29_tier: {
+  type: DataTypes.SMALLINT,
+},
+p3_u30_character_id: {
+  type: DataTypes.STRING,
+},
+p3_u30_item1: {
+  type: DataTypes.STRING,
+},
+p3_u30_item2: {
+  type: DataTypes.STRING,
+},
+p3_u30_item3: {
+  type: DataTypes.STRING,
+},
+p3_u30_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p3_u30_tier: {
+  type: DataTypes.SMALLINT,
+},
+p4_u1_character_id: {
+  type: DataTypes.STRING,
+},
+p4_u1_item1: {
+  type: DataTypes.STRING,
+},
+p4_u1_item2: {
+  type: DataTypes.STRING,
+},
+p4_u1_item3: {
+  type: DataTypes.STRING,
+},
+p4_u1_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p4_u1_tier: {
+  type: DataTypes.SMALLINT,
+},
+p4_u2_character_id: {
+  type: DataTypes.STRING,
+},
+p4_u2_item1: {
+  type: DataTypes.STRING,
+},
+p4_u2_item2: {
+  type: DataTypes.STRING,
+},
+p4_u2_item3: {
+  type: DataTypes.STRING,
+},
+p4_u2_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p4_u2_tier: {
+  type: DataTypes.SMALLINT,
+},
+p4_u3_character_id: {
+  type: DataTypes.STRING,
+},
+p4_u3_item1: {
+  type: DataTypes.STRING,
+},
+p4_u3_item2: {
+  type: DataTypes.STRING,
+},
+p4_u3_item3: {
+  type: DataTypes.STRING,
+},
+p4_u3_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p4_u3_tier: {
+  type: DataTypes.SMALLINT,
+},
+p4_u4_character_id: {
+  type: DataTypes.STRING,
+},
+p4_u4_item1: {
+  type: DataTypes.STRING,
+},
+p4_u4_item2: {
+  type: DataTypes.STRING,
+},
+p4_u4_item3: {
+  type: DataTypes.STRING,
+},
+p4_u4_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p4_u4_tier: {
+  type: DataTypes.SMALLINT,
+},
+p4_u5_character_id: {
+  type: DataTypes.STRING,
+},
+p4_u5_item1: {
+  type: DataTypes.STRING,
+},
+p4_u5_item2: {
+  type: DataTypes.STRING,
+},
+p4_u5_item3: {
+  type: DataTypes.STRING,
+},
+p4_u5_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p4_u5_tier: {
+  type: DataTypes.SMALLINT,
+},
+p4_u6_character_id: {
+  type: DataTypes.STRING,
+},
+p4_u6_item1: {
+  type: DataTypes.STRING,
+},
+p4_u6_item2: {
+  type: DataTypes.STRING,
+},
+p4_u6_item3: {
+  type: DataTypes.STRING,
+},
+p4_u6_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p4_u6_tier: {
+  type: DataTypes.SMALLINT,
+},
+p4_u7_character_id: {
+  type: DataTypes.STRING,
+},
+p4_u7_item1: {
+  type: DataTypes.STRING,
+},
+p4_u7_item2: {
+  type: DataTypes.STRING,
+},
+p4_u7_item3: {
+  type: DataTypes.STRING,
+},
+p4_u7_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p4_u7_tier: {
+  type: DataTypes.SMALLINT,
+},
+p4_u8_character_id: {
+  type: DataTypes.STRING,
+},
+p4_u8_item1: {
+  type: DataTypes.STRING,
+},
+p4_u8_item2: {
+  type: DataTypes.STRING,
+},
+p4_u8_item3: {
+  type: DataTypes.STRING,
+},
+p4_u8_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p4_u8_tier: {
+  type: DataTypes.SMALLINT,
+},
+p4_u9_character_id: {
+  type: DataTypes.STRING,
+},
+p4_u9_item1: {
+  type: DataTypes.STRING,
+},
+p4_u9_item2: {
+  type: DataTypes.STRING,
+},
+p4_u9_item3: {
+  type: DataTypes.STRING,
+},
+p4_u9_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p4_u9_tier: {
+  type: DataTypes.SMALLINT,
+},
+p4_u10_character_id: {
+  type: DataTypes.STRING,
+},
+p4_u10_item1: {
+  type: DataTypes.STRING,
+},
+p4_u10_item2: {
+  type: DataTypes.STRING,
+},
+p4_u10_item3: {
+  type: DataTypes.STRING,
+},
+p4_u10_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p4_u10_tier: {
+  type: DataTypes.SMALLINT,
+},
+p4_u11_character_id: {
+  type: DataTypes.STRING,
+},
+p4_u11_item1: {
+  type: DataTypes.STRING,
+},
+p4_u11_item2: {
+  type: DataTypes.STRING,
+},
+p4_u11_item3: {
+  type: DataTypes.STRING,
+},
+p4_u11_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p4_u11_tier: {
+  type: DataTypes.SMALLINT,
+},
+p4_u12_character_id: {
+  type: DataTypes.STRING,
+},
+p4_u12_item1: {
+  type: DataTypes.STRING,
+},
+p4_u12_item2: {
+  type: DataTypes.STRING,
+},
+p4_u12_item3: {
+  type: DataTypes.STRING,
+},
+p4_u12_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p4_u12_tier: {
+  type: DataTypes.SMALLINT,
+},
+p4_u13_character_id: {
+  type: DataTypes.STRING,
+},
+p4_u13_item1: {
+  type: DataTypes.STRING,
+},
+p4_u13_item2: {
+  type: DataTypes.STRING,
+},
+p4_u13_item3: {
+  type: DataTypes.STRING,
+},
+p4_u13_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p4_u13_tier: {
+  type: DataTypes.SMALLINT,
+},
+p4_u14_character_id: {
+  type: DataTypes.STRING,
+},
+p4_u14_item1: {
+  type: DataTypes.STRING,
+},
+p4_u14_item2: {
+  type: DataTypes.STRING,
+},
+p4_u14_item3: {
+  type: DataTypes.STRING,
+},
+p4_u14_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p4_u14_tier: {
+  type: DataTypes.SMALLINT,
+},
+p4_u15_character_id: {
+  type: DataTypes.STRING,
+},
+p4_u15_item1: {
+  type: DataTypes.STRING,
+},
+p4_u15_item2: {
+  type: DataTypes.STRING,
+},
+p4_u15_item3: {
+  type: DataTypes.STRING,
+},
+p4_u15_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p4_u15_tier: {
+  type: DataTypes.SMALLINT,
+},
+p4_u16_character_id: {
+  type: DataTypes.STRING,
+},
+p4_u16_item1: {
+  type: DataTypes.STRING,
+},
+p4_u16_item2: {
+  type: DataTypes.STRING,
+},
+p4_u16_item3: {
+  type: DataTypes.STRING,
+},
+p4_u16_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p4_u16_tier: {
+  type: DataTypes.SMALLINT,
+},
+p4_u17_character_id: {
+  type: DataTypes.STRING,
+},
+p4_u17_item1: {
+  type: DataTypes.STRING,
+},
+p4_u17_item2: {
+  type: DataTypes.STRING,
+},
+p4_u17_item3: {
+  type: DataTypes.STRING,
+},
+p4_u17_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p4_u17_tier: {
+  type: DataTypes.SMALLINT,
+},
+p4_u18_character_id: {
+  type: DataTypes.STRING,
+},
+p4_u18_item1: {
+  type: DataTypes.STRING,
+},
+p4_u18_item2: {
+  type: DataTypes.STRING,
+},
+p4_u18_item3: {
+  type: DataTypes.STRING,
+},
+p4_u18_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p4_u18_tier: {
+  type: DataTypes.SMALLINT,
+},
+p4_u19_character_id: {
+  type: DataTypes.STRING,
+},
+p4_u19_item1: {
+  type: DataTypes.STRING,
+},
+p4_u19_item2: {
+  type: DataTypes.STRING,
+},
+p4_u19_item3: {
+  type: DataTypes.STRING,
+},
+p4_u19_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p4_u19_tier: {
+  type: DataTypes.SMALLINT,
+},
+p4_u20_character_id: {
+  type: DataTypes.STRING,
+},
+p4_u20_item1: {
+  type: DataTypes.STRING,
+},
+p4_u20_item2: {
+  type: DataTypes.STRING,
+},
+p4_u20_item3: {
+  type: DataTypes.STRING,
+},
+p4_u20_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p4_u20_tier: {
+  type: DataTypes.SMALLINT,
+},
+p4_u21_character_id: {
+  type: DataTypes.STRING,
+},
+p4_u21_item1: {
+  type: DataTypes.STRING,
+},
+p4_u21_item2: {
+  type: DataTypes.STRING,
+},
+p4_u21_item3: {
+  type: DataTypes.STRING,
+},
+p4_u21_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p4_u21_tier: {
+  type: DataTypes.SMALLINT,
+},
+p4_u22_character_id: {
+  type: DataTypes.STRING,
+},
+p4_u22_item1: {
+  type: DataTypes.STRING,
+},
+p4_u22_item2: {
+  type: DataTypes.STRING,
+},
+p4_u22_item3: {
+  type: DataTypes.STRING,
+},
+p4_u22_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p4_u22_tier: {
+  type: DataTypes.SMALLINT,
+},
+p4_u23_character_id: {
+  type: DataTypes.STRING,
+},
+p4_u23_item1: {
+  type: DataTypes.STRING,
+},
+p4_u23_item2: {
+  type: DataTypes.STRING,
+},
+p4_u23_item3: {
+  type: DataTypes.STRING,
+},
+p4_u23_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p4_u23_tier: {
+  type: DataTypes.SMALLINT,
+},
+p4_u24_character_id: {
+  type: DataTypes.STRING,
+},
+p4_u24_item1: {
+  type: DataTypes.STRING,
+},
+p4_u24_item2: {
+  type: DataTypes.STRING,
+},
+p4_u24_item3: {
+  type: DataTypes.STRING,
+},
+p4_u24_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p4_u24_tier: {
+  type: DataTypes.SMALLINT,
+},
+p4_u25_character_id: {
+  type: DataTypes.STRING,
+},
+p4_u25_item1: {
+  type: DataTypes.STRING,
+},
+p4_u25_item2: {
+  type: DataTypes.STRING,
+},
+p4_u25_item3: {
+  type: DataTypes.STRING,
+},
+p4_u25_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p4_u25_tier: {
+  type: DataTypes.SMALLINT,
+},
+p4_u26_character_id: {
+  type: DataTypes.STRING,
+},
+p4_u26_item1: {
+  type: DataTypes.STRING,
+},
+p4_u26_item2: {
+  type: DataTypes.STRING,
+},
+p4_u26_item3: {
+  type: DataTypes.STRING,
+},
+p4_u26_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p4_u26_tier: {
+  type: DataTypes.SMALLINT,
+},
+p4_u27_character_id: {
+  type: DataTypes.STRING,
+},
+p4_u27_item1: {
+  type: DataTypes.STRING,
+},
+p4_u27_item2: {
+  type: DataTypes.STRING,
+},
+p4_u27_item3: {
+  type: DataTypes.STRING,
+},
+p4_u27_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p4_u27_tier: {
+  type: DataTypes.SMALLINT,
+},
+p4_u28_character_id: {
+  type: DataTypes.STRING,
+},
+p4_u28_item1: {
+  type: DataTypes.STRING,
+},
+p4_u28_item2: {
+  type: DataTypes.STRING,
+},
+p4_u28_item3: {
+  type: DataTypes.STRING,
+},
+p4_u28_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p4_u28_tier: {
+  type: DataTypes.SMALLINT,
+},
+p4_u29_character_id: {
+  type: DataTypes.STRING,
+},
+p4_u29_item1: {
+  type: DataTypes.STRING,
+},
+p4_u29_item2: {
+  type: DataTypes.STRING,
+},
+p4_u29_item3: {
+  type: DataTypes.STRING,
+},
+p4_u29_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p4_u29_tier: {
+  type: DataTypes.SMALLINT,
+},
+p4_u30_character_id: {
+  type: DataTypes.STRING,
+},
+p4_u30_item1: {
+  type: DataTypes.STRING,
+},
+p4_u30_item2: {
+  type: DataTypes.STRING,
+},
+p4_u30_item3: {
+  type: DataTypes.STRING,
+},
+p4_u30_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p4_u30_tier: {
+  type: DataTypes.SMALLINT,
+},
+p5_u1_character_id: {
+  type: DataTypes.STRING,
+},
+p5_u1_item1: {
+  type: DataTypes.STRING,
+},
+p5_u1_item2: {
+  type: DataTypes.STRING,
+},
+p5_u1_item3: {
+  type: DataTypes.STRING,
+},
+p5_u1_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p5_u1_tier: {
+  type: DataTypes.SMALLINT,
+},
+p5_u2_character_id: {
+  type: DataTypes.STRING,
+},
+p5_u2_item1: {
+  type: DataTypes.STRING,
+},
+p5_u2_item2: {
+  type: DataTypes.STRING,
+},
+p5_u2_item3: {
+  type: DataTypes.STRING,
+},
+p5_u2_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p5_u2_tier: {
+  type: DataTypes.SMALLINT,
+},
+p5_u3_character_id: {
+  type: DataTypes.STRING,
+},
+p5_u3_item1: {
+  type: DataTypes.STRING,
+},
+p5_u3_item2: {
+  type: DataTypes.STRING,
+},
+p5_u3_item3: {
+  type: DataTypes.STRING,
+},
+p5_u3_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p5_u3_tier: {
+  type: DataTypes.SMALLINT,
+},
+p5_u4_character_id: {
+  type: DataTypes.STRING,
+},
+p5_u4_item1: {
+  type: DataTypes.STRING,
+},
+p5_u4_item2: {
+  type: DataTypes.STRING,
+},
+p5_u4_item3: {
+  type: DataTypes.STRING,
+},
+p5_u4_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p5_u4_tier: {
+  type: DataTypes.SMALLINT,
+},
+p5_u5_character_id: {
+  type: DataTypes.STRING,
+},
+p5_u5_item1: {
+  type: DataTypes.STRING,
+},
+p5_u5_item2: {
+  type: DataTypes.STRING,
+},
+p5_u5_item3: {
+  type: DataTypes.STRING,
+},
+p5_u5_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p5_u5_tier: {
+  type: DataTypes.SMALLINT,
+},
+p5_u6_character_id: {
+  type: DataTypes.STRING,
+},
+p5_u6_item1: {
+  type: DataTypes.STRING,
+},
+p5_u6_item2: {
+  type: DataTypes.STRING,
+},
+p5_u6_item3: {
+  type: DataTypes.STRING,
+},
+p5_u6_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p5_u6_tier: {
+  type: DataTypes.SMALLINT,
+},
+p5_u7_character_id: {
+  type: DataTypes.STRING,
+},
+p5_u7_item1: {
+  type: DataTypes.STRING,
+},
+p5_u7_item2: {
+  type: DataTypes.STRING,
+},
+p5_u7_item3: {
+  type: DataTypes.STRING,
+},
+p5_u7_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p5_u7_tier: {
+  type: DataTypes.SMALLINT,
+},
+p5_u8_character_id: {
+  type: DataTypes.STRING,
+},
+p5_u8_item1: {
+  type: DataTypes.STRING,
+},
+p5_u8_item2: {
+  type: DataTypes.STRING,
+},
+p5_u8_item3: {
+  type: DataTypes.STRING,
+},
+p5_u8_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p5_u8_tier: {
+  type: DataTypes.SMALLINT,
+},
+p5_u9_character_id: {
+  type: DataTypes.STRING,
+},
+p5_u9_item1: {
+  type: DataTypes.STRING,
+},
+p5_u9_item2: {
+  type: DataTypes.STRING,
+},
+p5_u9_item3: {
+  type: DataTypes.STRING,
+},
+p5_u9_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p5_u9_tier: {
+  type: DataTypes.SMALLINT,
+},
+p5_u10_character_id: {
+  type: DataTypes.STRING,
+},
+p5_u10_item1: {
+  type: DataTypes.STRING,
+},
+p5_u10_item2: {
+  type: DataTypes.STRING,
+},
+p5_u10_item3: {
+  type: DataTypes.STRING,
+},
+p5_u10_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p5_u10_tier: {
+  type: DataTypes.SMALLINT,
+},
+p5_u11_character_id: {
+  type: DataTypes.STRING,
+},
+p5_u11_item1: {
+  type: DataTypes.STRING,
+},
+p5_u11_item2: {
+  type: DataTypes.STRING,
+},
+p5_u11_item3: {
+  type: DataTypes.STRING,
+},
+p5_u11_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p5_u11_tier: {
+  type: DataTypes.SMALLINT,
+},
+p5_u12_character_id: {
+  type: DataTypes.STRING,
+},
+p5_u12_item1: {
+  type: DataTypes.STRING,
+},
+p5_u12_item2: {
+  type: DataTypes.STRING,
+},
+p5_u12_item3: {
+  type: DataTypes.STRING,
+},
+p5_u12_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p5_u12_tier: {
+  type: DataTypes.SMALLINT,
+},
+p5_u13_character_id: {
+  type: DataTypes.STRING,
+},
+p5_u13_item1: {
+  type: DataTypes.STRING,
+},
+p5_u13_item2: {
+  type: DataTypes.STRING,
+},
+p5_u13_item3: {
+  type: DataTypes.STRING,
+},
+p5_u13_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p5_u13_tier: {
+  type: DataTypes.SMALLINT,
+},
+p5_u14_character_id: {
+  type: DataTypes.STRING,
+},
+p5_u14_item1: {
+  type: DataTypes.STRING,
+},
+p5_u14_item2: {
+  type: DataTypes.STRING,
+},
+p5_u14_item3: {
+  type: DataTypes.STRING,
+},
+p5_u14_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p5_u14_tier: {
+  type: DataTypes.SMALLINT,
+},
+p5_u15_character_id: {
+  type: DataTypes.STRING,
+},
+p5_u15_item1: {
+  type: DataTypes.STRING,
+},
+p5_u15_item2: {
+  type: DataTypes.STRING,
+},
+p5_u15_item3: {
+  type: DataTypes.STRING,
+},
+p5_u15_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p5_u15_tier: {
+  type: DataTypes.SMALLINT,
+},
+p5_u16_character_id: {
+  type: DataTypes.STRING,
+},
+p5_u16_item1: {
+  type: DataTypes.STRING,
+},
+p5_u16_item2: {
+  type: DataTypes.STRING,
+},
+p5_u16_item3: {
+  type: DataTypes.STRING,
+},
+p5_u16_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p5_u16_tier: {
+  type: DataTypes.SMALLINT,
+},
+p5_u17_character_id: {
+  type: DataTypes.STRING,
+},
+p5_u17_item1: {
+  type: DataTypes.STRING,
+},
+p5_u17_item2: {
+  type: DataTypes.STRING,
+},
+p5_u17_item3: {
+  type: DataTypes.STRING,
+},
+p5_u17_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p5_u17_tier: {
+  type: DataTypes.SMALLINT,
+},
+p5_u18_character_id: {
+  type: DataTypes.STRING,
+},
+p5_u18_item1: {
+  type: DataTypes.STRING,
+},
+p5_u18_item2: {
+  type: DataTypes.STRING,
+},
+p5_u18_item3: {
+  type: DataTypes.STRING,
+},
+p5_u18_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p5_u18_tier: {
+  type: DataTypes.SMALLINT,
+},
+p5_u19_character_id: {
+  type: DataTypes.STRING,
+},
+p5_u19_item1: {
+  type: DataTypes.STRING,
+},
+p5_u19_item2: {
+  type: DataTypes.STRING,
+},
+p5_u19_item3: {
+  type: DataTypes.STRING,
+},
+p5_u19_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p5_u19_tier: {
+  type: DataTypes.SMALLINT,
+},
+p5_u20_character_id: {
+  type: DataTypes.STRING,
+},
+p5_u20_item1: {
+  type: DataTypes.STRING,
+},
+p5_u20_item2: {
+  type: DataTypes.STRING,
+},
+p5_u20_item3: {
+  type: DataTypes.STRING,
+},
+p5_u20_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p5_u20_tier: {
+  type: DataTypes.SMALLINT,
+},
+p5_u21_character_id: {
+  type: DataTypes.STRING,
+},
+p5_u21_item1: {
+  type: DataTypes.STRING,
+},
+p5_u21_item2: {
+  type: DataTypes.STRING,
+},
+p5_u21_item3: {
+  type: DataTypes.STRING,
+},
+p5_u21_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p5_u21_tier: {
+  type: DataTypes.SMALLINT,
+},
+p5_u22_character_id: {
+  type: DataTypes.STRING,
+},
+p5_u22_item1: {
+  type: DataTypes.STRING,
+},
+p5_u22_item2: {
+  type: DataTypes.STRING,
+},
+p5_u22_item3: {
+  type: DataTypes.STRING,
+},
+p5_u22_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p5_u22_tier: {
+  type: DataTypes.SMALLINT,
+},
+p5_u23_character_id: {
+  type: DataTypes.STRING,
+},
+p5_u23_item1: {
+  type: DataTypes.STRING,
+},
+p5_u23_item2: {
+  type: DataTypes.STRING,
+},
+p5_u23_item3: {
+  type: DataTypes.STRING,
+},
+p5_u23_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p5_u23_tier: {
+  type: DataTypes.SMALLINT,
+},
+p5_u24_character_id: {
+  type: DataTypes.STRING,
+},
+p5_u24_item1: {
+  type: DataTypes.STRING,
+},
+p5_u24_item2: {
+  type: DataTypes.STRING,
+},
+p5_u24_item3: {
+  type: DataTypes.STRING,
+},
+p5_u24_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p5_u24_tier: {
+  type: DataTypes.SMALLINT,
+},
+p5_u25_character_id: {
+  type: DataTypes.STRING,
+},
+p5_u25_item1: {
+  type: DataTypes.STRING,
+},
+p5_u25_item2: {
+  type: DataTypes.STRING,
+},
+p5_u25_item3: {
+  type: DataTypes.STRING,
+},
+p5_u25_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p5_u25_tier: {
+  type: DataTypes.SMALLINT,
+},
+p5_u26_character_id: {
+  type: DataTypes.STRING,
+},
+p5_u26_item1: {
+  type: DataTypes.STRING,
+},
+p5_u26_item2: {
+  type: DataTypes.STRING,
+},
+p5_u26_item3: {
+  type: DataTypes.STRING,
+},
+p5_u26_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p5_u26_tier: {
+  type: DataTypes.SMALLINT,
+},
+p5_u27_character_id: {
+  type: DataTypes.STRING,
+},
+p5_u27_item1: {
+  type: DataTypes.STRING,
+},
+p5_u27_item2: {
+  type: DataTypes.STRING,
+},
+p5_u27_item3: {
+  type: DataTypes.STRING,
+},
+p5_u27_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p5_u27_tier: {
+  type: DataTypes.SMALLINT,
+},
+p5_u28_character_id: {
+  type: DataTypes.STRING,
+},
+p5_u28_item1: {
+  type: DataTypes.STRING,
+},
+p5_u28_item2: {
+  type: DataTypes.STRING,
+},
+p5_u28_item3: {
+  type: DataTypes.STRING,
+},
+p5_u28_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p5_u28_tier: {
+  type: DataTypes.SMALLINT,
+},
+p5_u29_character_id: {
+  type: DataTypes.STRING,
+},
+p5_u29_item1: {
+  type: DataTypes.STRING,
+},
+p5_u29_item2: {
+  type: DataTypes.STRING,
+},
+p5_u29_item3: {
+  type: DataTypes.STRING,
+},
+p5_u29_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p5_u29_tier: {
+  type: DataTypes.SMALLINT,
+},
+p5_u30_character_id: {
+  type: DataTypes.STRING,
+},
+p5_u30_item1: {
+  type: DataTypes.STRING,
+},
+p5_u30_item2: {
+  type: DataTypes.STRING,
+},
+p5_u30_item3: {
+  type: DataTypes.STRING,
+},
+p5_u30_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p5_u30_tier: {
+  type: DataTypes.SMALLINT,
+},
+p6_u1_character_id: {
+  type: DataTypes.STRING,
+},
+p6_u1_item1: {
+  type: DataTypes.STRING,
+},
+p6_u1_item2: {
+  type: DataTypes.STRING,
+},
+p6_u1_item3: {
+  type: DataTypes.STRING,
+},
+p6_u1_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p6_u1_tier: {
+  type: DataTypes.SMALLINT,
+},
+p6_u2_character_id: {
+  type: DataTypes.STRING,
+},
+p6_u2_item1: {
+  type: DataTypes.STRING,
+},
+p6_u2_item2: {
+  type: DataTypes.STRING,
+},
+p6_u2_item3: {
+  type: DataTypes.STRING,
+},
+p6_u2_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p6_u2_tier: {
+  type: DataTypes.SMALLINT,
+},
+p6_u3_character_id: {
+  type: DataTypes.STRING,
+},
+p6_u3_item1: {
+  type: DataTypes.STRING,
+},
+p6_u3_item2: {
+  type: DataTypes.STRING,
+},
+p6_u3_item3: {
+  type: DataTypes.STRING,
+},
+p6_u3_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p6_u3_tier: {
+  type: DataTypes.SMALLINT,
+},
+p6_u4_character_id: {
+  type: DataTypes.STRING,
+},
+p6_u4_item1: {
+  type: DataTypes.STRING,
+},
+p6_u4_item2: {
+  type: DataTypes.STRING,
+},
+p6_u4_item3: {
+  type: DataTypes.STRING,
+},
+p6_u4_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p6_u4_tier: {
+  type: DataTypes.SMALLINT,
+},
+p6_u5_character_id: {
+  type: DataTypes.STRING,
+},
+p6_u5_item1: {
+  type: DataTypes.STRING,
+},
+p6_u5_item2: {
+  type: DataTypes.STRING,
+},
+p6_u5_item3: {
+  type: DataTypes.STRING,
+},
+p6_u5_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p6_u5_tier: {
+  type: DataTypes.SMALLINT,
+},
+p6_u6_character_id: {
+  type: DataTypes.STRING,
+},
+p6_u6_item1: {
+  type: DataTypes.STRING,
+},
+p6_u6_item2: {
+  type: DataTypes.STRING,
+},
+p6_u6_item3: {
+  type: DataTypes.STRING,
+},
+p6_u6_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p6_u6_tier: {
+  type: DataTypes.SMALLINT,
+},
+p6_u7_character_id: {
+  type: DataTypes.STRING,
+},
+p6_u7_item1: {
+  type: DataTypes.STRING,
+},
+p6_u7_item2: {
+  type: DataTypes.STRING,
+},
+p6_u7_item3: {
+  type: DataTypes.STRING,
+},
+p6_u7_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p6_u7_tier: {
+  type: DataTypes.SMALLINT,
+},
+p6_u8_character_id: {
+  type: DataTypes.STRING,
+},
+p6_u8_item1: {
+  type: DataTypes.STRING,
+},
+p6_u8_item2: {
+  type: DataTypes.STRING,
+},
+p6_u8_item3: {
+  type: DataTypes.STRING,
+},
+p6_u8_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p6_u8_tier: {
+  type: DataTypes.SMALLINT,
+},
+p6_u9_character_id: {
+  type: DataTypes.STRING,
+},
+p6_u9_item1: {
+  type: DataTypes.STRING,
+},
+p6_u9_item2: {
+  type: DataTypes.STRING,
+},
+p6_u9_item3: {
+  type: DataTypes.STRING,
+},
+p6_u9_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p6_u9_tier: {
+  type: DataTypes.SMALLINT,
+},
+p6_u10_character_id: {
+  type: DataTypes.STRING,
+},
+p6_u10_item1: {
+  type: DataTypes.STRING,
+},
+p6_u10_item2: {
+  type: DataTypes.STRING,
+},
+p6_u10_item3: {
+  type: DataTypes.STRING,
+},
+p6_u10_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p6_u10_tier: {
+  type: DataTypes.SMALLINT,
+},
+p6_u11_character_id: {
+  type: DataTypes.STRING,
+},
+p6_u11_item1: {
+  type: DataTypes.STRING,
+},
+p6_u11_item2: {
+  type: DataTypes.STRING,
+},
+p6_u11_item3: {
+  type: DataTypes.STRING,
+},
+p6_u11_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p6_u11_tier: {
+  type: DataTypes.SMALLINT,
+},
+p6_u12_character_id: {
+  type: DataTypes.STRING,
+},
+p6_u12_item1: {
+  type: DataTypes.STRING,
+},
+p6_u12_item2: {
+  type: DataTypes.STRING,
+},
+p6_u12_item3: {
+  type: DataTypes.STRING,
+},
+p6_u12_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p6_u12_tier: {
+  type: DataTypes.SMALLINT,
+},
+p6_u13_character_id: {
+  type: DataTypes.STRING,
+},
+p6_u13_item1: {
+  type: DataTypes.STRING,
+},
+p6_u13_item2: {
+  type: DataTypes.STRING,
+},
+p6_u13_item3: {
+  type: DataTypes.STRING,
+},
+p6_u13_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p6_u13_tier: {
+  type: DataTypes.SMALLINT,
+},
+p6_u14_character_id: {
+  type: DataTypes.STRING,
+},
+p6_u14_item1: {
+  type: DataTypes.STRING,
+},
+p6_u14_item2: {
+  type: DataTypes.STRING,
+},
+p6_u14_item3: {
+  type: DataTypes.STRING,
+},
+p6_u14_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p6_u14_tier: {
+  type: DataTypes.SMALLINT,
+},
+p6_u15_character_id: {
+  type: DataTypes.STRING,
+},
+p6_u15_item1: {
+  type: DataTypes.STRING,
+},
+p6_u15_item2: {
+  type: DataTypes.STRING,
+},
+p6_u15_item3: {
+  type: DataTypes.STRING,
+},
+p6_u15_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p6_u15_tier: {
+  type: DataTypes.SMALLINT,
+},
+p6_u16_character_id: {
+  type: DataTypes.STRING,
+},
+p6_u16_item1: {
+  type: DataTypes.STRING,
+},
+p6_u16_item2: {
+  type: DataTypes.STRING,
+},
+p6_u16_item3: {
+  type: DataTypes.STRING,
+},
+p6_u16_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p6_u16_tier: {
+  type: DataTypes.SMALLINT,
+},
+p6_u17_character_id: {
+  type: DataTypes.STRING,
+},
+p6_u17_item1: {
+  type: DataTypes.STRING,
+},
+p6_u17_item2: {
+  type: DataTypes.STRING,
+},
+p6_u17_item3: {
+  type: DataTypes.STRING,
+},
+p6_u17_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p6_u17_tier: {
+  type: DataTypes.SMALLINT,
+},
+p6_u18_character_id: {
+  type: DataTypes.STRING,
+},
+p6_u18_item1: {
+  type: DataTypes.STRING,
+},
+p6_u18_item2: {
+  type: DataTypes.STRING,
+},
+p6_u18_item3: {
+  type: DataTypes.STRING,
+},
+p6_u18_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p6_u18_tier: {
+  type: DataTypes.SMALLINT,
+},
+p6_u19_character_id: {
+  type: DataTypes.STRING,
+},
+p6_u19_item1: {
+  type: DataTypes.STRING,
+},
+p6_u19_item2: {
+  type: DataTypes.STRING,
+},
+p6_u19_item3: {
+  type: DataTypes.STRING,
+},
+p6_u19_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p6_u19_tier: {
+  type: DataTypes.SMALLINT,
+},
+p6_u20_character_id: {
+  type: DataTypes.STRING,
+},
+p6_u20_item1: {
+  type: DataTypes.STRING,
+},
+p6_u20_item2: {
+  type: DataTypes.STRING,
+},
+p6_u20_item3: {
+  type: DataTypes.STRING,
+},
+p6_u20_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p6_u20_tier: {
+  type: DataTypes.SMALLINT,
+},
+p6_u21_character_id: {
+  type: DataTypes.STRING,
+},
+p6_u21_item1: {
+  type: DataTypes.STRING,
+},
+p6_u21_item2: {
+  type: DataTypes.STRING,
+},
+p6_u21_item3: {
+  type: DataTypes.STRING,
+},
+p6_u21_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p6_u21_tier: {
+  type: DataTypes.SMALLINT,
+},
+p6_u22_character_id: {
+  type: DataTypes.STRING,
+},
+p6_u22_item1: {
+  type: DataTypes.STRING,
+},
+p6_u22_item2: {
+  type: DataTypes.STRING,
+},
+p6_u22_item3: {
+  type: DataTypes.STRING,
+},
+p6_u22_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p6_u22_tier: {
+  type: DataTypes.SMALLINT,
+},
+p6_u23_character_id: {
+  type: DataTypes.STRING,
+},
+p6_u23_item1: {
+  type: DataTypes.STRING,
+},
+p6_u23_item2: {
+  type: DataTypes.STRING,
+},
+p6_u23_item3: {
+  type: DataTypes.STRING,
+},
+p6_u23_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p6_u23_tier: {
+  type: DataTypes.SMALLINT,
+},
+p6_u24_character_id: {
+  type: DataTypes.STRING,
+},
+p6_u24_item1: {
+  type: DataTypes.STRING,
+},
+p6_u24_item2: {
+  type: DataTypes.STRING,
+},
+p6_u24_item3: {
+  type: DataTypes.STRING,
+},
+p6_u24_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p6_u24_tier: {
+  type: DataTypes.SMALLINT,
+},
+p6_u25_character_id: {
+  type: DataTypes.STRING,
+},
+p6_u25_item1: {
+  type: DataTypes.STRING,
+},
+p6_u25_item2: {
+  type: DataTypes.STRING,
+},
+p6_u25_item3: {
+  type: DataTypes.STRING,
+},
+p6_u25_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p6_u25_tier: {
+  type: DataTypes.SMALLINT,
+},
+p6_u26_character_id: {
+  type: DataTypes.STRING,
+},
+p6_u26_item1: {
+  type: DataTypes.STRING,
+},
+p6_u26_item2: {
+  type: DataTypes.STRING,
+},
+p6_u26_item3: {
+  type: DataTypes.STRING,
+},
+p6_u26_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p6_u26_tier: {
+  type: DataTypes.SMALLINT,
+},
+p6_u27_character_id: {
+  type: DataTypes.STRING,
+},
+p6_u27_item1: {
+  type: DataTypes.STRING,
+},
+p6_u27_item2: {
+  type: DataTypes.STRING,
+},
+p6_u27_item3: {
+  type: DataTypes.STRING,
+},
+p6_u27_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p6_u27_tier: {
+  type: DataTypes.SMALLINT,
+},
+p6_u28_character_id: {
+  type: DataTypes.STRING,
+},
+p6_u28_item1: {
+  type: DataTypes.STRING,
+},
+p6_u28_item2: {
+  type: DataTypes.STRING,
+},
+p6_u28_item3: {
+  type: DataTypes.STRING,
+},
+p6_u28_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p6_u28_tier: {
+  type: DataTypes.SMALLINT,
+},
+p6_u29_character_id: {
+  type: DataTypes.STRING,
+},
+p6_u29_item1: {
+  type: DataTypes.STRING,
+},
+p6_u29_item2: {
+  type: DataTypes.STRING,
+},
+p6_u29_item3: {
+  type: DataTypes.STRING,
+},
+p6_u29_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p6_u29_tier: {
+  type: DataTypes.SMALLINT,
+},
+p6_u30_character_id: {
+  type: DataTypes.STRING,
+},
+p6_u30_item1: {
+  type: DataTypes.STRING,
+},
+p6_u30_item2: {
+  type: DataTypes.STRING,
+},
+p6_u30_item3: {
+  type: DataTypes.STRING,
+},
+p6_u30_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p6_u30_tier: {
+  type: DataTypes.SMALLINT,
+},
+p7_u1_character_id: {
+  type: DataTypes.STRING,
+},
+p7_u1_item1: {
+  type: DataTypes.STRING,
+},
+p7_u1_item2: {
+  type: DataTypes.STRING,
+},
+p7_u1_item3: {
+  type: DataTypes.STRING,
+},
+p7_u1_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p7_u1_tier: {
+  type: DataTypes.SMALLINT,
+},
+p7_u2_character_id: {
+  type: DataTypes.STRING,
+},
+p7_u2_item1: {
+  type: DataTypes.STRING,
+},
+p7_u2_item2: {
+  type: DataTypes.STRING,
+},
+p7_u2_item3: {
+  type: DataTypes.STRING,
+},
+p7_u2_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p7_u2_tier: {
+  type: DataTypes.SMALLINT,
+},
+p7_u3_character_id: {
+  type: DataTypes.STRING,
+},
+p7_u3_item1: {
+  type: DataTypes.STRING,
+},
+p7_u3_item2: {
+  type: DataTypes.STRING,
+},
+p7_u3_item3: {
+  type: DataTypes.STRING,
+},
+p7_u3_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p7_u3_tier: {
+  type: DataTypes.SMALLINT,
+},
+p7_u4_character_id: {
+  type: DataTypes.STRING,
+},
+p7_u4_item1: {
+  type: DataTypes.STRING,
+},
+p7_u4_item2: {
+  type: DataTypes.STRING,
+},
+p7_u4_item3: {
+  type: DataTypes.STRING,
+},
+p7_u4_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p7_u4_tier: {
+  type: DataTypes.SMALLINT,
+},
+p7_u5_character_id: {
+  type: DataTypes.STRING,
+},
+p7_u5_item1: {
+  type: DataTypes.STRING,
+},
+p7_u5_item2: {
+  type: DataTypes.STRING,
+},
+p7_u5_item3: {
+  type: DataTypes.STRING,
+},
+p7_u5_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p7_u5_tier: {
+  type: DataTypes.SMALLINT,
+},
+p7_u6_character_id: {
+  type: DataTypes.STRING,
+},
+p7_u6_item1: {
+  type: DataTypes.STRING,
+},
+p7_u6_item2: {
+  type: DataTypes.STRING,
+},
+p7_u6_item3: {
+  type: DataTypes.STRING,
+},
+p7_u6_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p7_u6_tier: {
+  type: DataTypes.SMALLINT,
+},
+p7_u7_character_id: {
+  type: DataTypes.STRING,
+},
+p7_u7_item1: {
+  type: DataTypes.STRING,
+},
+p7_u7_item2: {
+  type: DataTypes.STRING,
+},
+p7_u7_item3: {
+  type: DataTypes.STRING,
+},
+p7_u7_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p7_u7_tier: {
+  type: DataTypes.SMALLINT,
+},
+p7_u8_character_id: {
+  type: DataTypes.STRING,
+},
+p7_u8_item1: {
+  type: DataTypes.STRING,
+},
+p7_u8_item2: {
+  type: DataTypes.STRING,
+},
+p7_u8_item3: {
+  type: DataTypes.STRING,
+},
+p7_u8_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p7_u8_tier: {
+  type: DataTypes.SMALLINT,
+},
+p7_u9_character_id: {
+  type: DataTypes.STRING,
+},
+p7_u9_item1: {
+  type: DataTypes.STRING,
+},
+p7_u9_item2: {
+  type: DataTypes.STRING,
+},
+p7_u9_item3: {
+  type: DataTypes.STRING,
+},
+p7_u9_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p7_u9_tier: {
+  type: DataTypes.SMALLINT,
+},
+p7_u10_character_id: {
+  type: DataTypes.STRING,
+},
+p7_u10_item1: {
+  type: DataTypes.STRING,
+},
+p7_u10_item2: {
+  type: DataTypes.STRING,
+},
+p7_u10_item3: {
+  type: DataTypes.STRING,
+},
+p7_u10_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p7_u10_tier: {
+  type: DataTypes.SMALLINT,
+},
+p7_u11_character_id: {
+  type: DataTypes.STRING,
+},
+p7_u11_item1: {
+  type: DataTypes.STRING,
+},
+p7_u11_item2: {
+  type: DataTypes.STRING,
+},
+p7_u11_item3: {
+  type: DataTypes.STRING,
+},
+p7_u11_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p7_u11_tier: {
+  type: DataTypes.SMALLINT,
+},
+p7_u12_character_id: {
+  type: DataTypes.STRING,
+},
+p7_u12_item1: {
+  type: DataTypes.STRING,
+},
+p7_u12_item2: {
+  type: DataTypes.STRING,
+},
+p7_u12_item3: {
+  type: DataTypes.STRING,
+},
+p7_u12_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p7_u12_tier: {
+  type: DataTypes.SMALLINT,
+},
+p7_u13_character_id: {
+  type: DataTypes.STRING,
+},
+p7_u13_item1: {
+  type: DataTypes.STRING,
+},
+p7_u13_item2: {
+  type: DataTypes.STRING,
+},
+p7_u13_item3: {
+  type: DataTypes.STRING,
+},
+p7_u13_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p7_u13_tier: {
+  type: DataTypes.SMALLINT,
+},
+p7_u14_character_id: {
+  type: DataTypes.STRING,
+},
+p7_u14_item1: {
+  type: DataTypes.STRING,
+},
+p7_u14_item2: {
+  type: DataTypes.STRING,
+},
+p7_u14_item3: {
+  type: DataTypes.STRING,
+},
+p7_u14_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p7_u14_tier: {
+  type: DataTypes.SMALLINT,
+},
+p7_u15_character_id: {
+  type: DataTypes.STRING,
+},
+p7_u15_item1: {
+  type: DataTypes.STRING,
+},
+p7_u15_item2: {
+  type: DataTypes.STRING,
+},
+p7_u15_item3: {
+  type: DataTypes.STRING,
+},
+p7_u15_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p7_u15_tier: {
+  type: DataTypes.SMALLINT,
+},
+p7_u16_character_id: {
+  type: DataTypes.STRING,
+},
+p7_u16_item1: {
+  type: DataTypes.STRING,
+},
+p7_u16_item2: {
+  type: DataTypes.STRING,
+},
+p7_u16_item3: {
+  type: DataTypes.STRING,
+},
+p7_u16_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p7_u16_tier: {
+  type: DataTypes.SMALLINT,
+},
+p7_u17_character_id: {
+  type: DataTypes.STRING,
+},
+p7_u17_item1: {
+  type: DataTypes.STRING,
+},
+p7_u17_item2: {
+  type: DataTypes.STRING,
+},
+p7_u17_item3: {
+  type: DataTypes.STRING,
+},
+p7_u17_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p7_u17_tier: {
+  type: DataTypes.SMALLINT,
+},
+p7_u18_character_id: {
+  type: DataTypes.STRING,
+},
+p7_u18_item1: {
+  type: DataTypes.STRING,
+},
+p7_u18_item2: {
+  type: DataTypes.STRING,
+},
+p7_u18_item3: {
+  type: DataTypes.STRING,
+},
+p7_u18_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p7_u18_tier: {
+  type: DataTypes.SMALLINT,
+},
+p7_u19_character_id: {
+  type: DataTypes.STRING,
+},
+p7_u19_item1: {
+  type: DataTypes.STRING,
+},
+p7_u19_item2: {
+  type: DataTypes.STRING,
+},
+p7_u19_item3: {
+  type: DataTypes.STRING,
+},
+p7_u19_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p7_u19_tier: {
+  type: DataTypes.SMALLINT,
+},
+p7_u20_character_id: {
+  type: DataTypes.STRING,
+},
+p7_u20_item1: {
+  type: DataTypes.STRING,
+},
+p7_u20_item2: {
+  type: DataTypes.STRING,
+},
+p7_u20_item3: {
+  type: DataTypes.STRING,
+},
+p7_u20_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p7_u20_tier: {
+  type: DataTypes.SMALLINT,
+},
+p7_u21_character_id: {
+  type: DataTypes.STRING,
+},
+p7_u21_item1: {
+  type: DataTypes.STRING,
+},
+p7_u21_item2: {
+  type: DataTypes.STRING,
+},
+p7_u21_item3: {
+  type: DataTypes.STRING,
+},
+p7_u21_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p7_u21_tier: {
+  type: DataTypes.SMALLINT,
+},
+p7_u22_character_id: {
+  type: DataTypes.STRING,
+},
+p7_u22_item1: {
+  type: DataTypes.STRING,
+},
+p7_u22_item2: {
+  type: DataTypes.STRING,
+},
+p7_u22_item3: {
+  type: DataTypes.STRING,
+},
+p7_u22_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p7_u22_tier: {
+  type: DataTypes.SMALLINT,
+},
+p7_u23_character_id: {
+  type: DataTypes.STRING,
+},
+p7_u23_item1: {
+  type: DataTypes.STRING,
+},
+p7_u23_item2: {
+  type: DataTypes.STRING,
+},
+p7_u23_item3: {
+  type: DataTypes.STRING,
+},
+p7_u23_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p7_u23_tier: {
+  type: DataTypes.SMALLINT,
+},
+p7_u24_character_id: {
+  type: DataTypes.STRING,
+},
+p7_u24_item1: {
+  type: DataTypes.STRING,
+},
+p7_u24_item2: {
+  type: DataTypes.STRING,
+},
+p7_u24_item3: {
+  type: DataTypes.STRING,
+},
+p7_u24_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p7_u24_tier: {
+  type: DataTypes.SMALLINT,
+},
+p7_u25_character_id: {
+  type: DataTypes.STRING,
+},
+p7_u25_item1: {
+  type: DataTypes.STRING,
+},
+p7_u25_item2: {
+  type: DataTypes.STRING,
+},
+p7_u25_item3: {
+  type: DataTypes.STRING,
+},
+p7_u25_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p7_u25_tier: {
+  type: DataTypes.SMALLINT,
+},
+p7_u26_character_id: {
+  type: DataTypes.STRING,
+},
+p7_u26_item1: {
+  type: DataTypes.STRING,
+},
+p7_u26_item2: {
+  type: DataTypes.STRING,
+},
+p7_u26_item3: {
+  type: DataTypes.STRING,
+},
+p7_u26_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p7_u26_tier: {
+  type: DataTypes.SMALLINT,
+},
+p7_u27_character_id: {
+  type: DataTypes.STRING,
+},
+p7_u27_item1: {
+  type: DataTypes.STRING,
+},
+p7_u27_item2: {
+  type: DataTypes.STRING,
+},
+p7_u27_item3: {
+  type: DataTypes.STRING,
+},
+p7_u27_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p7_u27_tier: {
+  type: DataTypes.SMALLINT,
+},
+p7_u28_character_id: {
+  type: DataTypes.STRING,
+},
+p7_u28_item1: {
+  type: DataTypes.STRING,
+},
+p7_u28_item2: {
+  type: DataTypes.STRING,
+},
+p7_u28_item3: {
+  type: DataTypes.STRING,
+},
+p7_u28_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p7_u28_tier: {
+  type: DataTypes.SMALLINT,
+},
+p7_u29_character_id: {
+  type: DataTypes.STRING,
+},
+p7_u29_item1: {
+  type: DataTypes.STRING,
+},
+p7_u29_item2: {
+  type: DataTypes.STRING,
+},
+p7_u29_item3: {
+  type: DataTypes.STRING,
+},
+p7_u29_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p7_u29_tier: {
+  type: DataTypes.SMALLINT,
+},
+p7_u30_character_id: {
+  type: DataTypes.STRING,
+},
+p7_u30_item1: {
+  type: DataTypes.STRING,
+},
+p7_u30_item2: {
+  type: DataTypes.STRING,
+},
+p7_u30_item3: {
+  type: DataTypes.STRING,
+},
+p7_u30_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p7_u30_tier: {
+  type: DataTypes.SMALLINT,
+},
+p8_u1_character_id: {
+  type: DataTypes.STRING,
+},
+p8_u1_item1: {
+  type: DataTypes.STRING,
+},
+p8_u1_item2: {
+  type: DataTypes.STRING,
+},
+p8_u1_item3: {
+  type: DataTypes.STRING,
+},
+p8_u1_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p8_u1_tier: {
+  type: DataTypes.SMALLINT,
+},
+p8_u2_character_id: {
+  type: DataTypes.STRING,
+},
+p8_u2_item1: {
+  type: DataTypes.STRING,
+},
+p8_u2_item2: {
+  type: DataTypes.STRING,
+},
+p8_u2_item3: {
+  type: DataTypes.STRING,
+},
+p8_u2_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p8_u2_tier: {
+  type: DataTypes.SMALLINT,
+},
+p8_u3_character_id: {
+  type: DataTypes.STRING,
+},
+p8_u3_item1: {
+  type: DataTypes.STRING,
+},
+p8_u3_item2: {
+  type: DataTypes.STRING,
+},
+p8_u3_item3: {
+  type: DataTypes.STRING,
+},
+p8_u3_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p8_u3_tier: {
+  type: DataTypes.SMALLINT,
+},
+p8_u4_character_id: {
+  type: DataTypes.STRING,
+},
+p8_u4_item1: {
+  type: DataTypes.STRING,
+},
+p8_u4_item2: {
+  type: DataTypes.STRING,
+},
+p8_u4_item3: {
+  type: DataTypes.STRING,
+},
+p8_u4_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p8_u4_tier: {
+  type: DataTypes.SMALLINT,
+},
+p8_u5_character_id: {
+  type: DataTypes.STRING,
+},
+p8_u5_item1: {
+  type: DataTypes.STRING,
+},
+p8_u5_item2: {
+  type: DataTypes.STRING,
+},
+p8_u5_item3: {
+  type: DataTypes.STRING,
+},
+p8_u5_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p8_u5_tier: {
+  type: DataTypes.SMALLINT,
+},
+p8_u6_character_id: {
+  type: DataTypes.STRING,
+},
+p8_u6_item1: {
+  type: DataTypes.STRING,
+},
+p8_u6_item2: {
+  type: DataTypes.STRING,
+},
+p8_u6_item3: {
+  type: DataTypes.STRING,
+},
+p8_u6_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p8_u6_tier: {
+  type: DataTypes.SMALLINT,
+},
+p8_u7_character_id: {
+  type: DataTypes.STRING,
+},
+p8_u7_item1: {
+  type: DataTypes.STRING,
+},
+p8_u7_item2: {
+  type: DataTypes.STRING,
+},
+p8_u7_item3: {
+  type: DataTypes.STRING,
+},
+p8_u7_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p8_u7_tier: {
+  type: DataTypes.SMALLINT,
+},
+p8_u8_character_id: {
+  type: DataTypes.STRING,
+},
+p8_u8_item1: {
+  type: DataTypes.STRING,
+},
+p8_u8_item2: {
+  type: DataTypes.STRING,
+},
+p8_u8_item3: {
+  type: DataTypes.STRING,
+},
+p8_u8_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p8_u8_tier: {
+  type: DataTypes.SMALLINT,
+},
+p8_u9_character_id: {
+  type: DataTypes.STRING,
+},
+p8_u9_item1: {
+  type: DataTypes.STRING,
+},
+p8_u9_item2: {
+  type: DataTypes.STRING,
+},
+p8_u9_item3: {
+  type: DataTypes.STRING,
+},
+p8_u9_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p8_u9_tier: {
+  type: DataTypes.SMALLINT,
+},
+p8_u10_character_id: {
+  type: DataTypes.STRING,
+},
+p8_u10_item1: {
+  type: DataTypes.STRING,
+},
+p8_u10_item2: {
+  type: DataTypes.STRING,
+},
+p8_u10_item3: {
+  type: DataTypes.STRING,
+},
+p8_u10_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p8_u10_tier: {
+  type: DataTypes.SMALLINT,
+},
+p8_u11_character_id: {
+  type: DataTypes.STRING,
+},
+p8_u11_item1: {
+  type: DataTypes.STRING,
+},
+p8_u11_item2: {
+  type: DataTypes.STRING,
+},
+p8_u11_item3: {
+  type: DataTypes.STRING,
+},
+p8_u11_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p8_u11_tier: {
+  type: DataTypes.SMALLINT,
+},
+p8_u12_character_id: {
+  type: DataTypes.STRING,
+},
+p8_u12_item1: {
+  type: DataTypes.STRING,
+},
+p8_u12_item2: {
+  type: DataTypes.STRING,
+},
+p8_u12_item3: {
+  type: DataTypes.STRING,
+},
+p8_u12_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p8_u12_tier: {
+  type: DataTypes.SMALLINT,
+},
+p8_u13_character_id: {
+  type: DataTypes.STRING,
+},
+p8_u13_item1: {
+  type: DataTypes.STRING,
+},
+p8_u13_item2: {
+  type: DataTypes.STRING,
+},
+p8_u13_item3: {
+  type: DataTypes.STRING,
+},
+p8_u13_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p8_u13_tier: {
+  type: DataTypes.SMALLINT,
+},
+p8_u14_character_id: {
+  type: DataTypes.STRING,
+},
+p8_u14_item1: {
+  type: DataTypes.STRING,
+},
+p8_u14_item2: {
+  type: DataTypes.STRING,
+},
+p8_u14_item3: {
+  type: DataTypes.STRING,
+},
+p8_u14_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p8_u14_tier: {
+  type: DataTypes.SMALLINT,
+},
+p8_u15_character_id: {
+  type: DataTypes.STRING,
+},
+p8_u15_item1: {
+  type: DataTypes.STRING,
+},
+p8_u15_item2: {
+  type: DataTypes.STRING,
+},
+p8_u15_item3: {
+  type: DataTypes.STRING,
+},
+p8_u15_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p8_u15_tier: {
+  type: DataTypes.SMALLINT,
+},
+p8_u16_character_id: {
+  type: DataTypes.STRING,
+},
+p8_u16_item1: {
+  type: DataTypes.STRING,
+},
+p8_u16_item2: {
+  type: DataTypes.STRING,
+},
+p8_u16_item3: {
+  type: DataTypes.STRING,
+},
+p8_u16_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p8_u16_tier: {
+  type: DataTypes.SMALLINT,
+},
+p8_u17_character_id: {
+  type: DataTypes.STRING,
+},
+p8_u17_item1: {
+  type: DataTypes.STRING,
+},
+p8_u17_item2: {
+  type: DataTypes.STRING,
+},
+p8_u17_item3: {
+  type: DataTypes.STRING,
+},
+p8_u17_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p8_u17_tier: {
+  type: DataTypes.SMALLINT,
+},
+p8_u18_character_id: {
+  type: DataTypes.STRING,
+},
+p8_u18_item1: {
+  type: DataTypes.STRING,
+},
+p8_u18_item2: {
+  type: DataTypes.STRING,
+},
+p8_u18_item3: {
+  type: DataTypes.STRING,
+},
+p8_u18_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p8_u18_tier: {
+  type: DataTypes.SMALLINT,
+},
+p8_u19_character_id: {
+  type: DataTypes.STRING,
+},
+p8_u19_item1: {
+  type: DataTypes.STRING,
+},
+p8_u19_item2: {
+  type: DataTypes.STRING,
+},
+p8_u19_item3: {
+  type: DataTypes.STRING,
+},
+p8_u19_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p8_u19_tier: {
+  type: DataTypes.SMALLINT,
+},
+p8_u20_character_id: {
+  type: DataTypes.STRING,
+},
+p8_u20_item1: {
+  type: DataTypes.STRING,
+},
+p8_u20_item2: {
+  type: DataTypes.STRING,
+},
+p8_u20_item3: {
+  type: DataTypes.STRING,
+},
+p8_u20_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p8_u20_tier: {
+  type: DataTypes.SMALLINT,
+},
+p8_u21_character_id: {
+  type: DataTypes.STRING,
+},
+p8_u21_item1: {
+  type: DataTypes.STRING,
+},
+p8_u21_item2: {
+  type: DataTypes.STRING,
+},
+p8_u21_item3: {
+  type: DataTypes.STRING,
+},
+p8_u21_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p8_u21_tier: {
+  type: DataTypes.SMALLINT,
+},
+p8_u22_character_id: {
+  type: DataTypes.STRING,
+},
+p8_u22_item1: {
+  type: DataTypes.STRING,
+},
+p8_u22_item2: {
+  type: DataTypes.STRING,
+},
+p8_u22_item3: {
+  type: DataTypes.STRING,
+},
+p8_u22_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p8_u22_tier: {
+  type: DataTypes.SMALLINT,
+},
+p8_u23_character_id: {
+  type: DataTypes.STRING,
+},
+p8_u23_item1: {
+  type: DataTypes.STRING,
+},
+p8_u23_item2: {
+  type: DataTypes.STRING,
+},
+p8_u23_item3: {
+  type: DataTypes.STRING,
+},
+p8_u23_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p8_u23_tier: {
+  type: DataTypes.SMALLINT,
+},
+p8_u24_character_id: {
+  type: DataTypes.STRING,
+},
+p8_u24_item1: {
+  type: DataTypes.STRING,
+},
+p8_u24_item2: {
+  type: DataTypes.STRING,
+},
+p8_u24_item3: {
+  type: DataTypes.STRING,
+},
+p8_u24_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p8_u24_tier: {
+  type: DataTypes.SMALLINT,
+},
+p8_u25_character_id: {
+  type: DataTypes.STRING,
+},
+p8_u25_item1: {
+  type: DataTypes.STRING,
+},
+p8_u25_item2: {
+  type: DataTypes.STRING,
+},
+p8_u25_item3: {
+  type: DataTypes.STRING,
+},
+p8_u25_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p8_u25_tier: {
+  type: DataTypes.SMALLINT,
+},
+p8_u26_character_id: {
+  type: DataTypes.STRING,
+},
+p8_u26_item1: {
+  type: DataTypes.STRING,
+},
+p8_u26_item2: {
+  type: DataTypes.STRING,
+},
+p8_u26_item3: {
+  type: DataTypes.STRING,
+},
+p8_u26_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p8_u26_tier: {
+  type: DataTypes.SMALLINT,
+},
+p8_u27_character_id: {
+  type: DataTypes.STRING,
+},
+p8_u27_item1: {
+  type: DataTypes.STRING,
+},
+p8_u27_item2: {
+  type: DataTypes.STRING,
+},
+p8_u27_item3: {
+  type: DataTypes.STRING,
+},
+p8_u27_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p8_u27_tier: {
+  type: DataTypes.SMALLINT,
+},
+p8_u28_character_id: {
+  type: DataTypes.STRING,
+},
+p8_u28_item1: {
+  type: DataTypes.STRING,
+},
+p8_u28_item2: {
+  type: DataTypes.STRING,
+},
+p8_u28_item3: {
+  type: DataTypes.STRING,
+},
+p8_u28_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p8_u28_tier: {
+  type: DataTypes.SMALLINT,
+},
+p8_u29_character_id: {
+  type: DataTypes.STRING,
+},
+p8_u29_item1: {
+  type: DataTypes.STRING,
+},
+p8_u29_item2: {
+  type: DataTypes.STRING,
+},
+p8_u29_item3: {
+  type: DataTypes.STRING,
+},
+p8_u29_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p8_u29_tier: {
+  type: DataTypes.SMALLINT,
+},
+p8_u30_character_id: {
+  type: DataTypes.STRING,
+},
+p8_u30_item1: {
+  type: DataTypes.STRING,
+},
+p8_u30_item2: {
+  type: DataTypes.STRING,
+},
+p8_u30_item3: {
+  type: DataTypes.STRING,
+},
+p8_u30_rarity: {
+  type: DataTypes.SMALLINT,
+},
+p8_u30_tier: {
+  type: DataTypes.SMALLINT,
+},
+    
 });
 
+
+
+generalMatchData.sync().then(() => {console.log("User Model synced");});
+traitMatchData.sync().then(() => {console.log("User Model synced");});
+unitMatchData.sync().then(() => {console.log("User Model synced");});
+User.sync().then(() => {console.log("User Model synced");});
+matchUsers.sync().then(() => {console.log("User Model synced");});
+
 module.exports = {User, matchUsers, generalMatchData, traitMatchData, unitMatchData}
-
-//generalMatchData.sync().then(() => {console.log("User Model synced");});
-//traitMatchData.sync().then(() => {console.log("User Model synced");});
-//unitMatchData.sync().then(() => {console.log("User Model synced");});
-//User.sync().then(() => {console.log("User Model synced");});
-//matchUsers.sync().then(() => {console.log("User Model synced");});
-
 
 //var puuidAdd = User.create({
   //puuid: "4y7U0S8KJEdONYlueYzI_BHK22nE93gPmA783axCNcNOzC0M0ldpdcRs8ON-OAkMUA__t9QQNhRrLA",
