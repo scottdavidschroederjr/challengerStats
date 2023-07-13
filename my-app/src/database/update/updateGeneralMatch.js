@@ -26,7 +26,7 @@ function updateGeneralMatchData (requestInput, data) {
           defaults[damageKey] = data["info"]["participants"][x]["total_damage_to_players"]
           
           //puts augments 2 and 3 in the right spot when 1 is hidden
-          console.log(data["info"]["participants"][x]["augments"][2])
+  
 
           try {
             console.log(data["info"]["participants"][x]["augments"][2].length)
