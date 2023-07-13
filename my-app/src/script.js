@@ -3,7 +3,11 @@ const { sq } = require("./database/db.js")
 //const { DataTypes } = require("sequelize");
 const { User } = require("./database/modules/createTables.js")
 const { matchUsers } = require("./database/modules/createTables.js")
-const { matchData } = require("./database/modules/createTables.js")
+const { generalMatchData } = require("./database/modules/createTables.js")
+const { updateTrait } = require("./database/update/updateTrait.js")
+const { updateUnits } = require("./database/update/updateUnits.js")
+const { updatePUUID } = require("./database/update/updatePUUID.js")
+const { updateUsers } = require("./database/update/updateUsers.js")
 
 
 //variables that need to be seen everywhere
@@ -138,20 +142,7 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
       output[requestInput]["puuid"] = data["puuid"]
 
       //adds PUUID to database
-      try {
-        User.findOrCreate({
-          where: {puuid: data["puuid"]},
-          defaults: {
-          puuid: data["puuid"],
-          name: requestInput.toLowerCase(),
-          accountID: data["accountId"],
-          id: data["id"]
-         }
-        })
-      } catch {
-        console.log("Error adding new user to database.")
-      }
-
+      updatePUUID(requestInput, data)
 
       return output[requestInput]["puuid"]
     }
@@ -234,7 +225,7 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
     //checks databases
       async function checkMatch(inputMatch) {
         try {
-        const matchesDB = await matchData.findAll({
+        const matchesDB = await generalMatchData.findAll({
           where: {
             matchID: inputMatch
             }
@@ -277,7 +268,7 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
   
       //gets info from database
       //set to double undefined while this is WIP
-      if (sqlMatch !== undefined && sqlUsersMatch !== undefined){  
+      if (sqlMatch !== undefined && sqlUsersMatch !== undefined && 0 === 1){  
 
         //put data about match where it needs to be!
         if (sqlUsersMatch[0]['tft_set_core_name'] === setNumber && sqlUsersMatch[0]['queue_id'] === "1100" && sqlUsersMatch[0]['tft_game_type'] === "standard"){
@@ -312,48 +303,19 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
         //to catch failed requests because of rate limiting
         data = await rateLimitWait(data, matchRequestURL)
 
-
-
         //adds data to matchUsers database
-        try {
-          matchUsers.findOrCreate({
-            where: {matchID: requestInput},
-  
-            defaults: {
-  
-            matchID: data["metadata"]["match_id"],
-            game_datetime: data['info']["game_datetime"],
-            game_length: data['info']["game_length"],
-            queue_id: data['info']['queue_id'],
-            tft_game_type: data['info']['tft_game_type'],
-            tft_set_core_name: data['info']['tft_set_core_name'],
-            tft_set_number: data['info']['tft_set_number'],
-  
-            player1: data["metadata"]["participants"][0],
-            player2: data["metadata"]["participants"][1],
-            player3: data["metadata"]["participants"][2],
-            player4: data["metadata"]["participants"][3],
-            player5: data["metadata"]["participants"][4],
-            player6: data["metadata"]["participants"][5],
-            player7: data["metadata"]["participants"][6],
-            player8: data["metadata"]["participants"][7]
-            }
-          })
+        updateUsers(requestInput, data)
 
-        } catch {
-          console.log("Error adding new match user info to database.")
-        }
-
-        //adds data to matchData database
-        //TODO ADD ALL OF THE OTHER DATA
+        //TODO swap with function adds data to generalMatchData database
         try {
-          matchData.findOrCreate({
+          generalMatchData.findOrCreate({
             where: {matchID: requestInput},
   
             defaults: {
   
             matchID: data["metadata"]["match_id"],
   
+            //player 1 general data
             player1: data["metadata"]["participants"][0],
             p1_gold_left: data["info"]["participants"][0]['gold_left'],
             p1_last_round: data["info"]["participants"][0]['last_round'],
@@ -365,8 +327,8 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
             p1_augment1: data["info"]["participants"][0]['augments'][0],
             p1_augment2: data["info"]["participants"][0]['augments'][1],
             p1_augment3: data["info"]["participants"][0]['augments'][2],
-            
-            
+
+            //player 2 general data
             player2: data["metadata"]["participants"][1],
             p2_gold_left: data["info"]["participants"][1]['gold_left'],
             p2_last_round: data["info"]["participants"][1]['last_round'],
@@ -378,6 +340,8 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
             p2_augment1: data["info"]["participants"][1]['augments'][0],
             p2_augment2: data["info"]["participants"][1]['augments'][1],
             p2_augment3: data["info"]["participants"][1]['augments'][2],
+
+            //player 2 trait data
   
             player3: data["metadata"]["participants"][2],
             p3_gold_left: data["info"]["participants"][2]['gold_left'],
@@ -390,6 +354,8 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
             p3_augment1: data["info"]["participants"][2]['augments'][0],
             p3_augment2: data["info"]["participants"][2]['augments'][1],
             p3_augment3: data["info"]["participants"][2]['augments'][2],
+
+            //player 3 trait data
   
             player4: data["metadata"]["participants"][3],
             p4_gold_left: data["info"]["participants"][3]['gold_left'],
@@ -402,6 +368,8 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
             p4_augment1: data["info"]["participants"][3]['augments'][0],
             p4_augment2: data["info"]["participants"][3]['augments'][1],
             p4_augment3: data["info"]["participants"][3]['augments'][2],
+
+            //player 4 trait data
   
             player5: data["metadata"]["participants"][4],
             p5_gold_left: data["info"]["participants"][4]['gold_left'],
@@ -414,6 +382,8 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
             p5_augment1: data["info"]["participants"][4]['augments'][0],
             p5_augment2: data["info"]["participants"][4]['augments'][1],
             p5_augment3: data["info"]["participants"][4]['augments'][2],
+
+            //player 5 trait data
   
             player6: data["metadata"]["participants"][5],
             p6_gold_left: data["info"]["participants"][5]['gold_left'],
@@ -426,6 +396,8 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
             p6_augment1: data["info"]["participants"][5]['augments'][0],
             p6_augment2: data["info"]["participants"][5]['augments'][1],
             p6_augment3: data["info"]["participants"][5]['augments'][2],
+
+            //player 6 trait data
   
             player7: data["metadata"]["participants"][6],
             p7_gold_left: data["info"]["participants"][6]['gold_left'],
@@ -438,6 +410,8 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
             p7_augment1: data["info"]["participants"][6]['augments'][0],
             p7_augment2: data["info"]["participants"][6]['augments'][1],
             p7_augment3: data["info"]["participants"][6]['augments'][2],
+
+            //player 7 trait data
   
             player8: data["metadata"]["participants"][7],
             p8_gold_left: data["info"]["participants"][7]['gold_left'],
@@ -450,11 +424,20 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
             p8_augment1: data["info"]["participants"][7]['augments'][0],
             p8_augment2: data["info"]["participants"][7]['augments'][1],
             p8_augment3: data["info"]["participants"][7]['augments'][2],
+
+            //player 8 trait data
+
             }
           })
         } catch {
           console.log("Error adding NEW MATCH INFO to database.")
         }
+
+        //adds data to traitMatchData database
+        console.log("is it not getting here")
+        updateTrait(requestInput, data)
+        updateUnits(requestInput, data)
+
 
         //proper set, ranked and only normal match check
         if (data['info']['tft_set_core_name'] === setNumber && data['info']['queue_id'] === 1100 && data['info']['tft_game_type'] === "standard"){

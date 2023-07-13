@@ -1,6 +1,8 @@
 const { sq } = require("../db.js")
 const { DataTypes } = require("sequelize");
 
+
+
 const User = sq.define("puiid", {
     puuid: {
       type: DataTypes.STRING,
@@ -77,7 +79,7 @@ const matchUsers = sq.define("matchUsers", {
     }        
   });
 
-const matchData = sq.define("matchData", {
+const generalMatchData = sq.define("generalMatchData", {
     matchID: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -116,216 +118,7 @@ const matchData = sq.define("matchData", {
     p1_augment3: {
       type: DataTypes.STRING,
     },
-    p1_t1_name: {
-      type: DataTypes.STRING,
-    },
-    p1_t1_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t1_style: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t1_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t1_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t2_name: {
-      type: DataTypes.STRING,
-    },
-    p1_t2_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t2_style: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t2_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t2_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t3_name: {
-      type: DataTypes.STRING,
-    },
-    p1_t3_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t3_style: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t3_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t3_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t4_name: {
-      type: DataTypes.STRING,
-    },
-    p1_t4_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t4_style: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t4_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t4_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t5_name: {
-      type: DataTypes.STRING,
-    },
-    p1_t5_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t5_style: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t5_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t5_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t6_name: {
-      type: DataTypes.STRING,
-    },
-    p1_t6_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t6_style: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t6_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t6_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t7_name: {
-      type: DataTypes.STRING,
-    },
-    p1_t7_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t7_style: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t7_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t7_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t8_name: {
-      type: DataTypes.STRING,
-    },
-    p1_t8_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t8_style: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t8_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t8_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t9_name: {
-      type: DataTypes.STRING,
-    },
-    p1_t9_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t9_style: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t9_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t9_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t10_name: {
-      type: DataTypes.STRING,
-    },
-    p1_t10_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t10_style: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t10_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t10_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t11_name: {
-      type: DataTypes.STRING,
-    },
-    p1_t11_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t11_style: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t11_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t11_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t12_name: {
-      type: DataTypes.STRING,
-    },
-    p1_t12_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t12_style: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t12_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t12_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t13_name: {
-      type: DataTypes.STRING,
-    },
-    p1_t13_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t13_style: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t13_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t13_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t14_name: {
-      type: DataTypes.STRING,
-    },
-    p1_t14_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t14_style: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t14_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p1_t14_tier_total: {
-      type: DataTypes.INTEGER,
-    },
+   
 //p1 units
   p1_u1_character_id: {
     type: DataTypes.STRING,
@@ -676,536 +469,6 @@ const matchData = sq.define("matchData", {
     p2_augment3: {
       type: DataTypes.STRING,
     },
-    p2_t1_name: {
-      type: DataTypes.STRING,
-    },
-    p2_t1_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t1_style: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t1_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t1_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t2_name: {
-      type: DataTypes.STRING,
-    },
-    p2_t2_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t2_style: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t2_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t2_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t3_name: {
-      type: DataTypes.STRING,
-    },
-    p2_t3_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t3_style: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t3_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t3_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t4_name: {
-      type: DataTypes.STRING,
-    },
-    p2_t4_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t4_style: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t4_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t4_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t5_name: {
-      type: DataTypes.STRING,
-    },
-    p2_t5_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t5_style: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t5_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t5_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t6_name: {
-      type: DataTypes.STRING,
-    },
-    p2_t6_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t6_style: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t6_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t6_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t7_name: {
-      type: DataTypes.STRING,
-    },
-    p2_t7_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t7_style: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t7_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t7_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t8_name: {
-      type: DataTypes.STRING,
-    },
-    p2_t8_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t8_style: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t8_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t8_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t9_name: {
-      type: DataTypes.STRING,
-    },
-    p2_t9_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t9_style: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t9_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t9_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t10_name: {
-      type: DataTypes.STRING,
-    },
-    p2_t10_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t10_style: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t10_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t10_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t11_name: {
-      type: DataTypes.STRING,
-    },
-    p2_t11_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t11_style: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t11_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t11_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t12_name: {
-      type: DataTypes.STRING,
-    },
-    p2_t12_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t12_style: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t12_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t12_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t13_name: {
-      type: DataTypes.STRING,
-    },
-    p2_t13_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t13_style: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t13_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t13_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t14_name: {
-      type: DataTypes.STRING,
-    },
-    p2_t14_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t14_style: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t14_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p2_t14_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    
-    p2_u1_character_id: {
-      type: DataTypes.STRING,
-    },
-    p2_u1_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u1_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u1_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u1_name: {
-      type: DataTypes.STRING,
-    },
-    p2_u1_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u1_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u2_character_id: {
-      type: DataTypes.STRING,
-    },
-    p2_u2_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u2_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u2_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u2_name: {
-      type: DataTypes.STRING,
-    },
-    p2_u2_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u2_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u3_character_id: {
-      type: DataTypes.STRING,
-    },
-    p2_u3_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u3_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u3_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u3_name: {
-      type: DataTypes.STRING,
-    },
-    p2_u3_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u3_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u4_character_id: {
-      type: DataTypes.STRING,
-    },
-    p2_u4_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u4_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u4_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u4_name: {
-      type: DataTypes.STRING,
-    },
-    p2_u4_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u4_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u5_character_id: {
-      type: DataTypes.STRING,
-    },
-    p2_u5_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u5_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u5_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u5_name: {
-      type: DataTypes.STRING,
-    },
-    p2_u5_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u5_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u6_character_id: {
-      type: DataTypes.STRING,
-    },
-    p2_u6_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u6_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u6_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u6_name: {
-      type: DataTypes.STRING,
-    },
-    p2_u6_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u6_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u7_character_id: {
-      type: DataTypes.STRING,
-    },
-    p2_u7_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u7_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u7_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u7_name: {
-      type: DataTypes.STRING,
-    },
-    p2_u7_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u7_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u8_character_id: {
-      type: DataTypes.STRING,
-    },
-    p2_u8_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u8_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u8_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u8_name: {
-      type: DataTypes.STRING,
-    },
-    p2_u8_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u8_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u9_character_id: {
-      type: DataTypes.STRING,
-    },
-    p2_u9_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u9_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u9_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u9_name: {
-      type: DataTypes.STRING,
-    },
-    p2_u9_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u9_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u10_character_id: {
-      type: DataTypes.STRING,
-    },
-    p2_u10_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u10_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u10_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u10_name: {
-      type: DataTypes.STRING,
-    },
-    p2_u10_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u10_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u11_character_id: {
-      type: DataTypes.STRING,
-    },
-    p2_u11_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u11_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u11_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u11_name: {
-      type: DataTypes.STRING,
-    },
-    p2_u11_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u11_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u12_character_id: {
-      type: DataTypes.STRING,
-    },
-    p2_u12_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u12_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u12_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u12_name: {
-      type: DataTypes.STRING,
-    },
-    p2_u12_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u12_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u13_character_id: {
-      type: DataTypes.STRING,
-    },
-    p2_u13_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u13_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u13_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u13_name: {
-      type: DataTypes.STRING,
-    },
-    p2_u13_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u13_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u14_character_id: {
-      type: DataTypes.STRING,
-    },
-    p2_u14_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u14_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u14_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u14_name: {
-      type: DataTypes.STRING,
-    },
-    p2_u14_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u14_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u15_character_id: {
-      type: DataTypes.STRING,
-    },
-    p2_u15_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u15_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u15_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u15_name: {
-      type: DataTypes.STRING,
-    },
-    p2_u15_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p2_u15_tier: {
-      type: DataTypes.INTEGER,
-    },
-    
-
-
-
 //p3 stats
     player3: {
       type: DataTypes.STRING,
@@ -1241,535 +504,6 @@ const matchData = sq.define("matchData", {
       type: DataTypes.STRING,
     },
 
-    p3_t1_name: {
-      type: DataTypes.STRING,
-    },
-    p3_t1_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t1_style: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t1_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t1_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t2_name: {
-      type: DataTypes.STRING,
-    },
-    p3_t2_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t2_style: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t2_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t2_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t3_name: {
-      type: DataTypes.STRING,
-    },
-    p3_t3_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t3_style: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t3_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t3_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t4_name: {
-      type: DataTypes.STRING,
-    },
-    p3_t4_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t4_style: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t4_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t4_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t5_name: {
-      type: DataTypes.STRING,
-    },
-    p3_t5_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t5_style: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t5_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t5_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t6_name: {
-      type: DataTypes.STRING,
-    },
-    p3_t6_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t6_style: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t6_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t6_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t7_name: {
-      type: DataTypes.STRING,
-    },
-    p3_t7_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t7_style: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t7_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t7_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t8_name: {
-      type: DataTypes.STRING,
-    },
-    p3_t8_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t8_style: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t8_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t8_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t9_name: {
-      type: DataTypes.STRING,
-    },
-    p3_t9_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t9_style: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t9_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t9_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t10_name: {
-      type: DataTypes.STRING,
-    },
-    p3_t10_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t10_style: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t10_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t10_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t11_name: {
-      type: DataTypes.STRING,
-    },
-    p3_t11_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t11_style: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t11_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t11_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t12_name: {
-      type: DataTypes.STRING,
-    },
-    p3_t12_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t12_style: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t12_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t12_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t13_name: {
-      type: DataTypes.STRING,
-    },
-    p3_t13_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t13_style: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t13_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t13_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t14_name: {
-      type: DataTypes.STRING,
-    },
-    p3_t14_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t14_style: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t14_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p3_t14_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    
-    //p3 units
-    p3_u1_character_id: {
-      type: DataTypes.STRING,
-    },
-    p3_u1_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u1_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u1_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u1_name: {
-      type: DataTypes.STRING,
-    },
-    p3_u1_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u1_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u2_character_id: {
-      type: DataTypes.STRING,
-    },
-    p3_u2_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u2_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u2_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u2_name: {
-      type: DataTypes.STRING,
-    },
-    p3_u2_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u2_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u3_character_id: {
-      type: DataTypes.STRING,
-    },
-    p3_u3_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u3_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u3_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u3_name: {
-      type: DataTypes.STRING,
-    },
-    p3_u3_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u3_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u4_character_id: {
-      type: DataTypes.STRING,
-    },
-    p3_u4_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u4_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u4_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u4_name: {
-      type: DataTypes.STRING,
-    },
-    p3_u4_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u4_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u5_character_id: {
-      type: DataTypes.STRING,
-    },
-    p3_u5_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u5_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u5_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u5_name: {
-      type: DataTypes.STRING,
-    },
-    p3_u5_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u5_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u6_character_id: {
-      type: DataTypes.STRING,
-    },
-    p3_u6_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u6_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u6_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u6_name: {
-      type: DataTypes.STRING,
-    },
-    p3_u6_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u6_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u7_character_id: {
-      type: DataTypes.STRING,
-    },
-    p3_u7_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u7_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u7_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u7_name: {
-      type: DataTypes.STRING,
-    },
-    p3_u7_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u7_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u8_character_id: {
-      type: DataTypes.STRING,
-    },
-    p3_u8_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u8_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u8_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u8_name: {
-      type: DataTypes.STRING,
-    },
-    p3_u8_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u8_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u9_character_id: {
-      type: DataTypes.STRING,
-    },
-    p3_u9_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u9_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u9_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u9_name: {
-      type: DataTypes.STRING,
-    },
-    p3_u9_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u9_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u10_character_id: {
-      type: DataTypes.STRING,
-    },
-    p3_u10_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u10_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u10_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u10_name: {
-      type: DataTypes.STRING,
-    },
-    p3_u10_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u10_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u11_character_id: {
-      type: DataTypes.STRING,
-    },
-    p3_u11_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u11_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u11_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u11_name: {
-      type: DataTypes.STRING,
-    },
-    p3_u11_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u11_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u12_character_id: {
-      type: DataTypes.STRING,
-    },
-    p3_u12_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u12_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u12_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u12_name: {
-      type: DataTypes.STRING,
-    },
-    p3_u12_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u12_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u13_character_id: {
-      type: DataTypes.STRING,
-    },
-    p3_u13_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u13_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u13_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u13_name: {
-      type: DataTypes.STRING,
-    },
-    p3_u13_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u13_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u14_character_id: {
-      type: DataTypes.STRING,
-    },
-    p3_u14_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u14_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u14_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u14_name: {
-      type: DataTypes.STRING,
-    },
-    p3_u14_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u14_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u15_character_id: {
-      type: DataTypes.STRING,
-    },
-    p3_u15_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u15_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u15_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u15_name: {
-      type: DataTypes.STRING,
-    },
-    p3_u15_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p3_u15_tier: {
-      type: DataTypes.INTEGER,
-    },
-    
-
     //p4 stats
     player4: {
       type: DataTypes.STRING,
@@ -1804,533 +538,7 @@ const matchData = sq.define("matchData", {
     p4_augment3: {
       type: DataTypes.STRING,
     },  
-    p4_t1_name: {
-      type: DataTypes.STRING,
-    },
-    p4_t1_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t1_style: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t1_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t1_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t2_name: {
-      type: DataTypes.STRING,
-    },
-    p4_t2_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t2_style: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t2_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t2_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t3_name: {
-      type: DataTypes.STRING,
-    },
-    p4_t3_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t3_style: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t3_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t3_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t4_name: {
-      type: DataTypes.STRING,
-    },
-    p4_t4_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t4_style: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t4_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t4_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t5_name: {
-      type: DataTypes.STRING,
-    },
-    p4_t5_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t5_style: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t5_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t5_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t6_name: {
-      type: DataTypes.STRING,
-    },
-    p4_t6_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t6_style: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t6_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t6_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t7_name: {
-      type: DataTypes.STRING,
-    },
-    p4_t7_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t7_style: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t7_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t7_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t8_name: {
-      type: DataTypes.STRING,
-    },
-    p4_t8_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t8_style: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t8_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t8_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t9_name: {
-      type: DataTypes.STRING,
-    },
-    p4_t9_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t9_style: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t9_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t9_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t10_name: {
-      type: DataTypes.STRING,
-    },
-    p4_t10_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t10_style: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t10_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t10_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t11_name: {
-      type: DataTypes.STRING,
-    },
-    p4_t11_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t11_style: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t11_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t11_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t12_name: {
-      type: DataTypes.STRING,
-    },
-    p4_t12_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t12_style: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t12_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t12_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t13_name: {
-      type: DataTypes.STRING,
-    },
-    p4_t13_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t13_style: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t13_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t13_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t14_name: {
-      type: DataTypes.STRING,
-    },
-    p4_t14_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t14_style: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t14_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p4_t14_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-  
-    p4_u1_character_id: {
-      type: DataTypes.STRING,
-    },
-    p4_u1_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u1_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u1_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u1_name: {
-      type: DataTypes.STRING,
-    },
-    p4_u1_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u1_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u2_character_id: {
-      type: DataTypes.STRING,
-    },
-    p4_u2_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u2_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u2_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u2_name: {
-      type: DataTypes.STRING,
-    },
-    p4_u2_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u2_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u3_character_id: {
-      type: DataTypes.STRING,
-    },
-    p4_u3_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u3_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u3_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u3_name: {
-      type: DataTypes.STRING,
-    },
-    p4_u3_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u3_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u4_character_id: {
-      type: DataTypes.STRING,
-    },
-    p4_u4_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u4_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u4_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u4_name: {
-      type: DataTypes.STRING,
-    },
-    p4_u4_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u4_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u5_character_id: {
-      type: DataTypes.STRING,
-    },
-    p4_u5_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u5_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u5_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u5_name: {
-      type: DataTypes.STRING,
-    },
-    p4_u5_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u5_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u6_character_id: {
-      type: DataTypes.STRING,
-    },
-    p4_u6_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u6_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u6_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u6_name: {
-      type: DataTypes.STRING,
-    },
-    p4_u6_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u6_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u7_character_id: {
-      type: DataTypes.STRING,
-    },
-    p4_u7_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u7_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u7_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u7_name: {
-      type: DataTypes.STRING,
-    },
-    p4_u7_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u7_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u8_character_id: {
-      type: DataTypes.STRING,
-    },
-    p4_u8_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u8_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u8_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u8_name: {
-      type: DataTypes.STRING,
-    },
-    p4_u8_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u8_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u9_character_id: {
-      type: DataTypes.STRING,
-    },
-    p4_u9_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u9_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u9_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u9_name: {
-      type: DataTypes.STRING,
-    },
-    p4_u9_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u9_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u10_character_id: {
-      type: DataTypes.STRING,
-    },
-    p4_u10_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u10_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u10_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u10_name: {
-      type: DataTypes.STRING,
-    },
-    p4_u10_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u10_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u11_character_id: {
-      type: DataTypes.STRING,
-    },
-    p4_u11_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u11_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u11_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u11_name: {
-      type: DataTypes.STRING,
-    },
-    p4_u11_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u11_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u12_character_id: {
-      type: DataTypes.STRING,
-    },
-    p4_u12_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u12_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u12_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u12_name: {
-      type: DataTypes.STRING,
-    },
-    p4_u12_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u12_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u13_character_id: {
-      type: DataTypes.STRING,
-    },
-    p4_u13_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u13_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u13_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u13_name: {
-      type: DataTypes.STRING,
-    },
-    p4_u13_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u13_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u14_character_id: {
-      type: DataTypes.STRING,
-    },
-    p4_u14_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u14_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u14_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u14_name: {
-      type: DataTypes.STRING,
-    },
-    p4_u14_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u14_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u15_character_id: {
-      type: DataTypes.STRING,
-    },
-    p4_u15_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u15_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u15_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u15_name: {
-      type: DataTypes.STRING,
-    },
-    p4_u15_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p4_u15_tier: {
-      type: DataTypes.INTEGER,
-    },
-    
+
 
     //p5 stats
     player5: {
@@ -2367,536 +575,6 @@ const matchData = sq.define("matchData", {
       type: DataTypes.STRING,
     },
 
-    p5_t1_name: {
-      type: DataTypes.STRING,
-    },
-    p5_t1_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t1_style: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t1_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t1_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t2_name: {
-      type: DataTypes.STRING,
-    },
-    p5_t2_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t2_style: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t2_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t2_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t3_name: {
-      type: DataTypes.STRING,
-    },
-    p5_t3_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t3_style: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t3_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t3_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t4_name: {
-      type: DataTypes.STRING,
-    },
-    p5_t4_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t4_style: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t4_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t4_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t5_name: {
-      type: DataTypes.STRING,
-    },
-    p5_t5_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t5_style: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t5_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t5_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t6_name: {
-      type: DataTypes.STRING,
-    },
-    p5_t6_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t6_style: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t6_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t6_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t7_name: {
-      type: DataTypes.STRING,
-    },
-    p5_t7_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t7_style: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t7_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t7_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t8_name: {
-      type: DataTypes.STRING,
-    },
-    p5_t8_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t8_style: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t8_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t8_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t9_name: {
-      type: DataTypes.STRING,
-    },
-    p5_t9_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t9_style: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t9_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t9_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t10_name: {
-      type: DataTypes.STRING,
-    },
-    p5_t10_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t10_style: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t10_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t10_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t11_name: {
-      type: DataTypes.STRING,
-    },
-    p5_t11_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t11_style: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t11_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t11_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t12_name: {
-      type: DataTypes.STRING,
-    },
-    p5_t12_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t12_style: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t12_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t12_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t13_name: {
-      type: DataTypes.STRING,
-    },
-    p5_t13_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t13_style: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t13_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t13_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t14_name: {
-      type: DataTypes.STRING,
-    },
-    p5_t14_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t14_style: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t14_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p5_t14_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    
-
-    //p5 units
-    p5_u1_character_id: {
-      type: DataTypes.STRING,
-    },
-    p5_u1_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u1_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u1_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u1_name: {
-      type: DataTypes.STRING,
-    },
-    p5_u1_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u1_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u2_character_id: {
-      type: DataTypes.STRING,
-    },
-    p5_u2_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u2_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u2_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u2_name: {
-      type: DataTypes.STRING,
-    },
-    p5_u2_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u2_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u3_character_id: {
-      type: DataTypes.STRING,
-    },
-    p5_u3_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u3_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u3_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u3_name: {
-      type: DataTypes.STRING,
-    },
-    p5_u3_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u3_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u4_character_id: {
-      type: DataTypes.STRING,
-    },
-    p5_u4_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u4_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u4_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u4_name: {
-      type: DataTypes.STRING,
-    },
-    p5_u4_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u4_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u5_character_id: {
-      type: DataTypes.STRING,
-    },
-    p5_u5_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u5_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u5_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u5_name: {
-      type: DataTypes.STRING,
-    },
-    p5_u5_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u5_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u6_character_id: {
-      type: DataTypes.STRING,
-    },
-    p5_u6_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u6_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u6_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u6_name: {
-      type: DataTypes.STRING,
-    },
-    p5_u6_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u6_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u7_character_id: {
-      type: DataTypes.STRING,
-    },
-    p5_u7_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u7_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u7_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u7_name: {
-      type: DataTypes.STRING,
-    },
-    p5_u7_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u7_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u8_character_id: {
-      type: DataTypes.STRING,
-    },
-    p5_u8_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u8_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u8_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u8_name: {
-      type: DataTypes.STRING,
-    },
-    p5_u8_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u8_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u9_character_id: {
-      type: DataTypes.STRING,
-    },
-    p5_u9_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u9_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u9_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u9_name: {
-      type: DataTypes.STRING,
-    },
-    p5_u9_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u9_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u10_character_id: {
-      type: DataTypes.STRING,
-    },
-    p5_u10_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u10_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u10_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u10_name: {
-      type: DataTypes.STRING,
-    },
-    p5_u10_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u10_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u11_character_id: {
-      type: DataTypes.STRING,
-    },
-    p5_u11_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u11_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u11_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u11_name: {
-      type: DataTypes.STRING,
-    },
-    p5_u11_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u11_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u12_character_id: {
-      type: DataTypes.STRING,
-    },
-    p5_u12_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u12_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u12_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u12_name: {
-      type: DataTypes.STRING,
-    },
-    p5_u12_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u12_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u13_character_id: {
-      type: DataTypes.STRING,
-    },
-    p5_u13_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u13_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u13_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u13_name: {
-      type: DataTypes.STRING,
-    },
-    p5_u13_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u13_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u14_character_id: {
-      type: DataTypes.STRING,
-    },
-    p5_u14_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u14_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u14_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u14_name: {
-      type: DataTypes.STRING,
-    },
-    p5_u14_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u14_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u15_character_id: {
-      type: DataTypes.STRING,
-    },
-    p5_u15_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u15_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u15_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u15_name: {
-      type: DataTypes.STRING,
-    },
-    p5_u15_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p5_u15_tier: {
-      type: DataTypes.INTEGER,
-    },
-    
-
     //p6 stats
     player6: {
       type: DataTypes.STRING,
@@ -2931,535 +609,6 @@ const matchData = sq.define("matchData", {
     p6_augment3: {
       type: DataTypes.STRING,
     },    
-    p6_t1_name: {
-      type: DataTypes.STRING,
-    },
-    p6_t1_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t1_style: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t1_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t1_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t2_name: {
-      type: DataTypes.STRING,
-    },
-    p6_t2_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t2_style: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t2_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t2_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t3_name: {
-      type: DataTypes.STRING,
-    },
-    p6_t3_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t3_style: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t3_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t3_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t4_name: {
-      type: DataTypes.STRING,
-    },
-    p6_t4_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t4_style: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t4_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t4_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t5_name: {
-      type: DataTypes.STRING,
-    },
-    p6_t5_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t5_style: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t5_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t5_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t6_name: {
-      type: DataTypes.STRING,
-    },
-    p6_t6_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t6_style: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t6_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t6_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t7_name: {
-      type: DataTypes.STRING,
-    },
-    p6_t7_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t7_style: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t7_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t7_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t8_name: {
-      type: DataTypes.STRING,
-    },
-    p6_t8_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t8_style: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t8_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t8_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t9_name: {
-      type: DataTypes.STRING,
-    },
-    p6_t9_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t9_style: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t9_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t9_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t10_name: {
-      type: DataTypes.STRING,
-    },
-    p6_t10_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t10_style: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t10_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t10_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t11_name: {
-      type: DataTypes.STRING,
-    },
-    p6_t11_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t11_style: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t11_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t11_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t12_name: {
-      type: DataTypes.STRING,
-    },
-    p6_t12_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t12_style: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t12_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t12_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t13_name: {
-      type: DataTypes.STRING,
-    },
-    p6_t13_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t13_style: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t13_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t13_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t14_name: {
-      type: DataTypes.STRING,
-    },
-    p6_t14_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t14_style: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t14_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p6_t14_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-   
-
-    //p6 units
-    p6_u1_character_id: {
-      type: DataTypes.STRING,
-    },
-    p6_u1_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u1_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u1_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u1_name: {
-      type: DataTypes.STRING,
-    },
-    p6_u1_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u1_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u2_character_id: {
-      type: DataTypes.STRING,
-    },
-    p6_u2_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u2_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u2_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u2_name: {
-      type: DataTypes.STRING,
-    },
-    p6_u2_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u2_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u3_character_id: {
-      type: DataTypes.STRING,
-    },
-    p6_u3_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u3_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u3_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u3_name: {
-      type: DataTypes.STRING,
-    },
-    p6_u3_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u3_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u4_character_id: {
-      type: DataTypes.STRING,
-    },
-    p6_u4_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u4_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u4_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u4_name: {
-      type: DataTypes.STRING,
-    },
-    p6_u4_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u4_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u5_character_id: {
-      type: DataTypes.STRING,
-    },
-    p6_u5_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u5_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u5_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u5_name: {
-      type: DataTypes.STRING,
-    },
-    p6_u5_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u5_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u6_character_id: {
-      type: DataTypes.STRING,
-    },
-    p6_u6_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u6_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u6_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u6_name: {
-      type: DataTypes.STRING,
-    },
-    p6_u6_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u6_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u7_character_id: {
-      type: DataTypes.STRING,
-    },
-    p6_u7_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u7_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u7_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u7_name: {
-      type: DataTypes.STRING,
-    },
-    p6_u7_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u7_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u8_character_id: {
-      type: DataTypes.STRING,
-    },
-    p6_u8_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u8_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u8_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u8_name: {
-      type: DataTypes.STRING,
-    },
-    p6_u8_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u8_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u9_character_id: {
-      type: DataTypes.STRING,
-    },
-    p6_u9_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u9_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u9_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u9_name: {
-      type: DataTypes.STRING,
-    },
-    p6_u9_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u9_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u10_character_id: {
-      type: DataTypes.STRING,
-    },
-    p6_u10_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u10_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u10_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u10_name: {
-      type: DataTypes.STRING,
-    },
-    p6_u10_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u10_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u11_character_id: {
-      type: DataTypes.STRING,
-    },
-    p6_u11_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u11_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u11_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u11_name: {
-      type: DataTypes.STRING,
-    },
-    p6_u11_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u11_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u12_character_id: {
-      type: DataTypes.STRING,
-    },
-    p6_u12_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u12_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u12_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u12_name: {
-      type: DataTypes.STRING,
-    },
-    p6_u12_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u12_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u13_character_id: {
-      type: DataTypes.STRING,
-    },
-    p6_u13_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u13_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u13_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u13_name: {
-      type: DataTypes.STRING,
-    },
-    p6_u13_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u13_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u14_character_id: {
-      type: DataTypes.STRING,
-    },
-    p6_u14_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u14_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u14_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u14_name: {
-      type: DataTypes.STRING,
-    },
-    p6_u14_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u14_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u15_character_id: {
-      type: DataTypes.STRING,
-    },
-    p6_u15_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u15_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u15_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u15_name: {
-      type: DataTypes.STRING,
-    },
-    p6_u15_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p6_u15_tier: {
-      type: DataTypes.INTEGER,
-    },
-    
 
     //p7 stats
     player7: {
@@ -3495,535 +644,6 @@ const matchData = sq.define("matchData", {
     p7_augment3: {
       type: DataTypes.STRING,
     },
-    p7_t1_name: {
-      type: DataTypes.STRING,
-    },
-    p7_t1_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t1_style: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t1_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t1_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t2_name: {
-      type: DataTypes.STRING,
-    },
-    p7_t2_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t2_style: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t2_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t2_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t3_name: {
-      type: DataTypes.STRING,
-    },
-    p7_t3_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t3_style: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t3_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t3_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t4_name: {
-      type: DataTypes.STRING,
-    },
-    p7_t4_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t4_style: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t4_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t4_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t5_name: {
-      type: DataTypes.STRING,
-    },
-    p7_t5_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t5_style: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t5_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t5_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t6_name: {
-      type: DataTypes.STRING,
-    },
-    p7_t6_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t6_style: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t6_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t6_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t7_name: {
-      type: DataTypes.STRING,
-    },
-    p7_t7_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t7_style: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t7_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t7_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t8_name: {
-      type: DataTypes.STRING,
-    },
-    p7_t8_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t8_style: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t8_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t8_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t9_name: {
-      type: DataTypes.STRING,
-    },
-    p7_t9_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t9_style: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t9_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t9_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t10_name: {
-      type: DataTypes.STRING,
-    },
-    p7_t10_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t10_style: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t10_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t10_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t11_name: {
-      type: DataTypes.STRING,
-    },
-    p7_t11_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t11_style: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t11_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t11_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t12_name: {
-      type: DataTypes.STRING,
-    },
-    p7_t12_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t12_style: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t12_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t12_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t13_name: {
-      type: DataTypes.STRING,
-    },
-    p7_t13_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t13_style: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t13_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t13_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t14_name: {
-      type: DataTypes.STRING,
-    },
-    p7_t14_num_units: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t14_style: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t14_tier_current: {
-      type: DataTypes.INTEGER,
-    },
-    p7_t14_tier_total: {
-      type: DataTypes.INTEGER,
-    },
-    
-
-    //p7 units
-    p7_u1_character_id: {
-      type: DataTypes.STRING,
-    },
-    p7_u1_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u1_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u1_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u1_name: {
-      type: DataTypes.STRING,
-    },
-    p7_u1_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u1_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u2_character_id: {
-      type: DataTypes.STRING,
-    },
-    p7_u2_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u2_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u2_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u2_name: {
-      type: DataTypes.STRING,
-    },
-    p7_u2_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u2_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u3_character_id: {
-      type: DataTypes.STRING,
-    },
-    p7_u3_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u3_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u3_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u3_name: {
-      type: DataTypes.STRING,
-    },
-    p7_u3_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u3_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u4_character_id: {
-      type: DataTypes.STRING,
-    },
-    p7_u4_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u4_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u4_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u4_name: {
-      type: DataTypes.STRING,
-    },
-    p7_u4_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u4_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u5_character_id: {
-      type: DataTypes.STRING,
-    },
-    p7_u5_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u5_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u5_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u5_name: {
-      type: DataTypes.STRING,
-    },
-    p7_u5_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u5_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u6_character_id: {
-      type: DataTypes.STRING,
-    },
-    p7_u6_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u6_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u6_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u6_name: {
-      type: DataTypes.STRING,
-    },
-    p7_u6_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u6_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u7_character_id: {
-      type: DataTypes.STRING,
-    },
-    p7_u7_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u7_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u7_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u7_name: {
-      type: DataTypes.STRING,
-    },
-    p7_u7_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u7_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u8_character_id: {
-      type: DataTypes.STRING,
-    },
-    p7_u8_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u8_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u8_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u8_name: {
-      type: DataTypes.STRING,
-    },
-    p7_u8_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u8_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u9_character_id: {
-      type: DataTypes.STRING,
-    },
-    p7_u9_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u9_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u9_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u9_name: {
-      type: DataTypes.STRING,
-    },
-    p7_u9_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u9_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u10_character_id: {
-      type: DataTypes.STRING,
-    },
-    p7_u10_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u10_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u10_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u10_name: {
-      type: DataTypes.STRING,
-    },
-    p7_u10_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u10_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u11_character_id: {
-      type: DataTypes.STRING,
-    },
-    p7_u11_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u11_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u11_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u11_name: {
-      type: DataTypes.STRING,
-    },
-    p7_u11_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u11_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u12_character_id: {
-      type: DataTypes.STRING,
-    },
-    p7_u12_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u12_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u12_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u12_name: {
-      type: DataTypes.STRING,
-    },
-    p7_u12_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u12_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u13_character_id: {
-      type: DataTypes.STRING,
-    },
-    p7_u13_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u13_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u13_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u13_name: {
-      type: DataTypes.STRING,
-    },
-    p7_u13_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u13_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u14_character_id: {
-      type: DataTypes.STRING,
-    },
-    p7_u14_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u14_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u14_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u14_name: {
-      type: DataTypes.STRING,
-    },
-    p7_u14_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u14_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u15_character_id: {
-      type: DataTypes.STRING,
-    },
-    p7_u15_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u15_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u15_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u15_name: {
-      type: DataTypes.STRING,
-    },
-    p7_u15_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p7_u15_tier: {
-      type: DataTypes.INTEGER,
-    },
-    
 
     //p8 stats
     player8: {
@@ -4059,541 +679,3636 @@ const matchData = sq.define("matchData", {
     p8_augment3: {
       type: DataTypes.STRING,
     },   
+   
+  });
+
+const traitMatchData = sq.define("traitMatchData", {
+      matchID: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      primaryKey: true,
+    },
+    //player 1
+    p1_t1_name: {
+      type: DataTypes.STRING,
+    },
+    p1_t1_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t1_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t1_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t1_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t2_name: {
+      type: DataTypes.STRING,
+    },
+    p1_t2_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t2_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t2_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t2_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t3_name: {
+      type: DataTypes.STRING,
+    },
+    p1_t3_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t3_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t3_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t3_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t4_name: {
+      type: DataTypes.STRING,
+    },
+    p1_t4_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t4_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t4_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t4_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t5_name: {
+      type: DataTypes.STRING,
+    },
+    p1_t5_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t5_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t5_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t5_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t6_name: {
+      type: DataTypes.STRING,
+    },
+    p1_t6_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t6_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t6_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t6_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t7_name: {
+      type: DataTypes.STRING,
+    },
+    p1_t7_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t7_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t7_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t7_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t8_name: {
+      type: DataTypes.STRING,
+    },
+    p1_t8_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t8_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t8_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t8_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t9_name: {
+      type: DataTypes.STRING,
+    },
+    p1_t9_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t9_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t9_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t9_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t10_name: {
+      type: DataTypes.STRING,
+    },
+    p1_t10_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t10_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t10_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t10_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t11_name: {
+      type: DataTypes.STRING,
+    },
+    p1_t11_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t11_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t11_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t11_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t12_name: {
+      type: DataTypes.STRING,
+    },
+    p1_t12_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t12_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t12_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t12_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t13_name: {
+      type: DataTypes.STRING,
+    },
+    p1_t13_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t13_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t13_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t13_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t14_name: {
+      type: DataTypes.STRING,
+    },
+    p1_t14_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t14_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t14_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t14_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t15_name: {
+      type: DataTypes.STRING,
+    },
+    p1_t15_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t15_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t15_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t15_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t16_name: {
+      type: DataTypes.STRING,
+    },
+    p1_t16_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t16_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t16_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t16_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t17_name: {
+      type: DataTypes.STRING,
+    },
+    p1_t17_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t17_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t17_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t17_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t18_name: {
+      type: DataTypes.STRING,
+    },
+    p1_t18_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t18_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t18_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t18_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t19_name: {
+      type: DataTypes.STRING,
+    },
+    p1_t19_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t19_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t19_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t19_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t20_name: {
+      type: DataTypes.STRING,
+    },
+    p1_t20_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t20_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t20_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t20_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t21_name: {
+      type: DataTypes.STRING,
+    },
+    p1_t21_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t21_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t21_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t21_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t22_name: {
+      type: DataTypes.STRING,
+    },
+    p1_t22_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t22_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t22_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t22_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t23_name: {
+      type: DataTypes.STRING,
+    },
+    p1_t23_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t23_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t23_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t23_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t24_name: {
+      type: DataTypes.STRING,
+    },
+    p1_t24_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t24_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t24_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t24_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t25_name: {
+      type: DataTypes.STRING,
+    },
+    p1_t25_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t25_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t25_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t25_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t26_name: {
+      type: DataTypes.STRING,
+    },
+    p1_t26_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t26_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t26_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t26_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t27_name: {
+      type: DataTypes.STRING,
+    },
+    p1_t27_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t27_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t27_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t27_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t28_name: {
+      type: DataTypes.STRING,
+    },
+    p1_t28_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t28_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t28_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t28_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t29_name: {
+      type: DataTypes.STRING,
+    },
+    p1_t29_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t29_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t29_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t29_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t30_name: {
+      type: DataTypes.STRING,
+    },
+    p1_t30_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t30_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t30_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p1_t30_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+
+    //player 2 
+    p2_t1_name: {
+      type: DataTypes.STRING,
+    },
+    p2_t1_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t1_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t1_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t1_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t2_name: {
+      type: DataTypes.STRING,
+    },
+    p2_t2_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t2_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t2_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t2_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t3_name: {
+      type: DataTypes.STRING,
+    },
+    p2_t3_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t3_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t3_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t3_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t4_name: {
+      type: DataTypes.STRING,
+    },
+    p2_t4_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t4_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t4_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t4_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t5_name: {
+      type: DataTypes.STRING,
+    },
+    p2_t5_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t5_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t5_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t5_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t6_name: {
+      type: DataTypes.STRING,
+    },
+    p2_t6_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t6_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t6_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t6_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t7_name: {
+      type: DataTypes.STRING,
+    },
+    p2_t7_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t7_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t7_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t7_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t8_name: {
+      type: DataTypes.STRING,
+    },
+    p2_t8_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t8_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t8_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t8_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t9_name: {
+      type: DataTypes.STRING,
+    },
+    p2_t9_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t9_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t9_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t9_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t10_name: {
+      type: DataTypes.STRING,
+    },
+    p2_t10_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t10_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t10_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t10_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t11_name: {
+      type: DataTypes.STRING,
+    },
+    p2_t11_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t11_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t11_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t11_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t12_name: {
+      type: DataTypes.STRING,
+    },
+    p2_t12_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t12_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t12_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t12_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t13_name: {
+      type: DataTypes.STRING,
+    },
+    p2_t13_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t13_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t13_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t13_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t14_name: {
+      type: DataTypes.STRING,
+    },
+    p2_t14_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t14_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t14_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t14_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t15_name: {
+      type: DataTypes.STRING,
+    },
+    p2_t15_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t15_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t15_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t15_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t16_name: {
+      type: DataTypes.STRING,
+    },
+    p2_t16_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t16_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t16_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t16_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t17_name: {
+      type: DataTypes.STRING,
+    },
+    p2_t17_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t17_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t17_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t17_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t18_name: {
+      type: DataTypes.STRING,
+    },
+    p2_t18_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t18_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t18_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t18_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t19_name: {
+      type: DataTypes.STRING,
+    },
+    p2_t19_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t19_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t19_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t19_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t20_name: {
+      type: DataTypes.STRING,
+    },
+    p2_t20_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t20_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t20_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t20_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t21_name: {
+      type: DataTypes.STRING,
+    },
+    p2_t21_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t21_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t21_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t21_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t22_name: {
+      type: DataTypes.STRING,
+    },
+    p2_t22_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t22_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t22_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t22_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t23_name: {
+      type: DataTypes.STRING,
+    },
+    p2_t23_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t23_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t23_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t23_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t24_name: {
+      type: DataTypes.STRING,
+    },
+    p2_t24_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t24_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t24_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t24_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t25_name: {
+      type: DataTypes.STRING,
+    },
+    p2_t25_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t25_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t25_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t25_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t26_name: {
+      type: DataTypes.STRING,
+    },
+    p2_t26_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t26_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t26_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t26_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t27_name: {
+      type: DataTypes.STRING,
+    },
+    p2_t27_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t27_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t27_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t27_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t28_name: {
+      type: DataTypes.STRING,
+    },
+    p2_t28_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t28_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t28_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t28_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t29_name: {
+      type: DataTypes.STRING,
+    },
+    p2_t29_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t29_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t29_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t29_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t30_name: {
+      type: DataTypes.STRING,
+    },
+    p2_t30_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t30_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t30_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p2_t30_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t1_name: {
+      type: DataTypes.STRING,
+    },
+    p3_t1_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t1_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t1_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t1_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t2_name: {
+      type: DataTypes.STRING,
+    },
+    p3_t2_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t2_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t2_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t2_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t3_name: {
+      type: DataTypes.STRING,
+    },
+    p3_t3_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t3_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t3_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t3_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t4_name: {
+      type: DataTypes.STRING,
+    },
+    p3_t4_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t4_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t4_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t4_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t5_name: {
+      type: DataTypes.STRING,
+    },
+    p3_t5_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t5_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t5_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t5_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t6_name: {
+      type: DataTypes.STRING,
+    },
+    p3_t6_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t6_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t6_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t6_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t7_name: {
+      type: DataTypes.STRING,
+    },
+    p3_t7_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t7_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t7_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t7_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t8_name: {
+      type: DataTypes.STRING,
+    },
+    p3_t8_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t8_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t8_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t8_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t9_name: {
+      type: DataTypes.STRING,
+    },
+    p3_t9_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t9_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t9_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t9_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t10_name: {
+      type: DataTypes.STRING,
+    },
+    p3_t10_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t10_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t10_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t10_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t11_name: {
+      type: DataTypes.STRING,
+    },
+    p3_t11_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t11_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t11_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t11_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t12_name: {
+      type: DataTypes.STRING,
+    },
+    p3_t12_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t12_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t12_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t12_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t13_name: {
+      type: DataTypes.STRING,
+    },
+    p3_t13_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t13_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t13_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t13_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t14_name: {
+      type: DataTypes.STRING,
+    },
+    p3_t14_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t14_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t14_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t14_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t15_name: {
+      type: DataTypes.STRING,
+    },
+    p3_t15_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t15_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t15_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t15_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t16_name: {
+      type: DataTypes.STRING,
+    },
+    p3_t16_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t16_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t16_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t16_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t17_name: {
+      type: DataTypes.STRING,
+    },
+    p3_t17_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t17_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t17_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t17_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t18_name: {
+      type: DataTypes.STRING,
+    },
+    p3_t18_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t18_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t18_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t18_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t19_name: {
+      type: DataTypes.STRING,
+    },
+    p3_t19_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t19_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t19_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t19_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t20_name: {
+      type: DataTypes.STRING,
+    },
+    p3_t20_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t20_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t20_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t20_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t21_name: {
+      type: DataTypes.STRING,
+    },
+    p3_t21_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t21_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t21_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t21_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t22_name: {
+      type: DataTypes.STRING,
+    },
+    p3_t22_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t22_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t22_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t22_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t23_name: {
+      type: DataTypes.STRING,
+    },
+    p3_t23_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t23_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t23_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t23_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t24_name: {
+      type: DataTypes.STRING,
+    },
+    p3_t24_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t24_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t24_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t24_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t25_name: {
+      type: DataTypes.STRING,
+    },
+    p3_t25_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t25_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t25_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t25_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t26_name: {
+      type: DataTypes.STRING,
+    },
+    p3_t26_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t26_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t26_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t26_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t27_name: {
+      type: DataTypes.STRING,
+    },
+    p3_t27_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t27_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t27_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t27_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t28_name: {
+      type: DataTypes.STRING,
+    },
+    p3_t28_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t28_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t28_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t28_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t29_name: {
+      type: DataTypes.STRING,
+    },
+    p3_t29_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t29_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t29_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t29_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t30_name: {
+      type: DataTypes.STRING,
+    },
+    p3_t30_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t30_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t30_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p3_t30_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t1_name: {
+      type: DataTypes.STRING,
+    },
+    p4_t1_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t1_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t1_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t1_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t2_name: {
+      type: DataTypes.STRING,
+    },
+    p4_t2_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t2_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t2_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t2_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t3_name: {
+      type: DataTypes.STRING,
+    },
+    p4_t3_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t3_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t3_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t3_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t4_name: {
+      type: DataTypes.STRING,
+    },
+    p4_t4_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t4_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t4_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t4_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t5_name: {
+      type: DataTypes.STRING,
+    },
+    p4_t5_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t5_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t5_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t5_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t6_name: {
+      type: DataTypes.STRING,
+    },
+    p4_t6_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t6_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t6_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t6_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t7_name: {
+      type: DataTypes.STRING,
+    },
+    p4_t7_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t7_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t7_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t7_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t8_name: {
+      type: DataTypes.STRING,
+    },
+    p4_t8_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t8_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t8_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t8_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t9_name: {
+      type: DataTypes.STRING,
+    },
+    p4_t9_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t9_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t9_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t9_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t10_name: {
+      type: DataTypes.STRING,
+    },
+    p4_t10_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t10_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t10_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t10_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t11_name: {
+      type: DataTypes.STRING,
+    },
+    p4_t11_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t11_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t11_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t11_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t12_name: {
+      type: DataTypes.STRING,
+    },
+    p4_t12_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t12_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t12_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t12_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t13_name: {
+      type: DataTypes.STRING,
+    },
+    p4_t13_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t13_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t13_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t13_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t14_name: {
+      type: DataTypes.STRING,
+    },
+    p4_t14_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t14_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t14_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t14_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t15_name: {
+      type: DataTypes.STRING,
+    },
+    p4_t15_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t15_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t15_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t15_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t16_name: {
+      type: DataTypes.STRING,
+    },
+    p4_t16_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t16_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t16_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t16_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t17_name: {
+      type: DataTypes.STRING,
+    },
+    p4_t17_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t17_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t17_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t17_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t18_name: {
+      type: DataTypes.STRING,
+    },
+    p4_t18_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t18_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t18_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t18_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t19_name: {
+      type: DataTypes.STRING,
+    },
+    p4_t19_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t19_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t19_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t19_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t20_name: {
+      type: DataTypes.STRING,
+    },
+    p4_t20_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t20_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t20_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t20_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t21_name: {
+      type: DataTypes.STRING,
+    },
+    p4_t21_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t21_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t21_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t21_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t22_name: {
+      type: DataTypes.STRING,
+    },
+    p4_t22_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t22_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t22_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t22_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t23_name: {
+      type: DataTypes.STRING,
+    },
+    p4_t23_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t23_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t23_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t23_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t24_name: {
+      type: DataTypes.STRING,
+    },
+    p4_t24_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t24_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t24_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t24_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t25_name: {
+      type: DataTypes.STRING,
+    },
+    p4_t25_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t25_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t25_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t25_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t26_name: {
+      type: DataTypes.STRING,
+    },
+    p4_t26_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t26_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t26_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t26_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t27_name: {
+      type: DataTypes.STRING,
+    },
+    p4_t27_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t27_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t27_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t27_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t28_name: {
+      type: DataTypes.STRING,
+    },
+    p4_t28_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t28_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t28_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t28_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t29_name: {
+      type: DataTypes.STRING,
+    },
+    p4_t29_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t29_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t29_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t29_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t30_name: {
+      type: DataTypes.STRING,
+    },
+    p4_t30_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t30_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t30_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p4_t30_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t1_name: {
+      type: DataTypes.STRING,
+    },
+    p5_t1_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t1_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t1_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t1_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t2_name: {
+      type: DataTypes.STRING,
+    },
+    p5_t2_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t2_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t2_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t2_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t3_name: {
+      type: DataTypes.STRING,
+    },
+    p5_t3_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t3_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t3_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t3_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t4_name: {
+      type: DataTypes.STRING,
+    },
+    p5_t4_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t4_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t4_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t4_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t5_name: {
+      type: DataTypes.STRING,
+    },
+    p5_t5_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t5_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t5_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t5_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t6_name: {
+      type: DataTypes.STRING,
+    },
+    p5_t6_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t6_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t6_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t6_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t7_name: {
+      type: DataTypes.STRING,
+    },
+    p5_t7_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t7_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t7_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t7_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t8_name: {
+      type: DataTypes.STRING,
+    },
+    p5_t8_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t8_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t8_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t8_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t9_name: {
+      type: DataTypes.STRING,
+    },
+    p5_t9_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t9_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t9_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t9_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t10_name: {
+      type: DataTypes.STRING,
+    },
+    p5_t10_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t10_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t10_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t10_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t11_name: {
+      type: DataTypes.STRING,
+    },
+    p5_t11_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t11_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t11_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t11_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t12_name: {
+      type: DataTypes.STRING,
+    },
+    p5_t12_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t12_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t12_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t12_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t13_name: {
+      type: DataTypes.STRING,
+    },
+    p5_t13_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t13_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t13_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t13_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t14_name: {
+      type: DataTypes.STRING,
+    },
+    p5_t14_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t14_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t14_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t14_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t15_name: {
+      type: DataTypes.STRING,
+    },
+    p5_t15_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t15_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t15_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t15_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t16_name: {
+      type: DataTypes.STRING,
+    },
+    p5_t16_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t16_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t16_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t16_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t17_name: {
+      type: DataTypes.STRING,
+    },
+    p5_t17_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t17_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t17_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t17_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t18_name: {
+      type: DataTypes.STRING,
+    },
+    p5_t18_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t18_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t18_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t18_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t19_name: {
+      type: DataTypes.STRING,
+    },
+    p5_t19_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t19_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t19_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t19_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t20_name: {
+      type: DataTypes.STRING,
+    },
+    p5_t20_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t20_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t20_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t20_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t21_name: {
+      type: DataTypes.STRING,
+    },
+    p5_t21_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t21_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t21_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t21_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t22_name: {
+      type: DataTypes.STRING,
+    },
+    p5_t22_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t22_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t22_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t22_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t23_name: {
+      type: DataTypes.STRING,
+    },
+    p5_t23_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t23_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t23_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t23_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t24_name: {
+      type: DataTypes.STRING,
+    },
+    p5_t24_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t24_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t24_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t24_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t25_name: {
+      type: DataTypes.STRING,
+    },
+    p5_t25_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t25_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t25_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t25_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t26_name: {
+      type: DataTypes.STRING,
+    },
+    p5_t26_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t26_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t26_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t26_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t27_name: {
+      type: DataTypes.STRING,
+    },
+    p5_t27_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t27_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t27_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t27_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t28_name: {
+      type: DataTypes.STRING,
+    },
+    p5_t28_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t28_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t28_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t28_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t29_name: {
+      type: DataTypes.STRING,
+    },
+    p5_t29_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t29_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t29_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t29_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t30_name: {
+      type: DataTypes.STRING,
+    },
+    p5_t30_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t30_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t30_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p5_t30_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t1_name: {
+      type: DataTypes.STRING,
+    },
+    p6_t1_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t1_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t1_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t1_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t2_name: {
+      type: DataTypes.STRING,
+    },
+    p6_t2_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t2_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t2_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t2_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t3_name: {
+      type: DataTypes.STRING,
+    },
+    p6_t3_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t3_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t3_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t3_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t4_name: {
+      type: DataTypes.STRING,
+    },
+    p6_t4_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t4_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t4_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t4_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t5_name: {
+      type: DataTypes.STRING,
+    },
+    p6_t5_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t5_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t5_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t5_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t6_name: {
+      type: DataTypes.STRING,
+    },
+    p6_t6_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t6_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t6_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t6_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t7_name: {
+      type: DataTypes.STRING,
+    },
+    p6_t7_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t7_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t7_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t7_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t8_name: {
+      type: DataTypes.STRING,
+    },
+    p6_t8_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t8_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t8_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t8_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t9_name: {
+      type: DataTypes.STRING,
+    },
+    p6_t9_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t9_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t9_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t9_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t10_name: {
+      type: DataTypes.STRING,
+    },
+    p6_t10_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t10_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t10_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t10_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t11_name: {
+      type: DataTypes.STRING,
+    },
+    p6_t11_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t11_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t11_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t11_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t12_name: {
+      type: DataTypes.STRING,
+    },
+    p6_t12_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t12_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t12_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t12_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t13_name: {
+      type: DataTypes.STRING,
+    },
+    p6_t13_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t13_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t13_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t13_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t14_name: {
+      type: DataTypes.STRING,
+    },
+    p6_t14_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t14_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t14_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t14_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t15_name: {
+      type: DataTypes.STRING,
+    },
+    p6_t15_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t15_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t15_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t15_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t16_name: {
+      type: DataTypes.STRING,
+    },
+    p6_t16_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t16_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t16_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t16_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t17_name: {
+      type: DataTypes.STRING,
+    },
+    p6_t17_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t17_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t17_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t17_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t18_name: {
+      type: DataTypes.STRING,
+    },
+    p6_t18_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t18_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t18_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t18_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t19_name: {
+      type: DataTypes.STRING,
+    },
+    p6_t19_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t19_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t19_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t19_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t20_name: {
+      type: DataTypes.STRING,
+    },
+    p6_t20_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t20_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t20_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t20_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t21_name: {
+      type: DataTypes.STRING,
+    },
+    p6_t21_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t21_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t21_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t21_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t22_name: {
+      type: DataTypes.STRING,
+    },
+    p6_t22_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t22_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t22_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t22_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t23_name: {
+      type: DataTypes.STRING,
+    },
+    p6_t23_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t23_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t23_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t23_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t24_name: {
+      type: DataTypes.STRING,
+    },
+    p6_t24_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t24_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t24_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t24_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t25_name: {
+      type: DataTypes.STRING,
+    },
+    p6_t25_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t25_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t25_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t25_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t26_name: {
+      type: DataTypes.STRING,
+    },
+    p6_t26_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t26_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t26_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t26_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t27_name: {
+      type: DataTypes.STRING,
+    },
+    p6_t27_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t27_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t27_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t27_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t28_name: {
+      type: DataTypes.STRING,
+    },
+    p6_t28_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t28_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t28_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t28_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t29_name: {
+      type: DataTypes.STRING,
+    },
+    p6_t29_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t29_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t29_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t29_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t30_name: {
+      type: DataTypes.STRING,
+    },
+    p6_t30_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t30_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t30_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p6_t30_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t1_name: {
+      type: DataTypes.STRING,
+    },
+    p7_t1_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t1_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t1_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t1_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t2_name: {
+      type: DataTypes.STRING,
+    },
+    p7_t2_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t2_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t2_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t2_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t3_name: {
+      type: DataTypes.STRING,
+    },
+    p7_t3_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t3_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t3_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t3_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t4_name: {
+      type: DataTypes.STRING,
+    },
+    p7_t4_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t4_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t4_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t4_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t5_name: {
+      type: DataTypes.STRING,
+    },
+    p7_t5_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t5_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t5_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t5_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t6_name: {
+      type: DataTypes.STRING,
+    },
+    p7_t6_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t6_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t6_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t6_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t7_name: {
+      type: DataTypes.STRING,
+    },
+    p7_t7_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t7_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t7_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t7_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t8_name: {
+      type: DataTypes.STRING,
+    },
+    p7_t8_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t8_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t8_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t8_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t9_name: {
+      type: DataTypes.STRING,
+    },
+    p7_t9_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t9_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t9_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t9_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t10_name: {
+      type: DataTypes.STRING,
+    },
+    p7_t10_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t10_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t10_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t10_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t11_name: {
+      type: DataTypes.STRING,
+    },
+    p7_t11_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t11_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t11_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t11_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t12_name: {
+      type: DataTypes.STRING,
+    },
+    p7_t12_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t12_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t12_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t12_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t13_name: {
+      type: DataTypes.STRING,
+    },
+    p7_t13_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t13_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t13_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t13_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t14_name: {
+      type: DataTypes.STRING,
+    },
+    p7_t14_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t14_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t14_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t14_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t15_name: {
+      type: DataTypes.STRING,
+    },
+    p7_t15_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t15_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t15_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t15_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t16_name: {
+      type: DataTypes.STRING,
+    },
+    p7_t16_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t16_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t16_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t16_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t17_name: {
+      type: DataTypes.STRING,
+    },
+    p7_t17_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t17_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t17_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t17_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t18_name: {
+      type: DataTypes.STRING,
+    },
+    p7_t18_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t18_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t18_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t18_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t19_name: {
+      type: DataTypes.STRING,
+    },
+    p7_t19_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t19_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t19_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t19_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t20_name: {
+      type: DataTypes.STRING,
+    },
+    p7_t20_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t20_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t20_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t20_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t21_name: {
+      type: DataTypes.STRING,
+    },
+    p7_t21_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t21_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t21_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t21_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t22_name: {
+      type: DataTypes.STRING,
+    },
+    p7_t22_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t22_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t22_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t22_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t23_name: {
+      type: DataTypes.STRING,
+    },
+    p7_t23_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t23_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t23_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t23_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t24_name: {
+      type: DataTypes.STRING,
+    },
+    p7_t24_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t24_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t24_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t24_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t25_name: {
+      type: DataTypes.STRING,
+    },
+    p7_t25_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t25_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t25_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t25_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t26_name: {
+      type: DataTypes.STRING,
+    },
+    p7_t26_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t26_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t26_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t26_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t27_name: {
+      type: DataTypes.STRING,
+    },
+    p7_t27_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t27_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t27_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t27_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t28_name: {
+      type: DataTypes.STRING,
+    },
+    p7_t28_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t28_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t28_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t28_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t29_name: {
+      type: DataTypes.STRING,
+    },
+    p7_t29_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t29_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t29_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t29_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t30_name: {
+      type: DataTypes.STRING,
+    },
+    p7_t30_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t30_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t30_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p7_t30_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
     p8_t1_name: {
       type: DataTypes.STRING,
     },
     p8_t1_num_units: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t1_style: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t1_tier_current: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t1_tier_total: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t2_name: {
       type: DataTypes.STRING,
     },
     p8_t2_num_units: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t2_style: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t2_tier_current: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t2_tier_total: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t3_name: {
       type: DataTypes.STRING,
     },
     p8_t3_num_units: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t3_style: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t3_tier_current: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t3_tier_total: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t4_name: {
       type: DataTypes.STRING,
     },
     p8_t4_num_units: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t4_style: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t4_tier_current: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t4_tier_total: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t5_name: {
       type: DataTypes.STRING,
     },
     p8_t5_num_units: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t5_style: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t5_tier_current: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t5_tier_total: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t6_name: {
       type: DataTypes.STRING,
     },
     p8_t6_num_units: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t6_style: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t6_tier_current: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t6_tier_total: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t7_name: {
       type: DataTypes.STRING,
     },
     p8_t7_num_units: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t7_style: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t7_tier_current: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t7_tier_total: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t8_name: {
       type: DataTypes.STRING,
     },
     p8_t8_num_units: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t8_style: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t8_tier_current: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t8_tier_total: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t9_name: {
       type: DataTypes.STRING,
     },
     p8_t9_num_units: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t9_style: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t9_tier_current: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t9_tier_total: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t10_name: {
       type: DataTypes.STRING,
     },
     p8_t10_num_units: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t10_style: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t10_tier_current: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t10_tier_total: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t11_name: {
       type: DataTypes.STRING,
     },
     p8_t11_num_units: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t11_style: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t11_tier_current: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t11_tier_total: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t12_name: {
       type: DataTypes.STRING,
     },
     p8_t12_num_units: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t12_style: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t12_tier_current: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t12_tier_total: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t13_name: {
       type: DataTypes.STRING,
     },
     p8_t13_num_units: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t13_style: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t13_tier_current: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t13_tier_total: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t14_name: {
       type: DataTypes.STRING,
     },
     p8_t14_num_units: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t14_style: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t14_tier_current: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
     p8_t14_tier_total: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.SMALLINT,
     },
-    
+    p8_t15_name: {
+      type: DataTypes.STRING,
+    },
+    p8_t15_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t15_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t15_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t15_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t16_name: {
+      type: DataTypes.STRING,
+    },
+    p8_t16_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t16_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t16_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t16_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t17_name: {
+      type: DataTypes.STRING,
+    },
+    p8_t17_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t17_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t17_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t17_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t18_name: {
+      type: DataTypes.STRING,
+    },
+    p8_t18_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t18_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t18_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t18_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t19_name: {
+      type: DataTypes.STRING,
+    },
+    p8_t19_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t19_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t19_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t19_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t20_name: {
+      type: DataTypes.STRING,
+    },
+    p8_t20_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t20_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t20_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t20_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t21_name: {
+      type: DataTypes.STRING,
+    },
+    p8_t21_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t21_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t21_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t21_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t22_name: {
+      type: DataTypes.STRING,
+    },
+    p8_t22_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t22_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t22_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t22_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t23_name: {
+      type: DataTypes.STRING,
+    },
+    p8_t23_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t23_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t23_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t23_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t24_name: {
+      type: DataTypes.STRING,
+    },
+    p8_t24_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t24_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t24_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t24_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t25_name: {
+      type: DataTypes.STRING,
+    },
+    p8_t25_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t25_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t25_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t25_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t26_name: {
+      type: DataTypes.STRING,
+    },
+    p8_t26_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t26_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t26_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t26_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t27_name: {
+      type: DataTypes.STRING,
+    },
+    p8_t27_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t27_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t27_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t27_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t28_name: {
+      type: DataTypes.STRING,
+    },
+    p8_t28_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t28_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t28_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t28_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t29_name: {
+      type: DataTypes.STRING,
+    },
+    p8_t29_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t29_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t29_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t29_tier_total: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t30_name: {
+      type: DataTypes.STRING,
+    },
+    p8_t30_num_units: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t30_style: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t30_tier_current: {
+      type: DataTypes.SMALLINT,
+    },
+    p8_t30_tier_total: {
+      type: DataTypes.SMALLINT,
+    } 
+});
 
-    //p8 champs
-    p8_u1_character_id: {
+const unitMatchData = sq.define("unitMatchData", {
+      matchID: {
       type: DataTypes.STRING,
+      allowNull: false,
+      primaryKey: true,
     },
-    p8_u1_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u1_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u1_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u1_name: {
-      type: DataTypes.STRING,
-    },
-    p8_u1_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u1_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u2_character_id: {
-      type: DataTypes.STRING,
-    },
-    p8_u2_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u2_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u2_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u2_name: {
-      type: DataTypes.STRING,
-    },
-    p8_u2_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u2_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u3_character_id: {
-      type: DataTypes.STRING,
-    },
-    p8_u3_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u3_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u3_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u3_name: {
-      type: DataTypes.STRING,
-    },
-    p8_u3_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u3_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u4_character_id: {
-      type: DataTypes.STRING,
-    },
-    p8_u4_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u4_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u4_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u4_name: {
-      type: DataTypes.STRING,
-    },
-    p8_u4_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u4_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u5_character_id: {
-      type: DataTypes.STRING,
-    },
-    p8_u5_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u5_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u5_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u5_name: {
-      type: DataTypes.STRING,
-    },
-    p8_u5_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u5_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u6_character_id: {
-      type: DataTypes.STRING,
-    },
-    p8_u6_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u6_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u6_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u6_name: {
-      type: DataTypes.STRING,
-    },
-    p8_u6_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u6_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u7_character_id: {
-      type: DataTypes.STRING,
-    },
-    p8_u7_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u7_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u7_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u7_name: {
-      type: DataTypes.STRING,
-    },
-    p8_u7_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u7_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u8_character_id: {
-      type: DataTypes.STRING,
-    },
-    p8_u8_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u8_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u8_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u8_name: {
-      type: DataTypes.STRING,
-    },
-    p8_u8_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u8_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u9_character_id: {
-      type: DataTypes.STRING,
-    },
-    p8_u9_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u9_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u9_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u9_name: {
-      type: DataTypes.STRING,
-    },
-    p8_u9_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u9_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u10_character_id: {
-      type: DataTypes.STRING,
-    },
-    p8_u10_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u10_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u10_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u10_name: {
-      type: DataTypes.STRING,
-    },
-    p8_u10_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u10_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u11_character_id: {
-      type: DataTypes.STRING,
-    },
-    p8_u11_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u11_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u11_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u11_name: {
-      type: DataTypes.STRING,
-    },
-    p8_u11_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u11_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u12_character_id: {
-      type: DataTypes.STRING,
-    },
-    p8_u12_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u12_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u12_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u12_name: {
-      type: DataTypes.STRING,
-    },
-    p8_u12_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u12_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u13_character_id: {
-      type: DataTypes.STRING,
-    },
-    p8_u13_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u13_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u13_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u13_name: {
-      type: DataTypes.STRING,
-    },
-    p8_u13_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u13_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u14_character_id: {
-      type: DataTypes.STRING,
-    },
-    p8_u14_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u14_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u14_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u14_name: {
-      type: DataTypes.STRING,
-    },
-    p8_u14_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u14_tier: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u15_character_id: {
-      type: DataTypes.STRING,
-    },
-    p8_u15_item1: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u15_item2: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u15_item3: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u15_name: {
-      type: DataTypes.STRING,
-    },
-    p8_u15_rarity: {
-      type: DataTypes.INTEGER,
-    },
-    p8_u15_tier: {
-      type: DataTypes.INTEGER,
-    },
-    
+});
 
-  });
+module.exports = {User, matchUsers, generalMatchData, traitMatchData, unitMatchData}
 
-matchData.sync().then(() => {console.log("User Model synced");});
-User.sync().then(() => {console.log("User Model synced");});
-matchUsers.sync().then(() => {console.log("User Model synced");});
+//generalMatchData.sync().then(() => {console.log("User Model synced");});
+//traitMatchData.sync().then(() => {console.log("User Model synced");});
+//unitMatchData.sync().then(() => {console.log("User Model synced");});
+//User.sync().then(() => {console.log("User Model synced");});
+//matchUsers.sync().then(() => {console.log("User Model synced");});
+
 
 //var puuidAdd = User.create({
   //puuid: "4y7U0S8KJEdONYlueYzI_BHK22nE93gPmA783axCNcNOzC0M0ldpdcRs8ON-OAkMUA__t9QQNhRrLA",
@@ -4606,4 +4321,3 @@ matchUsers.sync().then(() => {console.log("User Model synced");});
 
 
 
-module.exports = {User, matchUsers, matchData}
