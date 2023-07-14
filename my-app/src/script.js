@@ -1,18 +1,15 @@
-// for running SQL stuff
+// needed imports
 const { sq } = require("./database/db.js")
-//const { DataTypes } = require("sequelize");
-const { User } = require("./database/modules/createTables.js")
-const { matchUsers } = require("./database/modules/createTables.js")
 const { generalMatchData } = require("./database/modules/createTables.js")
 const { updateTrait } = require("./database/update/updateTrait.js")
 const { updateUnits } = require("./database/update/updateUnits.js")
-const { updatePUUID } = require("./database/update/updatePUUID.js")
 const { updateUsers } = require("./database/update/updateUsers.js")
 const { updateGeneralMatchData } = require("./database/update/updateGeneralMatch.js")
-
+const { updatePUUID } = require("./database/update/updatePUUID.js")
+const { User } = require("./database/modules/createTables.js")
 
 //variables that need to be seen everywhere
-//this can be cleaned up to mainly reference output object
+//TODO this can be cleaned up to mainly reference output object
 var userName1 = ""
 var userName2 = ""
 const apiKey = ""
@@ -20,16 +17,11 @@ var setNumber = ""
 var output = {}
 const lpChange = {1: 40, 2: 30, 3: 20, 4: 10, 5: -10, 6: -20, 7: -30, 8: -40}
 
-
 //starts sync to SQL server
 sq.sync()
 
-
-
 //click button on site to call this function
 function websiteRun(firstUserName, secondUserName, TFTset) {
-
-  
   setNumber = TFTset.toString()
   userName1 = firstUserName.toString()
   userName2 = secondUserName.toString()
@@ -97,8 +89,9 @@ function websiteRun(firstUserName, secondUserName, TFTset) {
 
 //all functions that request data flow through here
 async function fetchData(requestInput, typeOfRequest = false, username) {
+  console.log(requestInput)
 
-  //converts username to PUUID
+  //converts username to PUUID or gets this info from database
   if (typeOfRequest === "puuid") {
     async function checkUsers(inputUser) {
       var lowerUser = inputUser.toLowerCase()
@@ -137,6 +130,7 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
 
     //requests PUUID from Riot if not in database
     else {
+      
       let requestURL = "https://na1.api.riotgames.com/tft/summoner/v1/summoners/by-name/" + requestInput + "?api_key=" + apiKey;
       let response = await fetch(requestURL)
       let data = await response.json();
@@ -156,6 +150,7 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
       //grabs # of matches specified by number in while loop
       while (sectionOfMatches <= 1000){
         var matchRequestURL = "https://americas.api.riotgames.com/tft/match/v1/matches/by-puuid/" + requestInput + "/ids?start=" + sectionOfMatches + "&count=100&api_key=" + apiKey;
+        console.log(matchRequestURL)
         var response = await fetch(matchRequestURL)
         var data = await response.json();
 
@@ -175,7 +170,7 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
       
       //then start requesting data for duo games
         for (let i = 0; i < Object.keys(intersection).length; i++) {
-            let response = await fetchData(intersection[i], "matchInfo").then()
+            await fetchData(intersection[i], "matchInfo").then()
         }
 
         console.log(output[userName1]["duoPlacements"])
@@ -223,28 +218,10 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
   //gets match data
   else if (typeOfRequest === "matchInfo") {
 
-    //checks databases
-      async function checkMatch(inputMatch) {
-        try {
-        const matchesDB = await generalMatchData.findAll({
-          where: {
-            matchID: inputMatch
-            }
-          })
-        const plainMatch = matchesDB.map(user => user.toJSON())
-        try {
-          return plainMatch
-        } catch {
-          return undefined
-        }
-       } catch {
-        return undefined
-       }
-      }
-
+    //checks general database
       async function checkUsersMatch(inputMatch) {
         try {
-          const matchesUsersDB = await matchUsers.findAll({
+          const matchesUsersDB = await generalMatchData.findAll({
             where: {
               matchID: inputMatch
               }
@@ -265,11 +242,11 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
         }
 
       var sqlUsersMatch = await checkUsersMatch(requestInput)
-      var sqlMatch = await checkMatch(requestInput)
-  
+
+
       //gets info from database
       //set to double undefined while this is WIP
-      if (sqlMatch !== undefined && sqlUsersMatch !== undefined && 0 === 1){  
+      if (sqlUsersMatch !== undefined){  
 
         //put data about match where it needs to be!
         if (sqlUsersMatch[0]['tft_set_core_name'] === setNumber && sqlUsersMatch[0]['queue_id'] === "1100" && sqlUsersMatch[0]['tft_game_type'] === "standard"){
@@ -280,14 +257,14 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
           }
 
           //getting which player each user is in the game to reference data (bad hack)
-          let indexPlayer1 = getKeyByValue(sqlMatch[0], output[userName1]["puuid"])
+          let indexPlayer1 = getKeyByValue(sqlUsersMatch[0], output[userName1]["puuid"])
           let user1placement = indexPlayer1[0] + indexPlayer1[6] + "_placement"
-          let indexPlayer2  = getKeyByValue(sqlMatch[0], output[userName2]["puuid"])
+          let indexPlayer2  = getKeyByValue(sqlUsersMatch[0], output[userName2]["puuid"])
           let user2placement = indexPlayer2[0] + indexPlayer2[6] + "_placement"
     
           //adds both player's placements to the output object
-          output[userName1]["duoPlacements"] = output[userName1]["duoPlacements"].concat(sqlMatch[0][user1placement])
-          output[userName2]["duoPlacements"] = output[userName2]["duoPlacements"].concat(sqlMatch[0][user2placement])
+          output[userName1]["duoPlacements"] = output[userName1]["duoPlacements"].concat(sqlUsersMatch[0][user1placement])
+          output[userName2]["duoPlacements"] = output[userName2]["duoPlacements"].concat(sqlUsersMatch[0][user2placement])
   
         }  
   

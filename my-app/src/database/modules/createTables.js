@@ -8308,12 +8308,14 @@ p8_u30_tier: {
 
 
 
-generalMatchData.sync().then(() => {console.log("User Model synced");});
-traitMatchData.sync().then(() => {console.log("User Model synced");});
-unitMatchData.sync().then(() => {console.log("User Model synced");});
-User.sync().then(() => {console.log("User Model synced");});
-matchUsers.sync().then(() => {console.log("User Model synced");});
+//generalMatchData.sync().then(() => {console.log("User Model synced");});
+//traitMatchData.sync().then(() => {console.log("User Model synced");});
+//unitMatchData.sync().then(() => {console.log("User Model synced");});
+//User.sync().then(() => {console.log("User Model synced");});
+//matchUsers.sync().then(() => {console.log("User Model synced");});
 
+//generalMatchData.hasMany(matchUsers, { foreignKey: 'match_ID' });
+//matchUsers.belongsTo(generalMatchData, { foreignKey: 'match_ID' });
 module.exports = {User, matchUsers, generalMatchData, traitMatchData, unitMatchData}
 
 //var puuidAdd = User.create({

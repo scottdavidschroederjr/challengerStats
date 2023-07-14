@@ -29,7 +29,8 @@ function updateGeneralMatchData (requestInput, data) {
   
 
           try {
-            console.log(data["info"]["participants"][x]["augments"][2].length)
+            // eslint-disable-next-line no-unused-vars
+            let dummyVariable = data["info"]["participants"][x]["augments"][2].length
             defaults[aug3key] = data["info"]["participants"][x]["augments"][2]
             defaults[aug2key] = data["info"]["participants"][x]["augments"][1]
             defaults[aug1key] = data["info"]["participants"][x]["augments"][0]

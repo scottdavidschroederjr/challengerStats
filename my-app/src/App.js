@@ -58,8 +58,8 @@ function InputBlock() {
           for (let x = 1; x < 9; x++) {
             console.log(u1results)
             try {
-              setu1results(u1results.push(response['data'][0][firstUser]["matchResults"][x]))
-              setu2results(u2results.push(response['data'][0][secondUser]["matchResults"][x]))
+              //setu1results(u1results.push(response['data'][0][firstUser]["matchResults"][x]))
+              //setu2results(u2results.push(response['data'][0][secondUser]["matchResults"][x]))
             } catch {
               return
             }
