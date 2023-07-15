@@ -1,5 +1,5 @@
 const { sq } = require("../database/db.js")
-const { Op } = require("sequelize")
+const { Op, Model } = require("sequelize")
 const { User } = require("../database/modules/createTables.js")
 const { matchUsers, generalMatchData } = require("../database/modules/createTables.js")
 
@@ -9,6 +9,7 @@ sq.sync()
 async function augmentStats(username, setNumber) {
     let PUUID = await getPUUID(username)
     let matchData = await getMatches(PUUID, setNumber)
+    console.log(matchData)
     parseAugmentData(PUUID, matchData)
 }
 
@@ -31,6 +32,7 @@ async function getPUUID(inputUser) {
 
 //TODO use join to have this function return the rows from generalMatchData
 async function getMatches (PUUID, setNumber) {
+
     let matchData = {}
 
     const matchList = await matchUsers.findAll({
@@ -47,7 +49,8 @@ async function getMatches (PUUID, setNumber) {
                 {"player7": PUUID},
                 {"player8": PUUID},
             ]
-        }
+        },
+        include: [{model: generalMatchData}]
     })
     matchData["matchCount"] = matchList.length
     return matchData

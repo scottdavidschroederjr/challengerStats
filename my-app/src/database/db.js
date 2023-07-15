@@ -1,8 +1,9 @@
 const { Sequelize } = require("sequelize");
+const { dbPass } = require("../../secrets");
 
 
 //PUT PASSWORD BACK IN HERE WHEN YOU START WORKING AGAIN
-const sequelize = new Sequelize('postgres', 'postgres', '', {
+const sequelize = new Sequelize('postgres', 'postgres', dbPass, {
   host: 'localhost',
   dialect: 'postgres',
   logging: false

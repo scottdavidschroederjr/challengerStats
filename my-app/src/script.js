@@ -7,12 +7,12 @@ const { updateUsers } = require("./database/update/updateUsers.js")
 const { updateGeneralMatchData } = require("./database/update/updateGeneralMatch.js")
 const { updatePUUID } = require("./database/update/updatePUUID.js")
 const { User } = require("./database/modules/createTables.js")
+const {apiKey} = require("../secrets.js")
 
 //variables that need to be seen everywhere
 //TODO this can be cleaned up to mainly reference output object
 var userName1 = ""
 var userName2 = ""
-const apiKey = ""
 var setNumber = ""
 var output = {}
 const lpChange = {1: 40, 2: 30, 3: 20, 4: 10, 5: -10, 6: -20, 7: -30, 8: -40}
@@ -89,7 +89,6 @@ function websiteRun(firstUserName, secondUserName, TFTset) {
 
 //all functions that request data flow through here
 async function fetchData(requestInput, typeOfRequest = false, username) {
-  console.log(requestInput)
 
   //converts username to PUUID or gets this info from database
   if (typeOfRequest === "puuid") {
@@ -150,7 +149,6 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
       //grabs # of matches specified by number in while loop
       while (sectionOfMatches <= 1000){
         var matchRequestURL = "https://americas.api.riotgames.com/tft/match/v1/matches/by-puuid/" + requestInput + "/ids?start=" + sectionOfMatches + "&count=100&api_key=" + apiKey;
-        console.log(matchRequestURL)
         var response = await fetch(matchRequestURL)
         var data = await response.json();
 
@@ -161,7 +159,6 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
       }
       //once match list is full, save only duo games, third qualifer also stops it from getting into this loop twice for some reason?
       if (Object.keys(output[userName1]["matches"]).length >= 100 && Object.keys(output[userName2]["matches"]).length >= 100 && Object.keys(output[userName1]["duoMatches"]).length <= 0) {
-        
         const intersection = output[userName1]["matches"].filter(element => output[userName2]["matches"].includes(element));
 
         //trying to fix the double run with this code
@@ -241,7 +238,10 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
          }
         }
 
+        console.log(requestInput)
+
       var sqlUsersMatch = await checkUsersMatch(requestInput)
+      console.log(sqlUsersMatch)
 
 
       //gets info from database
@@ -283,9 +283,9 @@ async function fetchData(requestInput, typeOfRequest = false, username) {
 
         //adds data to databases
         updateUsers(requestInput, data)
-        updateGeneralMatchData(requestInput, data)
-        updateTrait(requestInput, data)
-        updateUnits(requestInput, data)
+        //updateGeneralMatchData(requestInput, data)
+        //updateTrait(requestInput, data)
+        //updateUnits(requestInput, data)
 
 
         //proper set, ranked and only normal match check

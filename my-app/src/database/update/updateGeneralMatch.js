@@ -39,7 +39,6 @@ function updateGeneralMatchData (requestInput, data) {
             defaults[aug2key] = data["info"]["participants"][x]["augments"][0]
           }
 
-          console.log(data["info"]["participants"][x]["augments"][2]) 
         }
   try {
     generalMatchData.findOrCreate({
