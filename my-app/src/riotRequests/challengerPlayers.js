@@ -15,6 +15,4 @@ async function requestChallengers() {
   
 }
 
-
-
 module.exports = {requestChallengers}

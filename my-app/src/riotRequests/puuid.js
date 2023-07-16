@@ -1,5 +1,5 @@
 //checks database for puuid info and then 
-const {apiKey} = require("../../secrets")
+const {apiKey} = require("../../secrets.js")
 const {updatePUUID} = require("../database/update/updatePUUID")
 const {User} = require("../database/modules/createTables.js")
 const {rateLimitWait} = require("./rateLimiter")

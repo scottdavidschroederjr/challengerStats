@@ -3,9 +3,6 @@ const {requestChallengers} = require("../challengerPlayers.js")
 const {matchList} = require("../matchList.js")
 const {matchInfo} = require("../matchInfo")
 
-
-
-
 async function challengerScrape() {
     let players = await requestChallengers()
     console.log(players)
