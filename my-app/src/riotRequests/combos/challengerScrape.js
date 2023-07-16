@@ -8,6 +8,7 @@ const {matchInfo} = require("../matchInfo")
 
 async function challengerScrape() {
     let players = await requestChallengers()
+    console.log(players)
 
     try {
         for (let x = 0; x < players.length; x++){

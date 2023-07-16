@@ -28,10 +28,8 @@ async function puuidRequest(username) {
         }
         
       }
-    console.log(username)
 
     let dbCheck = await checkUsers(lowerUser)
-    console.log(dbCheck)
 
     if (dbCheck === undefined) {
         let requestURL = "https://na1.api.riotgames.com/tft/summoner/v1/summoners/by-name/" + lowerUser + "?api_key=" + apiKey;

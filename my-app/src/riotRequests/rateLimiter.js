@@ -2,8 +2,6 @@
 async function rateLimitWait (dataReturned, URL, testAttribute = "metadata") {
 
     if (dataReturned[testAttribute] === undefined) {
-      console.log(URL)
-      console.log(dataReturned)
   
       //short time out of two seconds to wait out (20 requests every 1 second) limit 
       await new Promise(resolve => setTimeout(resolve, 5000));
