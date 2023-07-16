@@ -7,3 +7,12 @@ Tenative timeline
 (7/17/23) - get SQL joins/queries functioning properly
 (7/18/23) - setup Amazon site and push project to there
 (7/19/23) - launch site and troubleshoot bugs
+
+
+
+TODO for 7/16/23
+- add rankedTier/rankedDivision/latestUpdate to users table
+- get joins with queries working and figure out fkey situation
+- start setting up basics of site display
+
+TODO for 7/17/23
