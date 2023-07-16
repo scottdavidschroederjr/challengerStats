@@ -1,11 +1,12 @@
+//checks database for puuid info and then 
 const {apiKey} = require("../../secrets")
 const {updatePUUID} = require("../database/update/updatePUUID")
 const {User} = require("../database/modules/createTables.js")
+const {rateLimitWait} = require("./rateLimiter")
 
 async function puuidRequest(username) {
     var lowerUser = username.toLowerCase()
 
-    //TODO check database for username
     async function checkUsers(inputUser) {
         var lowerUser = inputUser.toLowerCase()
         const users = await User.findAll({
@@ -22,22 +23,25 @@ async function puuidRequest(username) {
         }
         
       }
+
     let dbCheck = await checkUsers(lowerUser)
+
     if (dbCheck === undefined) {
         let requestURL = "https://na1.api.riotgames.com/tft/summoner/v1/summoners/by-name/" + lowerUser + "?api_key=" + apiKey;
         let response = await fetch(requestURL)
         let data = await response.json();
-        updatePUUID(lowerUser, data)
-    
-        return console.log(data["puuid"])
 
+        if (data["puuid"] === undefined){
+          data = await rateLimitWait(data, requestURL, "puuid")
+          updatePUUID(lowerUser, data)
+          return data["puuid"]
+        } else {
+          updatePUUID(lowerUser, data)
+          return data["puuid"]
+        }
     } else {
-        return console.log(dbCheck + "___WE OUT HERE")
+      return dbCheck
     }
-    //requests username from riot
-
-
 }
 
-
-puuidRequest("xiaomajur")
+module.exports = {puuidRequest}
