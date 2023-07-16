@@ -23,7 +23,6 @@ async function matchList(puuid) {
             catch{return matches}
         }
     }
-    console.log(matches)
     return matches
 }
 

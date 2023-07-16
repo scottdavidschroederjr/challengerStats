@@ -1,6 +1,7 @@
 const {puuidRequest} = require("../puuid.js")
 const {requestChallengers} = require("../challengerPlayers.js")
 const {matchList} = require("../matchList.js")
+const {matchInfo} = require("../matchInfo")
 
 
 
@@ -13,11 +14,9 @@ async function challengerScrape() {
             console.log(x)
             let puuid = await puuidRequest(players[x]["summonerName"])
             let matches = await matchList(puuid)
+            let info = await matchInfo(matches)
+            console.log("Cycle complete.")
 
-            for (let y = 0; y < matches.length; y++){
-
-            }
-            
         }
     } catch {
         console.log("Error scraping Challenger data. Check API status.")

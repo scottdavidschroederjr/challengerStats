@@ -28,8 +28,9 @@ function updateTrait (requestInput, data) {
       where: {matchID: requestInput},
       defaults: defaults
       })
+      console.log("Trait data added!")
     } catch {
-      console.log("failed")
+      console.log("Trait data add failed.")
     }
 }
 

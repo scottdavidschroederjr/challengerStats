@@ -8306,10 +8306,7 @@ p8_u30_tier: {
     
 });
 
-matchUsers.hasOne(generalMatchData)
-generalMatchData.belongsTo(matchUsers)
-matchUsers.hasOne(generalMatchData)
-generalMatchData.belongsTo(matchUsers)
+
 
 //generalMatchData.sync().then(() => {console.log("User Model synced");});
 //traitMatchData.sync().then(() => {console.log("User Model synced");});

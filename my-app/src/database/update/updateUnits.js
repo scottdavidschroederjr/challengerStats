@@ -33,6 +33,7 @@ function updateUnits (requestInput, data) {
       where: {matchID: requestInput},
       defaults: defaults
       })
+      console.log("Unit data added!")
     } catch {
       console.log("Error adding unit data.")
     }

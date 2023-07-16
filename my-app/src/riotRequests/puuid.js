@@ -9,12 +9,17 @@ async function puuidRequest(username) {
 
     async function checkUsers(inputUser) {
         var lowerUser = inputUser.toLowerCase()
-        const users = await User.findAll({
-          where: {
-            name: lowerUser
-            }
-          })
-        const plainUsers = users.map(user => user.toJSON())
+        try {
+          const users = await User.findAll({
+            where: {
+              name: lowerUser
+              }
+            })
+          const plainUsers = users.map(user => user.toJSON())
+        } catch (error) {
+          console.log(error)
+        }
+
   
         try {
           return plainUsers[0]["puuid"]
@@ -23,8 +28,10 @@ async function puuidRequest(username) {
         }
         
       }
+    console.log(username)
 
     let dbCheck = await checkUsers(lowerUser)
+    console.log(dbCheck)
 
     if (dbCheck === undefined) {
         let requestURL = "https://na1.api.riotgames.com/tft/summoner/v1/summoners/by-name/" + lowerUser + "?api_key=" + apiKey;
