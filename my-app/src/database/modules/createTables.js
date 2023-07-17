@@ -1,7 +1,7 @@
 const { sq } = require("../db.js")
 const { DataTypes } = require("sequelize");
 
-
+sq.sync()
 
 const User = sq.define("puiid", {
     puuid: {
@@ -21,6 +21,13 @@ const User = sq.define("puiid", {
     id: {
         type: DataTypes.STRING,
       },
+
+    rank: {
+      type: DataTypes.STRING,
+    },
+    division: {
+      type: DataTypes.STRING,
+    }
   });
 
 const matchUsers = sq.define("matchUsers", {
@@ -8308,11 +8315,11 @@ p8_u30_tier: {
 
 
 
-//generalMatchData.sync().then(() => {console.log("User Model synced");});
-//traitMatchData.sync().then(() => {console.log("User Model synced");});
-//unitMatchData.sync().then(() => {console.log("User Model synced");});
-//User.sync().then(() => {console.log("User Model synced");});
-//matchUsers.sync().then(() => {console.log("User Model synced");});
+generalMatchData.sync().then(() => {console.log("User Model synced");});
+traitMatchData.sync().then(() => {console.log("User Model synced");});
+unitMatchData.sync().then(() => {console.log("User Model synced");});
+User.sync().then(() => {console.log("User Model synced");});
+matchUsers.sync().then(() => {console.log("User Model synced");});
 
 //generalMatchData.hasMany(matchUsers, { foreignKey: 'match_ID' });
 //matchUsers.belongsTo(generalMatchData, { foreignKey: 'match_ID' });
