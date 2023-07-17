@@ -6,7 +6,6 @@ export function App() {
   return (
       <div>
         <AugmentDisplay/>
-        text
       </div>
   );
 }

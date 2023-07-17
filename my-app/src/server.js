@@ -1,7 +1,8 @@
-const websiteRun = require('./script.js')
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const augmentStats = require("./database/analysis/augmentStats.js")
+
 
 
 const app = express();
@@ -11,11 +12,11 @@ app.use(bodyParser.json()); // Use body-parser middleware
 
 // handles incoming POST requests
 app.post('/api/data', async (req, res) => {
-  const serverRequestData = await websiteRun(req.body['firstUser'], req.body['secondUser'], req.body['set']);
-  res.json(serverRequestData);
+  await augmentStats().then(data => res.json(data));
+  ;
 });
 
 // starts up the server
-app.listen(3001, () => {
+app.listen(3002, () => {
   console.log('Server is running on port 3001');
 });

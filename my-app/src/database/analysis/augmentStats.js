@@ -34,14 +34,14 @@ async function augmentStats(){
     });
   
     // Return the array of top occurrences
-    return console.log(resultArray);
+    return resultArray;
     }
 
-    let results = challengerMatches().then(x => getTopOccurrences(x[0]))
+    let results = challengerMatches().then(x => getTopOccurrences(x[1]))
     return results
 }
 
-module.exports = {augmentStats}
+module.exports = augmentStats
 
 
 

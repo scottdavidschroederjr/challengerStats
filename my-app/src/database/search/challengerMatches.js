@@ -25,7 +25,7 @@ async function challengerMatches (setNumber = "TFTSet9"){
     generalMatchData.belongsTo(matchUsers, {foreignKey: 'matchID'})
     matchUsers.hasMany(generalMatchData, {foreignKey: 'matchID'})
 
-    for (let s = 0; s < 2; s++){
+    for (let s = 0; s < players.length; s++){
         puuidChallengers.push(players[s]['dataValues']['puuid'])
 
         const matches = await generalMatchData.findAll({
@@ -67,7 +67,7 @@ async function challengerMatches (setNumber = "TFTSet9"){
     }
 
 
-
+    
     return [aug1, aug2, aug3]
 
 }
