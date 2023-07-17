@@ -1,15 +1,12 @@
 import './App.css';
 import React, { useState } from 'react';
-const config = {
-  headers: {
-    'Content-Type': 'application/json'
-  }
-};
+import AugmentDisplay from './visuals/augmentDisplay.js'
 
 export function App() {
   return (
       <div>
-        here's some text :)
+        <AugmentDisplay/>
+        text
       </div>
   );
 }

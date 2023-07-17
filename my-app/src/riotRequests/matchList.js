@@ -1,4 +1,4 @@
-const {apiKey} = require("../../secrets")
+const {apiKey} = require("../secrets")
 const {rateLimitWait} = require("./rateLimiter")
 
 //TODO once we have database structure setup for this, we want to only request matches since the last time they were requested

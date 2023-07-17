@@ -1,4 +1,4 @@
-const {apiKey} = require("../../secrets")
+const {apiKey} = require("../secrets.js")
 const {rateLimitWait} = require("./rateLimiter")
 
 async function requestChallengers() {
@@ -14,7 +14,6 @@ async function requestChallengers() {
     }
   
 }
-
 
 
 module.exports = {requestChallengers}

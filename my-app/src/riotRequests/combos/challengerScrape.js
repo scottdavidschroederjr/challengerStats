@@ -9,8 +9,8 @@ async function challengerScrape() {
     try {
         for (let x = 0; x < players.length; x++){
             let puuid = await puuidRequest(players[x]["summonerName"])
-            //let matches = await matchList(puuid)
-            //let info = await matchInfo(matches)
+            let matches = await matchList(puuid)
+            let info = await matchInfo(matches)
             console.log("Cycle complete.")
 
         }

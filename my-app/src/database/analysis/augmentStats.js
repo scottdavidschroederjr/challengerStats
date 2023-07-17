@@ -1,6 +1,8 @@
 const { challengerMatches } = require("../../database/search/challengerMatches.js")
 
-function getTopOccurrences(arr) {
+
+async function augmentStats(){
+    async function getTopOccurrences(arr) {
     // Create an empty object to store the counts
     var countObj = {};
   
@@ -33,10 +35,14 @@ function getTopOccurrences(arr) {
   
     // Return the array of top occurrences
     return console.log(resultArray);
-  }
-  
-  
+    }
+
+    let results = challengerMatches().then(x => getTopOccurrences(x[0]))
+    return results
+}
+
+module.exports = {augmentStats}
 
 
 
-challengerMatches().then(x => getTopOccurrences(x[0]))
+

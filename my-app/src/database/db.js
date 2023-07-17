@@ -1,5 +1,5 @@
 const { Sequelize } = require("sequelize");
-const { dbPass } = require("../../secrets");
+const { dbPass } = require("../secrets");
 
 
 //PUT PASSWORD BACK IN HERE WHEN YOU START WORKING AGAIN
