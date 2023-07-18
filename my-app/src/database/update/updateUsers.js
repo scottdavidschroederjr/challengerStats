@@ -27,7 +27,7 @@ function updateUsers (requestInput, data) {
         })
         console.log("User data added!")
       } catch {
-        console.log("Error adding match users data.")
+        console.log("Error adding match users data with updateUsers.js")
       }
 }
 

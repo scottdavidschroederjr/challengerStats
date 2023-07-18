@@ -1,0 +1,29 @@
+
+PATCH	SCHEDULED DATE (PACIFIC TIME)
+13.1	Wednesday, Jan 11, 2023
+13.2	Wednesday, Jan 25, 2023
+13.3	Wednesday, Feb 8, 2023
+13.4	Thursday, Feb 23, 2023
+13.5	Wednesday, March 8, 2023
+13.6	Wednesday, March 22, 2023
+13.7	Wednesday, April 5, 2023
+13.8	Wednesday, April 19, 2023
+13.9	Wednesday, May 3, 2023
+13.10	Wednesday, May 17, 2023
+13.11	Thursday, June 1, 2023
+13.12	Wednesday, June 14, 2023
+13.13	Wednesday, June 28, 2023
+
+
+13.14	Wednesday, July 19, 2023
+
+13.15	Wednesday, Aug 2, 2023
+13.16	Wednesday, Aug 16, 2023
+13.17	Wednesday, Aug 30, 2023
+13.18	Wednesday, Sept 13, 2023
+13.19	Wednesday, Sept 27, 2023
+13.20	Wednesday, Oct 11, 2023
+13.21	Wednesday, Oct 25, 2023
+13.22	Wednesday, Nov 8, 2023
+13.23	Tuesday, Nov 21, 2023
+13.24	Wednesday, Dec 6, 2023

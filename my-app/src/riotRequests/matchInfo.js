@@ -45,12 +45,15 @@ async function matchInfo(matchArray) {
             //TODO make this optional if data is correct
             data = await rateLimitWait(data, matchRequestURL)
     
-            updateUsers(matchArray[z], data)
-            updateGeneralMatchData(matchArray[z], data)
-            updateUnits(matchArray[z], data)
-            updateTrait(matchArray[z], data)
+            try {
+              updateUsers(matchArray[z], data)
+              updateGeneralMatchData(matchArray[z], data)
+              updateUnits(matchArray[z], data)
+              updateTrait(matchArray[z], data)
+            } catch {console.log("Error with adding: " + matchArray[z])}
 
-            console.log(matchArray[z])
+
+            
         }
     }
 }
