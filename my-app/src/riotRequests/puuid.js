@@ -38,6 +38,9 @@ async function puuidRequest(username) {
 
         if (data["puuid"] === undefined){
           data = await rateLimitWait(data, requestURL, "puuid")
+          if (data["puuid"] === undefined){
+            return 
+          }
           updatePUUID(lowerUser, data)
           return data["puuid"]
         } else {

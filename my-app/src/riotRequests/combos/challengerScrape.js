@@ -29,7 +29,7 @@ async function challengerScrape(patchTime) {
 }
 
 
-//challengerScrape(latestPatch)
+challengerScrape(latestPatch)
 
 module.exports = latestPatch
 
