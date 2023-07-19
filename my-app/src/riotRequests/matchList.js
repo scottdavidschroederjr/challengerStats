@@ -31,8 +31,12 @@ async function matchList(puuid, startTime = null) {
             var timedMatchRequestURL = "https://americas.api.riotgames.com/tft/match/v1/matches/by-puuid/" + puuid + "/ids?start=" + x + "&startTime=" + startTime + "&count=100&api_key=" + apiKey;
             var timedResponse = await fetch(timedMatchRequestURL)
             var timedData = await timedResponse.json()
-    
-    
+
+            console.log(timedData)
+            if (timedData.length <= 0) {
+                x = 500
+
+            } else {
             try {
                 //TODO better error catcher here
                 data = await rateLimitWait(timedData, timedMatchRequestURL, 0)
@@ -41,7 +45,7 @@ async function matchList(puuid, startTime = null) {
                 data = await rateLimitWait(timedData, timedMatchRequestURL, 0)
                 try {matches = matches.concat(timedData)}
                 catch{return matches}
-            }
+            }}
     } return matches
     
 

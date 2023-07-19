@@ -13,11 +13,11 @@ async function challengerScrape(patchTime) {
 
     try {
         for (let x = 0; x < players.length; x++){
-            //console.log(x)
-            //let puuid = await puuidRequest(players[x]["summonerName"])
-            //let matches = await matchList(puuid, patchTime)
-            //let info = await matchInfo(matches)
-            //console.log("Cycle complete.")
+            console.log(players[x]["summonerName"])
+            let puuid = await puuidRequest(players[x]["summonerName"])
+            let matches = await matchList(puuid, patchTime)
+            let info = await matchInfo(matches)
+            console.log("Cycle complete.")
 
         }
     } catch {

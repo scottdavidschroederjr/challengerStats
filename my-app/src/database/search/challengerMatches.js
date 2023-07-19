@@ -44,14 +44,14 @@ async function challengerMatches (setNumber = "TFTSet9"){
                     {"tft_set_core_name": setNumber,
                     "queue_id": 1100,
                     "game_datetime": {
-                        [Op.gte]: (latestPatch * 10)
+                        [Op.gte]: (latestPatch * 1000)
                     }
                     },
             }]         
             })
             //TODO SET ABOVE TIMES TO TIMES 1000 to properly account for latest patch
-
-        challengerMatches.push(matches[0]['dataValues']['matchID'])
+        try {challengerMatches.push(matches[0]['dataValues']['matchID'])} catch {}
+        
     }
     //gets duplicate matches out of list
     function removeDuplicates(array) {

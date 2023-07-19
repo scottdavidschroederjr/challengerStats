@@ -35,6 +35,8 @@ async function matchInfo(matchArray) {
             }
         var sqlUsersMatch = await checkUsersMatch(matchArray[z])
 
+        console.log(sqlUsersMatch)
+        
         if (sqlUsersMatch !== undefined){  
             console.log("match already exists!")
         } else {
