@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const augmentStats = require("./database/analysis/augmentStats.js")
+const UnitStats = require("./database/analysis/unitStats.js")
 
 
 
@@ -12,7 +12,7 @@ app.use(bodyParser.json()); // Use body-parser middleware
 
 // handles incoming POST requests
 app.post('/api/data', async (req, res) => {
-  await augmentStats().then(data => res.json(data));
+  await UnitStats().then(data => res.json(data));
   ;
 });
 

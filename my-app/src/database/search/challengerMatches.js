@@ -1,19 +1,14 @@
-const { User, matchUsers, generalMatchData} = require("../modules/createTables.js")
+const { User, matchUsers, generalMatchData, unitMatchData} = require("../modules/createTables.js")
 const { Op } = require("sequelize")
-const { sq } = require("../../database/db.js")
-
-sq.sync()
-
+const latestPatch = require("../../riotRequests/combos/challengerScrape.js")
 
 async function challengerMatches (setNumber = "TFTSet9"){
+
     //any additional info that would also want to be extracted from these matches should go here
-    let aug1 = []
-    let aug2 = []
-    let aug3 = []
-    //end of variables
+    let challengerMatches = []
+    let units = []
 
-
-    let puuidChallengers = []
+    //gets list of challenger's puuids
     const  players = await User.findAll({
         where: {
             rank: 'challenger'
@@ -22,55 +17,97 @@ async function challengerMatches (setNumber = "TFTSet9"){
             'puuid',
         ]
     })
+    
+    //gets list of matches for challenger players
     generalMatchData.belongsTo(matchUsers, {foreignKey: 'matchID'})
     matchUsers.hasMany(generalMatchData, {foreignKey: 'matchID'})
 
     for (let s = 0; s < players.length; s++){
-        puuidChallengers.push(players[s]['dataValues']['puuid'])
 
         const matches = await generalMatchData.findAll({
             where: {
                 [Op.or]: [
-                    {"player1": puuidChallengers[s]},
-                    {"player2": puuidChallengers[s]},
-                    {"player3": puuidChallengers[s]},
-                    {"player4": puuidChallengers[s]},
-                    {"player5": puuidChallengers[s]},
-                    {"player6": puuidChallengers[s]},
-                    {"player7": puuidChallengers[s]},
-                    {"player8": puuidChallengers[s]},
+                    {"player1": players[s]['dataValues']['puuid']},
+                    {"player2": players[s]['dataValues']['puuid']},
+                    {"player3": players[s]['dataValues']['puuid']},
+                    {"player4": players[s]['dataValues']['puuid']},
+                    {"player5": players[s]['dataValues']['puuid']},
+                    {"player6": players[s]['dataValues']['puuid']},
+                    {"player7": players[s]['dataValues']['puuid']},
+                    {"player8": players[s]['dataValues']['puuid']},
                 ]
             },
+            attributes: ['matchID'],
             include: [{
                 model: matchUsers,
                 where: 
                     {"tft_set_core_name": setNumber,
-                    "queue_id": 1100}
+                    "queue_id": 1100,
+                    "game_datetime": {
+                        [Op.gte]: (latestPatch * 10)
+                    }
+                    },
             }]         
             })
-        for (let u = 0; u < matches.length; u++){
+            //TODO SET ABOVE TIMES TO TIMES 1000 to properly account for latest patch
 
-            //getting augement stats out
+        challengerMatches.push(matches[0]['dataValues']['matchID'])
+    }
+    //gets duplicate matches out of list
+    function removeDuplicates(array) {
+        return [...new Set(array)];
+      }
+    
+    challengerMatches = removeDuplicates(challengerMatches)
+
+    //gets stats from matches
+    for (let u = 0; u < challengerMatches.length; u++){
+
+        const unitDataRequest =  await unitMatchData.findAll({
+            where: {matchID: challengerMatches[u]}})
+
+        //getting stats out from matches
             for (let v = 0; v < 7; v++){
-                let augment1 = "p" + (v + 1) + "_augment1"
-                let augment2 = "p" + (v + 1) + "_augment2"
-                let augment3 = "p" + (v + 1) + "_augment3"
 
-                aug1.push(matches[u]['dataValues'][augment1])
-                aug2.push(matches[u]['dataValues'][augment2])
-                aug3.push(matches[u]['dataValues'][augment3])
+            const placementDataRequest =  await generalMatchData.findAll({
+                where: {matchID: challengerMatches[u]}})
+            
+            let currentPlayer = "p" + (v + 1) + "_placement"
+            let placement = placementDataRequest[0]['dataValues'][currentPlayer]
+
+
+                for (let a = 0; a < 30; a++){
+                    let unitArray = []
+                    
+                    let unit = "p" + (v + 1) + "_u" + (a + 1) + "_character_id"
+                    let starLevel =  "p" + (v + 1) + "_u" + (a + 1) + "_tier"
+                    let item1 = "p" + (v + 1) + "_u" + (a + 1) + "_item1"
+                    let item2 = "p" + (v + 1) + "_u" + (a + 1) + "_item2"
+                    let item3 = "p" + (v + 1) + "_u" + (a + 1) + "_item3"
+
+                    
+
+                    //checks if unit exists before adding to data
+                    if (unitDataRequest[0]['dataValues'][unit] === null) {
+                        a = 50;
+                    }
+                    else {
+                        unitArray.push(unitDataRequest[0]['dataValues'][unit])
+                        unitArray.push(unitDataRequest[0]['dataValues'][starLevel])
+                        unitArray.push(unitDataRequest[0]['dataValues'][item1])
+                        unitArray.push(unitDataRequest[0]['dataValues'][item2])
+                        unitArray.push(unitDataRequest[0]['dataValues'][item3])
+                        unitArray.push(placement)
+                        units.push(unitArray)
+                    }
+
+                }
                 
             }
 
         }
-
+        return units
     }
-
-
-    
-    return [aug1, aug2, aug3]
-
-}
 
 
 module.exports = {challengerMatches}

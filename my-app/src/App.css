@@ -1,0 +1,18 @@
+table {
+    width: 30%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  thead {
+    background-color: #383838;
+    color: rgb(255, 255, 255);
+    font-size: 16pt;
+    font-weight: 10;
+  }
+  
