@@ -17,7 +17,7 @@ async function challengerScrape(patchTime) {
             let puuid = await puuidRequest(players[x]["summonerName"])
             let matches = await matchList(puuid, patchTime)
             let info = await matchInfo(matches)
-            console.log("Cycle complete.")
+            console.log("Cycle " + x + " complete.")
 
         }
     } catch {
@@ -29,7 +29,7 @@ async function challengerScrape(patchTime) {
 }
 
 
-challengerScrape(latestPatch)
+//challengerScrape(latestPatch)
 
 module.exports = latestPatch
 

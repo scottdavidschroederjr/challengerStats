@@ -1,6 +1,7 @@
 const { User, matchUsers, generalMatchData, unitMatchData} = require("../modules/createTables.js")
 const { Op } = require("sequelize")
 const latestPatch = require("../../riotRequests/combos/challengerScrape.js")
+const championData = require("../../riotAssets/tft-champion.js")
 
 async function challengerMatches (setNumber = "TFTSet9"){
 
@@ -88,11 +89,12 @@ async function challengerMatches (setNumber = "TFTSet9"){
                     
 
                     //checks if unit exists before adding to data
-                    if (unitDataRequest[0]['dataValues'][unit] === null) {
+                    if (unitDataRequest[0]['dataValues'][unit] === null || unitDataRequest[0]['dataValues'][unit] === undefined) {
                         a = 50;
                     }
                     else {
-                        unitArray.push(unitDataRequest[0]['dataValues'][unit])
+                        let unitName = [unitDataRequest[0]['dataValues'][unit]]
+                        unitArray.push(championData['data'][unitName]['name'])
                         unitArray.push(unitDataRequest[0]['dataValues'][starLevel])
                         unitArray.push(unitDataRequest[0]['dataValues'][item1])
                         unitArray.push(unitDataRequest[0]['dataValues'][item2])
@@ -109,5 +111,6 @@ async function challengerMatches (setNumber = "TFTSet9"){
         return units
     }
 
+challengerMatches()
 
 module.exports = {challengerMatches}

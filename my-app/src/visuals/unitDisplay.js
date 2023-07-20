@@ -50,6 +50,7 @@ function UnitDisplay() {
       }
       return (
         <div>
+          <h1>Champion Appearance</h1>
           <label>
             Show Rows:
             <input

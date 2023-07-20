@@ -1,4 +1,4 @@
-{
+const championData = {
     "type": "tft-champion",
     "version": "13.13.1",
     "data": {
@@ -380,8 +380,8 @@
                 "h": 48
             }
         },
-        "TFT9_RekSai": {
-            "id": "TFT9_RekSai",
+        "tft9_reksai": {
+            "id": "tft9_reksai",
             "name": "Rek'Sai",
             "tier": 3,
             "image": {
@@ -967,6 +967,37 @@
                 "w": 48,
                 "h": 48
             }
+        },
+        //add additional info for this one
+        "TFT9_HeimerdingerTurret": {
+            "id": "TFT9_HeimerdingerTurret",
+            "name": "Heimer's Turret",
+            "tier": 5,
+            "image": {
+                "full": "",
+                "sprite": "",
+                "group": "",
+                "x": 384,
+                "y": 0,
+                "w": 48,
+                "h": 48
+            },
+        },
+        "TFT9_THex": {
+            "id": "TFT9_THex",
+            "name": "Piltover T-Hex",
+            "tier": 5,
+            "image": {
+                "full": "",
+                "sprite": "",
+                "group": "",
+                "x": 384,
+                "y": 0,
+                "w": 48,
+                "h": 48
+            },
         }
     }
 }
+
+module.exports = championData
