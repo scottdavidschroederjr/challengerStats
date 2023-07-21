@@ -34,11 +34,7 @@ async function matchInfo(matchArray) {
              }
             }
         var sqlUsersMatch = await checkUsersMatch(matchArray[z])
-
-        console.log(sqlUsersMatch)
-        
         if (sqlUsersMatch !== undefined){  
-            console.log("match already exists!")
         } else {
             let matchRequestURL = "https://americas.api.riotgames.com/tft/match/v1/matches/"+ matchArray[z] + "?api_key=" + apiKey
             var response = await fetch(matchRequestURL)

@@ -32,7 +32,6 @@ async function matchList(puuid, startTime = null) {
             var timedResponse = await fetch(timedMatchRequestURL)
             var timedData = await timedResponse.json()
 
-            console.log(timedData)
             if (timedData.length <= 0) {
                 x = 500
 

@@ -100,7 +100,6 @@ async function challengerMatches (setNumber = "TFTSet9"){
                         unitArray.push(unitDataRequest[0]['dataValues'][item2])
                         unitArray.push(unitDataRequest[0]['dataValues'][item3])
                         unitArray.push(placement)
-                        units.push(unitArray)
                     }
 
                 }
