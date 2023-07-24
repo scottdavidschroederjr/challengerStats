@@ -38,7 +38,7 @@ async function challengerScrape(patchTime, division = 'challengers') {
 
 async function autoScrap(){
     while (latestPatch > 0) {
-        requestGMs(latestPatch, 'grandmaster')
+        challengerScrape(latestPatch, 'grandmaster')
         await new Promise(resolve => setTimeout(resolve, 900000))
         challengerScrape(latestPatch)
         await new Promise(resolve => setTimeout(resolve, 900000))

@@ -6,6 +6,7 @@ const championData = {
             "id": "TFT9_Tristana",
             "name": "Tristana",
             "tier": 1,
+            "traits": ['Yordle', 'Gunner'],
             "image": {
                 "full": "TFT9_Tristana.TFT_Set9.png",
                 "sprite": "tft-champion0.png",
@@ -999,5 +1000,7 @@ const championData = {
         }
     }
 }
+
+
 
 module.exports = championData
