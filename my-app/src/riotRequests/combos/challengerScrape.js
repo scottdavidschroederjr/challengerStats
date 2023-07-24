@@ -6,7 +6,8 @@ const {matchInfo} = require("../matchInfo")
 const {updateChallengers} = require("../../database/update/updateChallengers.js")
 
 //time of latest patch in epoch time
-const latestPatch = 1689760800
+//1689886800 b patch
+const latestPatch = 1689886800
 
 async function challengerScrape(patchTime) {
     let players = await requestChallengers()
@@ -28,8 +29,17 @@ async function challengerScrape(patchTime) {
     return console.log("Scrape complete!")
 }
 
+async function autoScrap(){
+    while (latestPatch > 0) {
+        challengerScrape(1689886800)
+        await new Promise(resolve => setTimeout(resolve, 900000))
+        await new Promise(resolve => setTimeout(resolve, 900000))
+        await new Promise(resolve => setTimeout(resolve, 900000))
+        await new Promise(resolve => setTimeout(resolve, 900000))
+    }
+}
 
-challengerScrape(latestPatch)
+//autoScrap()
 
 module.exports = latestPatch
 

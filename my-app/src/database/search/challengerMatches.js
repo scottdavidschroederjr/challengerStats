@@ -54,6 +54,7 @@ async function challengerMatches (setNumber = "TFTSet9"){
         try {challengerMatches.push(matches[0]['dataValues']['matchID'])} catch {}
         
     }
+    console.log(challengerMatches)
     //gets duplicate matches out of list
     function removeDuplicates(array) {
         return [...new Set(array)];
@@ -87,10 +88,11 @@ async function challengerMatches (setNumber = "TFTSet9"){
                     let item3 = "p" + (v + 1) + "_u" + (a + 1) + "_item3"
 
                     
-
+                    
                     //checks if unit exists before adding to data
                     if (unitDataRequest[0]['dataValues'][unit] === null || unitDataRequest[0]['dataValues'][unit] === undefined) {
                         a = 50;
+                        
                     }
                     else {
                         let unitName = [unitDataRequest[0]['dataValues'][unit]]
@@ -100,6 +102,7 @@ async function challengerMatches (setNumber = "TFTSet9"){
                         unitArray.push(unitDataRequest[0]['dataValues'][item2])
                         unitArray.push(unitDataRequest[0]['dataValues'][item3])
                         unitArray.push(placement)
+                        units.push(unitArray)
                     }
 
                 }
@@ -110,6 +113,6 @@ async function challengerMatches (setNumber = "TFTSet9"){
         return units
     }
 
-challengerMatches()
+//challengerMatches()
 
 module.exports = {challengerMatches}
