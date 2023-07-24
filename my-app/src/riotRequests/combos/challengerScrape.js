@@ -8,15 +8,16 @@ const {requestGMs} = require("../grandmasterPlayers.js")
 
 //time of latest patch in epoch time
 //1689886800 b patch
-const latestPatch = 1689886800
+var latestPatch = 1689886800
 
 async function challengerScrape(patchTime, division = 'challengers') {
+    var players = ""
     if (division === 'grandmaster') {
-        let players = await requestGMs()
+        players = await requestGMs()
     } else {
-        let players = await requestChallengers()
+        players = await requestChallengers()
     }
-    
+    console.log(players)
 
     try {
         for (let x = 0; x < players.length; x++){
@@ -37,9 +38,9 @@ async function challengerScrape(patchTime, division = 'challengers') {
 
 async function autoScrap(){
     while (latestPatch > 0) {
-        requestGMs(1689886800)
+        requestGMs(latestPatch, 'grandmaster')
         await new Promise(resolve => setTimeout(resolve, 900000))
-        challengerScrape(1689886800)
+        challengerScrape(latestPatch)
         await new Promise(resolve => setTimeout(resolve, 900000))
         await new Promise(resolve => setTimeout(resolve, 900000))
         await new Promise(resolve => setTimeout(resolve, 900000))

@@ -15,5 +15,4 @@ async function requestGMs() {
   
 }
 
-
 module.exports = {requestGMs}
