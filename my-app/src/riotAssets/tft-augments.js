@@ -1,4 +1,4 @@
-var tftAugmentData = {
+const tftAugmentData = {
     "type": "tft-augment",
     "version": "13.13.1",
     "augment-container": {

@@ -1,4 +1,4 @@
-{
+const itemData = {
     "type": "tft-item",
     "version": "13.13.1",
     "data": {
@@ -1539,6 +1539,7 @@
         "TFT9_EmblemItems/TFT9_Item_StrategistEmblem": {
             "id": "TFT9_Item_StrategistEmblem",
             "name": "Strategist Emblem",
+            "type": "emblem",
             "image": {
                 "full": "TFT9_Item_StrategistEmblem.png",
                 "sprite": "tft-item3.png",
@@ -1551,7 +1552,8 @@
         },
         "TFT9_EmblemItems/TFT9_Item_SlayerEmblem": {
             "id": "TFT9_Item_SlayerEmblem",
-            "name": "Slayer Emblem<br>",
+            "name": "Slayer Emblem",
+            "type": "emblem",
             "image": {
                 "full": "TFT9_Item_SlayerEmblem.png",
                 "sprite": "tft-item3.png",
@@ -1565,6 +1567,7 @@
         "TFT9_EmblemItems/TFT9_Item_BrawlerEmblem": {
             "id": "TFT9_Item_BrawlerEmblem",
             "name": "Bruiser Emblem",
+            "type": "emblem",
             "image": {
                 "full": "TFT9_Item_BrawlerEmblem.png",
                 "sprite": "tft-item4.png",
@@ -1578,6 +1581,7 @@
         "TFT9_EmblemItems/TFT9_Item_BastionEmblem": {
             "id": "TFT9_Item_BastionEmblem",
             "name": "Bastion Emblem",
+            "type": "emblem",
             "image": {
                 "full": "TFT9_Item_BastionEmblem.png",
                 "sprite": "tft-item4.png",
@@ -1591,6 +1595,7 @@
         "TFT9_EmblemItems/TFT9_Item_ArmorcladEmblem": {
             "id": "TFT9_Item_ArmorcladEmblem",
             "name": "Juggernaut Emblem",
+            "type": "emblem",
             "image": {
                 "full": "TFT9_Item_ArmorcladEmblem.png",
                 "sprite": "tft-item4.png",
@@ -1604,6 +1609,7 @@
         "TFT9_EmblemItems/TFT9_Item_DemaciaEmblem": {
             "id": "TFT9_Item_DemaciaEmblem",
             "name": "Demacia Emblem",
+            "type": "emblem",
             "image": {
                 "full": "TFT9_Item_DemaciaEmblem.png",
                 "sprite": "tft-item4.png",
@@ -1630,6 +1636,7 @@
         "TFT9_EmblemItems/TFT9_Item_VoidEmblem": {
             "id": "TFT9_Item_VoidEmblem",
             "name": "Void Emblem",
+            "type": "emblem",
             "image": {
                 "full": "TFT9_Item_VoidEmblem.png",
                 "sprite": "tft-item4.png",
@@ -1643,6 +1650,7 @@
         "TFT9_EmblemItems/TFT9_Item_IoniaEmblem": {
             "id": "TFT9_Item_IoniaEmblem",
             "name": "Ionia Emblem",
+            "type": "emblem",
             "image": {
                 "full": "TFT9_Item_IoniaEmblem.png",
                 "sprite": "tft-item4.png",
@@ -1655,6 +1663,7 @@
         },
         "TFT9_EmblemItems/TFT9_Item_PreserverEmblem": {
             "id": "TFT9_Item_PreserverEmblem",
+            "type": "emblem",
             "name": "Invoker Emblem",
             "image": {
                 "full": "TFT9_Item_PreserverEmblem.png",
@@ -1682,6 +1691,7 @@
         "TFT9_EmblemItems/TFT9_Item_SorcererEmblem": {
             "id": "TFT9_Item_SorcererEmblem",
             "name": "Sorcerer Emblem",
+            "type": "emblem",
             "image": {
                 "full": "TFT9_Item_SorcererEmblem.png",
                 "sprite": "tft-item4.png",
@@ -1721,6 +1731,7 @@
         "TFT9_EmblemItems/TFT9_Item_ZaunEmblem": {
             "id": "TFT9_Item_ZaunEmblem",
             "name": "Zaun Emblem",
+            "type": "emblem",
             "image": {
                 "full": "TFT9_Item_ZaunEmblem.png",
                 "sprite": "tft-item4.png",
@@ -1734,6 +1745,7 @@
         "TFT9_EmblemItems/TFT9_Item_TargonEmblem": {
             "id": "TFT9_Item_TargonEmblem",
             "name": "Targon Emblem",
+            "type": "emblem",
             "image": {
                 "full": "TFT9_Item_TargonEmblem.png",
                 "sprite": "tft-item4.png",
@@ -1747,6 +1759,7 @@
         "TFT9_EmblemItems/TFT9_Item_RogueEmblem": {
             "id": "TFT9_Item_RogueEmblem",
             "name": "Rogue Emblem",
+            "type": "emblem",
             "image": {
                 "full": "TFT9_Item_RogueEmblem.png",
                 "sprite": "tft-item4.png",
@@ -1773,6 +1786,7 @@
         "TFT9_EmblemItems/TFT9_Item_TrickshotEmblem": {
             "id": "TFT9_Item_TrickshotEmblem",
             "name": "Gunner Emblem",
+            "type": "emblem",
             "image": {
                 "full": "TFT9_Item_TrickshotEmblem.png",
                 "sprite": "tft-item4.png",
@@ -1786,6 +1800,7 @@
         "TFT9_EmblemItems/TFT9_Item_ChallengerEmblem": {
             "id": "TFT9_Item_ChallengerEmblem",
             "name": "Challenger Emblem",
+            "type": "emblem",
             "image": {
                 "full": "TFT9_Item_ChallengerEmblem.png",
                 "sprite": "tft-item4.png",
@@ -1890,6 +1905,7 @@
         "TFT9_EmblemItems/TFT9_Item_PiltoverEmblem": {
             "id": "TFT9_Item_PiltoverEmblem",
             "name": "Piltover Emblem",
+            "type": "emblem",
             "image": {
                 "full": "TFT9_Item_PiltoverEmblem.png",
                 "sprite": "tft-item4.png",

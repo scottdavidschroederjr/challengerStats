@@ -1,5 +1,5 @@
-const {apiKey} = require("../secrets.js")
-const {rateLimitWait} = require("./rateLimiter")
+const {apiKey} = require("../../secrets.js")
+const {rateLimitWait} = require("../rateLimiter.js")
 
 async function requestChallengers() {
     let requestURL = "https://na1.api.riotgames.com/tft/league/v1/challenger?api_key=" + apiKey;

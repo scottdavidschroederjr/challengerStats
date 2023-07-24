@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
 const {puuidRequest} = require("../puuid.js")
-const {requestChallengers} = require("../challengerPlayers.js")
+const {requestChallengers} = require("../playersTier/challengerPlayers.js")
 const {matchList} = require("../matchList.js")
 const {matchInfo} = require("../matchInfo")
 const {updateChallengers} = require("../../database/update/updateChallengers.js")
-const {requestGMs} = require("../grandmasterPlayers.js")
+const {requestGMs} = require("../playersTier/grandmasterPlayers.js")
 
 //time of latest patch in epoch time
 //1689886800 b patch
