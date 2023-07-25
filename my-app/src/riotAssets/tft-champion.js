@@ -21,6 +21,7 @@ const championData = {
             "id": "TFT9_Irelia",
             "name": "Irelia",
             "tier": 1,
+            "traits": [],
             "image": {
                 "full": "TFT9_Irelia.TFT_Set9.png",
                 "sprite": "tft-champion0.png",
@@ -35,6 +36,7 @@ const championData = {
             "id": "TFT9_Aatrox",
             "name": "Aatrox",
             "tier": 5,
+            "traits": [],
             "image": {
                 "full": "TFT9_Aatrox.TFT_Set9.png",
                 "sprite": "tft-champion0.png",
@@ -49,6 +51,7 @@ const championData = {
             "id": "TFT9_Ahri",
             "name": "Ahri",
             "tier": 5,
+            "traits": [],
             "image": {
                 "full": "TFT9_Ahri.TFT_Set9.png",
                 "sprite": "tft-champion0.png",
@@ -63,6 +66,7 @@ const championData = {
             "id": "TFT9_Akshan",
             "name": "Akshan",
             "tier": 3,
+            "traits": [],
             "image": {
                 "full": "TFT9_Akshan.TFT_Set9.png",
                 "sprite": "tft-champion0.png",
@@ -77,6 +81,7 @@ const championData = {
             "id": "TFT9_Ashe",
             "name": "Ashe",
             "tier": 2,
+            "traits": [],
             "image": {
                 "full": "TFT9_Ashe.TFT_Set9.png",
                 "sprite": "tft-champion0.png",
@@ -91,6 +96,7 @@ const championData = {
             "id": "TFT9_Azir",
             "name": "Azir",
             "tier": 4,
+            "traits": [],
             "image": {
                 "full": "TFT9_Azir.TFT_Set9.png",
                 "sprite": "tft-champion0.png",
@@ -105,6 +111,7 @@ const championData = {
             "id": "TFT9_BelVeth",
             "name": "Bel'Veth",
             "tier": 5,
+            "traits": [],
             "image": {
                 "full": "TFT9_BelVeth.TFT_Set9.png",
                 "sprite": "tft-champion0.png",
@@ -119,6 +126,7 @@ const championData = {
             "id": "TFT9_ChoGath",
             "name": "Cho'Gath",
             "tier": 1,
+            "traits": [],
             "image": {
                 "full": "TFT9_ChoGath.TFT_Set9.png",
                 "sprite": "tft-champion0.png",
@@ -132,6 +140,7 @@ const championData = {
         "TFT9_Darius": {
             "id": "TFT9_Darius",
             "name": "Darius",
+            "traits": [],
             "tier": 3,
             "image": {
                 "full": "TFT9_Darius.TFT_Set9.png",
@@ -147,6 +156,7 @@ const championData = {
             "id": "TFT9_Ekko",
             "name": "Ekko",
             "tier": 3,
+            "traits": [],
             "image": {
                 "full": "TFT9_Ekko.TFT_Set9.png",
                 "sprite": "tft-champion0.png",
@@ -161,6 +171,7 @@ const championData = {
             "id": "TFT9_Garen",
             "name": "Garen",
             "tier": 3,
+            "traits": [],
             "image": {
                 "full": "TFT9_Garen.TFT_Set9.png",
                 "sprite": "tft-champion0.png",
@@ -175,6 +186,7 @@ const championData = {
             "id": "TFT9_Gwen",
             "name": "Gwen",
             "tier": 4,
+            "traits": [],
             "image": {
                 "full": "TFT9_Gwen.TFT_Set9.png",
                 "sprite": "tft-champion0.png",
@@ -189,6 +201,7 @@ const championData = {
             "id": "TFT9_Heimerdinger",
             "name": "Heimerdinger",
             "tier": 5,
+            "traits": [],
             "image": {
                 "full": "TFT9_Heimerdinger.TFT_Set9.png",
                 "sprite": "tft-champion0.png",
@@ -203,6 +216,7 @@ const championData = {
             "id": "TFT9_JarvanIV",
             "name": "Jarvan IV",
             "tier": 4,
+            "traits": [],
             "image": {
                 "full": "TFT9_JarvanIV.TFT_Set9.png",
                 "sprite": "tft-champion0.png",
@@ -217,6 +231,7 @@ const championData = {
             "id": "TFT9_Jayce",
             "name": "Jayce",
             "tier": 3,
+            "traits": [],
             "image": {
                 "full": "TFT9_Jayce.TFT_Set9.png",
                 "sprite": "tft-champion0.png",
@@ -231,6 +246,7 @@ const championData = {
             "id": "TFT9_Jinx",
             "name": "Jinx",
             "tier": 2,
+            "traits": [],
             "image": {
                 "full": "TFT9_Jinx.TFT_Set9.png",
                 "sprite": "tft-champion0.png",
@@ -245,6 +261,7 @@ const championData = {
             "id": "TFT9_KaiSa",
             "name": "Kai'Sa",
             "tier": 4,
+            "traits": [],
             "image": {
                 "full": "TFT9_KaiSa.TFT_Set9.png",
                 "sprite": "tft-champion0.png",
@@ -259,6 +276,7 @@ const championData = {
             "id": "TFT9_Karma",
             "name": "Karma",
             "tier": 3,
+            "traits": [],
             "image": {
                 "full": "TFT9_Karma.TFT_Set9.png",
                 "sprite": "tft-champion0.png",
@@ -273,6 +291,7 @@ const championData = {
             "id": "TFT9_Katarina",
             "name": "Katarina",
             "tier": 3,
+            "traits": [],
             "image": {
                 "full": "TFT9_Katarina.TFT_Set9.png",
                 "sprite": "tft-champion0.png",
@@ -287,6 +306,7 @@ const championData = {
             "id": "TFT9_Kled",
             "name": "Kled",
             "tier": 2,
+            "traits": [],
             "image": {
                 "full": "TFT9_Kled.TFT_Set9.png",
                 "sprite": "tft-champion0.png",
@@ -301,6 +321,7 @@ const championData = {
             "id": "TFT9_KSante",
             "name": "K'Sante",
             "tier": 5,
+            "traits": [],
             "image": {
                 "full": "TFT9_KSante.TFT_Set9.png",
                 "sprite": "tft-champion0.png",
@@ -315,6 +336,7 @@ const championData = {
             "id": "TFT9_Lissandra",
             "name": "Lissandra",
             "tier": 3,
+            "traits": [],
             "image": {
                 "full": "TFT9_Lissandra.TFT_Set9.png",
                 "sprite": "tft-champion0.png",
@@ -329,6 +351,7 @@ const championData = {
             "id": "TFT9_Lux",
             "name": "Lux",
             "tier": 4,
+            "traits": [],
             "image": {
                 "full": "TFT9_Lux.TFT_Set9.png",
                 "sprite": "tft-champion0.png",
@@ -343,6 +366,7 @@ const championData = {
             "id": "TFT9_Orianna",
             "name": "Orianna",
             "tier": 1,
+            "traits": [],
             "image": {
                 "full": "TFT9_Orianna.TFT_Set9.png",
                 "sprite": "tft-champion0.png",
@@ -357,6 +381,7 @@ const championData = {
             "id": "TFT9_Poppy",
             "name": "Poppy",
             "tier": 1,
+            "traits": [],
             "image": {
                 "full": "TFT9_Poppy.TFT_Set9.png",
                 "sprite": "tft-champion0.png",
@@ -371,6 +396,7 @@ const championData = {
             "id": "TFT9_Shen",
             "name": "Shen",
             "tier": 4,
+            "traits": [],
             "image": {
                 "full": "TFT9_Shen.TFT_Set9.png",
                 "sprite": "tft-champion0.png",
@@ -385,6 +411,7 @@ const championData = {
             "id": "tft9_reksai",
             "name": "Rek'Sai",
             "tier": 3,
+            "traits": [],
             "image": {
                 "full": "TFT9_RekSai.TFT_Set9.png",
                 "sprite": "tft-champion0.png",
@@ -399,6 +426,7 @@ const championData = {
             "id": "TFT9_Renekton",
             "name": "Renekton",
             "tier": 1,
+            "traits": [],
             "image": {
                 "full": "TFT9_Renekton.TFT_Set9.png",
                 "sprite": "tft-champion0.png",
@@ -413,6 +441,7 @@ const championData = {
             "id": "TFT9_Sejuani",
             "name": "Sejuani",
             "tier": 4,
+            "traits": [],
             "image": {
                 "full": "TFT9_Sejuani.TFT_Set9.png",
                 "sprite": "tft-champion0.png",
@@ -427,6 +456,7 @@ const championData = {
             "id": "TFT9_Senna",
             "name": "Senna",
             "tier": 5,
+            "traits": [],
             "image": {
                 "full": "TFT9_Senna.TFT_Set9.png",
                 "sprite": "tft-champion1.png",
@@ -441,6 +471,7 @@ const championData = {
             "id": "TFT9_Sion",
             "name": "Sion",
             "tier": 5,
+            "traits": [],
             "image": {
                 "full": "TFT9_Sion.TFT_Set9.png",
                 "sprite": "tft-champion1.png",
@@ -455,6 +486,7 @@ const championData = {
             "id": "TFT9_Sona",
             "name": "Sona",
             "tier": 3,
+            "traits": [],
             "image": {
                 "full": "TFT9_Sona.TFT_Set9.png",
                 "sprite": "tft-champion1.png",
@@ -469,6 +501,7 @@ const championData = {
             "id": "TFT9_Soraka",
             "name": "Soraka",
             "tier": 2,
+            "traits": [],
             "image": {
                 "full": "TFT9_Soraka.TFT_Set9.png",
                 "sprite": "tft-champion1.png",
@@ -483,6 +516,7 @@ const championData = {
             "id": "TFT9_Swain",
             "name": "Swain",
             "tier": 2,
+            "traits": [],
             "image": {
                 "full": "TFT9_Swain.TFT_Set9.png",
                 "sprite": "tft-champion1.png",
@@ -497,6 +531,7 @@ const championData = {
             "id": "TFT9_Taric",
             "name": "Taric",
             "tier": 3,
+            "traits": [],
             "image": {
                 "full": "TFT9_Taric.TFT_Set9.png",
                 "sprite": "tft-champion1.png",
@@ -511,6 +546,7 @@ const championData = {
             "id": "TFT9_Teemo",
             "name": "Teemo",
             "tier": 2,
+            "traits": [],
             "image": {
                 "full": "TFT9_Teemo.TFT_Set9.png",
                 "sprite": "tft-champion1.png",
@@ -525,6 +561,7 @@ const championData = {
             "id": "TFT9_VelKoz",
             "name": "Vel'Koz",
             "tier": 3,
+            "traits": [],
             "image": {
                 "full": "TFT9_VelKoz.TFT_Set9.png",
                 "sprite": "tft-champion1.png",
@@ -539,6 +576,7 @@ const championData = {
             "id": "TFT9_Warwick",
             "name": "Warwick",
             "tier": 2,
+            "traits": [],
             "image": {
                 "full": "TFT9_Warwick.TFT_Set9.png",
                 "sprite": "tft-champion1.png",
@@ -553,6 +591,7 @@ const championData = {
             "id": "TFT9_Yasuo",
             "name": "Yasuo",
             "tier": 4,
+            "traits": [],
             "image": {
                 "full": "TFT9_Yasuo.TFT_Set9.png",
                 "sprite": "tft-champion1.png",
@@ -567,6 +606,7 @@ const championData = {
             "id": "TFT9_Zed",
             "name": "Zed",
             "tier": 2,
+            "traits": [],
             "image": {
                 "full": "TFT9_Zed.TFT_Set9.png",
                 "sprite": "tft-champion1.png",
@@ -581,6 +621,7 @@ const championData = {
             "id": "TFT9_Cassiopeia",
             "name": "Cassiopeia",
             "tier": 1,
+            "traits": [],
             "image": {
                 "full": "TFT9_Cassiopeia.TFT_Set9.png",
                 "sprite": "tft-champion1.png",
@@ -595,6 +636,7 @@ const championData = {
             "id": "TFT9_Vi",
             "name": "Vi",
             "tier": 2,
+            "traits": [],
             "image": {
                 "full": "TFT9_Vi.TFT_Set9.png",
                 "sprite": "tft-champion1.png",
@@ -609,6 +651,7 @@ const championData = {
             "id": "TFT9_Maokai",
             "name": "Maokai",
             "tier": 1,
+            "traits": [],
             "image": {
                 "full": "TFT9_Maokai.TFT_Set9.png",
                 "sprite": "tft-champion1.png",
@@ -623,6 +666,7 @@ const championData = {
             "id": "TFT9_Kayle",
             "name": "Kayle",
             "tier": 1,
+            "traits": [],
             "image": {
                 "full": "TFT9_Kayle.TFT_Set9.png",
                 "sprite": "tft-champion1.png",
@@ -637,6 +681,7 @@ const championData = {
             "id": "TFT9_Samira",
             "name": "Samira",
             "tier": 1,
+            "traits": [],
             "image": {
                 "full": "TFT9_Samira.TFT_Set9.png",
                 "sprite": "tft-champion1.png",
@@ -651,6 +696,7 @@ const championData = {
             "id": "TFT9_Urgot",
             "name": "Urgot",
             "tier": 4,
+            "traits": [],
             "image": {
                 "full": "TFT9_Urgot.TFT_Set9.png",
                 "sprite": "tft-champion1.png",
@@ -665,6 +711,7 @@ const championData = {
             "id": "TFT9_Aphelios",
             "name": "Aphelios",
             "tier": 4,
+            "traits": [],
             "image": {
                 "full": "TFT9_Aphelios.TFT_Set9.png",
                 "sprite": "tft-champion1.png",
@@ -679,6 +726,7 @@ const championData = {
             "id": "TFT9_Zeri",
             "name": "Zeri",
             "tier": 4,
+            "traits": [],
             "image": {
                 "full": "TFT9_Zeri.TFT_Set9.png",
                 "sprite": "tft-champion1.png",
@@ -693,6 +741,7 @@ const championData = {
             "id": "TFT9_Galio",
             "name": "Galio",
             "tier": 2,
+            "traits": [],
             "image": {
                 "full": "TFT9_Galio.TFT_Set9.png",
                 "sprite": "tft-champion1.png",
@@ -707,6 +756,7 @@ const championData = {
             "id": "TFT9_Kalista",
             "name": "Kalista",
             "tier": 3,
+            "traits": [],
             "image": {
                 "full": "TFT9_Kalista.TFT_Set9.png",
                 "sprite": "tft-champion1.png",
@@ -721,6 +771,7 @@ const championData = {
             "id": "TFT9_Nasus",
             "name": "Nasus",
             "tier": 4,
+            "traits": [],
             "image": {
                 "full": "TFT9_Nasus.TFT_Set9.png",
                 "sprite": "tft-champion1.png",
@@ -735,6 +786,7 @@ const championData = {
             "id": "TFT9_Malzahar",
             "name": "Malzahar",
             "tier": 1,
+            "traits": [],
             "image": {
                 "full": "TFT9_Malzahar.TFT_Set9.png",
                 "sprite": "tft-champion1.png",
@@ -749,6 +801,7 @@ const championData = {
             "id": "TFT9_Taliyah",
             "name": "Taliyah",
             "tier": 2,
+            "traits": [],
             "image": {
                 "full": "TFT9_Taliyah.TFT_Set9.png",
                 "sprite": "tft-champion1.png",
@@ -763,6 +816,7 @@ const championData = {
             "id": "TFT9_Ryze",
             "name": "Ryze",
             "tier": 5,
+            "traits": [],
             "image": {
                 "full": "TFT9_Ryze.TFT_Set9.png",
                 "sprite": "tft-champion1.png",
@@ -777,6 +831,7 @@ const championData = {
             "id": "TFT9_Sett",
             "name": "Sett",
             "tier": 2,
+            "traits": [],
             "image": {
                 "full": "TFT9_Sett.TFT_Set9.png",
                 "sprite": "tft-champion1.png",
@@ -791,6 +846,7 @@ const championData = {
             "id": "TFT9_Jhin",
             "name": "Jhin",
             "tier": 1,
+            "traits": [],
             "image": {
                 "full": "TFT9_Jhin.TFT_Set9.png",
                 "sprite": "tft-champion1.png",
@@ -805,6 +861,7 @@ const championData = {
             "id": "TFT9_Viego",
             "name": "Viego",
             "tier": 1,
+            "traits": [],
             "image": {
                 "full": "TFT9_Viego.TFT_Set9.png",
                 "sprite": "tft-champion1.png",
@@ -819,6 +876,7 @@ const championData = {
             "id": "TFT9_Kassadin",
             "name": "Kassadin",
             "tier": 2,
+            "traits": [],
             "image": {
                 "full": "TFT9_Kassadin.TFT_Set9.png",
                 "sprite": "tft-champion1.png",
@@ -833,6 +891,7 @@ const championData = {
             "id": "TFT9_RyzeDemacia",
             "name": "Ryze",
             "tier": 5,
+            "traits": [],
             "image": {
                 "full": "TFT9_Ryze.TFT_Set9.png",
                 "sprite": "tft-champion1.png",
@@ -847,6 +906,7 @@ const championData = {
             "id": "TFT9_RyzeBandleCity",
             "name": "Ryze",
             "tier": 5,
+            "traits": [],
             "image": {
                 "full": "TFT9_Ryze.TFT_Set9.png",
                 "sprite": "tft-champion2.png",
@@ -861,6 +921,7 @@ const championData = {
             "id": "TFT9_RyzeFreljord",
             "name": "Ryze",
             "tier": 5,
+            "traits": [],
             "image": {
                 "full": "TFT9_Ryze.TFT_Set9.png",
                 "sprite": "tft-champion2.png",
@@ -875,6 +936,7 @@ const championData = {
             "id": "TFT9_RyzeIonia",
             "name": "Ryze",
             "tier": 5,
+            "traits": [],
             "image": {
                 "full": "TFT9_Ryze.TFT_Set9.png",
                 "sprite": "tft-champion2.png",
@@ -889,6 +951,7 @@ const championData = {
             "id": "TFT9_RyzeNoxus",
             "name": "Ryze",
             "tier": 5,
+            "traits": [],
             "image": {
                 "full": "TFT9_Ryze.TFT_Set9.png",
                 "sprite": "tft-champion2.png",
@@ -903,6 +966,7 @@ const championData = {
             "id": "TFT9_RyzePiltover",
             "name": "Ryze",
             "tier": 5,
+            "traits": [],
             "image": {
                 "full": "TFT9_Ryze.TFT_Set9.png",
                 "sprite": "tft-champion2.png",
@@ -917,6 +981,7 @@ const championData = {
             "id": "TFT9_RyzeShadowIsles",
             "name": "Ryze",
             "tier": 5,
+            "traits": [],
             "image": {
                 "full": "TFT9_Ryze.TFT_Set9.png",
                 "sprite": "tft-champion2.png",
@@ -931,6 +996,7 @@ const championData = {
             "id": "TFT9_RyzeShurima",
             "name": "Ryze",
             "tier": 5,
+            "traits": [],
             "image": {
                 "full": "TFT9_Ryze.TFT_Set9.png",
                 "sprite": "tft-champion2.png",
@@ -945,6 +1011,7 @@ const championData = {
             "id": "TFT9_RyzeTargon",
             "name": "Ryze",
             "tier": 5,
+            "traits": [],
             "image": {
                 "full": "TFT9_Ryze.TFT_Set9.png",
                 "sprite": "tft-champion2.png",
@@ -959,6 +1026,7 @@ const championData = {
             "id": "TFT9_RyzeZaun",
             "name": "Ryze",
             "tier": 5,
+            "traits": [],
             "image": {
                 "full": "TFT9_Ryze.TFT_Set9.png",
                 "sprite": "tft-champion2.png",
@@ -974,6 +1042,7 @@ const championData = {
             "id": "TFT9_HeimerdingerTurret",
             "name": "Heimer's Turret",
             "tier": 5,
+            "traits": [],
             "image": {
                 "full": "",
                 "sprite": "",
@@ -988,6 +1057,7 @@ const championData = {
             "id": "TFT9_THex",
             "name": "Piltover T-Hex",
             "tier": 5,
+            "traits": [],
             "image": {
                 "full": "",
                 "sprite": "",

@@ -47,7 +47,7 @@ async function autoScrap(){
     }
 }
 
-autoScrap()
+//autoScrap()
 
 module.exports = latestPatch
 
