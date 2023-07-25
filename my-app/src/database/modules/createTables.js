@@ -8313,6 +8313,16 @@ p8_u30_tier: {
     
 });
 
+const analysisData = sq.define("analysisData", {
+  type: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    primaryKey: true,
+  },
+  data: {
+    type: DataTypes.TEXT
+  }
+})
 
 
 //generalMatchData.sync().then(() => {console.log("User Model synced");});
@@ -8320,6 +8330,7 @@ p8_u30_tier: {
 //unitMatchData.sync().then(() => {console.log("User Model synced");});
 //User.sync().then(() => {console.log("User Model synced");});
 //matchUsers.sync().then(() => {console.log("User Model synced");});
+analysisData.sync().then(() => {console.log("User Model synced");});
 
 //generalMatchData.hasMany(matchUsers, { foreignKey: 'match_ID' });
 //matchUsers.belongsTo(generalMatchData, { foreignKey: 'match_ID' });

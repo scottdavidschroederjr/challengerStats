@@ -15,6 +15,7 @@ async function challengerScrape(patchTime, division = 'challengers') {
     var players = ""
     if (division === 'grandmaster') {
         players = await requestGMs()
+        let dummyGMs = await updateGMs(players)
     } else {
         players = await requestChallengers()
     }
@@ -44,18 +45,6 @@ async function challengerScrape(patchTime, division = 'challengers') {
     
 }
 
-async function autoScrap(){
-    while (latestPatch > 0) {
-        challengerScrape(latestPatch, 'grandmaster')
-        await new Promise(resolve => setTimeout(resolve, 900000))
-        challengerScrape(latestPatch)
-        await new Promise(resolve => setTimeout(resolve, 900000))
-        await new Promise(resolve => setTimeout(resolve, 900000))
-        await new Promise(resolve => setTimeout(resolve, 900000))
-    }
-}
-
-autoScrap()
 
 module.exports = latestPatch
 

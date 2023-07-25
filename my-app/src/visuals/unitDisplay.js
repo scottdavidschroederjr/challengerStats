@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import axios from "axios"
 
-
-
 function UnitDisplay() {
     const [unitData, setUnitData] = React.useState(null)
     const [showRows, setShowRows] = useState(10);
@@ -85,8 +83,6 @@ function UnitDisplay() {
     };
   };
     
-
-
 
 
 
