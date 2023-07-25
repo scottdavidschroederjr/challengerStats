@@ -8330,11 +8330,11 @@ const analysisData = sq.define("analysisData", {
 //unitMatchData.sync().then(() => {console.log("User Model synced");});
 //User.sync().then(() => {console.log("User Model synced");});
 //matchUsers.sync().then(() => {console.log("User Model synced");});
-analysisData.sync().then(() => {console.log("User Model synced");});
+//analysisData.sync().then(() => {console.log("User Model synced");});
 
 //generalMatchData.hasMany(matchUsers, { foreignKey: 'match_ID' });
 //matchUsers.belongsTo(generalMatchData, { foreignKey: 'match_ID' });
-module.exports = {User, matchUsers, generalMatchData, traitMatchData, unitMatchData}
+module.exports = {User, matchUsers, generalMatchData, traitMatchData, unitMatchData, analysisData}
 
 //var puuidAdd = User.create({
   //puuid: "4y7U0S8KJEdONYlueYzI_BHK22nE93gPmA783axCNcNOzC0M0ldpdcRs8ON-OAkMUA__t9QQNhRrLA",

@@ -1,18 +1,10 @@
-Last Readme Update: 7/16/23
+Last Readme Update: 7/25/23
 
-Forked this from the duoStats project as I think this is a more interesting road to go down with this project and creating a new repo will allow me to be a bit more distructive with my changes which will keep the new code cleaner. The tentative plan is to have a barebones version of the site up and running for the patch that comes out on 7/19/23 (just basic data on an Amazon hosted site but that may end up being a little too ambious.
+The goal of this project is provide a customizable one site solution for all the additional reference data a high level player needs to play competitive TFT at the highest level.
 
-Tenative timeline
-(7/16/23) - switch to new repo, clean up old DuoStats files and collect test data to use to prep for site
-(7/17/23) - get SQL joins/queries functioning properly
-(7/18/23) - setup Amazon site and push project to there
-(7/19/23) - launch site and troubleshoot bugs
-
+Current TODOs:
+- switch data display to happen from one central data source being returned by an axios request
+- send current count data to the analysisData table and set this to automatically run in the constantFunctions area
+- switch data request to going to the static data stored in the analysisData table
 
 
-TODO for 7/16/23
-- add rankedTier/rankedDivision/latestUpdate to users table
-- get joins with queries working and figure out fkey situation
-- start setting up basics of site display
-
-TODO for 7/17/23
