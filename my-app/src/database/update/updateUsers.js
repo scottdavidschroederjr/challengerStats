@@ -25,7 +25,7 @@ function updateUsers (requestInput, data) {
           player8: data["metadata"]["participants"][7]
           }
         })
-        console.log("User data added!")
+        //console.log("User data added!")
       } catch {
         console.log("Error adding match users data with updateUsers.js")
       }

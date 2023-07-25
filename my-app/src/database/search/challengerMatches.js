@@ -12,7 +12,11 @@ async function challengerMatches (setNumber = "TFTSet9"){
     //gets list of challenger's puuids
     const  players = await User.findAll({
         where: {
-            rank: 'challenger'
+            [Op.or]: [
+                {rank: 'challenger'},
+                {rank: 'grandmaster'},
+            ]
+            
         },
         attributes: [
             'puuid',
@@ -54,7 +58,6 @@ async function challengerMatches (setNumber = "TFTSet9"){
         try {challengerMatches.push(matches[0]['dataValues']['matchID'])} catch {}
         
     }
-    console.log(challengerMatches)
     //gets duplicate matches out of list
     function removeDuplicates(array) {
         return [...new Set(array)];

@@ -4319,5 +4319,3 @@ const tftAugmentData = {
         }
     }
 }
-
-console.log(tftAugementData)

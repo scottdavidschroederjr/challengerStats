@@ -5,6 +5,7 @@ const {matchList} = require("../matchList.js")
 const {matchInfo} = require("../matchInfo")
 const {updateChallengers} = require("../../database/update/updateChallengers.js")
 const {requestGMs} = require("../playersTier/grandmasterPlayers.js")
+const {updateGMs} = require("../../database/update/updateGMs.js")
 
 //time of latest patch in epoch time
 //1689886800 b patch
@@ -17,23 +18,30 @@ async function challengerScrape(patchTime, division = 'challengers') {
     } else {
         players = await requestChallengers()
     }
-    console.log(players)
+
 
     try {
         for (let x = 0; x < players.length; x++){
-            console.log(players[x]["summonerName"])
             let puuid = await puuidRequest(players[x]["summonerName"])
             let matches = await matchList(puuid, patchTime)
             let info = await matchInfo(matches)
-            console.log("Cycle " + x + " complete.")
+            console.log("Cycle " + x + " complete: " + (players[x]["summonerName"]))
 
         }
     } catch {
         console.log("Error scraping Challenger data. Check API status.")
         return
     }
-    let dummyChallenger = await updateChallengers(players)
-    return console.log("Scrape complete!")
+
+    if (division === 'grandmaster'){
+        let dummyGMs = await updateGMs(players)
+        return console.log("GM Scrape complete!")
+
+    } else {
+        let dummyChallenger = await updateChallengers(players)
+        return console.log("Challenger Scrape complete!")
+    }
+    
 }
 
 async function autoScrap(){
@@ -47,7 +55,7 @@ async function autoScrap(){
     }
 }
 
-//autoScrap()
+autoScrap()
 
 module.exports = latestPatch
 
