@@ -1,4 +1,5 @@
 const {challengerScrape} = require("../riotRequests/combos/challengerScrape.js")
+var latestPatch = 1689886800
 
 async function autoScrap(){
     while (latestPatch > 0) {

@@ -46,5 +46,5 @@ async function challengerScrape(patchTime, division = 'challengers') {
 }
 
 
-module.exports = latestPatch
+module.exports = { challengerScrape, latestPatch }
 
