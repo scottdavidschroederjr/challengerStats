@@ -1,14 +1,23 @@
 const {matchDataCollection} = require("./lowerFunctions/matchDataCollection.js")
 const {unitCountData} = require("./lowerFunctions/unitAppearenceData.js")
 const {analysisData} = require("../../database/modules/createTables.js")
+const {placementByStars} = require("../analysis/lowerFunctions/placementByStars.js")
 
 async function updateAnalysisTable() {
     var data = await matchDataCollection()
 
+    //updates overall champion appears count
     var unitCount = await unitCountData(data[0])
     var jsonUnitCount = JSON.stringify(unitCount)
     await updateOrCreate(analysisData, {type: 'unitCount'}, {type: 'unitCount'})
     await updateOrCreate(analysisData, {type: 'unitCount'}, {data: jsonUnitCount})
+
+    //updates champion by star count
+    var starCount = await placementByStars(data[0])
+    var jsonStarCount = JSON.stringify(starCount)
+    await updateOrCreate(analysisData, {type: 'starCount'}, {type: 'starCount'})
+    await updateOrCreate(analysisData, {type: 'starCount'}, {data: jsonUnitCount})
+
        
 }
 

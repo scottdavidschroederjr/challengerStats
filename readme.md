@@ -7,4 +7,8 @@ Current TODOs:
 - send current count data to the analysisData table and set this to automatically run in the constantFunctions area
 - switch data request to going to the static data stored in the analysisData table
 
-
+guide to unitData export
+// 0 - unitName
+// 1 - starLevel
+// 2,3,4 - item1, item2, item3
+// 5 - placement
