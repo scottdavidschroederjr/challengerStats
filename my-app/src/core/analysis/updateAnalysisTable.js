@@ -1,6 +1,6 @@
 const {matchDataCollection} = require("./lowerFunctions/matchDataCollection.js")
 const {unitCountData} = require("./lowerFunctions/unitAppearenceData.js")
-const { analysisData} = require("../../database/modules/createTables.js")
+const {analysisData} = require("../../database/modules/createTables.js")
 
 async function updateAnalysisTable() {
     var data = await matchDataCollection()
@@ -9,9 +9,7 @@ async function updateAnalysisTable() {
     var jsonUnitCount = JSON.stringify(unitCount)
     await updateOrCreate(analysisData, {type: 'unitCount'}, {type: 'unitCount'})
     await updateOrCreate(analysisData, {type: 'unitCount'}, {data: jsonUnitCount})
-    
-
-    
+       
 }
 
 async function updateOrCreate (model, where, newItem) {
@@ -27,5 +25,4 @@ async function updateOrCreate (model, where, newItem) {
     return {item, created: false};
 }
 
-
-updateAnalysisTable()
+module.exports = {updateAnalysisTable}
