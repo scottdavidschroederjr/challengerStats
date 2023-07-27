@@ -1,3 +1,5 @@
+
+
 async function unitCountData(unitData) {  
     async function countOccurrences(nestedArray) {
         const counts = {};

@@ -80,9 +80,12 @@ async function matchDataCollection (setNumber = "TFTSet9"){
         
         const traitDataRequest =  await traitMatchData.findAll({
             where: {matchID: challengerMatches[u]}}) 
+        
+        console.log("Game #" + u)
 
         //getting stats out from matches
-        for (let v = 0; v < 7; v++){
+        for (let v = 0; v < 8; v++){
+            
 
             const placementDataRequest =  await generalMatchData.findAll({
                 where: {matchID: challengerMatches[u]}})
@@ -137,10 +140,10 @@ async function matchDataCollection (setNumber = "TFTSet9"){
             }
         }
     }
+    
     let results = [units, traits]
+    console.log(results)
     return results
 }
-
-matchDataCollection()
 
 module.exports = {matchDataCollection}
