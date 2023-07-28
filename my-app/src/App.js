@@ -1,9 +1,10 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import UnitStats from './visuals/unitDisplay.js'
-import CoreDisplay from './visuals/coreDisplay.js'
 import axios from "axios"
+
 import AugmentData from './visuals/static/augmentData';
+import UnitStats from './visuals/unitDisplay.js'
+import TomeDisplay from './visuals/static/tomeDisplay';
 
 
 
@@ -22,8 +23,8 @@ export function App() {
   else{
     return (
       <div>
-        <CoreDisplay/>
         <AugmentData/>
+        <TomeDisplay/>
         <br></br>
         <UnitStats aboveUnitData={dataPackage[0]}/>
       </div>

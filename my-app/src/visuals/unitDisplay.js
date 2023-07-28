@@ -24,8 +24,8 @@ function UnitDisplay({aboveUnitData}) {
       }
 
   return (
-        <div className='component'>
-          Champion Appearance
+        <div className='component' id='championAppearanceBox'>
+          <div className='componentHeader'>Champion Appearance</div>
           <br></br>
           <label>
             Rows:
