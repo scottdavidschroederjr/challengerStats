@@ -13,7 +13,6 @@ app.use(bodyParser.json()); // Use body-parser middleware
 // handles incoming POST requests
 app.post('/api/data', async (req, res) => {
   await stats().then(data => res.json(data))
-  //await UnitStats().then(data => res.json(data));
   ;
 });
 

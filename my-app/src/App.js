@@ -1,38 +1,36 @@
 import './App.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import UnitStats from './visuals/unitDisplay.js'
 import CoreDisplay from './visuals/coreDisplay.js'
 import axios from "axios"
 
-var data = []
-const config = {headers: {'Content-Type': 'application/json'}}
-async function getData() {await axios.post('http://localhost:3002/api/data', config).then(response => data = response['data'])}
 
-getData()
 
 export function App() {
-  
-  if (data === []) {
-    return  (
-      <div>
-        Loading data please wait!
-      </div>
-    )
-  }
+  const [loadingStatus, setloadingStatus] = useState(0);
+  var data = []
+  const config = {headers: {'Content-Type': 'application/json'}}  
+  async function getData() {await axios.post('http://localhost:3002/api/data', config).then(response => data = response['data'])}
 
-  else {
-    console.log(data)
-    
+  getData()
+  console.log(loadingStatus)
+  console.log(data)
+  console.log(data.length)
 
+  useEffect(() => {coreDisplay()}, [])
+
+  function coreDisplay(){
     return (
       <div>
         <CoreDisplay/>
-        <UnitStats aboveUnitData={data}/>
+        <UnitStats aboveUnitData={data[0]}/>
       </div>
-  );
+  )
+  }
+  
+  return (<div>wait one moment!</div>)
   }
 
-}
 
 
 
