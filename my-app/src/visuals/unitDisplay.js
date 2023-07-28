@@ -24,10 +24,11 @@ function UnitDisplay({aboveUnitData}) {
       }
 
   return (
-        <div>
-          <h1>Champion Appearance</h1>
+        <div className='component'>
+          Champion Appearance
+          <br></br>
           <label>
-            Show Rows:
+            Rows:
             <input
               type="number"
               min="1"
@@ -41,8 +42,8 @@ function UnitDisplay({aboveUnitData}) {
             <thead>
               <tr>
                 <th onClick={() => handleColumnSort(0)}>Unit</th>
-                <th onClick={() => handleColumnSort(1)}>Occurrences</th>
-                <th onClick={() => handleColumnSort(2)}>Placement</th>
+                <th onClick={() => handleColumnSort(1)}>Count</th>
+                <th onClick={() => handleColumnSort(2)}>Place</th>
               </tr>
             </thead>
             <tbody>

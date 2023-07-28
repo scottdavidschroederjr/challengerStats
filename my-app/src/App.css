@@ -1,18 +1,23 @@
 table {
-    width: 40%;
+    width: 100px;
     border-collapse: collapse;
   }
   
-  th, td {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-  }
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  border-left:  1px solid #ddd;
+  border-right:  1px solid #ddd;
+}
   
-  thead {
-    background-color: #383838;
-    color: rgb(255, 255, 255);
-    font-size: 16pt;
-    font-weight: 10;
-  }
+thead {
+  background-color: #383838;
+  color: rgb(255, 255, 255);
+  font-size: 14pt;
+  font-weight: 10;
+}
+.component {
+  margin: 10px;
+}
   
