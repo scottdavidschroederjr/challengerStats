@@ -16,7 +16,7 @@ async function updateAnalysisTable() {
     var starCount = await placementByStars(data[0])
     var jsonStarCount = JSON.stringify(starCount)
     await updateOrCreate(analysisData, {type: 'starCount'}, {type: 'starCount'})
-    await updateOrCreate(analysisData, {type: 'starCount'}, {data: jsonUnitCount})
+    await updateOrCreate(analysisData, {type: 'starCount'}, {data: jsonStarCount})
 
        
 }

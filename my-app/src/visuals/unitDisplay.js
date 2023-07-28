@@ -1,52 +1,29 @@
 import React, { useState } from 'react';
-import axios from "axios"
 
-function UnitDisplay() {
-    const [unitData, setUnitData] = React.useState(null)
-    const [showRows, setShowRows] = useState(10);
-    const [sortColumn, setSortColumn] = useState(null);
-    const [sortOrder, setSortOrder] = useState('asc');
-    const config = {headers: {'Content-Type': 'application/json'}}
-  
-    const handleShowRowsChange = (event) => {
-      setShowRows(parseInt(event.target.value));
-    };
-  
-    const handleColumnSort = (columnIndex) => {
-      if (columnIndex === sortColumn) {
-        setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
-      } else {
-        setSortColumn(columnIndex);
-        setSortOrder('asc');
-      }
-    };
-  
+function UnitDisplay({aboveUnitData}) {
+  const [showRows, setShowRows] = useState(10);
+  const [sortColumn, setSortColumn] = useState(null);
+  const [sortOrder, setSortOrder] = useState('asc');
 
-
-   async function getData() {
-    await axios.post('http://localhost:3002/api/data', config).then(response => setUnitData(response['data']))}
-
-
-    
-  if (unitData === null){
-        getData()
-        
-
-        return(
-            <div>
-              Loading data! One moment
-            </div>)
+  const handleShowRowsChange = (event) => {setShowRows(parseInt(event.target.value))}
+  const handleColumnSort = (columnIndex) => {
+    if (columnIndex === sortColumn) {
+      setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')
+    } else {
+      setSortColumn(columnIndex)
+      setSortOrder('asc')
     }
-    else {
-      const sortedData = [...unitData];
-      if (sortColumn !== null) {
-        sortedData.sort((a, b) => {
-          const columnA = a[sortColumn];
+  }
+  const sortedData = [...aboveUnitData];
+  if (sortColumn !== null) {
+      sortedData.sort((a, b) => {
+        const columnA = a[sortColumn];
           const columnB = b[sortColumn];
           return sortOrder === 'asc' ? columnA - columnB : columnB - columnA;
         });
       }
-      return (
+
+  return (
         <div>
           <h1>Champion Appearance</h1>
           <label>
@@ -54,7 +31,7 @@ function UnitDisplay() {
             <input
               type="number"
               min="1"
-              max={unitData.length}
+              max={aboveUnitData.length}
               value={showRows}
               onChange={handleShowRowsChange}
             />
@@ -80,8 +57,9 @@ function UnitDisplay() {
           </table>
         </div>
       );
-    };
+    
   };
+  
     
 
 
