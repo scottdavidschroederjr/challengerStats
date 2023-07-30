@@ -5,6 +5,7 @@ import axios from "axios"
 import AugmentData from './visuals/static/augmentData';
 import UnitStats from './visuals/unitDisplay.js'
 import TomeDisplay from './visuals/static/tomeDisplay';
+import PortalDisplay from './visuals/static/portalDisplay';
 
 
 
@@ -25,6 +26,7 @@ export function App() {
       <div>
         <AugmentData/>
         <TomeDisplay/>
+        <PortalDisplay/>
         <br></br>
         <UnitStats aboveUnitData={dataPackage[0]}/>
       </div>
