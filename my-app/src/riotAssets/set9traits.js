@@ -1,5 +1,5 @@
-set9traits = {
-    "Demacia": ["Kayle", "Poppy", "Galio", "Garen", "Sona", "Jarvan", "Lux"],
+const set9traits = {
+    "Demacia": ["Kayle", "Poppy", "Galio", "Garen", "Sona", "Jarvan IV", "Lux"],
     "Freljord": ['Ashe','Lissandra','Sejuani'],
     "Ionia": ['Irelia', 'Jhin', 'Sett', 'Zed', 'Karma', 'Shen','Yasuo','Ahri'],
     'Noxus': ['Cassiopeia', 'Samira', 'Kled', 'Swain', 'Darius', 'Katarina', 'Sion'],
@@ -7,12 +7,12 @@ set9traits = {
     'Shadow Isles': ['Maokai', 'Veigo', 'Kalista', 'Gwen', 'Senna'],
     'Shurima': ['Cassiopeia', 'Renekton', 'Taliyah', 'Akshan', 'Azir', 'Nasus', 'Ksante'],
     'Targon': ['Soraka', 'Taric', 'Aphelios'],
-    'Void': ['Chogath', 'Malzahar', 'Kassadin', 'Reksai', 'Velkoz', 'Kaisa', 'Belveth'],
+    'Void': ['Chogath', 'Malzahar', 'Kassadin', 'Reksai', 'Velkoz', "Kai'Sa", 'Belveth'],
     'Yordle': ['Poppy', 'Tristana', 'Kled', 'Teemo', 'Heimerdinger'],
     'Zaun': ['Jinx', 'Warwick', 'Ekko', 'Urgot', 'Zeri'],
     'Bastion': ['Maokai', 'Poppy', 'Kassadin', 'Taric', 'Shen', 'Ksante'],
     'Bruiser': ['Chogath', 'Renekton', 'Vi', 'Reksai', 'Sejuani', 'Sion'],
-    'Challenger': ['Irelia', 'Samira', 'Warwick', 'Kalista', 'Kaisa', 'Yasuo'],
+    'Challenger': ['Irelia', 'Samira', 'Warwick', 'Kalista', "Kai'Sa", 'Yasuo'],
     'Deadeye': ['Jhin', 'Ashe', 'Akshan', 'Aphelios', 'Urgot'],
     'Gunner': ['Tristana', 'Jinx', 'Jayce', 'Zeri', 'Senna'],
     'Invoker': ['Cassiopeia', 'Galio', 'Soraka', 'Karma', 'Lissandra', 'Shen'],
@@ -21,7 +21,7 @@ set9traits = {
     'Rogue': ['Veigo', 'Zed', 'Ekko', 'Katarina'],
     'Slayer': ['Kayle', 'Kled', 'Zed', 'Gwen', 'Aatrox'],
     'Sorcerer': ['Malzahar', 'Orianna', 'Swain', 'Taric', 'Velkoz', 'Lux', 'Ahri'],
-    'Strategist': ['Swain', 'Teemo', 'Azir', 'Jarvan'],
-
+    'Strategist': ['Swain', 'Teemo', 'Azir', 'Jarvan IV'],
 }
 
+module.exports = set9traits
