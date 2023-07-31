@@ -23,11 +23,10 @@ export function App() {
     )}
   else{
     return (
-      <div>
+      <div id='bigBox'>
         <AugmentData/>
         <TomeDisplay/>
         <PortalDisplay/>
-        <br></br>
         <UnitStats aboveUnitData={dataPackage[0]}/>
       </div>
     )

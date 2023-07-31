@@ -25,6 +25,7 @@ function UnitDisplay({aboveUnitData}) {
 
   return (
         <div className='component' id='championAppearanceBox'>
+          <div>
           <div className='componentHeader'>Champion Appearance</div>
           <br></br>
           <label>
@@ -56,6 +57,7 @@ function UnitDisplay({aboveUnitData}) {
               ))}
             </tbody>
           </table>
+        </div>
         </div>
       );
     
