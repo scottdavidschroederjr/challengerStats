@@ -6,6 +6,7 @@ import AugmentData from './visuals/static/augmentData';
 import UnitStats from './visuals/unitDisplay.js'
 import TomeDisplay from './visuals/static/tomeDisplay';
 import PortalDisplay from './visuals/static/portalDisplay';
+import StarBasedWR from './visuals/starbasedWR';
 
 
 
@@ -28,6 +29,7 @@ export function App() {
         <TomeDisplay/>
         <PortalDisplay/>
         <UnitStats aboveUnitData={dataPackage[0]}/>
+        <StarBasedWR aboveUnitData={dataPackage[1]}/>
       </div>
     )
   }
