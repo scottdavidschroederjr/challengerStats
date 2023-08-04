@@ -30,6 +30,7 @@ export function App() {
     getData();
     return <div>wait one moment!</div>;
   } else {
+    console.log(dataPackage[2])
     return (
       <div>
         <div>
