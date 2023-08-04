@@ -10,7 +10,10 @@ async function stats(){
     const starData = await analysisData.findAll({where: {type: 'starCount'}})
     var starCountData = JSON.parse(starData[0]['dataValues']['data'])
 
-    var allData = [unitCountData, starCountData]
+    const emblemData = await analysisData.findAll({where: {type: 'emblemPlacement'}})
+    var emblemCountData = JSON.parse(starData[0]['dataValues']['data'])
+
+    var allData = [unitCountData, starCountData, emblemCountData]
     return allData
 }
 

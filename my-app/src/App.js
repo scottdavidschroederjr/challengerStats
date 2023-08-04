@@ -7,6 +7,7 @@ import UnitStats from './visuals/unitDisplay.js'
 import TomeDisplay from './visuals/static/tomeDisplay';
 import PortalDisplay from './visuals/static/portalDisplay';
 import StarBasedWR from './visuals/starbasedWR';
+import EmblemWR from './visuals/emblemWR'
 
 export function App() {
   const [dataPackage, setdataPackage] = useState(0);
@@ -15,6 +16,7 @@ export function App() {
   const [showPortalDisplay, setShowPortalDisplay] = useState(true);
   const [showUnitStats, setShowUnitStats] = useState(true);
   const [showStarBasedWR, setShowStarBasedWR] = useState(true);
+  const [showEmblemWR, setShowEmblemWR] = useState(true)
 
   const config = { headers: { "Content-Type": "application/json" } };
 
@@ -84,6 +86,18 @@ export function App() {
             Show Star Based WR
           </label>
         </div>
+
+        <div>
+        <label>
+          <input
+            type="checkbox"
+            checked={showEmblemWR}
+            onChange={() => setShowEmblemWR(!showEmblemWR)}
+          />
+          Show EmblemWR
+        </label>
+        </div>
+
         <div id="bigBox">
         {/* Conditional rendering based on the state variables */}
         {showAugmentData && <AugmentData />}
@@ -91,6 +105,7 @@ export function App() {
         {showPortalDisplay && <PortalDisplay />}
         {showUnitStats && <UnitStats aboveUnitData={dataPackage[0]} />}
         {showStarBasedWR && <StarBasedWR aboveUnitData={dataPackage[1]} />}
+        {showEmblemWR && <EmblemWR aboveEmblemData={dataPackage[2]}/>}
         </div>
       </div>
     );
