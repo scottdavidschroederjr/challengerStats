@@ -1,31 +1,29 @@
 import React, { useState } from 'react';
 const set9traits = require('../riotAssets/set9traits.js')
-
-
-// Assuming set9traits has been imported correctly
+const set9byStar = require("../riotAssets/set9unitsBystar.js")
 
 function UnitDisplay({ aboveUnitData }) {
-  const [showRows, setShowRows] = useState(10);
+  const [showRows, setShowRows] = useState(15);
   const [sortColumn, setSortColumn] = useState(null);
   const [sortOrder, setSortOrder] = useState('asc');
   const [selectedFilters, setSelectedFilters] = useState([]);
   const [showFilterPopup, setShowFilterPopup] = useState(false);
 
-  const handleShowRowsChange = (event) => {
+  function handleShowRowsChange(event) {
     setShowRows(parseInt(event.target.value));
-  };
-
-  const handleColumnSort = (columnIndex) => {
+  }
+  
+  function handleColumnSort(columnIndex) {
     if (columnIndex === sortColumn) {
       setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
     } else {
       setSortColumn(columnIndex);
       setSortOrder('asc');
     }
-  };
+  }
+  
 
   const handleFilterChange = (filter) => {
-    // Toggle the filter on/off
     setSelectedFilters((prevFilters) =>
       prevFilters.includes(filter)
         ? prevFilters.filter((item) => item !== filter)
@@ -39,6 +37,7 @@ function UnitDisplay({ aboveUnitData }) {
     } else {
       return aboveUnitData.filter((data) => {
         const selectedFilterUnits = selectedFilters.flatMap(filter => set9traits[filter]);
+        console.log(selectedFilterUnits)
         return selectedFilterUnits.includes(data[0]);
       });
     }
@@ -55,7 +54,7 @@ function UnitDisplay({ aboveUnitData }) {
   }
 
   const filteredOptions = Object.keys(set9traits).sort();
-  const displayedOptions = filteredOptions.slice(0, 5);
+  const displayedOptions = filteredOptions.slice(0, 20);
 
   return (
     <div className='component' id='championAppearanceBox'>
