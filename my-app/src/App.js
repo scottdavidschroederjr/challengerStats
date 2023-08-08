@@ -8,6 +8,7 @@ import TomeDisplay from './visuals/static/tomeDisplay';
 import PortalDisplay from './visuals/static/portalDisplay';
 import StarBasedWR from './visuals/starbasedWR';
 import EmblemWR from './visuals/emblemWR'
+import LeDuck from './visuals/static/LeDuckSite';
 
 export function App() {
   const [dataPackage, setdataPackage] = useState(0);
@@ -17,6 +18,7 @@ export function App() {
   const [showUnitStats, setShowUnitStats] = useState(true);
   const [showStarBasedWR, setShowStarBasedWR] = useState(true);
   const [showEmblemWR, setShowEmblemWR] = useState(true)
+  const [showLeDuck, setShowLeDuck] = useState(true)
 
   const config = { headers: { "Content-Type": "application/json" } };
 
@@ -35,6 +37,7 @@ export function App() {
         <div>
           <label><input type="checkbox" checked={showAugmentData} onChange={() => setShowAugmentData(!showAugmentData)}/>Augment Data</label>
           <label><input type="checkbox" checked={showTomeDisplay} onChange={() => setShowTomeDisplay(!showTomeDisplay)}/>Tome</label>
+          <label><input type="checkbox" checked={showLeDuck} onChange={() => setShowLeDuck(!showLeDuck)}/>LeDuck Sheet</label>
           <label><input type="checkbox" checked={showPortalDisplay} onChange={() => setShowPortalDisplay(!showPortalDisplay)}/>Portal/Ryze Info</label>
           <label><input type="checkbox" checked={showUnitStats} onChange={() => setShowUnitStats(!showUnitStats)}/>Units</label>
           <label><input type="checkbox" checked={showStarBasedWR} onChange={() => setShowStarBasedWR(!showStarBasedWR)}/>Starred Units</label>
@@ -45,6 +48,7 @@ export function App() {
         {/* Conditional rendering based on the state variables */}
         {showAugmentData && <AugmentData />}
         {showTomeDisplay && <TomeDisplay />}
+        {showLeDuck && <LeDuck />}
         {showPortalDisplay && <PortalDisplay />}
         {showUnitStats && <UnitStats aboveUnitData={dataPackage[0]} />}
         {showStarBasedWR && <StarBasedWR aboveUnitData={dataPackage[1]} />}
