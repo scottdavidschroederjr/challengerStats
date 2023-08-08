@@ -30,76 +30,18 @@ export function App() {
     getData();
     return <div>wait one moment!</div>;
   } else {
-    console.log(dataPackage[2])
     return (
-      <div>
+      <div className='ViewToggle'>
         <div>
-          <label>
-            <input
-              type="checkbox"
-              checked={showAugmentData}
-              onChange={() => setShowAugmentData(!showAugmentData)}
-            />
-            Show Augment Data
-          </label>
-        </div>
+          <label><input type="checkbox" checked={showAugmentData} onChange={() => setShowAugmentData(!showAugmentData)}/>Augment Data</label>
+          <label><input type="checkbox" checked={showTomeDisplay} onChange={() => setShowTomeDisplay(!showTomeDisplay)}/>Tome</label>
+          <label><input type="checkbox" checked={showPortalDisplay} onChange={() => setShowPortalDisplay(!showPortalDisplay)}/>Portal/Ryze Info</label>
+          <label><input type="checkbox" checked={showUnitStats} onChange={() => setShowUnitStats(!showUnitStats)}/>Units</label>
+          <label><input type="checkbox" checked={showStarBasedWR} onChange={() => setShowStarBasedWR(!showStarBasedWR)}/>Starred Units</label>
+          <label><input type="checkbox" checked={showEmblemWR}onChange={() => setShowEmblemWR(!showEmblemWR)}/>Emblem</label>
+      </div>
 
-        <div>
-          <label>
-            <input
-              type="checkbox"
-              checked={showTomeDisplay}
-              onChange={() => setShowTomeDisplay(!showTomeDisplay)}
-            />
-            Show Tome Display
-          </label>
-        </div>
-
-        <div>
-          <label>
-            <input
-              type="checkbox"
-              checked={showPortalDisplay}
-              onChange={() => setShowPortalDisplay(!showPortalDisplay)}
-            />
-            Show Portal Display
-          </label>
-        </div>
-
-        <div>
-          <label>
-            <input
-              type="checkbox"
-              checked={showUnitStats}
-              onChange={() => setShowUnitStats(!showUnitStats)}
-            />
-            Show Unit Stats
-          </label>
-        </div>
-
-        <div>
-          <label>
-            <input
-              type="checkbox"
-              checked={showStarBasedWR}
-              onChange={() => setShowStarBasedWR(!showStarBasedWR)}
-            />
-            Show Star Based WR
-          </label>
-        </div>
-
-        <div>
-        <label>
-          <input
-            type="checkbox"
-            checked={showEmblemWR}
-            onChange={() => setShowEmblemWR(!showEmblemWR)}
-          />
-          Show EmblemWR
-        </label>
-        </div>
-
-        <div id="bigBox">
+      <div id="bigBox">
         {/* Conditional rendering based on the state variables */}
         {showAugmentData && <AugmentData />}
         {showTomeDisplay && <TomeDisplay />}
@@ -107,8 +49,8 @@ export function App() {
         {showUnitStats && <UnitStats aboveUnitData={dataPackage[0]} />}
         {showStarBasedWR && <StarBasedWR aboveUnitData={dataPackage[1]} />}
         {showEmblemWR && <EmblemWR aboveEmblemData={dataPackage[2]}/>}
-        </div>
       </div>
+    </div>
     );
   }
 }
