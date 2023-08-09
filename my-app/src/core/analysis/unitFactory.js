@@ -10,11 +10,19 @@ function unitFactory(unitData){
         }
     }
 
-    //get a list of all unique unit values from input data
+    //get a list of all unique unit values from input data or pull from riot object
+    var uniqueUnits = []
 
     //loop over each value in that array, get the proper data and add them to Units
-    Units.push(new Unit("Gwen", "4", ["Shadow Isles, Slayer"], {}, {}))
+    for (x = 0; x < uniqueUnits.length; x++){
+        let name = ""
+        let cost = ""
+        let traits = ""
+        let itemStats = ""
+        let starStats = ""
 
+        Units.push(new Unit(name, cost, traits, itemStats, starStats))
+    }
     
     console.log(Units)
     return Units;
@@ -69,10 +77,3 @@ var exampleUnit = {
         },
     }
 }
-
-
-
-
-
-
-console.log(Units[0])
