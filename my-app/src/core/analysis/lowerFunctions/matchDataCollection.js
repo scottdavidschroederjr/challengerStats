@@ -1,9 +1,8 @@
 const { User, matchUsers, generalMatchData, unitMatchData, traitMatchData} = require("../../../database/modules/createTables.js")
 const { Op } = require("sequelize")
-const latestPatch = require("../../../riotRequests/combos/challengerScrape.js")
 const championData = require("../../../riotAssets/tft-champion.js")
 
-async function matchDataCollection (setNumber = "TFTSet9"){
+async function matchDataCollection (setNumber = "TFTSet9", latestPatch){
     let challengerMatches = []
     let units = []
     let traits = []
@@ -49,7 +48,7 @@ async function matchDataCollection (setNumber = "TFTSet9"){
                     {"tft_set_core_name": setNumber,
                     "queue_id": 1100,
                     "game_datetime": {
-                        [Op.gte]: (latestPatch['latestPatch'] * 1000)
+                        [Op.gte]: (latestPatch * 1000)
                     }
                     },
             }]         
@@ -69,9 +68,6 @@ async function matchDataCollection (setNumber = "TFTSet9"){
     
 
     challengerMatches = removeDuplicates(challengerMatches)
-    
-    console.log(challengerMatches.length)
-   
     
     //gets stats from matches
     for (let u = 0; u < challengerMatches.length; u++){

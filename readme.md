@@ -3,7 +3,7 @@ Last Readme Update: 7/25/23
 The goal of this project is provide a customizable one site solution for all the additional reference data a high level player needs to play competitive TFT at the highest level.
 
 Current TODOs:
-- update having two places where patch epoch value has to be change just to one
+- add basic augment stats to project now that "ban" has been lifted
 
 
 guide to unitData export
@@ -16,3 +16,4 @@ Past TODOs
 - switch data display to happen from one central data source being returned by an axios request
 - send current count data to the analysisData table and set this to automatically run in the constantFunctions area
 - switch data request to going to the static data stored in the analysisData table
+- update having two places where patch epoch value has to be change just to one (8/10/23)

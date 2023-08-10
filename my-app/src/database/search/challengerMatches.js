@@ -1,6 +1,8 @@
+//TODO double check but I think this file is not used anymore
+
 const { User, matchUsers, generalMatchData, unitMatchData} = require("../modules/createTables.js")
 const { Op } = require("sequelize")
-const latestPatch = require("../../riotRequests/combos/challengerScrape.js")
+//const latestPatch = require("../../riotRequests/combos/challengerScrape.js")
 const championData = require("../../riotAssets/tft-champion.js")
 
 async function challengerMatches (setNumber = "TFTSet9"){
@@ -116,6 +118,4 @@ async function challengerMatches (setNumber = "TFTSet9"){
         return units
     }
 
-//challengerMatches()
-
-module.exports = {challengerMatches}
+//module.exports = {challengerMatches}

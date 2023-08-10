@@ -37,7 +37,6 @@ function UnitDisplay({ aboveUnitData }) {
     } else {
       return aboveUnitData.filter((data) => {
         const selectedFilterUnits = selectedFilters.flatMap(filter => set9traits[filter]);
-        console.log(selectedFilterUnits)
         return selectedFilterUnits.includes(data[0]);
       });
     }

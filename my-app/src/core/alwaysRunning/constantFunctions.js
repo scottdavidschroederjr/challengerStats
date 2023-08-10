@@ -1,10 +1,11 @@
 const {challengerScrape} = require("../../riotRequests/combos/challengerScrape.js")
 const {updateAnalysisTable} = require("../analysis/updateAnalysisTable.js")
-var latestPatch = 1690977600
+const latestPatch = 1690977600
+const tftSetNumber = "TFTSet9"
 
 async function autoScrap(){
     while (latestPatch > 0) {
-        await updateAnalysisTable()
+        await updateAnalysisTable(tftSetNumber, latestPatch)
         await challengerScrape(latestPatch)
         await challengerScrape(latestPatch, 'grandmaster')
         await new Promise(resolve => setTimeout(resolve, 900000))
@@ -14,3 +15,5 @@ async function autoScrap(){
 }
 
 autoScrap()
+
+exports.latestPatch = latestPatch

@@ -1,5 +1,3 @@
-const {UnitStats} = require("./unitStats.js")
-const {challengerMatches} = require("../search/challengerMatches.js")
 const { analysisData } = require("../modules/createTables.js")
 
 async function stats(){

@@ -7,10 +7,6 @@ const {updateChallengers} = require("../../database/update/updateChallengers.js"
 const {requestGMs} = require("../playersTier/grandmasterPlayers.js")
 const {updateGMs} = require("../../database/update/updateGMs.js")
 
-//time of latest patch in epoch time
-//1689886800 b patch
-var latestPatch = 1690977600
-
 async function challengerScrape(patchTime, division = 'challengers') {
     var players = ""
     if (division === 'grandmaster') {
@@ -46,5 +42,5 @@ async function challengerScrape(patchTime, division = 'challengers') {
 }
 
 
-module.exports = { challengerScrape, latestPatch }
+module.exports = {challengerScrape}
 

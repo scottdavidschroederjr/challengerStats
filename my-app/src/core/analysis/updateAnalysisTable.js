@@ -4,8 +4,8 @@ const {analysisData} = require("../../database/modules/createTables.js")
 const {placementByStars} = require("../analysis/lowerFunctions/placementByStars.js")
 const {emblemWR} = require("../analysis/lowerFunctions/emblemWR.js")
 
-async function updateAnalysisTable() {
-    var data = await matchDataCollection()
+async function updateAnalysisTable(tftSetNumber, latestPatch) {
+    var data = await matchDataCollection(tftSetNumber, latestPatch)
 
     //updates overall champion appears count
     var unitCount = await unitCountData(data[0])
