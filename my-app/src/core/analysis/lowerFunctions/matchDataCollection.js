@@ -6,6 +6,7 @@ async function matchDataCollection (setNumber = "TFTSet9", latestPatch){
     let challengerMatches = []
     let units = []
     let traits = []
+    let augments = []
 
     //gets list of challenger's puuids
     const  players = await User.findAll({
@@ -76,18 +77,16 @@ async function matchDataCollection (setNumber = "TFTSet9", latestPatch){
         
         const traitDataRequest =  await traitMatchData.findAll({
             where: {matchID: challengerMatches[u]}}) 
-        
+
+        const augmentDataRequest = await generalMatchData.findAll({
+            where: {matchID: challengerMatches[u]}})
+    
         console.log("Game #" + u)
 
         //getting stats out from matches
         for (let v = 0; v < 8; v++){
-            
-
-            const placementDataRequest =  await generalMatchData.findAll({
-                where: {matchID: challengerMatches[u]}})
-            
             let currentPlayer = "p" + (v + 1) + "_placement"
-            let placement = placementDataRequest[0]['dataValues'][currentPlayer]
+            let placement = augmentDataRequest[0]['dataValues'][currentPlayer]
 
             //unit stats
             for (let a = 0; a < 30; a++){
@@ -129,15 +128,29 @@ async function matchDataCollection (setNumber = "TFTSet9", latestPatch){
                     traitArray.push(traitDataRequest[0]['dataValues'][style])
                     traitArray.push(traitDataRequest[0]['dataValues'][tierCurrent])
                     traitArray.push(traitDataRequest[0]['dataValues'][tierTotal])
+                    traitArray.push(placement)
                     traits.push(traitArray)
                 } catch {
                     b = 50;
                 }          
             }
+            //augment stats
+                let augmentArray = []
+                let aug1 = "p" + (v + 1) + "_augment1"
+                let aug2 = "p" + (v + 1) + "_augment2"
+                let aug3 = "p" + (v + 1) + "_augment3"
+
+                augmentArray.push(augmentDataRequest[0]['dataValues'][aug1])
+                augmentArray.push(augmentDataRequest[0]['dataValues'][aug2])
+                augmentArray.push(augmentDataRequest[0]['dataValues'][aug3])
+                augmentArray.push(placement)
+                augments.push(augmentArray)
+
+
         }
     }
     
-    let results = [units, traits]
+    let results = [units, traits, augments]
     console.log(results)
     return results
 }
