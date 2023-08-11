@@ -4319,3 +4319,5 @@ const tftAugmentData = {
         }
     }
 }
+
+module.exports = tftAugmentData
