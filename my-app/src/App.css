@@ -45,12 +45,7 @@ thead {
   width: 250px;
   text-align: center;
 }
-#augmentStatsSite{
-  width: 150px;
-  max-height: 20px;
-  padding: 5px;
-}
-#tomeBox{
+#augmentStatsSite, #tomeBox{
   width: 150px;
   max-height: 20px;
   padding: 5px;
@@ -69,5 +64,11 @@ thead {
 .filterPopup label {
   display: block;
   margin-bottom: 5px;
+}
+#LeDuck {
+  padding: 2px;
+  height: 155px;
+  display: flexbox;
+  flex-direction: column;
 }
 
