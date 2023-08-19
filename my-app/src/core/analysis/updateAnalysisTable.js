@@ -26,10 +26,10 @@ async function updateAnalysisTable(tftSetNumber, latestPatch) {
     await updateOrCreate(analysisData, {type: 'emblemPlacement'}, {data: jsonEmblemPlacement})
 
     //update augment placements
-    var augmentStats = await augmentPlacement(data[2])
-    var jsonAugmentStats = JSON.stringify(augmentStats)
-    await updateOrCreate(analysisData, {type: 'augmentStats'}, {type: 'augmentStats'})
-    await updateOrCreate(analysisData, {type: 'augmentStats'}, {data: jsonAugmentStats})
+    //var augmentStats = await augmentPlacement(data[2])
+    //var jsonAugmentStats = JSON.stringify(augmentStats)
+    //await updateOrCreate(analysisData, {type: 'augmentStats'}, {type: 'augmentStats'})
+    //await updateOrCreate(analysisData, {type: 'augmentStats'}, {data: jsonAugmentStats})
 
        
 }

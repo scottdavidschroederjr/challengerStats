@@ -1,6 +1,6 @@
 const {challengerScrape} = require("../../riotRequests/combos/challengerScrape.js")
 const {updateAnalysisTable} = require("../analysis/updateAnalysisTable.js")
-const latestPatch = 1690977600
+const latestPatch = 1692187200
 const tftSetNumber = "TFTSet9"
 
 async function autoScrap(){
