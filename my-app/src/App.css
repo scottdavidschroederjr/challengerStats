@@ -38,7 +38,9 @@ thead {
 .componentHeader {
   font-size: 28px;
   color: #f5f5f5;
+  width: 100%;
   background-color: #000;
+  margin-bottom: 5px;
 }
 #championAppearanceBox {
   width: 250px;
@@ -59,12 +61,10 @@ thead {
   max-height: 150px; /* Adjust this value to set the maximum height of the popup */
   overflow-y: auto;
 }
-
 .filterPopup label {
   display: block;
   margin-bottom: 5px;
 }
-
 #topBox {
   display: flex;
   flex-direction: column;
@@ -85,5 +85,16 @@ thead {
 #LeDuck {
   display: inline;
   max-width: 265px;
-  max-height: 140px;
+  max-height: 155px;
 }
+.scrollable {
+  width: 320px;
+  border-collapse: collapse;
+  overflow: auto;
+  max-height: 230px;
+}
+#emblemStats {
+  max-height: 280px;
+  width: 235px;
+}
+

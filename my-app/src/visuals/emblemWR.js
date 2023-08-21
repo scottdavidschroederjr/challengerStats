@@ -1,25 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const EmblemWR = ({ aboveEmblemData }) => {
-  // State to manage sorting
-  const [sortBy, setSortBy] = useState('count'); // Default sorting by count
-  const [sortOrder, setSortOrder] = useState('asc'); // Default sorting order ascending
-  const [rowsToShow, setRowsToShow] = useState(10); // Default number of rows to show
-
-  // Handler for changing sorting options
-  const handleSortChange = (column) => {
-    if (column === sortBy) {
-      setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
-    } else {
-      setSortBy(column);
-      setSortOrder('asc'); // Default to ascending order for new column
-    }
-  };
-
-  // Handler for changing the number of rows to display
-  const handleRowsToShowChange = (event) => {
-    setRowsToShow(parseInt(event.target.value, 10));
-  };
+  const [sortBy] = useState('place'); // Always sorting by place
+  const [sortOrder] = useState('asc'); // Default sorting order ascending
 
   if (!aboveEmblemData || !Array.isArray(aboveEmblemData)) {
     // Return null or a loading indicator when the data is not available yet
@@ -32,37 +15,14 @@ const EmblemWR = ({ aboveEmblemData }) => {
     count,
     place,
   ]).sort((a, b) => {
-    const index = sortBy === 'place' ? 2 : 1;
-    const aValue = a[index];
-    const bValue = b[index];
-
-    if (sortOrder === 'asc') {
-      return aValue - bValue;
-    } else {
-      return bValue - aValue;
-    }
+    return sortOrder === 'asc' ? a[2] - b[2] : b[2] - a[2];
   });
 
   return (
-    <div className='component'>
-      {/* Sorting and Rows per Page Controls */}
-
-        <label>
-          Sort By:
-          <button onClick={() => handleSortChange('count')}>
-            Count {sortBy === 'count' && (sortOrder === 'asc' ? '▲' : '▼')}
-          </button>
-          <button onClick={() => handleSortChange('place')}>
-            Place {sortBy === 'place' && (sortOrder === 'asc' ? '▲' : '▼')}
-          </button>
-        </label>
-        <label>
-          Rows per Page:
-          <input type="number" min="1" value={rowsToShow} onChange={handleRowsToShowChange} />
-        </label>
-        <br></br>
-
-      <table>
+    <div className='component' id='emblemStats'>
+      <div className="componentHeader">Emblem Stats</div>
+      <div className='scrollable'>
+        <table>
         <thead>
           <tr>
             <th>Trait</th>
@@ -71,17 +31,19 @@ const EmblemWR = ({ aboveEmblemData }) => {
           </tr>
         </thead>
         <tbody>
-          {sortedData.slice(0, rowsToShow).map(([trait, count, place], index) => (
+          {sortedData.map(([trait, count, place], index) => (
             <tr key={index}>
               <td>{trait}</td>
               <td>{count}</td>
-              <td>{place}</td>
+              <td>{place.toFixed(2)}</td>
             </tr>
           ))}
         </tbody>
-      </table>
+        </table>
+      </div>  
     </div>
   );
 };
 
 export default EmblemWR;
+
