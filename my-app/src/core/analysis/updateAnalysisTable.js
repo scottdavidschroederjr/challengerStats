@@ -3,6 +3,7 @@ const {unitCountData} = require("./lowerFunctions/unitAppearenceData.js")
 const {analysisData} = require("../../database/modules/createTables.js")
 const {placementByStars} = require("../analysis/lowerFunctions/placementByStars.js")
 const {emblemWR} = require("../analysis/lowerFunctions/emblemWR.js")
+const {itemWR} = require("../analysis/lowerFunctions/itemWR.js")
 
 async function updateAnalysisTable(tftSetNumber, latestPatch) {
     var data = await matchDataCollection(tftSetNumber, latestPatch)
@@ -30,6 +31,12 @@ async function updateAnalysisTable(tftSetNumber, latestPatch) {
     //var jsonAugmentStats = JSON.stringify(augmentStats)
     //await updateOrCreate(analysisData, {type: 'augmentStats'}, {type: 'augmentStats'})
     //await updateOrCreate(analysisData, {type: 'augmentStats'}, {data: jsonAugmentStats})
+
+    //update overall item data
+    var itemStats = await itemWR(data[0])
+    var jsonitemStats = JSON.stringify(itemStats)
+    await updateOrCreate(analysisData, {type: 'itemStats'}, {type: 'itemStats'})
+    await updateOrCreate(analysisData, {type: 'itemStats'}, {data: jsonitemStats})   
 
        
 }

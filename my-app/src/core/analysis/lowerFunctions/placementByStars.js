@@ -32,7 +32,6 @@ async function placementByStars(matchData) {
       // Push the result to the results array in the desired format
       results.push([`${matchValue} ${separator}`, average, count]);
     }
-    console.log(results)
     return results;
   }
   
