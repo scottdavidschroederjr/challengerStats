@@ -72,3 +72,21 @@ thead {
   flex-direction: column;
 }
 
+#topBox {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-self: center;
+  border: solid 2px #000;
+  width: 350px;
+  margin: 0 auto;
+  color: #f5f5f5;
+  background-color: #000;
+}
+
+#viewToggle {
+  text-align: center;
+  border: solid 2px #000;
+  width: 350px;
+  margin: 0 auto;
+}

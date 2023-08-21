@@ -39,7 +39,12 @@ export function App() {
   } else {
     return (
     <div>
-      <label><input type="checkbox" checked={showAugmentData} onChange={() => setShowAugmentData(!showAugmentData)}/>Augment Data</label>
+    <div id="topBox">
+      <h1>TFT Reference Doc</h1>
+    </div>
+
+    <div id="viewToggle">
+    <label><input type="checkbox" checked={showAugmentData} onChange={() => setShowAugmentData(!showAugmentData)}/>Augment Data</label>
       <label><input type="checkbox" checked={showTomeDisplay} onChange={() => setShowTomeDisplay(!showTomeDisplay)}/>Tome</label>
       <label><input type="checkbox" checked={showLeDuck} onChange={() => setShowLeDuck(!showLeDuck)}/>Build Sheets</label>
       <label><input type="checkbox" checked={showPortalDisplay} onChange={() => setShowPortalDisplay(!showPortalDisplay)}/>Portal/Ryze Info</label>
@@ -47,6 +52,7 @@ export function App() {
       <label><input type="checkbox" checked={showStarBasedWR} onChange={() => setShowStarBasedWR(!showStarBasedWR)}/>Starred Units</label>
       <label><input type="checkbox" checked={showEmblemWR}onChange={() => setShowEmblemWR(!showEmblemWR)}/>Emblem</label>
       <br></br><br></br>
+    </div>
 
     <div id="bigBox">
         {/* Conditional rendering based on the state variables */}
