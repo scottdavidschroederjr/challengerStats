@@ -46,10 +46,8 @@ thead {
   width: 250px;
   text-align: center;
 }
-#augmentStatsSite, #tomeBox{
+#augmentStatsSite{
   width: 150px;
-  max-height: 20px;
-  padding: 5px;
 }
 .filterPopup {
   position: absolute;
@@ -96,5 +94,8 @@ thead {
 #emblemStats {
   max-height: 280px;
   width: 235px;
+}
+#tomeBox {
+  width: 200px;
 }
 
