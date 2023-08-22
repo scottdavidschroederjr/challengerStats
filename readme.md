@@ -3,6 +3,8 @@ Last Readme Update: 7/25/23
 The goal of this project is provide a customizable one site solution for all the additional reference data a high level player needs to play competitive TFT at the highest level.
 
 Current TODOs:
+- display itemStats on site
+- allow items to be filtered by Radient, Ornn, Emblem etc
 - add basic augment stats to project now that "ban" has been lifted
 
 
