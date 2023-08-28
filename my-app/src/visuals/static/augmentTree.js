@@ -1,65 +1,127 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function AugmentTree() {
-    const [augment1, setAugment1] = useState(null);
-    const [augment2, setAugment2] = useState(null);
+    const [augment1, setAugment1] = useState('base');
+    const [augment2, setAugment2] = useState('silver');
+    const [augment3, setAugment3] = useState('silver');
     const [values, setValues] = useState({
-        silver: "Silver Augment",
-        gold: "Gold Augment",
-        prismatic: "Prismatic Augment"
+        silver: 1,
+        gold: 2,
+        prismatic: 3,
     });
 
-    const updateValues = () => {
-        // Manually define your probability tree here
-        const probabilityTree = {
-            // Define probabilities and new values based on augment choices
+    const baseOdds = {
+        silver: "",
+        gold: "",
+        prismatic: "",
+    }
+    const secondOdds = {
+        silver: {
+            silver: "",
+            gold: "",
+            prismatic: "",
+        },
+        gold: {
+            silver: "",
+            gold: "",
+            prismatic: "",
+        },
+        prismatic: {
+            silver: "",
+            gold: "",
+            prismatic: "",
+        }
+    }
+    const thirdOdds = {
+        silver: {
             silver: {
-                gold: { probability: 0.3, newValue: "New Silver+Gold Value" },
-                prismatic: { probability: 0.5, newValue: "New Silver+Prismatic Value" }
+                silver: "",
+                gold: "",
+                prismatic: "",
             },
             gold: {
-                silver: { probability: 0.4, newValue: "New Gold+Silver Value" },
-                prismatic: { probability: 0.6, newValue: "New Gold+Prismatic Value" }
+                silver: "",
+                gold: "",
+                prismatic: "",
             },
             prismatic: {
-                silver: { probability: 0.2, newValue: "New Prismatic+Silver Value" },
-                gold: { probability: 0.7, newValue: "New Prismatic+Gold Value" }
-            }
-        };
-
-        if (augment1 && augment2) {
-            const { probability, newValue } = probabilityTree[augment1][augment2];
-            const updatedValues = { ...values };
-            updatedValues[augment1] = newValue;
-            setValues(updatedValues);
+                silver: "",
+                gold: "",
+                prismatic: "",
+            },
+        },
+        gold: {
+            silver: {
+                silver: "",
+                gold: "",
+                prismatic: "",
+            },
+            gold: {
+                silver: "",
+                gold: "",
+                prismatic: "",
+            },
+            prismatic: {
+                silver: "",
+                gold: "",
+                prismatic: "",
+            },
+        },
+        prismatic: {
+            silver: {
+                silver: "",
+                gold: "",
+                prismatic: "",
+            },
+            gold: {
+                silver: "",
+                gold: "",
+                prismatic: "",
+            },
+            prismatic: {
+                silver: "",
+                gold: "",
+                prismatic: "",
+            },
         }
-    };
+    }
+
+
+    return (<div>placeholder</div>)
 
     return (
-        <div className="component" id=''>
+        <div className="component">
             <div className="componentHeader">Augment Tree</div>
             <div>
                 <select onChange={(e) => setAugment1(e.target.value)}>
-                    <option value="">Choose Augment 1</option>
+                    <option value="" disabled>Choose Augment 1</option>
                     <option value="silver">Silver</option>
                     <option value="gold">Gold</option>
                     <option value="prismatic">Prismatic</option>
                 </select>
+                <br />
                 <select onChange={(e) => setAugment2(e.target.value)}>
-                    <option value="">Choose Augment 2</option>
+                    <option value="" disabled>Choose Augment 2</option>
                     <option value="silver">Silver</option>
                     <option value="gold">Gold</option>
                     <option value="prismatic">Prismatic</option>
                 </select>
-                <button onClick={updateValues}>Update Values</button>
-            </div>
-            <div id='tree'>
-                {Object.keys(values).map((key) => (
-                    <div key={key}>{values[key]}</div>
-                ))}
+                <br />
+                <select onChange={(e) => setAugment3(e.target.value)}>
+                    <option value="" disabled>Choose Augment 3</option>
+                    <option value="silver">Silver</option>
+                    <option value="gold">Gold</option>
+                    <option value="prismatic">Prismatic</option>
+                </select>
+                <br />
+                <div id='tree'>
+                    {Object.keys(values).map((key) => (
+                        <div key={key}>{values[key]}</div>
+                    ))}
+                </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default AugmentTree;
