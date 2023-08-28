@@ -10,6 +10,7 @@ Current TODOs:
 
 - create cashout table in Cashout page instead of just linking to site
 - create tome chart instead of linking
+- fix portal info to just show ryze spell
 
 
 guide to unitData export
