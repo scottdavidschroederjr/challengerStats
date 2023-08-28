@@ -11,6 +11,7 @@ import EmblemWR from './visuals/emblemWR'
 import LeDuck from './visuals/static/LeDuckSite';
 import ItemWR from './visuals/itemWR';
 import Cashout from './visuals/static/cashout';
+import AugmentTree from './visuals/static/augmentTree';
 
 export function App() {
   const [dataPackage, setdataPackage] = useState(0);
@@ -23,6 +24,7 @@ export function App() {
   const [showLeDuck, setShowLeDuck] = useState(false)
   const [showItemWR, setshowItemWR] = useState(false)
   const [showCashout, setshowCashout] = useState(false)
+  const [showAugmentTree, setshowAugmentTree] = useState(false)
 
   const config = { headers: { "Content-Type": "application/json" } };
 
@@ -52,6 +54,7 @@ export function App() {
       <label><input type="checkbox" checked={showEmblemWR}onChange={() => setShowEmblemWR(!showEmblemWR)}/>Emblem</label><br></br>
       <label><input type="checkbox" checked={showItemWR}onChange={() => setshowItemWR(!showItemWR)}/>Items</label><br></br>
       <label><input type="checkbox" checked={showCashout}onChange={() => setshowCashout(!showCashout)}/>Piltover Cashout</label><br></br>
+      <label><input type="checkbox" checked={showAugmentTree}onChange={() => setshowAugmentTree(!showAugmentTree)}/>Augment Tree</label><br></br>
     </div>
 
     <div id="bigBox">
@@ -61,6 +64,7 @@ export function App() {
         {showLeDuck && <LeDuck />}
         {showPortalDisplay && <PortalDisplay />}
         {showCashout && <Cashout />}
+        {showAugmentTree && <AugmentTree/>}
         {showUnitStats && <UnitStats aboveUnitData={dataPackage[0]} />}
         {showStarBasedWR && <StarBasedWR aboveUnitData={dataPackage[1]} />}
         {showEmblemWR && <EmblemWR aboveEmblemData={dataPackage[2]}/>}
