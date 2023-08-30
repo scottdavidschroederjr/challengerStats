@@ -1,10 +1,9 @@
 table {
-    width: 100px;
     border-collapse: collapse;
   }
   
 th, td {
-  padding: 8px;
+  padding: 2px;
   text-align: left;
   border-bottom: 1px solid #ddd;
   border-left:  1px solid #ddd;
@@ -96,6 +95,6 @@ thead {
   width: 235px;
 }
 #tomeBox {
-  width: 200px;
+  width: 500px;
 }
 
