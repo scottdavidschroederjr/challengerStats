@@ -275,19 +275,19 @@ const cashoutTables = {
     </tr>
     <tr>
         <td>30%</td>
-        <td></td>
+        <td>2x TaC, 2 Champ Duplicators, 2 Radiant Items, Reforger + 15g</td>
     </tr>
     <tr>
         <td>25%</td>
-        <td></td>
+        <td>2x Radiant Items, 2x Reforgers, 1x TaC + 75g</td>
     </tr>
     <tr>
-        <td>25%</td>
-        <td></td>
+        <td>??%</td>
+        <td>3x Completed Anvils, Radiant Item, Reforger, 1x ???</td>
     </tr>
     <tr>
-        <td>25%</td>
-        <td></td>
+        <td>??%</td>
+        <td>Convert all regular items to Radiant + dynamic gold</td>
     </tr>
     </table>, 
 
@@ -297,20 +297,20 @@ const cashoutTables = {
         <th>Cashout</th>
     </tr>
     <tr>
-        <td>%</td>
-        <td></td>
+        <td>??%</td>
+        <td>3x TaC, 3x Radiant Items, 2 Removers, Reforger + ???</td>
     </tr>
     <tr>
-        <td>%</td>
-        <td></td>
+        <td>??%</td>
+        <td>175g + 2x Champ Duplicators</td>
     </tr>
     <tr>
-        <td>%</td>
-        <td></td>
+        <td>??%</td>
+        <td>3 Ornn Anvils, 2x TaC, 2 Radiant Items, 2 Removers + ???</td>
     </tr>
     <tr>
-        <td>%</td>
-        <td></td>
+        <td>??%</td>
+        <td>3* 5 Cost</td>
     </tr>
     </table>, 
 };
