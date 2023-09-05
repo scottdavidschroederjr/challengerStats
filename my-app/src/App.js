@@ -27,6 +27,13 @@ export function App() {
   const [showAugmentTree, setshowAugmentTree] = useState(false)
 
   const config = { headers: { "Content-Type": "application/json" } };
+  
+  const [showTools, setShowTools] = useState(false);
+  const [showData, setShowData] = useState(false);
+
+  const toggleToolsVisibility = () => {setShowTools(!showTools);};
+  const toggleDataVisibility = () => {setShowData(!showData);};
+
 
   async function getData() {
     await axios
@@ -40,21 +47,38 @@ export function App() {
   } else {
     return (
     <div>
-    <div id="topBox">
-      <h1>TFT Reference Doc</h1>
-    </div>
-
+    <div id="topBox">TFT Reference Doc</div>
     <div id="viewToggle">
+      <div className='toggleCatHeader' onClick={toggleToolsVisibility}>Tools</div>
+      <div className={`tools${showTools ? ' visible' : ''}`}>
+      <label><input type="checkbox" checked={showTomeDisplay} onChange={() => setShowTomeDisplay(!showTomeDisplay)} />Tome</label><br></br>
+      <label><input type="checkbox" checked={showAugmentTree} onChange={() => setshowAugmentTree(!showAugmentTree)} />Augment Tree</label><br></br>
+      <label><input type="checkbox" checked={showCashout} onChange={() => setshowCashout(!showCashout)} />Piltover Cashout</label><br></br>
+      </div>
+
+      <div className='toggleCat'>
+        <div className='toggleCatHeader'>Data</div>
+
       <label><input type="checkbox" checked={showAugmentData} onChange={() => setShowAugmentData(!showAugmentData)}/>Augment Data</label><br></br>
-      <label><input type="checkbox" checked={showTomeDisplay} onChange={() => setShowTomeDisplay(!showTomeDisplay)}/>Tome</label><br></br>
-      <label><input type="checkbox" checked={showLeDuck} onChange={() => setShowLeDuck(!showLeDuck)}/>Build Sheets</label><br></br>
-      <label><input type="checkbox" checked={showPortalDisplay} onChange={() => setShowPortalDisplay(!showPortalDisplay)}/>Portal/Ryze Info</label><br></br>
+
       <label><input type="checkbox" checked={showUnitStats} onChange={() => setShowUnitStats(!showUnitStats)}/>Units</label><br></br>
+
       <label><input type="checkbox" checked={showStarBasedWR} onChange={() => setShowStarBasedWR(!showStarBasedWR)}/>Starred Units</label><br></br>
+
       <label><input type="checkbox" checked={showEmblemWR}onChange={() => setShowEmblemWR(!showEmblemWR)}/>Emblem</label><br></br>
+
       <label><input type="checkbox" checked={showItemWR}onChange={() => setshowItemWR(!showItemWR)}/>Items</label><br></br>
-      <label><input type="checkbox" checked={showCashout}onChange={() => setshowCashout(!showCashout)}/>Piltover Cashout</label><br></br>
-      <label><input type="checkbox" checked={showAugmentTree}onChange={() => setshowAugmentTree(!showAugmentTree)}/>Augment Tree</label><br></br>
+
+      <label><input type="checkbox" checked={showPortalDisplay} onChange={() => setShowPortalDisplay(!showPortalDisplay)}/>Portal/Ryze Info</label><br></br>
+      
+      </div>
+
+      <div className='toggleCat'>
+      <div className='toggleCatHeader'>Reference</div>
+        <label><input type="checkbox" checked={showLeDuck} onChange={() => setShowLeDuck(!showLeDuck)}/>Build Sheets</label><br></br>
+      </div>
+      
+      
     </div>
 
     <div id="bigBox">

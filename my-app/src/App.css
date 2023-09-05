@@ -1,7 +1,6 @@
 table {
     border-collapse: collapse;
   }
-  
 th, td {
   padding: 2px;
   text-align: left;
@@ -9,7 +8,6 @@ th, td {
   border-left:  1px solid #ddd;
   border-right:  1px solid #ddd;
 }
-  
 thead {
   background-color: #383838;
   color: rgb(255, 255, 255);
@@ -97,4 +95,27 @@ thead {
 #tomeBox {
   width: 500px;
 }
+.toggleCat {
+  border: solid 2px #000;
+}
+.toggleCatHeader {
+  font-size: 28px;
+  color: #f5f5f5;
+  background-color: #414141;
+  margin-bottom: 5px;
+}
+#topBox {
+  font-size: 40px;
+  color: #f5f5f5;
+  width: 350px;
+  background-color: #000;
+}
 
+.tools {
+  display: none;
+}
+
+/* Show the body when the 'visible' class is added */
+.tools.visible {
+  display: block;
+}
