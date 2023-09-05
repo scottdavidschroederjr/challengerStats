@@ -102,7 +102,6 @@ thead {
   font-size: 28px;
   color: #f5f5f5;
   background-color: #414141;
-  margin-bottom: 5px;
 }
 #topBox {
   font-size: 40px;
@@ -110,12 +109,9 @@ thead {
   width: 350px;
   background-color: #000;
 }
-
-.tools {
+.tools, .data, .reference {
   display: none;
 }
-
-/* Show the body when the 'visible' class is added */
-.tools.visible {
+.tools.visible, .data.visible, .reference.visible {
   display: block;
 }

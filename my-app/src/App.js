@@ -30,9 +30,11 @@ export function App() {
   
   const [showTools, setShowTools] = useState(false);
   const [showData, setShowData] = useState(false);
+  const [showReference, setShowReference] = useState(false);
 
   const toggleToolsVisibility = () => {setShowTools(!showTools);};
   const toggleDataVisibility = () => {setShowData(!showData);};
+  const toggleReferenceVisibility = () => {setShowReference(!showReference);};
 
 
   async function getData() {
@@ -49,36 +51,40 @@ export function App() {
     <div>
     <div id="topBox">TFT Reference Doc</div>
     <div id="viewToggle">
+
       <div className='toggleCatHeader' onClick={toggleToolsVisibility}>Tools</div>
       <div className={`tools${showTools ? ' visible' : ''}`}>
-      <label><input type="checkbox" checked={showTomeDisplay} onChange={() => setShowTomeDisplay(!showTomeDisplay)} />Tome</label><br></br>
-      <label><input type="checkbox" checked={showAugmentTree} onChange={() => setshowAugmentTree(!showAugmentTree)} />Augment Tree</label><br></br>
-      <label><input type="checkbox" checked={showCashout} onChange={() => setshowCashout(!showCashout)} />Piltover Cashout</label><br></br>
+        <label><input type="checkbox" checked={showTomeDisplay} onChange={() => setShowTomeDisplay(!showTomeDisplay)} />Tome</label><br></br>
+        <label><input type="checkbox" checked={showAugmentTree} onChange={() => setshowAugmentTree(!showAugmentTree)} />Augment Tree</label><br></br>
+        <label><input type="checkbox" checked={showCashout} onChange={() => setshowCashout(!showCashout)} />Piltover Cashout</label><br></br>
       </div>
 
-      <div className='toggleCat'>
-        <div className='toggleCatHeader'>Data</div>
+      <div className='toggleCatHeader' onClick={toggleDataVisibility}>Data</div>
+      <div className={`data${showData ? ' visible' : ''}`}>
+  
+        <label><input type="checkbox" checked={showAugmentData} onChange={() => setShowAugmentData(!showAugmentData)}/>Augment Data</label><br></br>
 
-      <label><input type="checkbox" checked={showAugmentData} onChange={() => setShowAugmentData(!showAugmentData)}/>Augment Data</label><br></br>
+        <label><input type="checkbox" checked={showUnitStats} onChange={() => setShowUnitStats(!showUnitStats)}/>Units</label><br></br>
 
-      <label><input type="checkbox" checked={showUnitStats} onChange={() => setShowUnitStats(!showUnitStats)}/>Units</label><br></br>
+        <label><input type="checkbox" checked={showStarBasedWR} onChange={() => setShowStarBasedWR(!showStarBasedWR)}/>Starred Units</label><br></br>
 
-      <label><input type="checkbox" checked={showStarBasedWR} onChange={() => setShowStarBasedWR(!showStarBasedWR)}/>Starred Units</label><br></br>
+        <label><input type="checkbox" checked={showEmblemWR}onChange={() => setShowEmblemWR(!showEmblemWR)}/>Emblem</label><br></br>
 
-      <label><input type="checkbox" checked={showEmblemWR}onChange={() => setShowEmblemWR(!showEmblemWR)}/>Emblem</label><br></br>
+        <label><input type="checkbox" checked={showItemWR}onChange={() => setshowItemWR(!showItemWR)}/>Items</label><br></br>
 
-      <label><input type="checkbox" checked={showItemWR}onChange={() => setshowItemWR(!showItemWR)}/>Items</label><br></br>
-
-      <label><input type="checkbox" checked={showPortalDisplay} onChange={() => setShowPortalDisplay(!showPortalDisplay)}/>Portal/Ryze Info</label><br></br>
+        <label><input type="checkbox" checked={showPortalDisplay} onChange={() => setShowPortalDisplay(!showPortalDisplay)}/>Portal/Ryze Info</label><br></br>
       
       </div>
 
-      <div className='toggleCat'>
-      <div className='toggleCatHeader'>Reference</div>
+
+      <div className='toggleCatHeader' onClick={toggleReferenceVisibility}>Reference</div>
+      <div className={`data${showReference ? ' visible' : ''}`}>
         <label><input type="checkbox" checked={showLeDuck} onChange={() => setShowLeDuck(!showLeDuck)}/>Build Sheets</label><br></br>
       </div>
+
       
       
+    
     </div>
 
     <div id="bigBox">
