@@ -90,295 +90,288 @@ const itemList = {
         "info": "",
         "comps": "",
     },
-    "": {
-        "name": "",
-        "type": "",
-        "icon": "",
-        "info": "",
-        "comps": "",
-    },
 //Normal Items
-    "": {
+    "TFT_Item_Chalice": {
         "name": "Adaptive Helm",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["Tear", "Cloak"],
     },
-    "": {
+    "TFT_Item_JeweledGauntlet": {
         "name": "Jeweled Gauntlet",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["Rod", "Glove"],
     },
-    "": {
+    "TFT_Item_Bloodthirster": {
         "name": "Bloodthirster",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["Sword", "Cloak"],
     },
-    "": {
+    "TFT_Item_BrambleVest": {
         "name": "Bramble Vest",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["Chain Vest", "Chain Vest"],
     },
-    "": {
+    "TFT_Item_SeraphsEmbrace": {
         "name": "Blue Buff",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["Tear", "Tear"],
     },
-    "": {
+    "TFT_Item_LocketOfTheIronSolari": {
         "name": "Crownguard",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["Rod", "Chain Vest"],
     },
-    "": {
+    "TFT9_Item_CrownOfDemacia": {
         "name": "Crown of Demacia",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["", ""],
     },
-    "": {
+    "TFT_Item_DragonsClaw": {
         "name": "Dragon's Claw",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["Cloak", "Cloak"],
     },
-    "": {
+    "TFT_Item_Zephyr": {
         "name": "Evenshroud",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["Cloak", "Belt"],
     },
-    "": {
+    "TFT_Item_FrozenHeart": {
         "name": "Protector's Vow",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["Tear", "Chain Vest"],
     },
-    "": {
+    "TFT_Item_ForceOfNature": {
         "name": "Tactician's Crown",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["Spatula", "Spatula"],
     },
-    "": {
+    "TFT_Item_MadredsBloodrazor": {
         "name": "Giant Slayer",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["Sword", "Bow"],
     },
-    "": {
+    "TFT_Item_PowerGauntlet": {
         "name": "Guardbreaker",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["Belt", "Glove"],
     },
-    "": {
+    "TFT_Item_GuardianAngel": {
         "name": "Edge of Night",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["Sword", "Chain Vest"],
     },
-    "": {
+    "TFT_Item_GuinsoosRageblade": {
         "name": "Guinsoo's Rageblade",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["Rod", "Bow"],
     },
-    "": {
+    "TFT_Item_UnstableConcoction": {
         "name": "Hand of Justice",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["Tear", "Glove"],
     },
-    "": {
+    "TFT_Item_HextechGunblade": {
         "name": "Hextech Gunblade",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["Sword", "Rod"],
     },
-    "": {
+    "TFT_Item_InfinityEdge": {
         "name": "Infinity Edge",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["Sword", "Glove"],
     },
-    "": {
+    "TFT_Item_IonicSpark": {
         "name": "Ionic Spark",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["Rod", "Cloak"],
     },
-    "": {
+    "TFT_Item_GargoyleStoneplate": {
         "name": "Gargoyle Stoneplate",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["Cloak", "Chain Vest"],
     },
-    "": {
+    "TFT_Item_IonicSpark": {
         "name": "Last Whisper",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["Bow", "Glove"],
     },
-    "": {
+    "TFT_Item_Deathblade": {
         "name": "Deathblade",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["Sword", "Sword"],
     },
-    "": {
+    "TFT_Item_ArchangelsStaff": {
         "name": "Archangel's Staff",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["Rod", "Tear"],
     },
-    "": {
+    "Masterwork Upgrade": {
         "name": "Masterwork Upgrade",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["", ""],
     },
-    "": {
+    "Masterwork Upgrade": {
         "name": "Morellonomicon",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["Rod", "Belt"],
     },
-    "": {
+    "TFT_Item_TitanicHydra": {
         "name": "Nashors' Tooth",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["Bow", "Belt"],
     },
-    "": {
+    "TFT_Item_Shroud": {
         "name": "Night Harvester",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["Chain Vest", "Glove"],
     },
-    "": {
+    "TFT_Item_Quicksilver": {
         "name": "Quicksilver",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["Cloak", "Glove"],
     },
-    "": {
+    "TFT_Item_RabadonsDeathcap": {
         "name": "Rabadon's Deathcap",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["Rod", "Rod"],
     },
-    "": {
+    "TFT_Item_RapidFireCannon": {
         "name": "Rapid Firecannon",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["Bow", "Bow"],
     },
-    "": {
+    "TFT_Item_Redemption": {
         "name": "Redemption",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["Tear", "Belt"],
     },
-    "": {
+    "TFT_Item_RunaansHurricane": {
         "name": "Runaan's Hurricane",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["Bow", "Cloak"],
     },
-    "": {
+    "Scroll of Knowledge": {
         "name": "Scroll of Knowledge",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["", ""],
     },
-    "": {
+    "TFT_Item_SpearOfShojin": {
         "name": "Spear of Shojin",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["Sword", "Tear"],
     },
-    "": {
+    "TFT_Item_StatikkShiv": {
         "name": "Statikk Shiv",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["Bow", "Tear"],
     },
-    "": {
+    "TFT_Item_ZekesHerald": {
         "name": "Sterak's Gage",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["Sword", "Belt"],
     },
-    "": {
+    "TFT_Item_RedBuff": {
         "name": "Sunfire Cape",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["Belt", "Chain Vest"],
     },
-    "": {
+    "The Darkin Blade": {
         "name": "The Darkin Blade",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["", ""],
     },
-    "": {
+    "TFT_Item_ThiefsGloves": {
         "name": "Thief's Gloves",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["Glove", "Glove"],
     },
-    "": {
+    "TFT_Item_TitansResolve": {
         "name": "Titan's Resolve",
         "type": "Normal",
         "icon": "",
         "info": "",
         "comps": ["Bow", "Chain Vest"],
     },
-    "": {
+    "TFT_Item_WarmogsArmor": {
         "name": "Warmog's Armor",
         "type": "Normal",
         "icon": "",

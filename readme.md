@@ -6,6 +6,7 @@ Current TODOs:
 - display itemStats on site
 - allow items to be filtered by Radient, Ornn, Emblem etc
 - add basic augment stats to project now that "ban" has been lifted
+- https://www.npmjs.com/package/react-draggable
 
 
 - create cashout table in Cashout page instead of just linking to site
