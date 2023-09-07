@@ -3,15 +3,10 @@ const set9traits = require('../riotAssets/set9traits.js')
 const set9byStar = require("../riotAssets/set9unitsBystar.js")
 
 function UnitDisplay({ aboveUnitData }) {
-  const [showRows, setShowRows] = useState(15);
   const [sortColumn, setSortColumn] = useState(null);
   const [sortOrder, setSortOrder] = useState('asc');
   const [selectedFilters, setSelectedFilters] = useState([]);
   const [showFilterPopup, setShowFilterPopup] = useState(false);
-
-  function handleShowRowsChange(event) {
-    setShowRows(parseInt(event.target.value));
-  }
   
   function handleColumnSort(columnIndex) {
     if (columnIndex === sortColumn) {
@@ -57,20 +52,8 @@ function UnitDisplay({ aboveUnitData }) {
 
   return (
     <div className='component' id='championAppearanceBox'>
-      <div>
+      
         <div className='componentHeader'>Champion Appearance</div>
-        <br />
-        <label>
-          Rows:
-          <input
-            type='number'
-            min='1'
-            max={aboveUnitData.length}
-            value={showRows}
-            onChange={handleShowRowsChange}
-          />
-        </label>
-        <br />
         <button onClick={() => setShowFilterPopup(!showFilterPopup)}>Filter Options</button>
         {showFilterPopup && (
           <div className="filterPopup">
@@ -86,6 +69,7 @@ function UnitDisplay({ aboveUnitData }) {
             ))}
           </div>
         )}
+        <div className='scrollable'>
         <table>
           <thead>
             <tr>
@@ -95,7 +79,7 @@ function UnitDisplay({ aboveUnitData }) {
             </tr>
           </thead>
           <tbody>
-            {sortedData.slice(0, showRows).map((data, index) => (
+            {sortedData.map((data, index) => (
               <tr key={index}>
                 <td>{data[0]}</td>
                 <td>{data[1]}</td>
@@ -104,7 +88,7 @@ function UnitDisplay({ aboveUnitData }) {
             ))}
           </tbody>
         </table>
-      </div>
+        </div>
     </div>
   );
 }
