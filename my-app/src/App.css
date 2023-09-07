@@ -47,18 +47,12 @@ thead {
   width: 150px;
 }
 .filterPopup {
-  position: absolute;
   top: 30px; /* Adjust this value to set the distance from the top */
   right: 10px; /* Adjust this value to set the distance from the right */
   background-color: white;
   border: 1px solid #ccc;
-  padding: 10px;
   max-height: 150px; /* Adjust this value to set the maximum height of the popup */
-  overflow-y: auto;
-}
-.filterPopup label {
-  display: block;
-  margin-bottom: 5px;
+  width: 30px;
 }
 #topBox {
   display: flex;
@@ -114,4 +108,13 @@ thead {
 }
 .tools.visible, .data.visible, .reference.visible {
   display: block;
+}
+#filterButton {
+  max-width: 50px;
+  max-height: 20px;
+}
+#filterOptions {
+  max-width: 100px;
+  max-height: 100px;
+  overflow: auto;
 }

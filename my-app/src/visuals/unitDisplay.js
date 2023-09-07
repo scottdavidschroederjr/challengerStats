@@ -48,15 +48,16 @@ function UnitDisplay({ aboveUnitData }) {
   }
 
   const filteredOptions = Object.keys(set9traits).sort();
-  const displayedOptions = filteredOptions.slice(0, 20);
+  const displayedOptions = filteredOptions;
 
   return (
     <div className='component' id='championAppearanceBox'>
       
         <div className='componentHeader'>Champion Appearance</div>
-        <button onClick={() => setShowFilterPopup(!showFilterPopup)}>Filter Options</button>
+
+        <button id="filterButton" onClick={() => setShowFilterPopup(!showFilterPopup)}>Filter</button>
         {showFilterPopup && (
-          <div className="filterPopup">
+          <div id='filterOptions'>
             {displayedOptions.map((filterOption, index) => (
               <label key={index}>
                 <input
@@ -69,6 +70,7 @@ function UnitDisplay({ aboveUnitData }) {
             ))}
           </div>
         )}
+
         <div className='scrollable'>
         <table>
           <thead>
