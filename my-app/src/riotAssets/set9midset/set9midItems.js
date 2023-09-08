@@ -380,16 +380,85 @@ const itemList = {
     },
 
 //Components
-    "": {
-        "name": "",
-        "type": "Normal",
+    "TFT_Item_NegatronCloak": {
+        "name": "Cloak",
+        "type": "Component",
+        "icon": "",
+        "info": "",
+        "comps": ["", ""],
+    },
+    "TFT_Item_GiantsBelt": {
+        "name": "Belt",
+        "type": "Component",
+        "icon": "",
+        "info": "",
+        "comps": ["", ""],
+    },
+    "TFT_Item_TearOfTheGoddess": {
+        "name": "Tear",
+        "type": "Component",
+        "icon": "",
+        "info": "",
+        "comps": ["", ""],
+    },
+    "TFT_Item_RecurveBow": {
+        "name": "Bow",
+        "type": "Component",
+        "icon": "",
+        "info": "",
+        "comps": ["", ""],
+    },
+    "TFT_Item_NeedlesslyLargeRod": {
+        "name": "Rod",
+        "type": "Component",
+        "icon": "",
+        "info": "",
+        "comps": ["", ""],
+    },
+    "TFT_Item_NeedlesslyLargeRod": {
+        "name": "Chain Vest",
+        "type": "Component",
+        "icon": "",
+        "info": "",
+        "comps": ["", ""],
+    },
+    "TFT_Item_BFSword": {
+        "name": "Sword",
+        "type": "Component",
+        "icon": "",
+        "info": "",
+        "comps": ["", ""],
+    },
+    "TFT_Item_Spatula": {
+        "name": "Spatula",
+        "type": "Component",
+        "icon": "",
+        "info": "",
+        "comps": ["", ""],
+    },
+    "TFT_Item_SparringGloves": {
+        "name": "Glove",
+        "type": "Component",
         "icon": "",
         "info": "",
         "comps": ["", ""],
     },
 
 //Trait Items
-
+    "": {
+        "name": "",
+        "type": "",
+        "icon": "",
+        "info": "",
+        "comps": ["", ""],
+    },
+    "": {
+        "name": "",
+        "type": "",
+        "icon": "",
+        "info": "",
+        "comps": ["", ""],
+    },
 //Artifact Items
 
 //Radiant Items
