@@ -41,7 +41,7 @@ function ItemWR({ aboveItemData }) {
         <tbody>
           {sortedData.map((item, index) => (
             <tr key={index}>
-              <td>{item[0]}</td>
+              <td>{itemList[item[0]] ? itemList[item[0]].name : item[0]}</td>
               <td>{item[1]}</td>
               <td>{item[2].toFixed(2)}</td>
             </tr>

@@ -42,21 +42,21 @@ const itemList = {
         "info": "",
         "comps": "",
     },
-    "": {
+    "TFT7_Item_ShimmerscaleHeartOfGold": {
         "name": "Needlessly Big Gem",
         "type": "Support",
         "icon": "",
         "info": "",
         "comps": "",
     },
-    "": {
+    "TFT4_Item_OrnnObsidianCleaver": {
         "name": "Obsidian Cleaver",
         "type": "Support",
         "icon": "",
         "info": "",
         "comps": "",
     },
-    "": {
+    "TFT4_Item_OrnnRanduinsSanctum": {
         "name": "Randuin's Omen",
         "type": "Support",
         "icon": "",
@@ -386,6 +386,13 @@ const itemList = {
         "info": "",
         "comps": ["Belt", "Belt"],
     },
+    "TFT_Item_LastWhisper": {
+        "name": "Last Whisper",
+        "type": "Normal",
+        "icon": "",
+        "info": "",
+        "comps": ["Bow", "Glove"],
+    },
 
 //Components
     "TFT_Item_NegatronCloak": {
@@ -446,6 +453,13 @@ const itemList = {
     },
     "TFT_Item_SparringGloves": {
         "name": "Glove",
+        "type": "Component",
+        "icon": "",
+        "info": "",
+        "comps": ["", ""],
+    },
+    "TFT_Item_ChainVest": {
+        "name": "Chain Vest",
         "type": "Component",
         "icon": "",
         "info": "",
@@ -587,8 +601,99 @@ const itemList = {
         "comps": ["", ""],
     },
 //Artifact Items
-    "": {
-        "name": "",
+    "TFT4_Item_OrnnInfinityForce": {
+        "name": "Infinity Force",
+        "type": "Artifact",
+        "icon": "",
+        "info": "",
+        "comps": ["", ""],
+    },
+    "TFT9_Item_OrnnDeathfireGrasp": {
+        "name": "Deathfire Grasp",
+        "type": "Artifact",
+        "icon": "",
+        "info": "",
+        "comps": ["", ""],
+    },
+    "TFT4_Item_OrnnEternalWinter": {
+        "name": "Eternal Winter",
+        "type": "Artifact",
+        "icon": "",
+        "info": "",
+        "comps": ["", ""],
+    },
+    "TFT4_Item_OrnnTheCollector": {
+        "name": "Gold Collector",
+        "type": "Artifact",
+        "icon": "",
+        "info": "",
+        "comps": ["", ""],
+    },
+    "TFT7_Item_ShimmerscaleGoldmancersStaff": {
+        "name": "Goldmancer's Staff",
+        "type": "Artifact",
+        "icon": "",
+        "info": "",
+        "comps": ["", ""],
+    },
+    "TFT4_Item_OrnnZhonyasParadox": {
+        "name": "Zhonya's Paradox",
+        "type": "Artifact",
+        "icon": "",
+        "info": "",
+        "comps": ["", ""],
+    },
+    "TFT7_Item_ShimmerscaleMogulsMail": {
+        "name": "Mogul's Mail",
+        "type": "Artifact",
+        "icon": "",
+        "info": "",
+        "comps": ["", ""],
+    },
+    "TFT4_Item_OrnnMuramana": {
+        "name": "Muramana",
+        "type": "Artifact",
+        "icon": "",
+        "info": "",
+        "comps": ["", ""],
+    },
+    "TFT9_Item_OrnnTrickstersGlass": {
+        "name": "Tricksters Glass",
+        "type": "Artifact",
+        "icon": "",
+        "info": "",
+        "comps": ["", ""],
+    },
+    "TFT9_Item_OrnnHullbreaker": {
+        "name": "Hullcrusher",
+        "type": "Artifact",
+        "icon": "",
+        "info": "",
+        "comps": ["", ""],
+    },
+    "TFT9_Item_OrnnHorizonFocus": {
+        "name": "Sniper's Focus",
+        "type": "Artifact",
+        "icon": "",
+        "info": "",
+        "comps": ["", ""],
+    },
+    "TFT4_Item_OrnnAnimaVisage": {
+        "name": "Anima Visage",
+        "type": "Artifact",
+        "icon": "",
+        "info": "",
+        "comps": ["", ""],
+    },
+    "TFT4_Item_OrnnDeathsDefiance": {
+        "name": "Death's Defiance",
+        "type": "Artifact",
+        "icon": "",
+        "info": "",
+        "comps": ["", ""],
+    },
+    "TFT9_Item_OrnnPrototypeForge": {
+        "name": "Blacksmith's Gloves",
         "type": "Artifact",
         "icon": "",
         "info": "",
@@ -833,6 +938,20 @@ const itemList = {
         "info": "Radiant evenshroud",
         "comps": ["", ""],
     }, 
+    "TFT5_Item_StatikkShivRadiant": {
+        "name": "Statikk Favor",
+        "type": "Radiant",
+        "icon": "",
+        "info": "Radiant shiv",
+        "comps": ["", ""],
+    }, 
+    "TFT5_Item_LocketOfTheIronSolariRadiant": {
+        "name": "Royal Crownshield",
+        "type": "Radiant",
+        "icon": "",
+        "info": "Radiant Locket/Crownguard",
+        "comps": ["", ""],
+    }, 
 //Heimer Turret Items
     "TFT9_HeimerUpgrade_ShrinkRay": {
         "name": "Turret: Shrink Ray",
@@ -858,6 +977,73 @@ const itemList = {
     "TFT9_HeimerUpgrade_SelfRepair": {
         "name": "Turret: Self Repair",
         "type": "HeimerItem",
+        "icon": "",
+        "info": "",
+        "comps": ["", ""],
+    },
+//Piltover Items
+    "TFT9_Item_PiltoverProgress": {
+        "name": "Piltover: Progress",
+        "type": "Piltover",
+        "icon": "",
+        "info": "",
+        "comps": ["", ""],
+    },
+    "TFT9_Item_PiltoverCharges": {
+        "name": "Piltover: Charges",
+        "type": "Piltover",
+        "icon": "",
+        "info": "",
+        "comps": ["", ""],
+    },
+//Removed Shimmer Items
+    "TFT7_Item_ShimmerscaleDravensAxe": {
+        "name": "Draven's Axe",
+        "type": "Shimmerscale",
+        "icon": "",
+        "info": "",
+        "comps": ["", ""],
+    },
+    "TFT7_Item_ShimmerscaleGamblersBlade": {
+        "name": "Gambler's Blade",
+        "type": "Shimmerscale",
+        "icon": "",
+        "info": "",
+        "comps": ["", ""],
+    },
+    "TFT7_Item_ShimmerscaleDeterminedInvestor": {
+        "name": "Determinded Investor",
+        "type": "Shimmerscale",
+        "icon": "",
+        "info": "",
+        "comps": ["", ""],
+    },
+    "TFT7_Item_ShimmerscaleDiamondHands": {
+        "name": "Diamond Hands",
+        "type": "Shimmerscale",
+        "icon": "",
+        "info": "",
+        "comps": ["", ""],
+    },
+//Removed Emblems
+    "TFT9_Item_ShadowIslesEmblem": {
+        "name": "Shadow Isles Emblem",
+        "type": "Emblem",
+        "icon": "",
+        "info": "",
+        "comps": ["", ""],
+    },
+    "TFT9_Item_DeadeyeEmblem": {
+        "name": "Deadeye Emblem",
+        "type": "Emblem",
+        "icon": "",
+        "info": "",
+        "comps": ["", ""],
+    },
+//Unsure
+    "TFT_Item_EmptyBag": {
+        "name": "Empty Bag",
+        "type": "",
         "icon": "",
         "info": "",
         "comps": ["", ""],
