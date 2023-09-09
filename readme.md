@@ -9,7 +9,6 @@ Current TODOs:
 - https://www.npmjs.com/package/react-draggable
 
 
-- create cashout table in Cashout page instead of just linking to site
 - create tome chart instead of linking
 - fix portal info to just show ryze spell
 
@@ -25,3 +24,4 @@ Past TODOs
 - send current count data to the analysisData table and set this to automatically run in the constantFunctions area
 - switch data request to going to the static data stored in the analysisData table
 - update having two places where patch epoch value has to be change just to one (8/10/23)
+- create cashout table in Cashout page instead of just linking to site (9/9/23)

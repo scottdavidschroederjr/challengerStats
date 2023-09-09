@@ -32,5 +32,4 @@ const midset9units = {
         "Strategist": ['Swain', "Miss Fortune", 'Azir', 'Jarvan IV'],
         "Vanquisher": ['Jhin', "Ashe", "Darius", "Nilah", "Xayah"]
     },
-
 }

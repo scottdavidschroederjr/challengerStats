@@ -72,19 +72,15 @@ export function App() {
 
         <label><input type="checkbox" checked={showItemWR}onChange={() => setshowItemWR(!showItemWR)}/>Items</label><br></br>
 
-        <label><input type="checkbox" checked={showPortalDisplay} onChange={() => setShowPortalDisplay(!showPortalDisplay)}/>Portal/Ryze Info</label><br></br>
+        <label><input type="checkbox" checked={showPortalDisplay} onChange={() => setShowPortalDisplay(!showPortalDisplay)}/>Ryze Info</label><br></br>
       
       </div>
-
 
       <div className='toggleCatHeader' onClick={toggleReferenceVisibility}>Reference</div>
       <div className={`data${showReference ? ' visible' : ''}`}>
         <label><input type="checkbox" checked={showLeDuck} onChange={() => setShowLeDuck(!showLeDuck)}/>Build Sheets</label><br></br>
       </div>
 
-      
-      
-    
     </div>
 
     <div id="bigBox">
@@ -92,7 +88,7 @@ export function App() {
         {showAugmentData && <AugmentData />}
         {showTomeDisplay && <TomeDisplay />}
         {showLeDuck && <LeDuck />}
-        {showPortalDisplay && <PortalDisplay />}
+        {showPortalDisplay && <PortalDisplay aboveRyzeData={dataPackage[4]}/>}
         {showCashout && <Cashout />}
         {showAugmentTree && <AugmentTree/>}
         {showUnitStats && <UnitStats aboveUnitData={dataPackage[0]} />}

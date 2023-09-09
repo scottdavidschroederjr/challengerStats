@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import itemList from '../riotAssets/set9midset/set9midItems';
 
+
 function ItemWR({ aboveItemData }) {
   const [sortColumn, setSortColumn] = useState(1); // Initialize with column 2 as the default sorting column
   const [sortOrder, setSortOrder] = useState('asc'); // Initialize with ascending order as the default sorting order

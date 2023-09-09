@@ -889,7 +889,7 @@ const championData = {
         },
         "TFT9_RyzeDemacia": {
             "id": "TFT9_RyzeDemacia",
-            "name": "Ryze",
+            "name": "Ryze (Demacia)",
             "tier": 5,
             "traits": [],
             "image": {
@@ -904,7 +904,7 @@ const championData = {
         },
         "TFT9_RyzeBandleCity": {
             "id": "TFT9_RyzeBandleCity",
-            "name": "Ryze",
+            "name": "Ryze (Bandle City)",
             "tier": 5,
             "traits": [],
             "image": {
@@ -919,7 +919,7 @@ const championData = {
         },
         "TFT9_RyzeFreljord": {
             "id": "TFT9_RyzeFreljord",
-            "name": "Ryze",
+            "name": "Ryze (Freljord)",
             "tier": 5,
             "traits": [],
             "image": {
@@ -934,7 +934,7 @@ const championData = {
         },
         "TFT9_RyzeIonia": {
             "id": "TFT9_RyzeIonia",
-            "name": "Ryze",
+            "name": "Ryze (Ionia)",
             "tier": 5,
             "traits": [],
             "image": {
@@ -949,7 +949,7 @@ const championData = {
         },
         "TFT9_RyzeNoxus": {
             "id": "TFT9_RyzeNoxus",
-            "name": "Ryze",
+            "name": "Ryze (Noxus)",
             "tier": 5,
             "traits": [],
             "image": {
@@ -964,7 +964,7 @@ const championData = {
         },
         "TFT9_RyzePiltover": {
             "id": "TFT9_RyzePiltover",
-            "name": "Ryze",
+            "name": "Ryze (Piltover)",
             "tier": 5,
             "traits": [],
             "image": {
@@ -979,7 +979,7 @@ const championData = {
         },
         "TFT9_RyzeShadowIsles": {
             "id": "TFT9_RyzeShadowIsles",
-            "name": "Ryze",
+            "name": "Ryze (Shadow Isles)",
             "tier": 5,
             "traits": [],
             "image": {
@@ -994,7 +994,7 @@ const championData = {
         },
         "TFT9_RyzeShurima": {
             "id": "TFT9_RyzeShurima",
-            "name": "Ryze",
+            "name": "Ryze (Shurima)",
             "tier": 5,
             "traits": [],
             "image": {
@@ -1009,7 +1009,7 @@ const championData = {
         },
         "TFT9_RyzeTargon": {
             "id": "TFT9_RyzeTargon",
-            "name": "Ryze",
+            "name": "Ryze (Targon)",
             "tier": 5,
             "traits": [],
             "image": {
@@ -1024,7 +1024,7 @@ const championData = {
         },
         "TFT9_RyzeZaun": {
             "id": "TFT9_RyzeZaun",
-            "name": "Ryze",
+            "name": "Ryze (Zaun)",
             "tier": 5,
             "traits": [],
             "image": {
