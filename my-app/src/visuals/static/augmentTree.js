@@ -81,8 +81,12 @@ function AugmentTree() {
             <div className="component">
                 <div className="componentHeader">Augment Tree</div>
                 <div>
-                    <select onChange={(e) => setAugment1(e.target.value)}>
-                        <option value="">Choose Augment 1</option>
+                    <select onChange={(e) => {
+                        setAugment1(e.target.value);
+                        setAugment2("false");
+                        setAugment3("false");
+                    }}>
+                        <option value="false">Choose Augment 1</option>
                         <option value="silver">Silver</option>
                         <option value="gold">Gold</option>
                         <option value="prismatic">Prismatic</option>
@@ -99,25 +103,30 @@ function AugmentTree() {
     if (augment2 === "false") {
         return (
             <div className="component">
-                <div>
                 <div className="componentHeader">Augment Tree</div>
                 <div>
-                    <select onChange={(e) => setAugment1(e.target.value)}>
-                    <option value="false">Choose Augment 1</option>
-                    <option value="silver">Silver</option>
-                    <option value="gold">Gold</option>
-                    <option value="prismatic">Prismatic</option>
-                    </select>
-                </div>
-                <div>
-                    <select onChange={(e) => setAugment2(e.target.value)}>
-                    <option value="false">Choose Augment 2</option>
-                    <option value="silver">Silver</option>
-                    <option value="gold">Gold</option>
-                    <option value="prismatic">Prismatic</option>
-                    </select>
-                </div>
-                <br></br>
+                    <div>
+                        <select value={augment1} onChange={(e) => {
+                            setAugment1(e.target.value);
+                            setAugment2("false");
+                            setAugment3("false");
+                        }}>
+                            <option value="false">Choose Augment 1</option>
+                            <option value="silver">Silver</option>
+                            <option value="gold">Gold</option>
+                            <option value="prismatic">Prismatic</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <select onChange={(e) => setAugment2(e.target.value)}>
+                            <option value="false">Choose Augment 2</option>
+                            <option value="silver">Silver</option>
+                            <option value="gold">Gold</option>
+                            <option value="prismatic">Prismatic</option>
+                        </select>
+                    </div>
+                
                 
                 {secondOdds[augment1]['silver']} Silver Augment <br></br>
                 {secondOdds[augment1]['gold']} Gold Augment <br></br>
@@ -128,39 +137,46 @@ function AugmentTree() {
     )
     }
     if (augment3 === "false") {
+
     return (
         <div className="component">
-            <div>
             <div className="componentHeader">Augment Tree</div>
             <div>
-                <select onChange={(e) => setAugment1(e.target.value)}>
+                <div>
+                <select value={augment1} onChange={(e) => {
+                        setAugment1(e.target.value);
+                        setAugment2("false");
+                        setAugment3("false");
+                    }}>
                 <option value="false">Choose Augment 1</option>
                 <option value="silver">Silver</option>
                 <option value="gold">Gold</option>
                 <option value="prismatic">Prismatic</option>
                 </select>
-            </div>
-            <div>
-                <select onChange={(e) => setAugment2(e.target.value)}>
+                </div>
+            
+                <div>
+                <select value={augment2}  onChange={(e) => setAugment2(e.target.value)}>
                 <option value="false">Choose Augment 2</option>
                 <option value="silver">Silver</option>
                 <option value="gold">Gold</option>
                 <option value="prismatic">Prismatic</option>
                 </select>
-            </div>
-            <div>
+                </div>
+            
+                <div>
                 <select onChange={(e) => setAugment3(e.target.value)}>
                 <option value="false">Choose Augment 3</option>
                 <option value="silver">Silver</option>
                 <option value="gold">Gold</option>
                 <option value="prismatic">Prismatic</option>
                 </select>
+                </div>
+            <div>
+                {thirdOdds[augment1][augment2]['silver']} Silver Augment <br></br>
+                {thirdOdds[augment1][augment2]['gold']} Gold Augment <br></br>
+                {thirdOdds[augment1][augment2]['prismatic']} Prismatic Augment <br></br>
             </div>
-            <br></br>
-            
-            {thirdOdds[augment1][augment2]['silver']} Silver Augment <br></br>
-            {thirdOdds[augment1][augment2]['gold']} Gold Augment <br></br>
-            {thirdOdds[augment1][augment2]['prismatic']} Prismatic Augment <br></br>
             </div>
         </div>
 
@@ -168,18 +184,27 @@ function AugmentTree() {
     if (augment3 !== "false") {
         return (
             <div className="component">
-                <div>
                 <div className="componentHeader">Augment Tree</div>
                 <div>
-                    <select onChange={(e) => setAugment1(e.target.value)}>
+                
+                <div>
+                    <select value={augment1} onChange={(e) => {
+                        setAugment1(e.target.value);
+                        setAugment2("false");
+                        setAugment3("false");
+                    }}>
                     <option value="false">Choose Augment 1</option>
                     <option value="silver">Silver</option>
                     <option value="gold">Gold</option>
                     <option value="prismatic">Prismatic</option>
                     </select>
                 </div>
+
                 <div>
-                    <select onChange={(e) => setAugment2(e.target.value)}>
+                    <select value={augment2} onChange={(e) => {
+                        setAugment2(e.target.value);
+                        setAugment3("false");
+                    }}>
                     <option value="false">Choose Augment 2</option>
                     <option value="silver">Silver</option>
                     <option value="gold">Gold</option>
@@ -187,11 +212,11 @@ function AugmentTree() {
                     </select>
                 </div>
                 <div>
-                    <select onChange={(e) => setAugment3(e.target.value)}>
+                    <select value={augment3} onChange={(e) => setAugment3(e.target.value)}>
                     <option value="false">Choose Augment 3</option>
-                    <option value="silver">Silver</option>
-                    <option value="gold">Gold</option>
-                    <option value="prismatic">Prismatic</option>
+                        <option value="silver">Silver</option>
+                        <option value="gold">Gold</option>
+                        <option value="prismatic">Prismatic</option>
                     </select>
             </div>
             </div>
