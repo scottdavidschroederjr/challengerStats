@@ -4,6 +4,7 @@ const {analysisData} = require("../../database/modules/createTables.js")
 const {placementByStars} = require("../analysis/lowerFunctions/placementByStars.js")
 const {emblemWR} = require("../analysis/lowerFunctions/emblemWR.js")
 const {itemWR} = require("../analysis/lowerFunctions/itemWR.js")
+//const {ryzeData} = require("./analysis/lowerFunctions/ryzeData.js")
 
 async function updateAnalysisTable(tftSetNumber, latestPatch) {
     var data = await matchDataCollection(tftSetNumber, latestPatch)
@@ -39,10 +40,10 @@ async function updateAnalysisTable(tftSetNumber, latestPatch) {
     await updateOrCreate(analysisData, {type: 'itemStats'}, {data: jsonitemStats})
     
     //update ryze data
-    //var augmentStats = await augmentPlacement(data[2])
-    //var jsonAugmentStats = JSON.stringify(augmentStats)
-    //await updateOrCreate(analysisData, {type: 'augmentStats'}, {type: 'augmentStats'})
-    //await updateOrCreate(analysisData, {type: 'augmentStats'}, {data: jsonAugmentStats})
+    //var ryzeStats = await ryzeData(data[0])
+    //var jsonRyzeStats = JSON.stringify(ryzeStats)
+    //await updateOrCreate(analysisData, {type: 'ryzeStats'}, {type: 'ryzeStats'})
+    //await updateOrCreate(analysisData, {type: 'ryzeStats'}, {data: jsonRyzeStats})
        
 }
 
