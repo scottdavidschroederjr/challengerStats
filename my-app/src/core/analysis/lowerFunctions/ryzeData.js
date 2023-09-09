@@ -15,17 +15,13 @@ async function ryzeData() {
             var reg = regExp.exec(unitCountData[x][0])
             var ryzeRegion = reg[1]
             var ryzeSpell = ryzeInfo[ryzeRegion]
-            console.log(ryzeArray)
 
             ryzeArray.push(ryzeRegion)
             ryzeArray.push(ryzeSpell)
-
             ryzeData.push(ryzeArray)
         }
     }
-    console.log(ryzeData)
     return ryzeData
 }
 
-ryzeData()
 module.exports = {ryzeData}
