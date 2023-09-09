@@ -118,3 +118,8 @@ thead {
   max-height: 100px;
   overflow: auto;
 }
+#ryzeTable {
+  border-collapse: collapse;
+  overflow: auto;
+  max-height: 300px;
+}
