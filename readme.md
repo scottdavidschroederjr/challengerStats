@@ -3,14 +3,11 @@ Last Readme Update: 8/27/23
 The goal of this project is provide a customizable one site solution for all the additional reference data a high level player needs to play competitive TFT at the highest level.
 
 Current TODOs:
-- display itemStats on site
 - allow items to be filtered by Radient, Ornn, Emblem etc
 - add basic augment stats to project now that "ban" has been lifted
 - https://www.npmjs.com/package/react-draggable
-
-
 - create tome chart instead of linking
-- fix portal info to just show ryze spell
+
 
 
 guide to unitData export
@@ -24,4 +21,6 @@ Past TODOs
 - send current count data to the analysisData table and set this to automatically run in the constantFunctions area
 - switch data request to going to the static data stored in the analysisData table
 - update having two places where patch epoch value has to be change just to one (8/10/23)
+- display itemStats on site (9/8/23)
 - create cashout table in Cashout page instead of just linking to site (9/9/23)
+- fix portal info to just show ryze spell (9/9/23)
