@@ -123,3 +123,11 @@ thead {
   overflow: auto;
   max-height: 300px;
 }
+#demaciaTable {
+  border-collapse: collapse;
+  overflow: auto;
+  max-height: 150px;
+}
+#demaciaComponent {
+  max-width: 250px;
+}

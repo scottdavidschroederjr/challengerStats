@@ -32,27 +32,27 @@ function DemaciaItems() {
         { unit: "K'sante", item: "Protector" },
         { unit: "Ryze", item: "Shojin" }
       ];
-      
+
     return (
-        <div className="component">
+        <div className="component" id='demaciaComponent'>
             <div className="componentHeader">Demacia Items</div>
+            <div id='demaciaTable'>
                 <table>
-      <thead>
-        <tr>
-          <th>Unit</th>
-          <th>Item</th>
-        </tr>
-      </thead>
-      <tbody>
-        {championData.map((champion, index) => (
-          <tr key={index}>
-            <td>{champion.unit}</td>
-            <td>{champion.item}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-    
+                    <thead>
+                        <tr>
+                        <th>Unit</th>
+                        <th>Item</th>
+                        </tr>
+                    </thead>
+                <tbody>
+                    {championData.map((champion, index) => (
+                    <tr key={index}>
+                        <td>{champion.unit}</td>
+                        <td>{champion.item}</td>
+                    </tr>))}
+                    </tbody>
+                </table>
+            </div>    
         </div>
     )
 }
