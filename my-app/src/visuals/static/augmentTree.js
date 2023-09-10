@@ -138,7 +138,7 @@ function AugmentTree() {
     }
     if (augment3 === "false") {
 
-    return (
+        return (
         <div className="component">
             <div className="componentHeader">Augment Tree</div>
             <div>
@@ -180,7 +180,7 @@ function AugmentTree() {
             </div>
         </div>
 
-    )}
+        )}
     if (augment3 !== "false") {
         return (
             <div className="component">
@@ -223,9 +223,6 @@ function AugmentTree() {
             </div>
         )
         }
-    
-
-
 
 }
 

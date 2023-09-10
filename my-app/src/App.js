@@ -12,6 +12,7 @@ import LeDuck from './visuals/static/LeDuckSite';
 import ItemWR from './visuals/itemWR';
 import Cashout from './visuals/static/cashout';
 import AugmentTree from './visuals/static/augmentTree';
+import DemaciaItems from './visuals/static/demaciatems';
 
 export function App() {
   const [dataPackage, setdataPackage] = useState(0);
@@ -25,6 +26,7 @@ export function App() {
   const [showItemWR, setshowItemWR] = useState(false)
   const [showCashout, setshowCashout] = useState(false)
   const [showAugmentTree, setshowAugmentTree] = useState(false)
+  const [showDemaciaItems, setShowDemaciaItems] = useState(false)
 
   const config = { headers: { "Content-Type": "application/json" } };
   
@@ -79,6 +81,7 @@ export function App() {
       <div className='toggleCatHeader' onClick={toggleReferenceVisibility}>Reference</div>
       <div className={`data${showReference ? ' visible' : ''}`}>
         <label><input type="checkbox" checked={showLeDuck} onChange={() => setShowLeDuck(!showLeDuck)}/>Build Sheets</label><br></br>
+        <label><input type="checkbox" checked={showDemaciaItems} onChange={() => setShowDemaciaItems(!showDemaciaItems)}/>Demacia Items</label><br></br>
       </div>
 
     </div>
@@ -95,6 +98,7 @@ export function App() {
         {showStarBasedWR && <StarBasedWR aboveUnitData={dataPackage[1]} />}
         {showEmblemWR && <EmblemWR aboveEmblemData={dataPackage[2]}/>}
         {showItemWR && <ItemWR aboveItemData={dataPackage[3]}/>}
+        {showDemaciaItems && <DemaciaItems />}
       </div>
     </div>
     );
