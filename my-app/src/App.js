@@ -6,7 +6,6 @@ import AugmentData from './visuals/static/augmentData';
 import UnitStats from './visuals/unitDisplay.js'
 import TomeDisplay from './visuals/static/tomeDisplay';
 import PortalDisplay from './visuals/static/portalDisplay';
-import StarBasedWR from './visuals/starbasedWR';
 import EmblemWR from './visuals/emblemWR'
 import LeDuck from './visuals/static/LeDuckSite';
 import ItemWR from './visuals/itemWR';
@@ -20,7 +19,6 @@ export function App() {
   const [showTomeDisplay, setShowTomeDisplay] = useState(false);
   const [showPortalDisplay, setShowPortalDisplay] = useState(false);
   const [showUnitStats, setShowUnitStats] = useState(false);
-  const [showStarBasedWR, setShowStarBasedWR] = useState(false);
   const [showEmblemWR, setShowEmblemWR] = useState(false)
   const [showLeDuck, setShowLeDuck] = useState(false)
   const [showItemWR, setshowItemWR] = useState(false)
@@ -30,9 +28,9 @@ export function App() {
 
   const config = { headers: { "Content-Type": "application/json" } };
   
-  const [showTools, setShowTools] = useState(false);
-  const [showData, setShowData] = useState(false);
-  const [showReference, setShowReference] = useState(false);
+  const [showTools, setShowTools] = useState(true);
+  const [showData, setShowData] = useState(true);
+  const [showReference, setShowReference] = useState(true);
 
   const toggleToolsVisibility = () => {setShowTools(!showTools);};
   const toggleDataVisibility = () => {setShowData(!showData);};
@@ -68,8 +66,6 @@ export function App() {
 
         <label><input type="checkbox" checked={showUnitStats} onChange={() => setShowUnitStats(!showUnitStats)}/>Units</label><br></br>
 
-        <label><input type="checkbox" checked={showStarBasedWR} onChange={() => setShowStarBasedWR(!showStarBasedWR)}/>Starred Units</label><br></br>
-
         <label><input type="checkbox" checked={showEmblemWR}onChange={() => setShowEmblemWR(!showEmblemWR)}/>Emblem</label><br></br>
 
         <label><input type="checkbox" checked={showItemWR}onChange={() => setshowItemWR(!showItemWR)}/>Items</label><br></br>
@@ -95,7 +91,6 @@ export function App() {
         {showCashout && <Cashout />}
         {showAugmentTree && <AugmentTree/>}
         {showUnitStats && <UnitStats aboveUnitData={dataPackage[0]} />}
-        {showStarBasedWR && <StarBasedWR aboveUnitData={dataPackage[1]} />}
         {showEmblemWR && <EmblemWR aboveEmblemData={dataPackage[2]}/>}
         {showItemWR && <ItemWR aboveItemData={dataPackage[3]}/>}
         {showDemaciaItems && <DemaciaItems />}

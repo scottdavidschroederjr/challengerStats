@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+
 function DemaciaItems() {
     const championData = [
         { unit: "Cho'gath", item: "Warmog" },
@@ -33,28 +35,43 @@ function DemaciaItems() {
         { unit: "Ryze", item: "Shojin" }
       ];
 
-    return (
-        <div className="component" id='demaciaComponent'>
-            <div className="componentHeader">Demacia Items</div>
-            <div id='demaciaTable'>
-                <table>
-                    <thead>
-                        <tr>
-                        <th>Unit</th>
-                        <th>Item</th>
-                        </tr>
-                    </thead>
-                <tbody>
-                    {championData.map((champion, index) => (
-                    <tr key={index}>
-                        <td>{champion.unit}</td>
-                        <td>{champion.item}</td>
-                    </tr>))}
-                    </tbody>
-                </table>
-            </div>    
-        </div>
-    )
-}
+      const [searchTerm, setSearchTerm] = useState("");
 
-export default DemaciaItems
+      const filteredChampionData = championData.filter((champion) =>
+        champion.unit.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    
+      return (
+        <div className="component" id="demaciaComponent">
+          <div className="componentHeader">Demacia Items</div>
+          <input
+              type="text"
+              placeholder="Search by unit..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+          <div id="demaciaTable">
+            
+            <div><br></br></div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Unit</th>
+                  <th>Item</th>
+                </tr>
+              </thead>
+              <tbody>
+                {filteredChampionData.map((champion, index) => (
+                  <tr key={index}>
+                    <td>{champion.unit}</td>
+                    <td>{champion.item}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      );
+    }
+    
+    export default DemaciaItems;

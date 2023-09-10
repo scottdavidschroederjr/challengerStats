@@ -126,8 +126,8 @@ thead {
 #demaciaTable {
   border-collapse: collapse;
   overflow: auto;
-  max-height: 150px;
+  max-height: 200px;
 }
 #demaciaComponent {
-  max-width: 250px;
+  width: 250px;
 }
