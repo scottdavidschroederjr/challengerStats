@@ -8,12 +8,7 @@ th, td {
   border-left:  1px solid #ddd;
   border-right:  1px solid #ddd;
 }
-thead {
-  background-color: #383838;
-  color: rgb(255, 255, 255);
-  font-size: 14pt;
-  font-weight: 10;
-}
+
 #bigBox {
   display: flex;
   flex-wrap: wrap;

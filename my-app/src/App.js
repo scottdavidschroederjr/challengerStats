@@ -12,6 +12,7 @@ import ItemWR from './visuals/itemWR';
 import Cashout from './visuals/static/cashout';
 import AugmentTree from './visuals/static/augmentTree';
 import DemaciaItems from './visuals/static/demaciatems';
+import ShopOdds from './visuals/static/shopOdds';
 
 export function App() {
   const [dataPackage, setdataPackage] = useState(0);
@@ -25,6 +26,7 @@ export function App() {
   const [showCashout, setshowCashout] = useState(false)
   const [showAugmentTree, setshowAugmentTree] = useState(false)
   const [showDemaciaItems, setShowDemaciaItems] = useState(false)
+  const [showShopOdds, setShowShopOdds] = useState(false)
 
   const config = { headers: { "Content-Type": "application/json" } };
   
@@ -54,7 +56,7 @@ export function App() {
 
       <div className='toggleCatHeader' onClick={toggleToolsVisibility}>Tools</div>
       <div className={`tools${showTools ? ' visible' : ''}`}>
-        <label><input type="checkbox" checked={showTomeDisplay} onChange={() => setShowTomeDisplay(!showTomeDisplay)} />Tome</label><br></br>
+        <label><input type="checkbox" checked={showTomeDisplay} onChange={() => setShowTomeDisplay(!showTomeDisplay)} />Tome (WIP)</label><br></br>
         <label><input type="checkbox" checked={showAugmentTree} onChange={() => setshowAugmentTree(!showAugmentTree)} />Augment Tree</label><br></br>
         <label><input type="checkbox" checked={showCashout} onChange={() => setshowCashout(!showCashout)} />Piltover Cashout</label><br></br>
       </div>
@@ -78,6 +80,7 @@ export function App() {
       <div className={`data${showReference ? ' visible' : ''}`}>
         <label><input type="checkbox" checked={showLeDuck} onChange={() => setShowLeDuck(!showLeDuck)}/>Build Sheets</label><br></br>
         <label><input type="checkbox" checked={showDemaciaItems} onChange={() => setShowDemaciaItems(!showDemaciaItems)}/>Demacia Items</label><br></br>
+        <label><input type="checkbox" checked={showShopOdds} onChange={() => setShowShopOdds(!showShopOdds)}/>Shop Odds</label><br></br>
       </div>
 
     </div>
@@ -94,6 +97,7 @@ export function App() {
         {showEmblemWR && <EmblemWR aboveEmblemData={dataPackage[2]}/>}
         {showItemWR && <ItemWR aboveItemData={dataPackage[3]}/>}
         {showDemaciaItems && <DemaciaItems />}
+        {showShopOdds && <ShopOdds />}
       </div>
     </div>
     );
