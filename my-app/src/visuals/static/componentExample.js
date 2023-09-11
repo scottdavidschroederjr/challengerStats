@@ -1,6 +1,12 @@
-return (
-    <div className="component">
-        <div className="componentHeader">Title</div>
+function Jawn(){
 
-    </div>
-)
+    return (
+        <div className="component">
+            <div className="componentHeader">Title</div>
+    
+        </div>
+    )
+    }
+    
+    
+    export default Jawn;

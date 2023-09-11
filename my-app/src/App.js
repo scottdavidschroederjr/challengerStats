@@ -13,6 +13,7 @@ import Cashout from './visuals/static/cashout';
 import AugmentTree from './visuals/static/augmentTree';
 import DemaciaItems from './visuals/static/demaciatems';
 import ShopOdds from './visuals/static/shopOdds';
+import DamageFormula from './visuals/static/damageFormula';
 
 export function App() {
   const [dataPackage, setdataPackage] = useState(0);
@@ -27,6 +28,7 @@ export function App() {
   const [showAugmentTree, setshowAugmentTree] = useState(false)
   const [showDemaciaItems, setShowDemaciaItems] = useState(false)
   const [showShopOdds, setShowShopOdds] = useState(false)
+  const [showDamageFormula, setShowDamageFormula] = useState(false)
 
   const config = { headers: { "Content-Type": "application/json" } };
   
@@ -81,6 +83,7 @@ export function App() {
         <label><input type="checkbox" checked={showLeDuck} onChange={() => setShowLeDuck(!showLeDuck)}/>Build Sheets</label><br></br>
         <label><input type="checkbox" checked={showDemaciaItems} onChange={() => setShowDemaciaItems(!showDemaciaItems)}/>Demacia Items</label><br></br>
         <label><input type="checkbox" checked={showShopOdds} onChange={() => setShowShopOdds(!showShopOdds)}/>Shop Odds</label><br></br>
+        <label><input type="checkbox" checked={showDamageFormula} onChange={() => setShowDamageFormula(!showDamageFormula)}/>Damage Formula</label><br></br>
       </div>
 
     </div>
@@ -98,6 +101,7 @@ export function App() {
         {showItemWR && <ItemWR aboveItemData={dataPackage[3]}/>}
         {showDemaciaItems && <DemaciaItems />}
         {showShopOdds && <ShopOdds />}
+        {showDamageFormula && <DamageFormula />}
       </div>
     </div>
     );

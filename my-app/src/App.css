@@ -131,3 +131,12 @@ thead {
 #demaciaComponent {
   width: 250px;
 }
+#damageTables {
+  display: flex;
+  max-width: 340px;
+  max-height: 320px;
+  padding-bottom: 10px;
+}
+#damageTABLE {
+  padding-right: 50px;
+}
