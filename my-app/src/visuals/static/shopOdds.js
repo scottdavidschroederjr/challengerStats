@@ -8,11 +8,11 @@ function ShopOdds(){
         <table>
         <tr>
             <th>Level</th>
-            <th>1-cost (29%)</th>
-            <th>2-cost (22%)</th>
-            <th>3-cost (18%)</th>
-            <th>4-cost (12%)</th>
-            <th>5-cost (10%)</th>
+            <th>1-cost (29)</th>
+            <th>2-cost (22)</th>
+            <th>3-cost (18)</th>
+            <th>4-cost (12)</th>
+            <th>5-cost (10)</th>
         </tr>
         <tr>
             <td>1</td>
