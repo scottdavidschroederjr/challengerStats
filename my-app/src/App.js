@@ -14,6 +14,7 @@ import AugmentTree from './visuals/static/augmentTree';
 import DemaciaItems from './visuals/static/demaciatems';
 import ShopOdds from './visuals/static/shopOdds';
 import DamageFormula from './visuals/static/damageFormula';
+import IxaocanTable from './visuals/static/ixaocanTable';
 
 export function App() {
   const [dataPackage, setdataPackage] = useState(0);
@@ -29,6 +30,7 @@ export function App() {
   const [showDemaciaItems, setShowDemaciaItems] = useState(false)
   const [showShopOdds, setShowShopOdds] = useState(false)
   const [showDamageFormula, setShowDamageFormula] = useState(false)
+  const [showIxaocanTable, setShowIxaocanTable] = useState(false)
 
   const config = { headers: { "Content-Type": "application/json" } };
   
@@ -95,6 +97,9 @@ export function App() {
 
       <label><input type="checkbox" checked={showDemaciaItems} onChange={() => setShowDemaciaItems(!showDemaciaItems)}/>Demacia Items</label><br></br>
 
+      <label><input type="checkbox" checked={showIxaocanTable} onChange={() => setShowIxaocanTable(!showIxaocanTable)}/>Ixaocan Table</label><br></br>
+      
+
       <label><input type="checkbox" checked={showDamageFormula} onChange={() => setShowDamageFormula(!showDamageFormula)}/>Legend Damage</label><br></br>
 
       </div>
@@ -116,6 +121,7 @@ export function App() {
         {showDemaciaItems && <DemaciaItems />}
         {showShopOdds && <ShopOdds />}
         {showDamageFormula && <DamageFormula />}
+        {showIxaocanTable && <IxaocanTable />}
       </div>
     </div>
     );

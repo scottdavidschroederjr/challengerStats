@@ -140,3 +140,14 @@ thead {
 #damageTABLE {
   padding-right: 50px;
 }
+#ixaocanComp{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  border-collapse: collapse;
+  overflow: auto;
+  max-height: 230px;
+}
