@@ -35,10 +35,12 @@ export function App() {
   const [showTools, setShowTools] = useState(true);
   const [showData, setShowData] = useState(true);
   const [showReference, setShowReference] = useState(true);
+  const [showTables, setShowTables] = useState(true);
 
   const toggleToolsVisibility = () => {setShowTools(!showTools);};
   const toggleDataVisibility = () => {setShowData(!showData);};
   const toggleReferenceVisibility = () => {setShowReference(!showReference);};
+  const toggleTablesVisibility = () => {setShowTables(!showTables);};
 
 
   async function getData() {
@@ -60,7 +62,7 @@ export function App() {
       <div className={`tools${showTools ? ' visible' : ''}`}>
         <label><input type="checkbox" checked={showTomeDisplay} onChange={() => setShowTomeDisplay(!showTomeDisplay)} />Tome (WIP)</label><br></br>
         <label><input type="checkbox" checked={showAugmentTree} onChange={() => setshowAugmentTree(!showAugmentTree)} />Augment Tree</label><br></br>
-        <label><input type="checkbox" checked={showCashout} onChange={() => setshowCashout(!showCashout)} />Piltover Cashout</label><br></br>
+        
       </div>
 
       <div className='toggleCatHeader' onClick={toggleDataVisibility}>Data</div>
@@ -81,10 +83,22 @@ export function App() {
       <div className='toggleCatHeader' onClick={toggleReferenceVisibility}>Reference</div>
       <div className={`data${showReference ? ' visible' : ''}`}>
         <label><input type="checkbox" checked={showLeDuck} onChange={() => setShowLeDuck(!showLeDuck)}/>Build Sheets</label><br></br>
-        <label><input type="checkbox" checked={showDemaciaItems} onChange={() => setShowDemaciaItems(!showDemaciaItems)}/>Demacia Items</label><br></br>
+        
         <label><input type="checkbox" checked={showShopOdds} onChange={() => setShowShopOdds(!showShopOdds)}/>Shop Odds</label><br></br>
-        <label><input type="checkbox" checked={showDamageFormula} onChange={() => setShowDamageFormula(!showDamageFormula)}/>Damage Formula</label><br></br>
+        
       </div>
+
+      <div className='toggleCatHeader' onClick={toggleTablesVisibility}>Tables</div>
+      <div className={`data${showTables ? ' visible' : ''}`}>
+
+      <label><input type="checkbox" checked={showCashout} onChange={() => setshowCashout(!showCashout)} />Piltover Cashout</label><br></br>
+
+      <label><input type="checkbox" checked={showDemaciaItems} onChange={() => setShowDemaciaItems(!showDemaciaItems)}/>Demacia Items</label><br></br>
+
+      <label><input type="checkbox" checked={showDamageFormula} onChange={() => setShowDamageFormula(!showDamageFormula)}/>Legend Damage</label><br></br>
+
+      </div>
+
 
     </div>
 
