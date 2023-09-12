@@ -3,6 +3,7 @@ Last Readme Update: 8/27/23
 The goal of this project is provide a customizable one site solution for all the additional reference data a high level player needs to play competitive TFT at the highest level.
 
 Current TODOs:
+- update / add tables https://mastodon.social/@laurenwu/111052873287056770
 - allow items to be filtered by Radient, Ornn, Emblem etc
 - add basic augment stats to project now that "ban" has been lifted
 - https://www.npmjs.com/package/react-draggable
